@@ -1,0 +1,26 @@
+Android轻量级数据结构：ArrayMap/SparseArray
+
+ArrayMap--HashMap
+ArraySet--HashSet
+SparseArray系列（SparseArray，SparseBooleanArray，SparseIntArray，SparseLongArray，LongSparseArray）
+
+满足下面两个条件我们可以使用SparseArray代替HashMap：
+
+数据量不大，最好在千级以内 
+key必须为int类型，这中情况下的HashMap可以用SparseArray代替：
+
+HashMap<Integer, Object> map = new HashMap<>();
+可以用SparseArray代替:
+SparseArray<Object> array = new SparseArray<>();
+
+ArrayMap应用场景
+数据量不大，最好在千级以内,数据结构类型为Map类型
+ArrayMap<Key, Value> arrayMap = new ArrayMap<>();
+1【注】：如果我们要兼容aip19以下版本的话，那么导入的包需要为v4包
+import android.support.v4.util.ArrayMap;
+
+总结
+SparseArray和ArrayMap都差不多，使用哪个呢？ 
+假设数据量都在千级以内的情况下：
+1、如果key的类型已经确定为int类型，那么使用SparseArray，因为它避免了自动装箱的过程，如果key为long类型，它还提供了一个LongSparseArray来确保key为long类型时的使用
+2、如果key类型为其它的类型，则使用ArrayMap
