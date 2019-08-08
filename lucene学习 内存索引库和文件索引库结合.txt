@@ -1,0 +1,73 @@
+lucene学习 内存索引库和文件索引库结合
+2016年05月30日 15:18:00 Emiya_Zero 阅读数 3662
+ 版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/qq_28042463/article/details/51538283
+在lucene索引库的创建的时候，我们有两种不同的索引库创建方式
+1
+1.文件索引库
+final Path docDir = Paths.get("index");
+Directory directory=FSDirectory.open(Paths.get("index"));
+1
+2
+这样创建的索引库是在本地磁盘上创建一个index文件夹，并且将索引放在index中，也称为文件索引库
+优点：将索引持久化到磁盘上，能长久保存。
+缺点：相比较内存索引库，读取慢
+1
+2
+3
+2.内存索引库
+Directory directory = new RAMDirectory();
+1
+只需要一句代码，就创建了一个内存索引库
+优点：读取快
+缺点：不具备持久化能力，结束时候内存索引库便会删除
+1
+2
+3
+3.两种索引库的结合
+根据两种索引库的特点我们可以将两种索引库结合起来，设计的思路是在程序启动时，将文件索引库中的索引拷贝到内存索引库中，然后让程序与内存索引库交互，当交互完毕后再将内存索引库的索引持久化到文件索引库。
+1
+/**
+         * 1.创建两个索引库
+         * 2.创建两个IndexWriter
+         * 3.把文件索引库中的内容放到内存索引库中
+         * 4.让内存索引库和客户端进行交互
+         * 5.把内存索引库的内容放到文件索引库
+         */
+        final Path docDir = Paths.get("index");
+        //创建文件索引库
+        Directory fileDirectory=FSDirectory.open(Paths.get("index"));
+        //创建内存索引库
+        Directory ramDirectory = new RAMDirectory(FSDirectory.open(Paths.get("index")), null);
+
+        Analyzer analyzer = new StandardAnalyzer();
+        IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
+        //操作文件的IndexWriter
+        IndexWriter fileIndexWriter = new IndexWriter(fileDirectory, iwc);
+        //操作内存的IndexWriter
+        Analyzer analyzer1 = new StandardAnalyzer();
+        IndexWriterConfig iwc1 = new IndexWriterConfig(analyzer1);
+        IndexWriter ramIndexWriter=new IndexWriter(ramDirectory, iwc1);
+
+        Article article = new Article();
+        article.setAid(1L);
+        article.setTitle("lucene是一个全文检索引擎");
+        article.setContent("baidu,google都是很好的全文检索引擎");
+
+        // 创建document
+        Document document = new Document();
+        Field idField = new Field("aid", article.getAid().toString(),
+                TextField.TYPE_STORED);
+        Field titleField = new Field("title", article.getTitle().toString(),
+                TextField.TYPE_STORED);
+        Field contentField = new Field("content", article.getContent()
+                .toString(), TextField.TYPE_STORED);
+        document.add(idField);
+        document.add(titleField);
+        document.add(contentField);
+
+        //把document放到内存当中
+        ramIndexWriter.addDocument(document);
+        ramIndexWriter.close();
+        //把内存索引库的内容合并到文件索引库
+        fileIndexWriter.addIndexes(ramDirectory);
+        fileIndexWriter.close();

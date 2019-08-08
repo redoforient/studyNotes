@@ -1,3 +1,6 @@
+
+
+
 ----------2019.8.7（农历己亥年七月初七） Web-------------
 Android轻量级数据结构：ArrayMap/SparseArray
 
@@ -25,3 +28,46 @@ SparseArray和ArrayMap都差不多，使用哪个呢？
 假设数据量都在千级以内的情况下：
 1、如果key的类型已经确定为int类型，那么使用SparseArray，因为它避免了自动装箱的过程，如果key为long类型，它还提供了一个LongSparseArray来确保key为long类型时的使用
 2、如果key类型为其它的类型，则使用ArrayMap
+
+
+
+
+
+---------------------------以前记录资料---学习目标-------------------------------------
+正则表达式
+http://c.biancheng.net/cpp/u/zhengze/
+
+
+耀华蓝牙电子秤数据解析正则表达式
+00=76.1000=76.1000=7000000000000000000000000
+00=76
+
+printf（"%05d",1）
+String.format("%07.3f",0.5f)
+
+
+趣课多英语词汇学习
+极客http学习
+
+
+下拉加载更多蓝牙设备
+PendingIntent学习
+IntentReceiver
+
+
+线程池创建使用
+
+光学字符识别
+https://www.wikiwand.com/zh/%E5%85%89%E5%AD%A6%E5%AD%97%E7%AC%A6%E8%AF%86%E5%88%AB
+
+
+授权性行为
+义务性行为
+禁止性行为
+
+ Sharia rulings fall into one of five categories known as “the five decisions” (al-aḥkām al-khamsa): 
+ mandatory (farḍ or wājib), 
+ recommended (mandūb or mustaḥabb), 
+ neutral (mubāḥ), 
+ reprehensible (makrūh), 
+ forbidden (ḥarām)
