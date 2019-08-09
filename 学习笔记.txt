@@ -1,5 +1,10 @@
 
 
+多线程异步处理
+反射
+生产者模式
+单例
+Android IntentService
 
 ----------2019.8.7（农历己亥年七月初七） Web-------------
 Android轻量级数据结构：ArrayMap/SparseArray
