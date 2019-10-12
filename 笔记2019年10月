@@ -1,10 +1,32 @@
+-------2019.10.12（己亥年九月十四）Sat---------
+Proxy模式：
+JDK动态代理    关键API:Proxy InvocationHandler  缺点：被代理对象必须实现接口
+cglib动态代理  关键API:Enhancer+MethodInterceptor 优点：被代理对象无需实现接口，使用简单 缺点：不能代理final对象
+org.objectweb.asm 小而快速的字节码操作框架     缺点：使用复杂
+
+
+java.lang.instrument
+提供允许 Java 编程语言代理检测运行在 JVM 上的程序的服务
+
+
+
+多线程高并发
+java.util.concurrent
+Interface Future<V>
+
+java.util.concurrent
+Interface Callable<V>
+
+
+java.util.concurrent
+Class FutureTask<V>
+All Implemented Interfaces:Runnable, Future<V>, RunnableFuture<V>
+
 -------2019.10.11（己亥年九月十三）Fri---------
 GoF《设计模式》
 Facade模式（封装内部逻辑细节，对外提供简化接口）
 Decorator模式：不改变原对象的前提下，扩展原对象的功能（不使用继承）
 Proxy模式：
-
-
 
 WeakHashMap
 
