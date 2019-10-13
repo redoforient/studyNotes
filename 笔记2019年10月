@@ -7,6 +7,7 @@ EventLoopGroup接口实现类 NioEventLoopGroup（本质是一个线程池）
 ChannelFuture
 ChannelInitializer<SocketChannel>
 
+Lombok插件
 
 http://yapi.demo.qunar.com/
 高效、易用、功能强大的API管理平台
