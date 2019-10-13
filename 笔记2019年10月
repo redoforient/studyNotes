@@ -1,4 +1,32 @@
+-------2019.10.13（己亥年九月十五）Sun---------
+
+netty客户端编程
+BootStrap
+EventLoopGroup接口实现类 NioEventLoopGroup（本质是一个线程池）
+
+ChannelFuture
+ChannelInitializer<SocketChannel>
+
+
+http://yapi.demo.qunar.com/
+高效、易用、功能强大的API管理平台
+旨在为开发、产品、测试人员提供更优雅的接口管理服务
+
+
 -------2019.10.12（己亥年九月十四）Sat---------
+分布式系统
+An Illustrated Proof of the CAP Theorem
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+Consistency 一致性
+Availability 可用性
+Partition tolerance 分区容错性
+
+
+
+
+
+
+
 Proxy模式：
 JDK动态代理    关键API:Proxy InvocationHandler  缺点：被代理对象必须实现接口
 cglib动态代理  关键API:Enhancer+MethodInterceptor 优点：被代理对象无需实现接口，使用简单 缺点：不能代理final对象
