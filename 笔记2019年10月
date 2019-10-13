@@ -1,5 +1,4 @@
 -------2019.10.13（己亥年九月十五）Sun---------
-
 netty客户端编程
 BootStrap
 EventLoopGroup接口实现类 NioEventLoopGroup（本质是一个线程池）
@@ -12,6 +11,11 @@ Lombok插件
 http://yapi.demo.qunar.com/
 高效、易用、功能强大的API管理平台
 旨在为开发、产品、测试人员提供更优雅的接口管理服务
+
+
+1、Template模式
+2、State模式？
+3、Intepreter
 
 
 -------2019.10.12（己亥年九月十四）Sat---------
