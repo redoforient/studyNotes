@@ -1,3 +1,13 @@
+-------2019.10.14（己亥年九月十六）Mon---------
+知识点1：DevOps
+ DevOps一词的来自于Development和Operations的组合，突出重视软件开发人员和运维人员的沟通合作，通过自动化流程来使得软件构建、测试、发布更加快捷、频繁和可靠。
+ DevOps希望做到的是软件产品交付过程中IT工具链的打通，使得各个团队减少时间损耗，更加高效地协同工作。
+ 现代化的DevOps工具，如Chef、Docker、Ansible、Packer、Troposphere、Consul、Jenkins、SonarQube、AWS等
+
+
+
+
+
 -------2019.10.13（己亥年九月十五）Sun---------
 netty客户端编程
 BootStrap
