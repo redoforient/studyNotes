@@ -4,6 +4,25 @@
  DevOps希望做到的是软件产品交付过程中IT工具链的打通，使得各个团队减少时间损耗，更加高效地协同工作。
  现代化的DevOps工具，如Chef、Docker、Ansible、Packer、Troposphere、Consul、Jenkins、SonarQube、AWS等
 
+知识点：Netty
+https://netty.io/wiki/related-articles.html
+Netty:Bootstrap的handler和childHandler
+
+netty官网概览
+https://netty.io/4.0/xref/
+
+
+
+学习目标：
+有较扎实的Java基础知识，能够熟练使用Java相关技术进行独立开发；
+熟悉Java多线程、并发库、熟悉TCP/IP协议，NIO，熟悉Netty框架，基础的算法和数据结构；
+熟悉MySql数据库及MySql的优化，熟悉protobuf协议；
+熟悉Maven构建工具；
+
+
+精通Java，多线程编程，消息系统，数据库，分布式应用等技术，对SOA框架有较深刻的理解；
+熟悉网络编程，具有设计和开发对外API接口经验和能力；
+有Hadoop、Spark、Hive等相关经验者优先；
 
 
 
