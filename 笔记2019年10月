@@ -1,3 +1,9 @@
+-------2019.10.15（己亥年九月十七）Tue---------
+设计模式：Adapter模式
+ //将字节流转化为字符流	 
+ InputStream in = new FileInputStream("C:/hello.txt");
+ InputStreamReader isr = new InputStreamReader(in);
+
 -------2019.10.14（己亥年九月十六）Mon---------
 知识点1：DevOps
  DevOps一词的来自于Development和Operations的组合，突出重视软件开发人员和运维人员的沟通合作，通过自动化流程来使得软件构建、测试、发布更加快捷、频繁和可靠。
@@ -88,6 +94,12 @@ All Implemented Interfaces:Runnable, Future<V>, RunnableFuture<V>
 GoF《设计模式》
 Facade模式（封装内部逻辑细节，对外提供简化接口）
 Decorator模式：不改变原对象的前提下，扩展原对象的功能（不使用继承）
+	File f1 = new File("D:\\Rain.txt");
+	FileInputStream fis = new FileInputStream(f1);
+	BufferedInputStream bis = new BufferedInputStream(fis);//为FileInputStream增加了缓冲功能
+
+
+
 Proxy模式：
 
 WeakHashMap
