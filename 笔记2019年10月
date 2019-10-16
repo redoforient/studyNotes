@@ -1,3 +1,19 @@
+-------2019.10.16（己亥年九月十八）Web---------
+设计模式：Chain Of Responsibility
+javax.servlet
+Interface Filter
+doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+          The doFilter method of the Filter is called by the container each time a request/response pair is passed through the chain due to a client request for a resource at the end of the chain.
+		  
+javax.servlet
+Interface FilterChain
+
+
+
+
+
+
+
 -------2019.10.15（己亥年九月十七）Tue---------
 设计模式：Adapter模式
  //将字节流转化为字符流	 
@@ -70,7 +86,22 @@ Partition tolerance 分区容错性
 Proxy模式：
 JDK动态代理    关键API:Proxy InvocationHandler  缺点：被代理对象必须实现接口
 cglib动态代理  关键API:Enhancer+MethodInterceptor 优点：被代理对象无需实现接口，使用简单 缺点：不能代理final对象
-org.objectweb.asm 小而快速的字节码操作框架     缺点：使用复杂
+org.objectweb.asm 小而快速的字节码操作框架     缺点：直接修改字节码，使用复杂
+asm官网
+https://gitlab.ow2.org/asm/asm
+https://asm.ow2.io/
+
+
+javaassist简要介绍
+和AOP有什么关系和区别？CGLib是动态代理的经典类库，其底层实现使用ASM
+
+Java bytecode engineering toolkit http://www.javassist.org
+javassist底层实现类似ASM
+Javassist (JAVA programming ASSISTant) 是在 Java 中编辑字节码的类库;它使 Java 程序能够在运行时定义一个新类, 并在 JVM 加载时修改类文件。
+我们常用到的动态特性主要是反射，在运行时查找对象属性、方法，修改作用域，通过方法名称调用方法等。
+在线的应用不会频繁使用反射，因为反射的性能开销较大。其实还有一种和反射一样强大的特性，但是开销却很低，它就是Javassit。
+与其他类似的字节码编辑器不同, Javassist 提供了两个级别的 API: 源级别和字节码级别。 
+如果用户使用源级 API, 他们可以编辑类文件, 而不知道 Java 字节码的规格。 整个 API 只用 Java 语言的词汇来设计。 您甚至可以以源文本的形式指定插入的字节码; Javassist 在运行中编译它
 
 
 java.lang.instrument
