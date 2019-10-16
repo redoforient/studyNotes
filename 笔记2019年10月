@@ -1,4 +1,15 @@
 -------2019.10.15（己亥年九月十七）Tue---------
+多线程高并发
+redis
+SpringCloud微服务
+
+直播平台
+客户端：obs studio
+服务端：nginx+rtmp插件
+
+
+
+
 设计模式：Adapter模式
  //将字节流转化为字符流	 
  InputStream in = new FileInputStream("C:/hello.txt");
