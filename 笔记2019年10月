@@ -1,3 +1,39 @@
+-------2019.10.17（己亥年九月十九）Thu---------
+JUC学习
+https://www.battleheart.cn
+
+Online Judge
+https://www.cnblogs.com/weiyinfu/p/10708677.html
+
+CompletableFuture
+
+Vector---HashTable 自带锁
+
+DelayQueue：按照等待时间进行排序
+PriorityQueue：优先队列
+
+Queue对于线程友好的API,offer、peek、poll
+BlockingQueue提供put、take阻塞方法（方便实现生产-消费者模型）
+
+BlockingQueue：
+LinkedBlockingQueue(无界队列）
+ArrayBlockingQueue(有界队列)
+队列满了
+add阻塞
+offer不阻塞直接返回false
+
+
+
+底层阻塞是通过LockSupport.park()
+ReentrantLock.
+
+
+SynchronousQueue（同步队列）队列长度为0，专门用作线程间交换数据
+TransferQueue（传递队列）装完--等待---取走
+
+Exchanger.change
+
+
 -------2019.10.16（己亥年九月十八）Web---------
 设计模式：Chain Of Responsibility
 javax.servlet
