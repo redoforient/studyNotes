@@ -1,3 +1,39 @@
+-------2019.10.17（己亥年九月十九）Thu---------
+JUC学习
+https://www.battleheart.cn
+
+Online Judge
+https://www.cnblogs.com/weiyinfu/p/10708677.html
+
+CompletableFuture
+
+Vector---HashTable 自带锁
+
+DelayQueue：按照等待时间进行排序
+PriorityQueue：优先队列
+
+Queue对于线程友好的API,offer、peek、poll
+BlockingQueue提供put、take阻塞方法（方便实现生产-消费者模型）
+
+BlockingQueue：
+LinkedBlockingQueue(无界队列）
+ArrayBlockingQueue(有界队列)
+队列满了
+add阻塞
+offer不阻塞直接返回false
+
+
+
+底层阻塞是通过LockSupport.park()
+ReentrantLock.
+
+
+SynchronousQueue（同步队列）队列长度为0，专门用作线程间交换数据
+TransferQueue（传递队列）装完--等待---取走
+
+Exchanger.change
+
+
 -------2019.10.16（己亥年九月十八）Web---------
 设计模式：Chain Of Responsibility
 javax.servlet
@@ -10,8 +46,42 @@ Interface FilterChain
 
 
 
+设计模式：
+1、Iterator模式
+2、Visitor模式----结合asm看visitor模式
+3、Builder模式
 
 
+
+ThreadLocal
+WeakReference<M> m = new WeakReference<>(new M());
+经过System.gc();后，m就被垃圾回收
+
+作业：
+WeakHashMap的用处
+读AQS unlock的源码
+
+
+ThreadLocal
+	static class ThreadLocalMap 
+			static class Entry extends WeakReference<ThreadLocal<?>>
+					Entry(ThreadLocal<?> k, Object v)
+					
+
+
+ThreadLocal<M> tl = new ThreadLocal<>();
+tl.set(new M());
+//!!!使用ThreadLocal之后，记得remove
+tl.remove();
+
+
+
+容器-Vector-Hashtable
+CopyOnWriteList
+ConcurrentHashMap
+ConcurrentSkipListMap
+BlockingQueue
+目标：为ThreadPool做准备
 
 -------2019.10.15（己亥年九月十七）Tue---------
 多线程高并发
@@ -115,6 +185,7 @@ Javassist (JAVA programming ASSISTant) 是在 Java 中编辑字节码的类库;�
 
 
 java.lang.instrument
+
 提供允许 Java 编程语言代理检测运行在 JVM 上的程序的服务
 
 
@@ -144,6 +215,8 @@ Decorator模式：不改变原对象的前提下，扩展原对象的功能（�
 Proxy模式：
 
 WeakHashMap
+
+
 
 
 栈stack内存--->存储函数的主体和变量名
