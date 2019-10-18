@@ -1,7 +1,55 @@
--------2019.10.17（己亥年九月十九）Thu---------
-ThreadPool：多见于线程并发，阻塞时延比较长的，这种线程池比较常用，一般设置的线程个数根据业务性能要求会比较多。
-ForkJoinPool：特点是少量线程完成大量任务，一般用于非阻塞的，能快速处理的业务，或阻塞时延比较少的。
+-------2019.10.18（己亥年九月二十）Fri---------
+ThreadPoolExecutor线程池
+1、小于核心线程，直接新建线程
+2、核心线程都在工作，加入任务队列
+3、任务队列满了，新建非核心线程去执行
+4、非核心线程满了且都在运行状态，若再有任务过来，则调用拒绝策略
 
+
+
+设计模式：装饰者模式（Decorator pattern）
+java.lang.Object
+  继承者 java.io.InputStream
+      继承者 java.io.FilterInputStream
+所有已实现的接口：
+Closeable
+直接已知子类：
+BufferedInputStream, CheckedInputStream, CipherInputStream, DataInputStream, DeflaterInputStream, 
+DigestInputStream, InflaterInputStream, LineNumberInputStream, ProgressMonitorInputStream, PushbackInputStream
+
+
+范例：原型InputStream我们只能读取byte，现在直接从stream中读取int，String等类型
+DataOutputStream dos = new DataOutputStream(new FileOutputStream("D:\\java.txt"));
+dos.writeInt(1234567);
+DataInputStream dis = new DataInputStream(new FileInputStream("D:\\java.txt"));
+System.out.println(dis.readInt());
+dis.close();
+dos.close();
+
+File file = new File("file.txt");
+InputStream in =new BufferedInputStream(new FileInputStream(file), 512);
+// 从字节流中读取5个字节。“abcde”，a对应0x61，b对应0x62，依次类推...
+for (int i=0; i<len; if="">= 0) {
+	// 读取“字节流的下一个字节”
+	int tmp = in.read();
+	System.out.printf("%d : 0x%s\n", i, Integer.toHexString(tmp));
+	}
+}
+
+
+FileInputStream fileInputStream = new FileInputStream(new File("readme.txt"));
+	BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream);
+	byte[] bytes = new byte[1024];
+	while(bufferedInputStream.read(bytes)!=-1){
+		System.out.println(new String(bytes));
+	}
+ 
+ 
+ 
+ 
+
+
+-------2019.10.17（己亥年九月十九）Thu---------
 JUC学习
 https://www.battleheart.cn
 
@@ -85,6 +133,7 @@ ConcurrentHashMap
 ConcurrentSkipListMap
 BlockingQueue
 目标：为ThreadPool做准备
+
 
 -------2019.10.15（己亥年九月十七）Tue---------
 多线程高并发
