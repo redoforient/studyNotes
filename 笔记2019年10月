@@ -1,3 +1,28 @@
+-------2019.10.19（己亥年九月廿一）Sat---------
+设计模式：
+memento模式、
+原型模式（Prototype）：实现cloneable接口clone的方法
+JMH JAVA吞吐量测试开发利器
+Disruptor简单入门
+
+
+Guava的Optional
+com.google.common.util.concurrent.RateLimiter.java
+
+https://yq.aliyun.com/articles/665116?utm_content=m_1000022476
+
+Android API
+https://developer.android.google.cn/reference
+
+JDK API
+http://tool.oschina.net/apidocs/apidoc?api=jdk-zh
+
+OPEN JDK
+http://openjdk.java.net/
+
+Google guava
+https://github.com/google/guava
+
 -------2019.10.18（己亥年九月二十）Fri---------
 RPC
 
