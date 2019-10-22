@@ -1,4 +1,17 @@
+-------2019.10.22（己亥年九月廿四）Tue---------
+坦克大战
+Disruptor：
+
+java基础知识和架构
+http://how2j.cn?p=54321
+
+
 -------2019.10.21（己亥年九月廿三）Mon---------
+数据结构可视化
+https://visualgo.net/zh
+https://www.geeksforgeeks.org/stack-data-structure/
+
+
 访问量PV:(Page View)
 
 TPS吞吐量(Throughput Per Second)：吞吐量是指系统在单位时间内处理请求的数量。
@@ -13,6 +26,12 @@ QPS
 ( 3000000 * 0.8 ) / (86400 * 0.2 ) = 139 (QPS)。
 一般需要达到139QPS，因为是峰值。
 
+
+
+LMAX - How to Do 100K TPS at Less than 1ms Latency
+https://www.infoq.com/presentations/LMAX/
+
+https://lmax-exchange.github.io/disruptor/
 
 
 
