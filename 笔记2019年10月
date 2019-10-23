@@ -1,3 +1,89 @@
+-------2019.10.23（己亥年九月廿五）Web---------
+
+注解的原理：反射
+retrofit：动态代理
+
+Python学习
+https://www.pypypy.cn/#/apps/1/lecture/5cd9765519bbcf0001554795
+
+
+https://fir.im/docs/publish
+
+
+发送消息到钉钉
+https://ding-doc.dingtalk.com/doc#/serverapi2/qgx3dh
+
+Google访问
+https://crimson-boat-1577.minatoaqua.workers.dev/-----https://www.google.com/
+
+
+Android开发：
+api等同于废弃的compile等价于public
+implementation   private
+api和compile一样 可以在父项目引用
+
+groovy语法
+http://www.groovy-lang.org/style-guide.html#_omitting_parentheses
+闭包
+
+阿里maven仓库
+https://maven.aliyun.com/mvn/view
+
+
+
+本地仓库方案
+nexus
+代理方案
+JFrog Artifactory Pro：支持maven、gradle
+组件化
+
+Repository	Key	Type	URL
+aliyun_google m Maven https://maven.aliyun.com/repository/google
+aliyun center https://maven.aliyun.com/repository/jcenter
+aliyun public m Maven http: //maven.allyun.com/nexus/content/groups/public
+
+让我们一起见证 Artifactory和 Retrofit在Gradle中的神奇效果吧
+Domain specific language
+移动架构师质
+搬运工3,55,895%
+中年危机加班
+Grade 3.0 compile
+Compile api public
+implementation. Private
+不负责任
+基础
+通用 Gradle android/ spring boot/ spring cloud
+			artifactory ios/ android/php/java
+1、完成这个插件; retrofit+gradle自动上传包到fir并且发送消息到丁丁
+2、 github跑不起来;很慢; Artfactory pro
+
+Gradle重要概念（从顶层到底层）
+Plugin
+Hooks
+Tasks
+Project
+Closure
+Wrapper
+
+老师帮助我建立架构
+
+
+
+
+Disruptor
+https://blog.csdn.net/qq_19558705/article/details/77247912
+	/ C1----\
+P1<			  > C3
+	\ C2----/
+四边菱形任务、六边菱形任务执行
+
+
+
+架构师技术图谱，助你早日成为架构师
+https://github.com/toutiaoio/awesome-architecture?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io#282
+
+
+
 -------2019.10.22（己亥年九月廿四）Tue---------
 Disruptor并发框架
 https://www.bilibili.com/video/av57885285?from=search&seid=1251517418409342493
