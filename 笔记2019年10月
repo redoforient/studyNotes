@@ -1,3 +1,21 @@
+-------2019.10.24（己亥年九月廿七）Fri---------
+
+
+
+
+-------2019.10.24（己亥年九月廿六）Thu---------
+
+今日主要熟悉网易云信SDK
+
+
+学习Python语法：
+1、''、""、''' '''用法（打印皮卡丘）
+2、str() int() float()方法
+3、if elif else 语法（强制缩进）
+
+
+重听bilibili网站Disruptor、RingBuffer讲座视频
+
 -------2019.10.23（己亥年九月廿五）Web---------
 
 注解的原理：反射
@@ -54,6 +72,8 @@ implementation. Private
 基础
 通用 Gradle android/ spring boot/ spring cloud
 			artifactory ios/ android/php/java
+
+			
 1、完成这个插件; retrofit+gradle自动上传包到fir并且发送消息到丁丁
 2、 github跑不起来;很慢; Artfactory pro
 
@@ -66,6 +86,7 @@ Closure
 Wrapper
 
 老师帮助我建立架构
+
 
 
 
