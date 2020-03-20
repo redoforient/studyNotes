@@ -1,3 +1,74 @@
+-------2020.3.20（庚子年二月廿七）Fri---------
+Proguard混淆注解@Keep
+
+
+-------2020.3.19（庚子年二月廿六）Thu---------
+大端、小端
+
+
+
+MMKV—强大的存储工具
+一款比sharepreferences稍重，远远小于数据库量级，但性能卓越的存储框架，由腾讯旗下的微信开发
+
+
+SpUtil多样加密存储，兼容android9.0
+http://www.demodashi.com/demo/15058.html
+
+LiveEventBus
+https://github.com/JeremyLiao/LiveEventBus/blob/master/docs/DIRECTION_1_3.md
+
+-------2020.3.17（庚子年二月廿四）Tue---------
+CompletableFuture
+
+Callable Future 
+
+FutureTask
+java.util.concurrent.FutureTask<V>
+类型参数：
+V - 此 FutureTask 的 get 方法所返回的结果类型。
+所有已实现的接口：
+Runnable, Future<V>, RunnableFuture<V>
+public class FutureTask<V> extends Object implements RunnableFuture<V>
+
+
+public interface RunnableFuture<V>  extends Runnable, Future<V>
+作为 Runnable 的 Future。成功执行 run 方法可以完成 Future 并允许访问其结果。
+     
+
+
+-------2020.3.16（庚子年二月廿三）Mon---------
+onTouch与onClick事件分发处理
+
+DecorView处理事件  ViewGroup
+
+
+
+-------2020.3.12（庚子年二月十九）Thu---------
+ transient 关键字被用来表示变量将不被序列化处理
+
+异步加载布局-AsyncLayoutInflater
+
+
+-------2020.3.11（庚子年二月十八）Wed---------
+JAVA8 HashMap是由数组+链表+红黑树组成
+
+将develop分支合并到master主干中
+$git checkout master
+$git merge develop
+
+
+keyWord：张一鸣---延迟满足感
+
+-------2020.3.10（庚子年二月十七）Tue---------
+public static Class<?> analysisClassInfo(Object object){
+	//getGenericSuperclass可以得到包含原始类型，参数化类型，数组类型，类型变量，基本类型
+	Type genType = object.getClass().getGenericSuperclass();
+	//获取参数化类型(<Resule>)
+	Type[] params = ((ParameterizedType) genType).getActualTypeArguments(); //强转换为参数类型  
+	return (Class<?>)params[0];
+}
+
+
 -------2019.10.24（己亥年九月廿七）Fri---------
 
 
