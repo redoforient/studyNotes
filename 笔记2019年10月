@@ -1,9 +1,16 @@
+----2020.3.22（庚子年二月廿九）Sunday----
+java.lang.Class<T>
+boolean isAssignableFrom(Class<?> cls)
+ 判定此 Class 对象所表示的类或接口与指定的 Class 参数所表示的类或接口是否相同，或是否是其超类或超接口
+
+
+
 -------2020.3.20（庚子年二月廿七）Fri---------
 Proguard混淆注解@Keep
 
 
 -------2020.3.19（庚子年二月廿六）Thu---------
-大端、小端
+二进制表示法：大端、小端
 
 
 
@@ -20,7 +27,7 @@ https://github.com/JeremyLiao/LiveEventBus/blob/master/docs/DIRECTION_1_3.md
 -------2020.3.17（庚子年二月廿四）Tue---------
 CompletableFuture
 
-Callable Future 
+Callable Future
 
 FutureTask
 java.util.concurrent.FutureTask<V>
@@ -33,7 +40,7 @@ public class FutureTask<V> extends Object implements RunnableFuture<V>
 
 public interface RunnableFuture<V>  extends Runnable, Future<V>
 作为 Runnable 的 Future。成功执行 run 方法可以完成 Future 并允许访问其结果。
-     
+
 
 
 -------2020.3.16（庚子年二月廿三）Mon---------
@@ -41,6 +48,27 @@ onTouch与onClick事件分发处理
 
 DecorView处理事件  ViewGroup
 
+----2020.3.15（庚子年二月廿二）Sunday----
+Google Breakpad开源库来采集native的crash日志
+
+jclasslib插件查看字节码
+
+
+
+---2020.3.14（庚子年二月廿一）Saturday---
+
+#Android组件化
+
+apt 注解处理工具
+javapoet源代码生成
+AutoService注解
+
+glide、eventbus、dagger
+
+dex类加载、反射
+
+dart语言开发库
+https://pub.dev/
 
 
 -------2020.3.12（庚子年二月十九）Thu---------
@@ -64,7 +92,7 @@ public static Class<?> analysisClassInfo(Object object){
 	//getGenericSuperclass可以得到包含原始类型，参数化类型，数组类型，类型变量，基本类型
 	Type genType = object.getClass().getGenericSuperclass();
 	//获取参数化类型(<Resule>)
-	Type[] params = ((ParameterizedType) genType).getActualTypeArguments(); //强转换为参数类型  
+	Type[] params = ((ParameterizedType) genType).getActualTypeArguments(); //强转换为参数类型
 	return (Class<?>)params[0];
 }
 
@@ -144,7 +172,7 @@ implementation. Private
 通用 Gradle android/ spring boot/ spring cloud
 			artifactory ios/ android/php/java
 
-			
+
 1、完成这个插件; retrofit+gradle自动上传包到fir并且发送消息到丁丁
 2、 github跑不起来;很慢; Artfactory pro
 
@@ -276,7 +304,7 @@ java.lang.Object
 所有已实现的接口：
 Closeable
 直接已知子类：
-BufferedInputStream, CheckedInputStream, CipherInputStream, DataInputStream, DeflaterInputStream, 
+BufferedInputStream, CheckedInputStream, CipherInputStream, DataInputStream, DeflaterInputStream,
 DigestInputStream, InflaterInputStream, LineNumberInputStream, ProgressMonitorInputStream, PushbackInputStream
 
 
@@ -305,10 +333,10 @@ FileInputStream fileInputStream = new FileInputStream(new File("readme.txt"));
 	while(bufferedInputStream.read(bytes)!=-1){
 		System.out.println(new String(bytes));
 	}
- 
- 
- 
- 
+
+
+
+
 
 
 -------2019.10.17（己亥年九月十九）Thu---------
@@ -353,7 +381,7 @@ javax.servlet
 Interface Filter
 doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
           The doFilter method of the Filter is called by the container each time a request/response pair is passed through the chain due to a client request for a resource at the end of the chain.
-		  
+
 javax.servlet
 Interface FilterChain
 
@@ -376,10 +404,10 @@ WeakHashMap的用处
 
 
 ThreadLocal
-	static class ThreadLocalMap 
+	static class ThreadLocalMap
 			static class Entry extends WeakReference<ThreadLocal<?>>
 					Entry(ThreadLocal<?> k, Object v)
-					
+
 
 
 ThreadLocal<M> tl = new ThreadLocal<>();
@@ -410,7 +438,7 @@ SpringCloud微服务
 
 
 设计模式：Adapter模式
- //将字节流转化为字符流	 
+ //将字节流转化为字符流
  InputStream in = new FileInputStream("C:/hello.txt");
  InputStreamReader isr = new InputStreamReader(in);
 
@@ -494,7 +522,7 @@ javassist底层实现类似ASM
 Javassist (JAVA programming ASSISTant) 是在 Java 中编辑字节码的类库;它使 Java 程序能够在运行时定义一个新类, 并在 JVM 加载时修改类文件。
 我们常用到的动态特性主要是反射，在运行时查找对象属性、方法，修改作用域，通过方法名称调用方法等。
 在线的应用不会频繁使用反射，因为反射的性能开销较大。其实还有一种和反射一样强大的特性，但是开销却很低，它就是Javassit。
-与其他类似的字节码编辑器不同, Javassist 提供了两个级别的 API: 源级别和字节码级别。 
+与其他类似的字节码编辑器不同, Javassist 提供了两个级别的 API: 源级别和字节码级别。
 如果用户使用源级 API, 他们可以编辑类文件, 而不知道 Java 字节码的规格。 整个 API 只用 Java 语言的词汇来设计。 您甚至可以以源文本的形式指定插入的字节码; Javassist 在运行中编译它
 
 

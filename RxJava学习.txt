@@ -1,0 +1,24 @@
+RxJava 有四个基本概念：
+Observable (可观察者，即被观察者)、 
+Observer (观察者)、 
+subscribe (订阅)、
+事件
+
+
+Observable 和 Observer 通过 subscribe() 方法实现订阅关系，
+从而 Observable 可以在需要的时候发出事件来通知 Observer。
+
+在android开发中
+Observable 可以是一个网络请求,Subscriber来显示请求结果
+Observable 可以是一个数据查询,Subscriber来显示查询结果 
+Observable 可以是一个按钮的点击事件,Subscriber来响应点击事件
+Observable 可以是一个图片文件的加载解析,Subscriber可以用来展示处理之后的图片
+
+
+
+
+ RxJava 的事件回调方法除了普通事件 onNext() （相当于 onClick() / onEvent()）之外，
+ 还定义了两个特殊的事件：onCompleted() 和 onError()。
+ 
+创建一个被观察者,创建一个观察者,在被观察中调用三个方法,来通知观察者
+首先onNext 可以被多次调用,onCompleted调用成功之后,如果中间异常报错之后,会自动回调onError, 成功和失败只能任选其一！
