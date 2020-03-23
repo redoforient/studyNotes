@@ -1,4 +1,29 @@
 ----2020.3.23（庚子年二月三十）Monday----
+
+okio：缓存机制
+segment、segmentPool，对象池
+
+
+Gson避免内存抖动
+TypeAdapter+对象池
+
+protobuf + mmkv
+内存映射filechannel
+***********
+
+零拷贝技术分类
+Linux 中的零拷贝技术主要有下面这几种：
+直接 I/O、mmap、sendfile、splice
+-------
+mars的日志模块 xlog
+
+
+魔数：
+魔数有两个含义
+一指用来判断文件类型的魔数；
+二指程序代码中的魔数，也称魔法值。
+
+
 java代理（静态、动态）
 
 java.lang.reflect 
