@@ -1,3 +1,55 @@
+----2020.3.23（庚子年二月三十）Monday----
+java代理（静态、动态）
+
+java.lang.reflect 
+接口 InvocationHandler
+public interface InvocationHandlerInvocationHandler 是代理实例的调用处理程序 实现的接口。 
+每个代理实例都具有一个关联的调用处理程序。对代理实例调用方法时，将对方法调用进行编码并将其指派到它的调用处理程序的 invoke 方法。 
+方法摘要 
+ Object invoke(Object proxy, Method method, Object[] args) 
+          在代理实例上处理方法调用并返回结果。 
+		  
+	************	  
+java.lang.reflect 
+类 Proxy
+java.lang.Object
+  继承者 java.lang.reflect.Proxy
+  
+static Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces, InvocationHandler h)  
+创建某一接口 Foo 的代理（更简单的方法） ： 
+     Foo f = (Foo) Proxy.newProxyInstance(Foo.class.getClassLoader(),
+                                          new Class[] { Foo.class },
+                                          handler);
+
+JAVA动态代理
+参考资料：https://www.jianshu.com/p/9bcac608c714
+
+
+java8中接口可以有实现方法 使用default修饰
+
+
+
+面向对象的三大基本特征，五大基本原则
+https://www.cnblogs.com/fzz9/p/8973315.html#%E4%BA%8C%E4%BA%94%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99
+
+一、三大基本特征：封装、继承、多态
+　　1、封装
+　　2、继承
+　　3、多态
+四大特征的话，增加“抽象”特征
+二、五大基本原则
+　　1、单一职责原则（SRP）
+　　2、开放封闭原则（OCP）
+　　3、里氏替换原则（LSP）
+　　4、依赖倒置原则（DIP）
+　　5、接口隔离原则（ISP）
+
+
+
+jsp八大内置对象
+四大域，九大内置对象
+
+
 ----2020.3.22（庚子年二月廿九）Sunday----
 java.lang.Class<T>
 boolean isAssignableFrom(Class<?> cls)
