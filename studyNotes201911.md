@@ -1,3 +1,191 @@
+----2020.3.25（庚子年三月初二）Monday----
+JS异步编程之Promise
+
+
+
+----2020.3.24（庚子年三月初一）Tuesday----
+前端三大框架：
+AngularJS(Google2009)、React(Facebook2013开源)、Vue.js(尤雨溪2014年2月)
+
+
+
+----2020.3.23（庚子年二月三十）Monday----
+
+okio：缓存机制
+segment、segmentPool，对象池
+
+
+Gson避免内存抖动
+TypeAdapter+对象池
+
+protobuf + mmkv
+内存映射filechannel
+***********
+
+零拷贝技术分类
+Linux 中的零拷贝技术主要有下面这几种：
+直接 I/O、mmap、sendfile、splice
+-------
+mars的日志模块 xlog
+
+
+魔数：
+魔数有两个含义
+一指用来判断文件类型的魔数；
+二指程序代码中的魔数，也称魔法值。
+
+
+java代理（静态、动态）
+
+java.lang.reflect 
+接口 InvocationHandler
+public interface InvocationHandlerInvocationHandler 是代理实例的调用处理程序 实现的接口。 
+每个代理实例都具有一个关联的调用处理程序。对代理实例调用方法时，将对方法调用进行编码并将其指派到它的调用处理程序的 invoke 方法。 
+方法摘要 
+ Object invoke(Object proxy, Method method, Object[] args) 
+          在代理实例上处理方法调用并返回结果。 
+		  
+	************	  
+java.lang.reflect 
+类 Proxy
+java.lang.Object
+  继承者 java.lang.reflect.Proxy
+  
+static Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces, InvocationHandler h)  
+创建某一接口 Foo 的代理（更简单的方法） ： 
+     Foo f = (Foo) Proxy.newProxyInstance(Foo.class.getClassLoader(),
+                                          new Class[] { Foo.class },
+                                          handler);
+
+JAVA动态代理
+参考资料：https://www.jianshu.com/p/9bcac608c714
+
+
+java8中接口可以有实现方法 使用default修饰
+
+
+
+面向对象的三大基本特征，五大基本原则
+https://www.cnblogs.com/fzz9/p/8973315.html#%E4%BA%8C%E4%BA%94%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99
+
+一、三大基本特征：封装、继承、多态
+　　1、封装
+　　2、继承
+　　3、多态
+四大特征的话，增加“抽象”特征
+二、五大基本原则
+　　1、单一职责原则（SRP）
+　　2、开放封闭原则（OCP）
+　　3、里氏替换原则（LSP）
+　　4、依赖倒置原则（DIP）
+　　5、接口隔离原则（ISP）
+
+
+
+jsp八大内置对象
+四大域，九大内置对象
+
+
+----2020.3.22（庚子年二月廿九）Sunday----
+java.lang.Class<T>
+boolean isAssignableFrom(Class<?> cls)
+ 判定此 Class 对象所表示的类或接口与指定的 Class 参数所表示的类或接口是否相同，或是否是其超类或超接口
+
+
+
+-------2020.3.20（庚子年二月廿七）Fri---------
+Proguard混淆注解@Keep
+
+
+-------2020.3.19（庚子年二月廿六）Thu---------
+二进制表示法：大端、小端
+
+
+
+MMKV—强大的存储工具
+一款比sharepreferences稍重，远远小于数据库量级，但性能卓越的存储框架，由腾讯旗下的微信开发
+
+
+SpUtil多样加密存储，兼容android9.0
+http://www.demodashi.com/demo/15058.html
+
+LiveEventBus
+https://github.com/JeremyLiao/LiveEventBus/blob/master/docs/DIRECTION_1_3.md
+
+-------2020.3.17（庚子年二月廿四）Tue---------
+CompletableFuture
+
+Callable Future
+
+FutureTask
+java.util.concurrent.FutureTask<V>
+类型参数：
+V - 此 FutureTask 的 get 方法所返回的结果类型。
+所有已实现的接口：
+Runnable, Future<V>, RunnableFuture<V>
+public class FutureTask<V> extends Object implements RunnableFuture<V>
+
+
+public interface RunnableFuture<V>  extends Runnable, Future<V>
+作为 Runnable 的 Future。成功执行 run 方法可以完成 Future 并允许访问其结果。
+
+
+
+-------2020.3.16（庚子年二月廿三）Mon---------
+onTouch与onClick事件分发处理
+
+DecorView处理事件  ViewGroup
+
+----2020.3.15（庚子年二月廿二）Sunday----
+Google Breakpad开源库来采集native的crash日志
+
+jclasslib插件查看字节码
+
+
+
+---2020.3.14（庚子年二月廿一）Saturday---
+
+#Android组件化
+
+apt 注解处理工具
+javapoet源代码生成
+AutoService注解
+
+glide、eventbus、dagger
+
+dex类加载、反射
+
+dart语言开发库
+https://pub.dev/
+
+
+-------2020.3.12（庚子年二月十九）Thu---------
+ transient 关键字被用来表示变量将不被序列化处理
+
+异步加载布局-AsyncLayoutInflater
+
+
+-------2020.3.11（庚子年二月十八）Wed---------
+JAVA8 HashMap是由数组+链表+红黑树组成
+
+将develop分支合并到master主干中
+$git checkout master
+$git merge develop
+
+
+keyWord：张一鸣---延迟满足感
+
+-------2020.3.10（庚子年二月十七）Tue---------
+public static Class<?> analysisClassInfo(Object object){
+	//getGenericSuperclass可以得到包含原始类型，参数化类型，数组类型，类型变量，基本类型
+	Type genType = object.getClass().getGenericSuperclass();
+	//获取参数化类型(<Resule>)
+	Type[] params = ((ParameterizedType) genType).getActualTypeArguments(); //强转换为参数类型
+	return (Class<?>)params[0];
+}
+
+
+
 `----------2019年11月9日 Saturday---------`
 
 
@@ -6,5 +194,487 @@
 
 
 `----------2019年11月2日 Saterday---------`
-
 **Android API --->HandlerThread**
+
+
+
+
+-------2019.10.24（己亥年九月廿七）Fri---------
+
+
+
+
+-------2019.10.24（己亥年九月廿六）Thu---------
+
+今日主要熟悉网易云信SDK
+
+
+学习Python语法：
+1、''、""、''' '''用法（打印皮卡丘）
+2、str() int() float()方法
+3、if elif else 语法（强制缩进）
+
+
+重听bilibili网站Disruptor、RingBuffer讲座视频
+
+-------2019.10.23（己亥年九月廿五）Web---------
+
+注解的原理：反射
+retrofit：动态代理
+
+Python学习
+https://www.pypypy.cn/#/apps/1/lecture/5cd9765519bbcf0001554795
+
+
+https://fir.im/docs/publish
+
+
+发送消息到钉钉
+https://ding-doc.dingtalk.com/doc#/serverapi2/qgx3dh
+
+Google访问
+https://crimson-boat-1577.minatoaqua.workers.dev/-----https://www.google.com/
+
+
+Android开发：
+api等同于废弃的compile等价于public
+implementation   private
+api和compile一样 可以在父项目引用
+
+groovy语法
+http://www.groovy-lang.org/style-guide.html#_omitting_parentheses
+闭包
+
+阿里maven仓库
+https://maven.aliyun.com/mvn/view
+
+
+
+本地仓库方案
+nexus
+代理方案
+JFrog Artifactory Pro：支持maven、gradle
+组件化
+
+Repository	Key	Type	URL
+aliyun_google m Maven https://maven.aliyun.com/repository/google
+aliyun center https://maven.aliyun.com/repository/jcenter
+aliyun public m Maven http: //maven.allyun.com/nexus/content/groups/public
+
+让我们一起见证 Artifactory和 Retrofit在Gradle中的神奇效果吧
+Domain specific language
+移动架构师质
+搬运工3,55,895%
+中年危机加班
+Grade 3.0 compile
+Compile api public
+implementation. Private
+不负责任
+基础
+通用 Gradle android/ spring boot/ spring cloud
+			artifactory ios/ android/php/java
+
+
+1、完成这个插件; retrofit+gradle自动上传包到fir并且发送消息到丁丁
+2、 github跑不起来;很慢; Artfactory pro
+
+Gradle重要概念（从顶层到底层）
+Plugin
+Hooks
+Tasks
+Project
+Closure
+Wrapper
+
+老师帮助我建立架构
+
+
+
+
+
+Disruptor
+https://blog.csdn.net/qq_19558705/article/details/77247912
+	/ C1----\
+P1<			  > C3
+	\ C2----/
+四边菱形任务、六边菱形任务执行
+
+
+
+架构师技术图谱，助你早日成为架构师
+https://github.com/toutiaoio/awesome-architecture?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io#282
+
+
+
+-------2019.10.22（己亥年九月廿四）Tue---------
+Disruptor并发框架
+https://www.bilibili.com/video/av57885285?from=search&seid=1251517418409342493
+
+RingBuffer单独使用、
+SequenceBarrier
+
+坦克大战
+Disruptor：
+
+java基础知识和架构
+模仿天猫整站SSM
+http://how2j.cn?p=54321
+
+
+-------2019.10.21（己亥年九月廿三）Mon---------
+数据结构可视化
+https://visualgo.net/zh
+https://www.geeksforgeeks.org/stack-data-structure/
+
+
+访问量PV:(Page View)
+
+TPS吞吐量(Throughput Per Second)：吞吐量是指系统在单位时间内处理请求的数量。
+
+QPS每秒查询率(Query Per Second)
+每秒查询率QPS是对一个特定的查询服务器在规定时间内所处理流量多少的衡量标准，在因特网上，作为域名系统服务器的机器的性能经常用每秒查询率来衡量。对应fetches/sec，即每秒的响应请求数，也即是最大吞吐能力。 （看来是类似于TPS，只是应用于特定场景的吞吐量）
+QPS
+原理：每天80%的访问集中在20%的时间里，这20%时间叫做峰值时间。
+公式：( 总PV数 * 80% ) / ( 每天秒数 * 20% ) = 峰值时间每秒请求数(QPS) 。
+机器：峰值时间每秒QPS / 单台机器的QPS = 需要的机器 。
+每天300w PV 的在单台机器上，这台机器需要多少QPS？
+( 3000000 * 0.8 ) / (86400 * 0.2 ) = 139 (QPS)。
+一般需要达到139QPS，因为是峰值。
+
+
+
+LMAX - How to Do 100K TPS at Less than 1ms Latency
+https://www.infoq.com/presentations/LMAX/
+
+https://lmax-exchange.github.io/disruptor/
+
+
+
+吞吐量（TPS）、QPS、并发数、响应时间（RT）概念
+https://www.cnblogs.com/longxiaojiangi/p/9259745.html
+
+-------2019.10.20（己亥年九月廿二）Sun---------
+学车练习科目三路考
+休息
+
+-------2019.10.19（己亥年九月廿一）Sat---------
+设计模式：
+memento模式、
+原型模式（Prototype）：实现cloneable接口clone的方法
+JMH JAVA吞吐量测试开发利器
+Disruptor简单入门
+
+
+Guava的Optional
+com.google.common.util.concurrent.RateLimiter.java
+
+https://yq.aliyun.com/articles/665116?utm_content=m_1000022476
+
+Android API
+https://developer.android.google.cn/reference
+
+JDK API
+http://tool.oschina.net/apidocs/apidoc?api=jdk-zh
+
+OPEN JDK
+http://openjdk.java.net/
+
+Google guava
+https://github.com/google/guava
+
+-------2019.10.18（己亥年九月二十）Fri---------
+RPC
+
+
+
+treemap(红黑树)原理
+TreeSet 底层实际使用的存储容器就是 TreeMap
+
+
+ThreadPoolExecutor线程池
+1、小于核心线程，直接新建线程
+2、核心线程都在工作，加入任务队列
+3、任务队列满了，新建非核心线程去执行
+4、非核心线程满了且都在运行状态，若再有任务过来，则调用拒绝策略
+
+
+
+设计模式：装饰者模式（Decorator pattern）
+java.lang.Object
+  继承者 java.io.InputStream
+      继承者 java.io.FilterInputStream
+所有已实现的接口：
+Closeable
+直接已知子类：
+BufferedInputStream, CheckedInputStream, CipherInputStream, DataInputStream, DeflaterInputStream,
+DigestInputStream, InflaterInputStream, LineNumberInputStream, ProgressMonitorInputStream, PushbackInputStream
+
+
+范例：原型InputStream我们只能读取byte，现在直接从stream中读取int，String等类型
+DataOutputStream dos = new DataOutputStream(new FileOutputStream("D:\\java.txt"));
+dos.writeInt(1234567);
+DataInputStream dis = new DataInputStream(new FileInputStream("D:\\java.txt"));
+System.out.println(dis.readInt());
+dis.close();
+dos.close();
+
+File file = new File("file.txt");
+InputStream in =new BufferedInputStream(new FileInputStream(file), 512);
+// 从字节流中读取5个字节。“abcde”，a对应0x61，b对应0x62，依次类推...
+for (int i=0; i<len; if="">= 0) {
+	// 读取“字节流的下一个字节”
+	int tmp = in.read();
+	System.out.printf("%d : 0x%s\n", i, Integer.toHexString(tmp));
+	}
+}
+
+
+FileInputStream fileInputStream = new FileInputStream(new File("readme.txt"));
+	BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream);
+	byte[] bytes = new byte[1024];
+	while(bufferedInputStream.read(bytes)!=-1){
+		System.out.println(new String(bytes));
+	}
+
+
+
+
+
+
+-------2019.10.17（己亥年九月十九）Thu---------
+JUC学习
+https://www.battleheart.cn
+
+Online Judge
+https://www.cnblogs.com/weiyinfu/p/10708677.html
+
+CompletableFuture
+
+Vector---HashTable 自带锁
+
+DelayQueue：按照等待时间进行排序
+PriorityQueue：优先队列
+
+Queue对于线程友好的API,offer、peek、poll
+BlockingQueue提供put、take阻塞方法（方便实现生产-消费者模型）
+
+BlockingQueue：
+LinkedBlockingQueue(无界队列）
+ArrayBlockingQueue(有界队列)
+队列满了
+add阻塞
+offer不阻塞直接返回false
+
+
+
+底层阻塞是通过LockSupport.park()
+ReentrantLock.
+
+
+SynchronousQueue（同步队列）队列长度为0，专门用作线程间交换数据
+TransferQueue（传递队列）装完--等待---取走
+
+Exchanger.change
+
+
+-------2019.10.16（己亥年九月十八）Web---------
+设计模式：Chain Of Responsibility
+javax.servlet
+Interface Filter
+doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+          The doFilter method of the Filter is called by the container each time a request/response pair is passed through the chain due to a client request for a resource at the end of the chain.
+
+javax.servlet
+Interface FilterChain
+
+
+
+设计模式：
+1、Iterator模式
+2、Visitor模式----结合asm看visitor模式
+3、Builder模式
+
+
+
+ThreadLocal
+WeakReference<M> m = new WeakReference<>(new M());
+经过System.gc();后，m就被垃圾回收
+
+作业：
+WeakHashMap的用处
+读AQS unlock的源码
+
+
+ThreadLocal
+	static class ThreadLocalMap
+			static class Entry extends WeakReference<ThreadLocal<?>>
+					Entry(ThreadLocal<?> k, Object v)
+
+
+
+ThreadLocal<M> tl = new ThreadLocal<>();
+tl.set(new M());
+//!!!使用ThreadLocal之后，记得remove
+tl.remove();
+
+
+
+容器-Vector-Hashtable
+CopyOnWriteList
+ConcurrentHashMap
+ConcurrentSkipListMap
+BlockingQueue
+目标：为ThreadPool做准备
+
+
+-------2019.10.15（己亥年九月十七）Tue---------
+多线程高并发
+redis
+SpringCloud微服务
+
+直播平台
+客户端：obs studio
+服务端：nginx+rtmp插件
+
+
+
+
+设计模式：Adapter模式
+ //将字节流转化为字符流
+ InputStream in = new FileInputStream("C:/hello.txt");
+ InputStreamReader isr = new InputStreamReader(in);
+
+-------2019.10.14（己亥年九月十六）Mon---------
+知识点1：DevOps
+ DevOps一词的来自于Development和Operations的组合，突出重视软件开发人员和运维人员的沟通合作，通过自动化流程来使得软件构建、测试、发布更加快捷、频繁和可靠。
+ DevOps希望做到的是软件产品交付过程中IT工具链的打通，使得各个团队减少时间损耗，更加高效地协同工作。
+ 现代化的DevOps工具，如Chef、Docker、Ansible、Packer、Troposphere、Consul、Jenkins、SonarQube、AWS等
+
+知识点：Netty
+https://netty.io/wiki/related-articles.html
+Netty:Bootstrap的handler和childHandler
+
+netty官网概览
+https://netty.io/4.0/xref/
+
+
+
+学习目标：
+有较扎实的Java基础知识，能够熟练使用Java相关技术进行独立开发；
+熟悉Java多线程、并发库、熟悉TCP/IP协议，NIO，熟悉Netty框架，基础的算法和数据结构；
+熟悉MySql数据库及MySql的优化，熟悉protobuf协议；
+熟悉Maven构建工具；
+
+
+精通Java，多线程编程，消息系统，数据库，分布式应用等技术，对SOA框架有较深刻的理解；
+熟悉网络编程，具有设计和开发对外API接口经验和能力；
+有Hadoop、Spark、Hive等相关经验者优先；
+
+
+
+
+-------2019.10.13（己亥年九月十五）Sun---------
+netty客户端编程
+BootStrap
+EventLoopGroup接口实现类 NioEventLoopGroup（本质是一个线程池）
+
+ChannelFuture
+ChannelInitializer<SocketChannel>
+
+Lombok插件
+
+http://yapi.demo.qunar.com/
+高效、易用、功能强大的API管理平台
+旨在为开发、产品、测试人员提供更优雅的接口管理服务
+
+
+1、Template模式
+2、State模式？
+3、Intepreter
+
+
+-------2019.10.12（己亥年九月十四）Sat---------
+分布式系统
+An Illustrated Proof of the CAP Theorem
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+Consistency 一致性
+Availability 可用性
+Partition tolerance 分区容错性
+
+
+
+
+
+
+
+Proxy模式：
+JDK动态代理    关键API:Proxy InvocationHandler  缺点：被代理对象必须实现接口
+cglib动态代理  关键API:Enhancer+MethodInterceptor 优点：被代理对象无需实现接口，使用简单 缺点：不能代理final对象
+org.objectweb.asm 小而快速的字节码操作框架     缺点：直接修改字节码，使用复杂
+asm官网
+https://gitlab.ow2.org/asm/asm
+https://asm.ow2.io/
+
+
+javaassist简要介绍
+和AOP有什么关系和区别？CGLib是动态代理的经典类库，其底层实现使用ASM
+
+Java bytecode engineering toolkit http://www.javassist.org
+javassist底层实现类似ASM
+Javassist (JAVA programming ASSISTant) 是在 Java 中编辑字节码的类库;它使 Java 程序能够在运行时定义一个新类, 并在 JVM 加载时修改类文件。
+我们常用到的动态特性主要是反射，在运行时查找对象属性、方法，修改作用域，通过方法名称调用方法等。
+在线的应用不会频繁使用反射，因为反射的性能开销较大。其实还有一种和反射一样强大的特性，但是开销却很低，它就是Javassit。
+与其他类似的字节码编辑器不同, Javassist 提供了两个级别的 API: 源级别和字节码级别。
+如果用户使用源级 API, 他们可以编辑类文件, 而不知道 Java 字节码的规格。 整个 API 只用 Java 语言的词汇来设计。 您甚至可以以源文本的形式指定插入的字节码; Javassist 在运行中编译它
+
+
+java.lang.instrument
+
+提供允许 Java 编程语言代理检测运行在 JVM 上的程序的服务
+
+
+
+多线程高并发
+java.util.concurrent
+Interface Future<V>
+
+java.util.concurrent
+Interface Callable<V>
+
+
+java.util.concurrent
+Class FutureTask<V>
+All Implemented Interfaces:Runnable, Future<V>, RunnableFuture<V>
+
+-------2019.10.11（己亥年九月十三）Fri---------
+GoF《设计模式》
+Facade模式（封装内部逻辑细节，对外提供简化接口）
+Decorator模式：不改变原对象的前提下，扩展原对象的功能（不使用继承）
+	File f1 = new File("D:\\Rain.txt");
+	FileInputStream fis = new FileInputStream(f1);
+	BufferedInputStream bis = new BufferedInputStream(fis);//为FileInputStream增加了缓冲功能
+
+
+
+Proxy模式：
+
+WeakHashMap
+
+
+
+
+栈stack内存--->存储函数的主体和变量名
+堆heap内存---->堆内存是用来存储实例(实例化后的对象实体)的
+引用名都放在栈内存,值放堆内存
+
+栈内存是线程私有的，堆内存是公共的
+
+
+
+-------2019.10.10（己亥年九月十二）Thu---------
+VarHandle
+java四种引用：强、软、弱、虚
+    软引用和弱引用的价值：
+    适合保存那些可有可无的缓存数据，当内存不足时，缓存数据被回收（再通过备选方案查询），当内存充足时，也可以存在较长时间，起到加速的作用。
+异或位操作
+容器
