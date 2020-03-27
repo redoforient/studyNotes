@@ -1,3 +1,29 @@
+----2020.3.27（庚子年三月初四）Friday----
+androidx.core.app.ComponentActivity
+androidx.appcompat.app.AppCompatActivity
+com.android.internal.policy.PhoneWindow
+androidx.core.view.KeyEventDispatcher
+
+com.android.internal.policy.DecorView extends FrameLayout implements RootViewSurfaceTaker, WindowCallbacks
+
+androidx.appcompat.view
+android.view.Window.Callback
+android.view.ViewRootImpl
+
+android.os.Looper
+android.os.Handler
+
+
+java.lang.instrument包的最大功能就是可以在已有的类上附加（修改）字节码来实现增强的逻辑
+
+javassist是一个开源的分析、编辑和创建java字节码的类库。通过使用javassist对字节码操作可以实现动态”AOP”框架。
+
+java字节码处理工具：
+bcel，asm(cglib只是对asm又封装了一层)，可以直接处理虚拟机指令
+javassist的主要的优点，在于简单，而且快速，直接使用java编码的形式，而不需要了解虚拟机指令，就能动态改变类的结构，或者动态生成类。
+
+
+
 ----2020.3.25（庚子年三月初二）Monday----
 JS异步编程之Promise
 
