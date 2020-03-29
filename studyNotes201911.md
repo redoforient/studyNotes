@@ -1,3 +1,14 @@
+----2020.3.28（庚子年三月初五）Saturday----
+动态代理
+Java Proxy.newProxyInstance
+CGLib是动态代理的经典类库
+
+giflib动图处理
+
+Java进阶Gradle系统详解
+https://ke.qq.com/course/442126?taid=3857967258976014
+
+
 ----2020.3.27（庚子年三月初四）Friday----
 androidx.core.app.ComponentActivity
 androidx.appcompat.app.AppCompatActivity
@@ -63,22 +74,22 @@ mars的日志模块 xlog
 
 java代理（静态、动态）
 
-java.lang.reflect 
+java.lang.reflect
 接口 InvocationHandler
-public interface InvocationHandlerInvocationHandler 是代理实例的调用处理程序 实现的接口。 
-每个代理实例都具有一个关联的调用处理程序。对代理实例调用方法时，将对方法调用进行编码并将其指派到它的调用处理程序的 invoke 方法。 
-方法摘要 
- Object invoke(Object proxy, Method method, Object[] args) 
-          在代理实例上处理方法调用并返回结果。 
-		  
+public interface InvocationHandlerInvocationHandler 是代理实例的调用处理程序 实现的接口。
+每个代理实例都具有一个关联的调用处理程序。对代理实例调用方法时，将对方法调用进行编码并将其指派到它的调用处理程序的 invoke 方法。
+方法摘要
+ Object invoke(Object proxy, Method method, Object[] args)
+          在代理实例上处理方法调用并返回结果。
+
 	************	  
-java.lang.reflect 
+java.lang.reflect
 类 Proxy
 java.lang.Object
   继承者 java.lang.reflect.Proxy
-  
+
 static Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces, InvocationHandler h)  
-创建某一接口 Foo 的代理（更简单的方法） ： 
+创建某一接口 Foo 的代理（更简单的方法） ：
      Foo f = (Foo) Proxy.newProxyInstance(Foo.class.getClassLoader(),
                                           new Class[] { Foo.class },
                                           handler);
