@@ -1,3 +1,8 @@
+----2020.3.29（庚子年三月初六）Sunday----
+梯子my.ishadowx.biz
+Artifactory和
+FIR/蒲公英
+
 ----2020.3.28（庚子年三月初五）Saturday----
 动态代理
 Java Proxy.newProxyInstance
