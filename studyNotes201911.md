@@ -1,3 +1,44 @@
+----2020.3.31（庚子年三月初八）Tuesday----
+JetPack
+ViewModel
+
+
+
+PECS（Producer Extends Consumer Super）原则
+频繁往外读取内容的，适合用上界Extends。
+经常往里插入的，适合用下界Super
+
+上界<? extends T>不能往里存，只能往外取
+Plate<? extends Fruit> p=new Plate<Apple>(new Apple());
+
+//不能存入任何元素
+p.set(new Fruit());    //Error
+p.set(new Apple());    //Error
+
+//读取出来的东西只能存放在Fruit或它的基类里。
+Fruit newFruit1=p.get();
+Object newFruit2=p.get();
+Apple newFruit3=p.get();    //Error
+
+*******分割*******
+下界<? super T>不影响往里存，但往外取只能放在Object对象里
+Plate<? super Fruit> p=new Plate<Fruit>(new Fruit());
+//存入元素正常
+p.set(new Fruit());
+p.set(new Apple());
+//读取出来的东西只能存放在Object类里。
+Apple newFruit3=p.get();    //Error
+Fruit newFruit1=p.get();    //Error
+Object newFruit2=p.get();
+
+
+
+
+----2020.3.30（庚子年三月初七）Monday----
+javapoet源代码生成
+
+
+
 ----2020.3.29（庚子年三月初六）Sunday----
 梯子my.ishadowx.biz
 Artifactory和
