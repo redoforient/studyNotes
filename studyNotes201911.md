@@ -1,3 +1,110 @@
+----2020.4.2（庚子年三月初十）Thursday----
+Android图片轮播控件---com.youth.banner.Banner
+
+优先级队列：根据时间先后顺序排队的单链表
+handler.sendXXX
+handler.sendXXX
+
+Handler
+dispatchMessage(Message msg)
+enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis) 
+
+private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis) {
+	msg.target = this;//Handler
+	if (mAsynchronous) {
+		msg.setAsynchronous(true);
+	}
+	return queue.enqueueMessage(msg, uptimeMillis);
+}
+
+
+一个线程是如何保证只有一个Looper？
+    /**
+     * Get the map associated with a ThreadLocal. Overridden in
+     * InheritableThreadLocal.
+     *
+     * @param  t the current thread
+     * @return the map
+     */
+    ThreadLocalMap getMap(Thread t) {
+        return t.threadLocals;
+    }
+	
+	
+
+// sThreadLocal.get() will return null unless you've called prepare().
+static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>()
+
+
+
+private static void prepare(boolean quitAllowed) {
+	if (sThreadLocal.get() != null) {
+		throw new RuntimeException("Only one Looper may be created per thread");
+	}
+	sThreadLocal.set(new Looper(quitAllowed));
+}
+
+ThreadLocalMap维护ThreadLocal和Looper
+
+
+Handler内存泄漏原因：
+内存泄漏：生命周期不一致
+非静态内部类持有外部类的引用
+
+
+Handler持有上下文，message.target握住Handler
+
+
+
+Handler--MessageQueue--Looper--
+
+
+/**
+ * Quits the looper safely.
+ * <p>
+ * Causes the {@link #loop} method to terminate as soon as all remaining messages
+ * in the message queue that are already due to be delivered have been handled.
+ * However pending delayed messages with due times in the future will not be
+ * delivered before the loop terminates.
+ * </p><p>
+ * Any attempt to post messages to the queue after the looper is asked to quit will fail.
+ * For example, the {@link Handler#sendMessage(Message)} method will return false.
+ * </p>
+ */
+public void quitSafely() {
+	mQueue.quit(true);
+}
+
+子线程中
+prepare
+loop
+myHandler.looper.quitSafely();-->
+
+释放内存、
+释放子线程
+
+
+synchronized:方法、静态方法、代码块(object)
+
+代码块(this)
+
+
+ThreadLocal源码解读
+https://www.cnblogs.com/micrari/p/6790229.html
+
+
+Java的synchronized的同步代码块和同步方法的区别
+https://www.cnblogs.com/xujingyang/p/6565606.html
+
+
+
+Message复用（享元模式）
+/**
+ * Recycles a Message that may be in-use.
+ * Used internally by the MessageQueue and Looper when disposing of queued Messages.
+ */
+void recycleUnchecked() {
+
 ----2020.3.31（庚子年三月初八）Tuesday----
 JetPack
 ViewModel
