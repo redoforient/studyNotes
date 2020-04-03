@@ -1,4 +1,39 @@
-----2020.4.2（庚子年三月初十）Thursday----
+----------------2020.4.3（庚子年三月十一）Friday---------------------------------------------
+
+为什么Java中synchronized同步的对象不能是Integer等类型？
+原因是Java的自动封箱和解箱操作在作怪。
+这里的i++实际上是i = new Integer(i+1)，所以执行完i++后，
+i已经不是原来的对象了，同步块自然就无效了
+
+
+java.util.concurrent.atomic
+atomic是线程安全的基本数据类型
+A small toolkit of classes that support lock-free thread-safe programming on single variables 
+
+
+Java纤程coroutine的实现(coroutine-libraries), 目前最好的应该还是Quasar
+
+Quasar知识:Channel、Actor、Reactive Stream
+Quasar官方参考文档
+http://docs.paralleluniverse.co/quasar/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------2020.4.2（庚子年三月初十）Thursday-----------------
 Android图片轮播控件---com.youth.banner.Banner
 
 优先级队列：根据时间先后顺序排队的单链表
