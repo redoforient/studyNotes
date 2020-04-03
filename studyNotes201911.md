@@ -1,5 +1,13 @@
 ----------------2020.4.3（庚子年三月十一）Friday---------------------------------------------
 
+at android.app.ActivityThread.main(ActivityThread.java:5151)
+at java.lang.reflect.Method.invokeNative(Method.java)
+at java.lang.reflect.Method.invoke(Method.java:515)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:868)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:684)
+at dalvik.system.NativeStart.main(NativeStart.java)
+
+
 为什么Java中synchronized同步的对象不能是Integer等类型？
 原因是Java的自动封箱和解箱操作在作怪。
 这里的i++实际上是i = new Integer(i+1)，所以执行完i++后，
@@ -20,6 +28,11 @@ http://docs.paralleluniverse.co/quasar/
 
 
 
+Zygote
+Zygote 是Android第一个应用进程，它由init程序解析import /init.${ro.zygote}.rc 所启动。
+在Android系统中，Zygote是java进程的鼻祖。它在启动时会创建虚拟机，并通过fork(复制进程)的形式来创建应用程序进程和SystemServer进程。
+
+Zygote 由init.rc脚本解析启动。以下只考虑 Zygote 的启动而不考虑 init.rc 的解析。已知Zygote 的入口函数是app_main.cpp的main()函数。
 
 
 
