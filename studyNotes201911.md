@@ -1,4 +1,37 @@
 ----------------2020.4.3（庚子年三月十一）Friday---------------------------------------------
+JVM垃圾回收：有向图机制 GC Roots
+*引用计数法(弊端：很难解决对象之间的循环引用问题)
+*枚举根节点做可达性分析
+
+
+哪些对象可以作为 GC Roots 的对象？
+*虚拟机栈中局部变量（也叫局部变量表）中引用的对象
+*方法区中类的静态变量、常量引用的对象
+*本地方法栈中 JNI (Native方法)引用的对象 
+
+解释：
+gc1:是虚拟机栈中的局部变量
+gc2:是方法区中类的静态变量
+gc3:是方法区中的常量
+都可以作为GC Roots 的对象。
+
+
+
+Android内存泄露————非静态内部类|匿名内部类 默认持有外部类的引用
+
+
+解决方案有2个思路：
+
+一、严格保证程序逻辑。
+		1.在销毁Activity的时候结束掉在执行的后台线程。线程结束了，就等于切断了与外部类关联的线。
+		2.使用Handler.postDelayed( new Runnable(),xxx)方式的话，直接调用Handler的removeCallbacksAndMessages(null)方法，移除回收消息队列的消息即可。
+
+二、采用静态内部类+弱引用（WeakReference）持有外部类实例
+
+https://blog.csdn.net/u012982629/article/details/82770282
+
+
+
 
 at android.app.ActivityThread.main(ActivityThread.java:5151)
 at java.lang.reflect.Method.invokeNative(Method.java)
@@ -8,10 +41,14 @@ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:684)
 at dalvik.system.NativeStart.main(NativeStart.java)
 
 
+java.lang.String
+intern()
+
 为什么Java中synchronized同步的对象不能是Integer等类型？
 原因是Java的自动封箱和解箱操作在作怪。
 这里的i++实际上是i = new Integer(i+1)，所以执行完i++后，
 i已经不是原来的对象了，同步块自然就无效了
+
 
 
 java.util.concurrent.atomic
