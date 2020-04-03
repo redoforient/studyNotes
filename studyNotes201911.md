@@ -35,7 +35,9 @@ Zygote 是Android第一个应用进程，它由init程序解析import /init.${ro
 Zygote 由init.rc脚本解析启动。以下只考虑 Zygote 的启动而不考虑 init.rc 的解析。已知Zygote 的入口函数是app_main.cpp的main()函数。
 
 
-
+***Glide源码分析****
+***Glide生命周期管理
+https://www.jianshu.com/p/317b2d6bde1b
 
 
 
