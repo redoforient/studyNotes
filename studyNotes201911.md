@@ -1,4 +1,22 @@
+----------------2020.4.5（庚子年三月十三）Sunday---------------------------------------------
+java.io
+装饰器模式（Decorator）&&适配器模式（Adapter）
+两个设计模式与IO框架的关联：
+适配器模式主要在于字节流到字符流的转换和元素的包装上，
+如类：InputStreamReader, CharArrayReader, FileReader, PipedReader, StringReader。
+
+装饰模式主要在对流的强化之中，如缓冲、过滤、行定位等，
+如类：BufferedReader, FilterReader, LineNumberReader。
+FilterInputStream-DataInputStream,BufferedInputStream
+
+举例说明：
+BufferReader br = new BufferReader(new InputStreamReader(System.in));
+上述把InputStream适配成InputStreamReader，再把InputStreamReader加强装饰城BufferedReader。
+
+
 ----------------2020.4.3（庚子年三月十一）Friday---------------------------------------------
+AtomicReference
+
 JVM垃圾回收：有向图机制 GC Roots
 *引用计数法(弊端：很难解决对象之间的循环引用问题)
 *枚举根节点做可达性分析
@@ -7,7 +25,7 @@ JVM垃圾回收：有向图机制 GC Roots
 哪些对象可以作为 GC Roots 的对象？
 *虚拟机栈中局部变量（也叫局部变量表）中引用的对象
 *方法区中类的静态变量、常量引用的对象
-*本地方法栈中 JNI (Native方法)引用的对象 
+*本地方法栈中 JNI (Native方法)引用的对象
 
 解释：
 gc1:是虚拟机栈中的局部变量
@@ -53,7 +71,7 @@ i已经不是原来的对象了，同步块自然就无效了
 
 java.util.concurrent.atomic
 atomic是线程安全的基本数据类型
-A small toolkit of classes that support lock-free thread-safe programming on single variables 
+A small toolkit of classes that support lock-free thread-safe programming on single variables
 
 
 Java纤程coroutine的实现(coroutine-libraries), 目前最好的应该还是Quasar
@@ -94,7 +112,7 @@ handler.sendXXX
 
 Handler
 dispatchMessage(Message msg)
-enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis) 
+enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis)
 
 private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis) {
 	msg.target = this;//Handler
@@ -116,8 +134,8 @@ private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMilli
     ThreadLocalMap getMap(Thread t) {
         return t.threadLocals;
     }
-	
-	
+
+
 
 // sThreadLocal.get() will return null unless you've called prepare().
 static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>()
