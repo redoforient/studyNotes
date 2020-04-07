@@ -1,6 +1,52 @@
 ----------------2020.4.7（庚子年三月十五）Tuesday---------------------------------------------
+git diff 版本编号1 版本编号2
 
 
+JAVA 准备解析初始化！
+https://mp.weixin.qq.com/s?__biz=MzIyNjUyNzQwMQ==&mid=2247483763&idx=1&sn=74fa1c054e91962b78f39c77b49425d6&scene=21#wechat_redirect
+
+
+静态内部类的单例模式
+https://mp.weixin.qq.com/s?src=3&timestamp=1586240207&ver=1&signature=DsLIvaPTLLx-RcdNB9eFfWz7UowM0CLpETMfT2WPLCLTkHsGCi4D9Te9N0*-jGFWnaAiDtiG-PhSLcbXM8dmQxbXtkT-KVGXXAe*vjw1RNJe-O7Uz8apcFLK1oMQ7JJ5L-QLgjpinMSlx7p-Pv3rgnzUgkvnMcmHkfSg5hyJ7jg=
+
+
+
+#### Facade与Mediator模式的区别？
+https://www.cnblogs.com/sweetdream/archive/2005/12/19/299983.html
+Facade模式是解耦系统外到系统内（单向）的对象关联关系，
+Mediator模式是解耦系统内各个对象之间在（双向）的关联关系
+
+
+### 设计模式(17)--Mediator(中介者模式)行为型
+https://www.cnblogs.com/yysbolg/p/7518777.html
+应用实例：
+[1]Mediator模式在事件驱动类应用中比较多，例如聊天、消息传递等等，需要有一个MessageMediator，专门负责request/reponse之间任务的调节。
+[2]MVC模式中，Controller是一种Mediator。
+[3]JDK的具体应用：
+　　　　　java.util.Timer
+　　　　　java.util.concurrent.Executor#execute()
+　　　　　java.util.concurrent.ExecutorService#submit()
+　　　　　java.lang.reflect.Method#invoke()
+
+
+
+
+优先级队列及小顶堆排序实现----【堆排序（大顶堆、小顶堆）】
+
+LRU (最近最少使用) 缓存机制
+LRU是Least Recently Used的缩写，即最近最少使用，是一种常用的页面置换算法，选择最近最久未使用的页面予以淘汰。
+
+
+坦克大战设计模式有道云笔记链接
+文档：tank_2019_v01
+链接：http://note.youdao.com/noteshare?id=2231807fcb13c1d0fcbd4d63d63c3fe5
+
+设计模式列表
+https://note.youdao.com/ynoteshare1/index.html?id=2231807fcb13c1d0fcbd4d63d63c3fe5&type=notebook#/B7B2A3A1168644E08C5E69F3651F944E
+
+
+思维导图绘制
+https://www.processon.com/diagrams
 
 
 
@@ -45,7 +91,7 @@ BufferReader br = new BufferReader(new InputStreamReader(System.in));
 
 
 
-----------------2020.4.4（庚子年三月十四）Saturday---------------------------------------------
+----------------2020.4.4（庚子年三月十二）Saturday---------------------------------------------
 androidx.lifecycle包
 Lifecycle
 LiveData
