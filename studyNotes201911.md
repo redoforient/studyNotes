@@ -1,3 +1,21 @@
+----------------2020.4.7（庚子年三月十五）Tuesday---------------------------------------------
+
+
+
+
+
+
+----------------2020.4.6（庚子年三月十四）Monday---------------------------------------------
+Room 持久性库
+https://developer.android.google.cn/topic/libraries/architecture/room
+
+
+
+微服务：拆分服务
+单体应用架构-->微服务架构
+
+
+
 ----------------2020.4.5（庚子年三月十三）Sunday---------------------------------------------
 java.io
 装饰器模式（Decorator）&&适配器模式（Adapter）
@@ -12,6 +30,17 @@ FilterInputStream-DataInputStream,BufferedInputStream
 举例说明：
 BufferReader br = new BufferReader(new InputStreamReader(System.in));
 上述把InputStream适配成InputStreamReader，再把InputStreamReader加强装饰城BufferedReader。
+
+
+
+----------------2020.4.4（庚子年三月十四）Saturday---------------------------------------------
+androidx.lifecycle包
+Lifecycle
+LiveData
+MutableLiveData
+ViewModel
+https://developer.android.google.cn/topic/libraries/architecture/lifecycle#java
+
 
 
 ----------------2020.4.3（庚子年三月十一）Friday---------------------------------------------
