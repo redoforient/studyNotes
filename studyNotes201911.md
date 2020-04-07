@@ -17,6 +17,18 @@ https://developer.android.google.cn/topic/libraries/architecture/room
 
 
 ----------------2020.4.5（庚子年三月十三）Sunday---------------------------------------------
+Kafka
+ MQ--->系统解耦、异步通信、削峰填谷
+流式计算
+
+
+TCP
+    连接---三次握手
+    断开---四次挥手
+
+
+
+
 java.io
 装饰器模式（Decorator）&&适配器模式（Adapter）
 两个设计模式与IO框架的关联：
