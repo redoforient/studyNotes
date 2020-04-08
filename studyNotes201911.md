@@ -1,4 +1,24 @@
+----------------2020.4.8（庚子年三月十六）Wednesday----------------------------------------
+前端：
+AsyncListUtil 是一个用于异步内容加载的类
+ViewPager2+Fragment
+
+类加载器
+PathClassLoader
+DexClassLoader
+
+
+后端：
+RPC（Remote Procedure Call）远程过程调用
+
+
+
+
 ----------------2020.4.7（庚子年三月十五）Tuesday---------------------------------------------
+jetpack-->paging分页库
+
+
+
 git diff 版本编号1 版本编号2
 
 
