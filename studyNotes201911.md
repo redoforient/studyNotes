@@ -1,9 +1,60 @@
-----------------2020.4.8（庚子年三月十六）Wednesday----------------------------------------
-前端：
+##----------2020.4.9（庚子年三月十七）Thursday---------
+
+
+**自定义View**
+
+	ViewRootImpl.performTransversal
+
+
+
+
+##前端-JetPack系列
+WorkManager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##----------------2020.4.8（庚子年三月十六）Wednesday----------------------------------------
+
+* 前端：
 AsyncListUtil 是一个用于异步内容加载的类
 
-60秒后过期倒计时器
-android.os.CountDownTimer countDownTimer = new CountDownTimer(60000, 1000) 
+>60秒后过期倒计时器
+  android.os.CountDownTimer countDownTimer = new CountDownTimer(60000, 1000) 
 
 ViewPager2+Fragment
 
@@ -15,47 +66,46 @@ DexClassLoader
 >static类在程序装入内存时就要确定数据类型并分配内存，而main函数包括其中的变量是在执行到的时候才分配的。
 静态代码块随着类的加载而执行，并且只执行一次，用于给类初始化，优先于主函数和方法。
 
-##静态块加载即执行，且只执行一次##
-
-##加载类的时候，虚拟机会加锁保证只有一个线程去做加载动作
-
-main一执行是开启一个进程，要加载各种资源，fork出很多线程，包括垃圾回收等线程
-
 
 java基础
 Java 8 中我们可以通过 `::` 关键字来访问类的构造方法，对象方法，静态方法。
 
 
 
-import java.util.concurrent.atomic.AtomicLong;
-public class Main {
-    static AtomicLong i = new AtomicLong();
-    static {
-        //会一直等待
-        //Thread t = new Thread(()->i.getAndIncrement());
-        Thread t = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                i.getAndIncrement();
-            }
-        });
-        //可以顺利执行并打印1
-        //Thread t = new Thread(i::getAndIncrement);
-        t.start();
-        try {
-            t.join();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    import java.util.concurrent.atomic.AtomicLong;
+	public class Main {
+	    static AtomicLong i = new AtomicLong();
+		//##静态块加载即执行，且只执行一次##
+		static {
+			//##加载类的时候，虚拟机会加锁保证只有一个线程去做加载动作
+	        //会一直等待
+	        //Thread t = new Thread(()->i.getAndIncrement());
+	        Thread t = new Thread(new Runnable() {
+	            @Override
+	            public void run() {
+	                i.getAndIncrement();
+	            }
+	        });
+	        //可以顺利执行并打印1
+	        //Thread t = new Thread(i::getAndIncrement);
+	        t.start();
+	        try {
+				//此处挂起主线程执行子线程任务
+	            t.join();
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	    }		
+		//main一执行是开启一个进程，要加载各种资源，fork出很多线程，包括垃圾回收等线程
+	    public static void main(String[] a) {
+	        System.out.print(i.get());
+	    }
+	}
 
-    public static void main(String[] a) {
-        System.out.print(i.get());
-    }
-}
 
 
-
+lamada和死锁的问题，视频解释了：
+[图片]https://www.bilibili.com/video/av59801808
 
 
 
@@ -64,18 +114,21 @@ public class Main {
 
 后端：
 RPC（Remote Procedure Call）远程过程调用
+
 **ELK**
+
 * Elasticsearch: 核心中的核心组件，基于著名的全文检索引擎lucence的一个分布式版本
 * Logstash: 一个灵活的数据传输和处理系统，在beats出来之前，还负责进行数据收集。
 * Kibana: 展示组件，基于angularjs。从Elasticsearch中读取数据并展示。
 
-为何推出beats？
-Logstash在数据收集上并不出色，而且作为agent，性能并不达标。elastic发布了beats系列轻量级采集组件。
+> 为何推出beats？
+
+>Logstash在数据收集上并不出色，而且作为agent，性能并不达标。elastic发布了beats系列轻量级采集组件。
 
 
 
 
-----------------2020.4.7（庚子年三月十五）Tuesday---------------------------------------------
+##----------------2020.4.7（庚子年三月十五）Tuesday---------------------------------------------
 jetpack-->paging分页库
 
 
@@ -132,7 +185,7 @@ https://www.processon.com/diagrams
 
 
 
-----------------2020.4.6（庚子年三月十四）Monday---------------------------------------------
+##----------------2020.4.6（庚子年三月十四）Monday---------------------------------------------
 Room 持久性库
 https://developer.android.google.cn/topic/libraries/architecture/room
 
@@ -143,7 +196,7 @@ https://developer.android.google.cn/topic/libraries/architecture/room
 
 
 
-----------------2020.4.5（庚子年三月十三）Sunday---------------------------------------------
+##----------------2020.4.5（庚子年三月十三）Sunday---------------------------------------------
 Kafka
  MQ--->系统解耦、异步通信、削峰填谷
 流式计算
@@ -172,7 +225,7 @@ BufferReader br = new BufferReader(new InputStreamReader(System.in));
 
 
 
-----------------2020.4.4（庚子年三月十二）Saturday---------------------------------------------
+##----------------2020.4.4（庚子年三月十二）Saturday---------------------------------------------
 androidx.lifecycle包
 Lifecycle
 LiveData
@@ -182,7 +235,7 @@ https://developer.android.google.cn/topic/libraries/architecture/lifecycle#java
 
 
 
-----------------2020.4.3（庚子年三月十一）Friday---------------------------------------------
+##----------------2020.4.3（庚子年三月十一）Friday---------------------------------------------
 AtomicReference
 
 JVM垃圾回收：有向图机制 GC Roots
@@ -649,6 +702,24 @@ public static Class<?> analysisClassInfo(Object object){
 
 
 
+>>遗憾啊，中途中断学习笔记近4个月 
+>>
+>>亡羊补牢，为时不晚
+>>
+>>亡羊补牢，为时不晚
+>>
+>>亡羊补牢，为时不晚
+>>
+>>亡羊补牢，为时不晚
+>>
+>>亡羊补牢，为时不晚
+>>
+>>亡羊补牢，为时不晚
+>>
+>>遗憾啊，中途中断学习笔记近4个月
+
+
+
 `----------2019年11月9日 Saturday---------`
 
 
@@ -657,6 +728,7 @@ public static Class<?> analysisClassInfo(Object object){
 
 
 `----------2019年11月2日 Saterday---------`
+
 **Android API --->HandlerThread**
 
 
