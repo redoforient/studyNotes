@@ -11,6 +11,16 @@ SQLiteStudio：
 https://github.com/pawelsalawa/sqlitestudio
 
 
+自定义控件 - 流式布局（FlowLayout）
+https://www.jianshu.com/p/41e63a9e10bb
+
+
+MVPArms:可配置化的 Android MVP 快速集成框架  
+https://github.com/JessYanCoding/MVPArms
+
+ArmsComponent:MVPArms 官方快速组件化方案  
+https://github.com/JessYanCoding/ArmsComponent
+
 
 ContentProvider主要用于数据管理和数据共享的功能，主要优势为数据共享  
 适用于经常需要给其他App提供数据的场景。  
