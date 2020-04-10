@@ -1,6 +1,24 @@
 ##----------2020.4.10（庚子年三月十八）Friday---------
 
+SQLiteStudio：
+简单、强大的sqlite数据库调试工具
+使用方法：
+* 1、获得jar包：SQLiteStudioRemote.jar
+* 2、将SQLiteStudioRemote.jar加入Android项目
+* 3、在application中添加代码：  
+`SQLiteStudioService.instance().start(this)`
 
+https://github.com/pawelsalawa/sqlitestudio
+
+
+
+ContentProvider主要用于数据管理和数据共享的功能，主要优势为数据共享  
+适用于经常需要给其他App提供数据的场景。  
+如系统内置应用：联系人，日历和短信，就比较适合使用ContentProvider
+
+
+
+ConstraintLayout
 
 
 ##----------2020.4.9（庚子年三月十七）Thursday---------
