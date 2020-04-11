@@ -1,21 +1,26 @@
+##----------2020.4.11（庚子年三月十九）Saturday---------
+CLion
+CLion: A Cross-Platform IDE for C and C++ by JetBrains
+
+
+
 ##----------2020.4.10（庚子年三月十八）Friday---------
 
 SQLiteStudio：
-简单、强大的sqlite数据库调试工具
+简单、强大的sqlite数据库调试工具  
+https://github.com/pawelsalawa/sqlitestudio  
 使用方法：
 * 1、获得jar包：SQLiteStudioRemote.jar
 * 2、将SQLiteStudioRemote.jar加入Android项目
 * 3、在application中添加代码：  
 `SQLiteStudioService.instance().start(this)`
 
-https://github.com/pawelsalawa/sqlitestudio
 
-
-自定义控件 - 流式布局（FlowLayout）
+自定义控件 - 流式布局（FlowLayout） 
 https://www.jianshu.com/p/41e63a9e10bb
 
 
-MVPArms:可配置化的 Android MVP 快速集成框架  
+MVPArms:可配置化的 Android MVP 快速集成框架   
 https://github.com/JessYanCoding/MVPArms
 
 ArmsComponent:MVPArms 官方快速组件化方案  
