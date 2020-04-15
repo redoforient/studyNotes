@@ -1,4 +1,32 @@
-##----------2020.4.13（庚子年三月廿一）Monday---------
+### ----------2020.4.14（庚子年三月廿二）Wednesday---------
+AAR（Android Archive）
+JAR（Java Archive）
+
+
+### ----------2020.4.14（庚子年三月廿二）Tuesday---------
+**vi操作**  
+ESC+O	换行  
+u		撤销上一步的操作  
+Ctrl+r	恢复上一步被撤销的操作  
+
+
+**度量单位含义**  
+`dip (dp)`  
+device independent pixels（设备独立像素）。  
+不同设备有不同的显示效果，这个和设备硬件有关，一般我们为了支持WVGA，HVGA和QVGA推荐使用这个，不依赖像素。  
+`px`  
+pixels（像素）不同设备显示效果相同。  
+`sp`  
+scaled pixels（放大像素）主要用于字体显示（best for textsize）。  
+`in`  
+英寸，长度单位。  
+`pt`  
+point，是一个标准长度单位，1pt = 1/72英寸，用于印刷业。  
+
+[原文链接]：https://blog.csdn.net/zinss26914/java/article/details/43732467
+
+
+### ----------2020.4.13（庚子年三月廿一）Monday---------
 TraceView：Android平台配备的性能分析工具
 使用：通过Android studio自带的traceview查看（Android profiler）
 
