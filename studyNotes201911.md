@@ -1,27 +1,88 @@
 ### ----------2020.4.16（庚子年三月廿三）Thursday---------
-《深度探索Gradle自动化构建技术（二、Groovy 筑基篇）》：https://juejin.im/post/5e97ac34f265da47aa3f6dca
+
+## **[马士兵教育直播列表](https://s1.mashibing.com/selectuser)**
+
+
+[《深度探索Gradle自动化构建技术（二、Groovy 筑基篇）》](https://juejin.im/post/5e97ac34f265da47aa3f6dca)
+
+***
+[SurfaceView用法](https://www.jianshu.com/p/a40c84580952)  
+View是通过刷新来重绘视图，系统通过发出VSSYNC信号来进行屏幕的重绘，刷新的时间间隔是16ms,
+如果我们可以在**16ms**以内将绘制工作完成，则没有任何问题。
+如果我们绘制过程逻辑很复杂，并且我们的界面更新还非常频繁，这时候就会造成界面的卡顿，影响用户体验，
+为此Android提供了SurfaceView来解决这一问题。  
+SurfaceView拥有独立的绘图表面，因此SurfaceView的UI就可以在一个独立的线程中进行绘制。  
+由于不会占用主线程资源，SurfaceView 一方面可以实现复杂而高效的UI，另一方面又不会导致用户输入得不到及时响应。
+***
+
+## 组件化方案
+* CC:ComponentCaller、
+* ARouter、
+* DDComponent/JIMU
+* AppJoint（面向接口编程）
+
+***
+
+> [模拟API返回数据](https://www.easy-mock.com/)
+
+***
+>[单链表反转](https://blog.csdn.net/zxm317122667/article/details/84282723)
+
+
+
+## ANR
+
+在Android里, App的响应能力是由Activity Manager和Window Manager系统服务来监控的. 通常在如下三种情况下会弹出ANR对话框:
+
+1.  Activity 位于前台时:**5s**内无法响应用户输入事件(例如键盘输入, 触摸屏幕等)
+2. BroadcastReceiver在**10s**内无法结束
+3. ServiceTimeout(**20s**) --小概率类型，Service在特定的时间内无法处理完成
+
+造成以上两种情况的首要原因就是在主线程(UI线程)里面做了太多的阻塞耗时操作, 例如文件读写, 数据库读写, 网络查询等.
+
+链接：https://www.jianshu.com/p/4eabede8c8af
+
+> Links: [ANR谷歌官方定义](https://developer.android.google.cn/topic/performance/vitals/anr?hl=zh_cn)
+***
+
+
+https://class.imooc.com/sale/newandroid?mc_marking=f322d9d94ed01283bfdc19694f44e877&mc_channel=bdazrmjt
 
 
 ### ----------2020.4.15（庚子年三月廿二）Wednesday---------
 AAR（Android Archive）
 JAR（Java Archive）
 
+```
 [view，canvas，surface之间的关系](https://blog.csdn.net/daojin505/article/details/76814844)  
 Views are not attached to the Canvas nor the Surface.   
 The window is tied to a Surface and the ViewRoot asks the Surface for a Canvas that is then used by the Views to draw onto.
-
 
 ViewRootImpl.performTraversals()  
 * 1、private void performMeasure(int childWidthMeasureSpec, int childHeightMeasureSpec)  
 * 2、private void performLayout(WindowManager.LayoutParams lp, int desiredWindowWidth, int desiredWindowHeight)  
 * 3、private void performDraw()  
-
+```
 
 > Android开发方向：  
 > 1. Android APP
 > 2. Android后台(Java后台)
 > 3. 系统级开发
 > 4. Android驱动开发(嵌入式串口编程)
+
+
+
+串口通信 用serialport:
+
+串口和tcp差不多，一个输入流一个输出流，来一个线程读 一个线程队列写，然后就是定协议的事情了
+
+ZLL:
+图像 音频的基础和编码，ffmpeg使用
+
+
+参考源码
+exoplayer
+ijkplayer
 
 
 
