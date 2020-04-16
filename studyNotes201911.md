@@ -1,6 +1,29 @@
-### ----------2020.4.14（庚子年三月廿二）Wednesday---------
+### ----------2020.4.16（庚子年三月廿三）Thursday---------
+《深度探索Gradle自动化构建技术（二、Groovy 筑基篇）》：https://juejin.im/post/5e97ac34f265da47aa3f6dca
+
+
+### ----------2020.4.15（庚子年三月廿二）Wednesday---------
 AAR（Android Archive）
 JAR（Java Archive）
+
+[view，canvas，surface之间的关系](https://blog.csdn.net/daojin505/article/details/76814844)  
+Views are not attached to the Canvas nor the Surface.   
+The window is tied to a Surface and the ViewRoot asks the Surface for a Canvas that is then used by the Views to draw onto.
+
+
+ViewRootImpl.performTraversals()  
+* 1、private void performMeasure(int childWidthMeasureSpec, int childHeightMeasureSpec)  
+* 2、private void performLayout(WindowManager.LayoutParams lp, int desiredWindowWidth, int desiredWindowHeight)  
+* 3、private void performDraw()  
+
+
+> Android开发方向：  
+> 1. Android APP
+> 2. Android后台(Java后台)
+> 3. 系统级开发
+> 4. Android驱动开发(嵌入式串口编程)
+
+
 
 
 ### ----------2020.4.14（庚子年三月廿二）Tuesday---------
