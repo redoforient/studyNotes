@@ -1,9 +1,15 @@
 ### ----------2020.4.20（庚子年三月廿七）Monday---------
 
-
 Links:
 > **JOL** (Java Object Layout) is the tiny toolbox to analyze object layout schemes in JVMs.  
 > [JOL](http://openjdk.java.net/projects/code-tools/jol/)
+
+
+
+> 自定义view事件分发  
+> window->decorView->ViewGroup->View.  
+> 3层，简化就是：Activity的分发， ViewGroup的事件分发，View的事件分发  
+
 
 
 
