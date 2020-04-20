@@ -1,3 +1,118 @@
+### ----------2020.4.20（庚子年三月廿七）Monday---------
+
+
+Links:
+> **JOL** (Java Object Layout) is the tiny toolbox to analyze object layout schemes in JVMs.  
+> [JOL](http://openjdk.java.net/projects/code-tools/jol/)
+
+
+
+
+
+### ----------2020.4.19（庚子年三月廿六）Sunday---------
+> **内存泄漏**  
+包含Context的单例(Context使用Application)
+
+***
+
+> say byebye to findViewById-----ViewBinding 
+[Butterknife的github主页](https://github.com/JakeWharton/butterknife)  
+http://jakewharton.github.io/butterknife/
+
+Attention: This tool is now deprecated. Please switch to view binding.
+
+
+***
+
+> Lifecycle  
+
+	public class ComponentActivity extends androidx.core.app.ComponentActivity implements
+        LifecycleOwner,
+        ViewModelStoreOwner,
+        SavedStateRegistryOwner,
+        OnBackPressedDispatcherOwner {
+***
+
+
+	public class ComponentActivity extends Activity implements
+			LifecycleOwner,
+			KeyEventDispatcher.Component 
+
+***
+	package androidx.lifecycle;
+	/**
+	 * Marks a class as a LifecycleObserver. It does not have any methods, instead, relies on
+	 * {@link OnLifecycleEvent} annotated methods.
+	 * <p>
+	 * @see Lifecycle Lifecycle - for samples and usage patterns.
+	 */
+	@SuppressWarnings("WeakerAccess")
+	public interface LifecycleObserver {
+
+	}
+
+***
+泛型PECS（Producer Extends<只读> Comsumer Super)  
+[Java 泛型 <? super T> 中 super 怎么 理解？与 extends 有何不同？](https://www.zhihu.com/question/20400700)  
+
+[《effective java》里，Joshua Bloch提出的PECS原则](http://stackoverflow.com/questions/2723397/what-is-pecs-producer-extends-consumer-super)
+
+> 软技能：拒绝的艺术
+
+### ----------2020.4.18（庚子年三月廿五）Saturday---------
+**一个线程对象只能调用一次start方法.**  
+从new到等待运行是单行道,所以如果你对一个已经启动的线程对象再调用一次start方法的话,会产生**IllegalThreadStateException**异常
+
+***
+[Java并发编程：Callable、Future和FutureTask](https://www.cnblogs.com/dolphin0520/p/3949310.html)  
+
+##### Future提供了三种功能：  
+　　1）判断任务是否完成；  
+　　2）能够中断任务；  
+　　3）能够获取任务执行结果。  
+
+* FutureTask是Future接口的常用实现类
+
+		public abstract class ForkJoinTask<V> implements Future<V>, Serializable 
+
+```
+JDK1.8 API Future接口
+所有已知实现类： 
+CompletableFuture ， CountedCompleter ， ForkJoinTask ， 
+FutureTask ，RecursiveAction ， RecursiveTask ， SwingWorker
+```
+
+**Future接口的实现类**
+
+|CompletableFuture  | CountedCompleter | ForkJoinTask |
+| --- | --- | --- |
+| FutureTask | RecursiveAction | RecursiveTask | SwingWorker |
+
+* FutureTask类实现了RunnableFuture接口  
+
+		public class FutureTask<V> implements RunnableFuture<V>
+ 
+* RunnableFuture接口的实现  
+
+		public interface RunnableFuture<V> extends Runnable, Future<V> {
+			void run();
+		}
+	
+***
+
+KeyWord：**ColorMatrix**  
+[Android改变图像的饱和度、亮度和对比度](https://blog.csdn.net/sxwyf248/article/details/7019731)
+
+
+[颜色矩阵-滤镜ColorMatrix](https://www.cnblogs.com/baiqiantao/p/5491800.html)
+
+## 色彩的三要素
+1. 色相。色相通俗的说就是“颜色”，色相的改变就是颜色的改变，色相的调节伴随着红橙黄绿蓝紫的变化。
+2. 亮度。明度通俗的说就是“光照度”，明度的改变就是光照在物体上带来的改变，明度的调节伴随着越高，光越强，越泛白（就像过曝一样，往白色上偏离）；越低，光越弱，越往黑里偏
+3. 饱和度。饱和度通俗的说就是“色彩的纯度”，饱和度的改变会影响颜色的鲜艳程度，以红色为例子，越高，越接近红色，越低则越接近灰色（黑白）
+
+
+
 ### ----------2020.4.17（庚子年三月廿四）Friday---------
 
 
@@ -233,8 +348,8 @@ androidx.work.Constraints.Builder
 * 前端：
 AsyncListUtil 是一个用于异步内容加载的类
 
->60秒后过期倒计时器
-  android.os.CountDownTimer countDownTimer = new CountDownTimer(60000, 1000) 
+> 60秒后过期倒计时器  
+	android.os.CountDownTimer countDownTimer = new CountDownTimer(60000, 1000) 
 
 ViewPager2+Fragment
 
@@ -452,12 +567,12 @@ https://blog.csdn.net/u012982629/article/details/82770282
 
 
 
-at android.app.ActivityThread.main(ActivityThread.java:5151)
-at java.lang.reflect.Method.invokeNative(Method.java)
-at java.lang.reflect.Method.invoke(Method.java:515)
-at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:868)
-at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:684)
-at dalvik.system.NativeStart.main(NativeStart.java)
+	at android.app.ActivityThread.main(ActivityThread.java:5151)
+	at java.lang.reflect.Method.invokeNative(Method.java)
+	at java.lang.reflect.Method.invoke(Method.java:515)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:868)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:684)
+	at dalvik.system.NativeStart.main(NativeStart.java)
 
 
 java.lang.String
@@ -504,7 +619,7 @@ https://www.jianshu.com/p/317b2d6bde1b
 
 
 
------------2020.4.2（庚子年三月初十）Thursday-----------------
+-----------2020.4.2（庚子年三月初十）Thursday-----------------  
 Android图片轮播控件---com.youth.banner.Banner
 
 优先级队列：根据时间先后顺序排队的单链表
@@ -512,43 +627,44 @@ handler.sendXXX
 handler.sendXXX
 
 Handler
-dispatchMessage(Message msg)
-enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis)
+	dispatchMessage(Message msg)
+	enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis)
 
-private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis) {
-	msg.target = this;//Handler
-	if (mAsynchronous) {
-		msg.setAsynchronous(true);
+	private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis) {
+		msg.target = this;//Handler
+		if (mAsynchronous) {
+			msg.setAsynchronous(true);
+		}
+		return queue.enqueueMessage(msg, uptimeMillis);
 	}
-	return queue.enqueueMessage(msg, uptimeMillis);
-}
 
 
 一个线程是如何保证只有一个Looper？
-    /**
-     * Get the map associated with a ThreadLocal. Overridden in
-     * InheritableThreadLocal.
-     *
-     * @param  t the current thread
-     * @return the map
-     */
-    ThreadLocalMap getMap(Thread t) {
-        return t.threadLocals;
-    }
 
-
-
-// sThreadLocal.get() will return null unless you've called prepare().
-static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>()
-
-
-
-private static void prepare(boolean quitAllowed) {
-	if (sThreadLocal.get() != null) {
-		throw new RuntimeException("Only one Looper may be created per thread");
+	/**
+	 * Get the map associated with a ThreadLocal. Overridden in
+	 * InheritableThreadLocal.
+	 *
+	 * @param  t the current thread
+	 * @return the map
+	 */
+	ThreadLocalMap getMap(Thread t) {
+		return t.threadLocals;
 	}
-	sThreadLocal.set(new Looper(quitAllowed));
-}
+
+
+
+	// sThreadLocal.get() will return null unless you've called prepare().
+	static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>()
+
+
+
+	private static void prepare(boolean quitAllowed) {
+		if (sThreadLocal.get() != null) {
+			throw new RuntimeException("Only one Looper may be created per thread");
+		}
+		sThreadLocal.set(new Looper(quitAllowed));
+	}
 
 ThreadLocalMap维护ThreadLocal和Looper
 
@@ -565,21 +681,21 @@ Handler持有上下文，message.target握住Handler
 Handler--MessageQueue--Looper--
 
 
-/**
- * Quits the looper safely.
- * <p>
- * Causes the {@link #loop} method to terminate as soon as all remaining messages
- * in the message queue that are already due to be delivered have been handled.
- * However pending delayed messages with due times in the future will not be
- * delivered before the loop terminates.
- * </p><p>
- * Any attempt to post messages to the queue after the looper is asked to quit will fail.
- * For example, the {@link Handler#sendMessage(Message)} method will return false.
- * </p>
- */
-public void quitSafely() {
-	mQueue.quit(true);
-}
+	/**
+	 * Quits the looper safely.
+	 * <p>
+	 * Causes the {@link #loop} method to terminate as soon as all remaining messages
+	 * in the message queue that are already due to be delivered have been handled.
+	 * However pending delayed messages with due times in the future will not be
+	 * delivered before the loop terminates.
+	 * </p><p>
+	 * Any attempt to post messages to the queue after the looper is asked to quit will fail.
+	 * For example, the {@link Handler#sendMessage(Message)} method will return false.
+	 * </p>
+	 */
+	public void quitSafely() {
+		mQueue.quit(true);
+	}
 
 子线程中
 prepare
@@ -616,10 +732,10 @@ JetPack
 ViewModel
 
 
-
-PECS（Producer Extends Consumer Super）原则
-频繁往外读取内容的，适合用上界Extends。
-经常往里插入的，适合用下界Super
+[泛型:上界<? extends T>  vs 下界<? super T>](https://www.cnblogs.com/drizzlewithwind/p/6100164.html)  
+PECS（Producer Extends Consumer Super）原则  
+* 生产者：频繁往外读取内容的，适合用上界Extends（只读)
+* 消费者：经常往里插入的，适合用下界Super
 
 上界<? extends T>不能往里存，只能往外取
 Plate<? extends Fruit> p=new Plate<Apple>(new Apple());
@@ -633,21 +749,22 @@ Fruit newFruit1=p.get();
 Object newFruit2=p.get();
 Apple newFruit3=p.get();    //Error
 
-*******分割*******
-下界<? super T>不影响往里存，但往外取只能放在Object对象里
-Plate<? super Fruit> p=new Plate<Fruit>(new Fruit());
-//存入元素正常
-p.set(new Fruit());
-p.set(new Apple());
-//读取出来的东西只能存放在Object类里。
-Apple newFruit3=p.get();    //Error
-Fruit newFruit1=p.get();    //Error
-Object newFruit2=p.get();
+***
+下界<? super T>不影响往里存，但往外取只能放在Object对象里  
+
+	Plate<? super Fruit> p=new Plate<Fruit>(new Fruit());  
+	//存入元素正常
+	p.set(new Fruit());
+	p.set(new Apple());
+	//读取出来的东西只能存放在Object类里。
+	Apple newFruit3=p.get();    //Error
+	Fruit newFruit1=p.get();    //Error
+	Object newFruit2=p.get();
 
 
 
 
-----2020.3.30（庚子年三月初七）Monday----
+----2020.3.30（庚子年三月初七）Monday----  
 javapoet源代码生成
 
 
