@@ -1,5 +1,137 @@
+### ----------2020.4.22（庚子年三月廿九）Tuesday---------
+@SuppressWarnings
+压制警告
+
+* android.widget.FrameLayout
+public class FrameLayout extends ViewGroup
+
+***
+设计模式:Composite--组合模式-树形结构
+
+***
+> 工具：
+* [知识圈助手](https://intools.cn/PCoverview)
+* PC QQ 滑动鼠标截长图：Ctrl+Alt+A
+
+
+
+[ViewPager不能高度自适应？height=wrap_content 无效解决办法](https://www.cnblogs.com/zhujiabin/p/4818551.html) -->重写onMeasure
+
+[Android为什么在RecyclerView中使用executePendingBindings](http://www.6tie.net/p/1272494.html)
+
+[Android Why use ExecutePendingBindings](https://stackoverflow.com/questions/52996894/android-why-use-executependingbindings)
+
+
+MD(Material Design)
+
+
+* BRVAH框架
+
+
+凡使用Adapter选项高度设定：包一层布局
+
+ public FrameLayout(@NonNull Context context, @Nullable AttributeSet attrs,
+            @AttrRes int defStyleAttr, @StyleRes int defStyleRes) 
+			
+			
+public View inflate(XmlPullParser parser, @Nullable ViewGroup root, boolean attachToRoot)
+
+setContentView inflate
+
+* LiveData=LifecycleObserver+DataObserver
+
+
+LoadSir是一个高效易用，低碳环保，扩展性良好的加载反馈页管理框架，在加载网络或其他数据时候，根据需求切换状态页面，可添加自定义状态页面，如加载中，加载失败，无数据，网络超时，占位图，登录失效等常用页面。可配合网络加载框架，结合返回状态码，错误码，数据进行状态页自动切换，封装使用效果更佳。
+A lightweight, good expandability Android library used for displaying different pages like loading, error, empty, timeout or even your custom page when you load a page.(优雅地处理加载中，重试，无数据等)
+[LoadSir Github传送门](https://github.com/KingJA/LoadSir)
+
+异步：线程池、多线程、链式调度、设计模式
+
 ### ----------2020.4.21（庚子年三月廿八）Tuesday---------
 > 后端：分库分表（水平分表策略：区间、取模）
+***
+> 为什么使用泛型？  
+	1. 编译时类型检查  
+	2. 消除类型强制转化
+	3. 实现通用算法-->代码复用
+
+***
+## 自定义View
+
+#### 描述MeasureSpec的原理
+
+MeasureSpec用一个32位的int来表示一个View测量规格  
+	前2位表示测量规格模式(mode)  
+	后30位表示测量规格尺寸大小(size)
+	
+```
+子View的大小及测量模式由父View的测量模式和子View的LayoutParams决定
+LayoutParams取值有三种：dp（精确值）,match_parent,wrap_content 
+根据父view的三种测量模式和子View的三种LayoutParams会得出九种结果
+```
+	
+
+	private static final int MODE_SHIFT = 30;
+	private static final int MODE_MASK  = 0x3 << MODE_SHIFT;
+	
+1. 未指定模式（android.view.View.MeasureSpec#UNSPECIFIED）  
+当前父View未对子View加任何限制，可以随便用空间，不受限制。
+	
+		/**
+		 * Measure specification mode: The parent has not imposed any constraint
+		 * on the child. It can be whatever size it wants.
+		 * 最高两位是00的时候表示"未指定模式"。即MeasureSpec.UNSPECIFIED  
+		 */
+		public static final int UNSPECIFIED = 0 << MODE_SHIFT;//00
+	
+2. 精确模式（android.view.View.MeasureSpec#EXACTLY）  
+父View对子View尺寸有精确限定。无论子View想要多大尺寸，但都已被已父View限定了范围。
+	
+		/**
+		 * Measure specification mode: The parent has determined an exact size
+		 * for the child. The child is going to be given those bounds regardless
+		 * of how big it wants to be.
+		 *最高两位是01的时候表示"'精确模式"。即MeasureSpec.EXACTLY
+		 */
+		public static final int EXACTLY     = 1 << MODE_SHIFT;//01
+	
+	
+	
+3. 最大模式（android.view.View.MeasureSpec#AT_MOST）  
+子View想要多大就多大,当然子View也可以用很小的尺寸  
+	
+		 /**
+		 * Measure specification mode: The child can be as large as it wants up
+		 * to the specified size.
+		 *最高两位是10的时候表示"最大模式"。即MeasureSpec.AT_MOST
+		 */
+		public static final int AT_MOST     = 2 << MODE_SHIFT;//10
+
+参考：  
+[MeasureSpec中三种模式：UNSPECIFIED，AT_MOST，EXACTLY](https://blog.csdn.net/mp624183768/article/details/79622527)
+
+
+***
+parentMeasureSpec和childMeasureSpec为什么会存在这样的转换关系？我是这样理解的：
+
+1. 当子view指定精确的大小时，无论父容器的测量模式是什么，父容器都会依据子view所要求的dimension来确定子view的大小，即子view的模式是EXACTLY。
+2. 当父容器为精确模式时,父容器的大小就确定了。如果子view的属性是match_parent，子view填满父容器，子view的大小就等于父容器的大小，那么子view的模式就是EXACTLY；如果子view的属性为wrap_content，那么子view的大小是不确定的，但是必须小于父容器的size，所以子view的MeasureSpec为AT_MOST+size。
+3. 当父器为AT_MOST最大模式时，这是时父容器的大小不确定，但是不能大于size。此时不论子view的属性是match_parent还是wrap_content，模式都是最大模式，并且小于size。
+4. 当父器为UNSPECIFIED未知模式时，此时无论子view的dimension为多大都是可以的，因为这个模式下父容器不限制子view的大小，要多大有多大。
+
+原文：[View的三种测量模式的理解](https://blog.csdn.net/yangtssj/article/details/71634229)
+
+
+
+
+### 自定义View，为什么要进行measure？ 
+通过measure可以测量出实际宽高尺寸，
+
+
+***
+**OOM_ADJ (Out of Memory Adjustment)** 
+是android系统在内存不足情况下进行内存调整的重要参数，OOM_ADJ 取值：
+[Android的OOM_ADJ](https://www.jianshu.com/p/8897b7e47466)
 
 
 ### ----------2020.4.20（庚子年三月廿七）Monday---------
