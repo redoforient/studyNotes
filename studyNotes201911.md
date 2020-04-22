@@ -1,4 +1,22 @@
 ### ----------2020.4.22（庚子年三月廿九）Tuesday---------
+[okhttp官网](https://square.github.io/okhttp/)
+
+
+***
+kHttp3的最底层是Socket，而不是URLConnection，它通过Platform的Class.forName()反射获得当前Runtime使用的socket库，调用栈如下
+
+okhttp//实现HTTP协议
+==>framwork//JRE，实现JDK中Socket封装
+    ==>jvm//JDK的实现，本质对libc标准库的native封装
+        ==>bionic//android下的libc标准库
+            ==>systemcall//用户态切换入内核
+                ==>kernel//实现下协议栈(L4,L3)与网络驱动(一般是L2,L1)
+
+注：需求决定，Android版本4.4.4 okhttp 3.2.0
+
+原文链接：https://blog.csdn.net/hello2mao/article/details/53159151
+
+***
 @SuppressWarnings
 压制警告
 
