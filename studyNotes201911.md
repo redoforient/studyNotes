@@ -1,4 +1,110 @@
 ### ----------2020.4.22（庚子年四月初一）Thursday---------
+IntelliJ IDEA 插件 ASM Bytecode Viewer插件
+ASMPlugin:Bytecode ASMified Groovified
+
+泛型
+不能创建泛型数组
+
+数组协变
+
+泛型+协变=坑
+
+CAP#1
+
+通配符就是解决泛型不能 协变和逆变的
+
+
+Box<?> 不能存也不能取,进行安全检查
+
+Box<? extends T> 可看作只取（读取)  
+Box<? super T> 主要用于存（写入)  
+***
+
+
+##java进阶
+	JVM、多线程、设计模式、Redis、ZK、MySQL调优
+	算法与数据结构
+	Netty（网络）
+
+
+
+《java多线程编程实战指南》--黄文海
+
+先栈后大再小堆，大是老人好GC
+
+
+
+对象内存存储布局
+jol(java object layout)
+
+[JOL：查看Java 对象布局、大小工具](https://www.iteye.com/blog/shihlei-2407693)  
+
+[Object obj = new Object()在内存中占用多少字节？](https://blog.csdn.net/linysuccess/article/details/105655614)  
+64位虚拟机，开启压缩，不开启压缩都是**16byte**，坑：obj在32G内存以上会膨胀为8byte  
+一个Object对象占用16个字节，那这个16个字节中分别存放的是什么内容呢？  
+
+前面8个字节是对象头，也叫markword，记录对象被上锁的各种状态（锁升级）和垃圾回收相关信息等。  
+接下来4个字节（4G堆内存以下；或者32G以内，并且开启了ClassPointer指针压缩，否则是8个字节）是一个指向对象所属Class对象的指针。  
+接下来4个字节是为了8字节对齐而填充的padding。  
+
+
+
+```
+markword 		8byte  
+class pointer		4byte  
+instance data		0byte  
+padding			4byte  
+```
+
+
+
+对象头markword klasspointer包含什么内容？（hashcode gc 锁）
+
+cms年龄是6
+
+biased lock偏向锁
+```
+####对象怎么定位？
+* 句柄方式(间接定位，句柄方式GC回收比较稳定)
+实例数据指针 m = 0
+类型数据指针 方法区 T.class
+
+* 直接指针
+
+
+
+```
+分配内存 调用构造 返回指针
+TLAB(Thread Local Allocation Buffer)
+
+***
+
+java -X
+java -XX
+java -XX:+PrintCommandLineFlags -version
+
+javac
+javap -c
+
+//编译成 class 文件
+javac Test.java 
+
+//反汇编 class 文件
+javap -V Test.class
+
+> IDEA 插件  
+	1. jclasslib Bytecode viewer  
+	2. ASM Bytecode Viewer  
+
+	
+	
+***
+HashMap优化：避免扩容  
+加载因子  
+阈值0.75  
+扩容：达到阈值=加载因子x默认大小  
+rehash  
+
 
 > 设计模式-代理模式
 > * 普通代理
@@ -29,10 +135,11 @@
 [jdk1.8 API中文翻译](https://gitee.com/aLiez/java8-zh)
 
 
-
 ***
 * GitHub:Android选择器（时间、省市区三级联动  
 [时间选择器、省市区三级联动](https://github.com/Bigkoo/Android-PickerView)
+
+https://github.com/saiwu-bigkoo?tab=repositories
 ***
 Activity>PhoneWindow>DecorView>(TitleView|ContentView)
 
@@ -148,7 +255,8 @@ public class FrameLayout extends ViewGroup
 MD(Material Design)
 
 
-* BRVAH框架
+* [BRVAH](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)
+> 强大而灵活的RecyclerView Adapter http://www.recyclerview.org/
 
 ***
 凡使用Adapter选项高度设定：包一层布局
