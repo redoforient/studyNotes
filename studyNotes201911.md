@@ -1,10 +1,43 @@
 ### ----------2020.4.22（庚子年四月初一）Thursday---------
 
+> 设计模式-代理模式
+> * 普通代理
+> * 强制代理
+> * 动态代理
+> [Android设计模式之代理模式 Proxy](https://blog.csdn.net/l2show/article/details/46992495)
+
+***
 > 工具  
 [英语词源](https://www.etymonline.com/)  
 [词根词源字典](http://etymon.cn/index.html)  
-[汉典](https://www.zdic.net/)
+[汉典](https://www.zdic.net/)  
+[IntelliJ IDEA官方文档 W3Cschol](https://www.w3cschool.cn/intellij_idea_doc/)  
+[JAVA SE6 API](https://docs.oracle.com/javase/6/docs/api/)  
+[JAVA SE7 API](https://docs.oracle.com/javase/7/docs/api/)  
+[JAVA SE8 API](https://docs.oracle.com/javase/8/docs/api/)  
+[JAVA SE10 API](https://docs.oracle.com/javase/10/docs/api/)  
+[JAVA SE14 API](https://docs.oracle.com/en/java/javase/14/docs/api/index.html)  
+[java8 language specification](https://docs.oracle.com/javase/specs/jls/se8/html/index.html)  
 
+
+[java6 api在线中文](https://tool.oschina.net/apidocs/apidoc?api=jdk-zh)
+[java8 api在线中文](http://www.matools.com/api/java8)  
+[open jdk](http://openjdk.java.net/)  
+[jdk14 download](http://jdk.java.net/14/)
+
+
+[jdk1.8 API中文翻译](https://gitee.com/aLiez/java8-zh)
+
+
+
+***
+* GitHub:Android选择器（时间、省市区三级联动  
+[时间选择器、省市区三级联动](https://github.com/Bigkoo/Android-PickerView)
+***
+Activity>PhoneWindow>DecorView>(TitleView|ContentView)
+
+[Android窗口机制（一）认识Android的窗口结构](https://blog.csdn.net/HoHohong/article/details/54412449)  
+[Android窗口机制（二）Window，PhoneWindow，DecorView，setContentView源码理解](https://blog.csdn.net/HoHohong/article/details/54412464)
 ***
 
 
