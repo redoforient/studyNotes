@@ -1,16 +1,88 @@
-### ----------2020.4.22（庚子年三月廿九）Tuesday---------
+### ----------2020.4.22（庚子年四月初一）Thursday---------
+
+> 工具  
+[英语词源](https://www.etymonline.com/)  
+[词根词源字典](http://etymon.cn/index.html)  
+[汉典](https://www.zdic.net/)
+
+***
+
+
+java.lang.Object
+	java.text.Format
+* All Implemented Interfaces:
+	Serializable, Cloneable
+* Direct Known Subclasses:
+	DateFormat, MessageFormat, **NumberFormat**
+	
+
+NumberFormat (Java Platform SE 7 )
+java.lang.Object  
+	java.text.Format  
+		java.text.NumberFormat 
+		
+* All Implemented Interfaces:  
+	Serializable, Cloneable
+* Direct Known Subclasses:
+	ChoiceFormat, DecimalFormat
+	
+```
+                 |-- java.text.MessageFormat
+java.text.Format—|
+		 |			   |--java.text.ChoiceFormat
+		 |--java.text.NumberFormat—|
+		 |			   |--java.text.DecimalFormat
+		 |
+		 |--java.text.DateFormat—java.text.SimpleDateFormat
+```
+
+java.text.NumberFormat类有三个方法可以产生下列数据的标准格式化器：  
+创建格式化器(默认地区Local格式)：  
+NumberFormat.getNumberInstance();//数字格式化器  
+NumberFormat.getCurrencyInstance();//货币格式化器  
+NumberFormat.getPercentInstance();//百分数格式化器  
+
+**整数或小数部分所显示的最少和最多位数**  
+设定整数或小数部分所显示的最少和最多位数，可以使用NumberFormat类的方法：  
+setMinimumIntegerDigits(int)//设定整数最小位数  
+setMinimumFractionDigits(int)//设定小数最少位数  
+setMaximumIntegerDigits(int)//设定整数最多位数  
+setMaximumFractionDigits(int)//设定小数最多位数  
+
+
+* 设定小数部分的最多位很有用处。
+	如果小数部分丢失的第一位数字大于等于5，那么显示的最后一位会增1（四舍五入）。  
+	如果要显示尾随的零，可以把小数部分的最少位等于最多位。  
+	如果不想显示，可以把小数部分的最少位设定为0或不设定。  
+
+* 指定最多位整数相当危险，显示值将会被截断，产生一个错误的值。
+
+> 原文链接：  
+[java.text.NumberFormat使用](https://blog.csdn.net/junshuaizhang/article/details/8559708)
+
+***
+### ----------2020.4.22（庚子年三月三十）Tuesday---------
+六大原则
+单一职责原则（SRP：Single Pesponsibility Principle）
+开放封闭原则（OCP：Open Closed Principle）--Open（Open for extendtion）开放支持扩展，Close（Closed for modification）
+里氏替换原则（LSP：Liskov Substitution Principl）
+依赖倒置原则（DIP：Dependence Inversion Principle）
+接口隔离原则（ISP：Interface Segregation Principle）
+最少知识原则（LKP：Least Knowledge Principle）又叫迪米特原则（Law of Demeter）,简单说成：talk only to your immediate friends
+
+
 [okhttp官网](https://square.github.io/okhttp/)
 
 
 ***
 kHttp3的最底层是Socket，而不是URLConnection，它通过Platform的Class.forName()反射获得当前Runtime使用的socket库，调用栈如下
 
-okhttp//实现HTTP协议
-==>framwork//JRE，实现JDK中Socket封装
-    ==>jvm//JDK的实现，本质对libc标准库的native封装
-        ==>bionic//android下的libc标准库
-            ==>systemcall//用户态切换入内核
-                ==>kernel//实现下协议栈(L4,L3)与网络驱动(一般是L2,L1)
+okhttp//实现HTTP协议  
+==>framwork//JRE，实现JDK中Socket封装  
+    ==>jvm//JDK的实现，本质对libc标准库的native封装  
+        ==>bionic//android下的libc标准库  
+            ==>systemcall//用户态切换入内核  
+                ==>kernel//实现下协议栈(L4,L3)与网络驱动(一般是L2,L1)  
 
 注：需求决定，Android版本4.4.4 okhttp 3.2.0
 
@@ -20,7 +92,7 @@ okhttp//实现HTTP协议
 @SuppressWarnings
 压制警告
 
-* android.widget.FrameLayout
+* android.widget.FrameLayout  
 public class FrameLayout extends ViewGroup
 
 ***
@@ -45,27 +117,40 @@ MD(Material Design)
 
 * BRVAH框架
 
-
+***
 凡使用Adapter选项高度设定：包一层布局
 
  public FrameLayout(@NonNull Context context, @Nullable AttributeSet attrs,
             @AttrRes int defStyleAttr, @StyleRes int defStyleRes) 
 			
-			
+***
 public View inflate(XmlPullParser parser, @Nullable ViewGroup root, boolean attachToRoot)
+常用方法：View inflate(int resource, ViewGroup root)
 
-setContentView inflate
-
+setContentView vs LayoutInflater.inflate  
+* 联系：
+	目的都是把xml表述的layout转化为View对象   
+	 Activity.setContentView底层PhoneWindow.setContentView最终调用的也是mLayoutInflater.inflate
+	 //将要加载的资源添加到mContentParent上
+     mLayoutInflater.inflate(layoutResID, mContentParent);
+	 
+	 new com.android.internal.policy.PhoneWindow(this, window, activityConfigCallback);
+* 区别：
+	1. setContentView()一旦调用, layout就会立刻显示UI；  
+	inflate只会把Layout形成一个以view类实现成的对象，可通过调用setContentView(view)显示出来  
+	2. 在activity中通过setContentView()将界面显示出来，在非activity中对控件布局设置操作需要用LayoutInflater动态加载
+***
 * LiveData=LifecycleObserver+DataObserver
 
-
-LoadSir是一个高效易用，低碳环保，扩展性良好的加载反馈页管理框架，在加载网络或其他数据时候，根据需求切换状态页面，可添加自定义状态页面，如加载中，加载失败，无数据，网络超时，占位图，登录失效等常用页面。可配合网络加载框架，结合返回状态码，错误码，数据进行状态页自动切换，封装使用效果更佳。
+***
+**LoadSir**是一个高效易用，低碳环保，扩展性良好的加载反馈页管理框架，在加载网络或其他数据时候，根据需求切换状态页面，可添加自定义状态页面，如加载中，加载失败，无数据，网络超时，占位图，登录失效等常用页面。可配合网络加载框架，结合返回状态码，错误码，数据进行状态页自动切换，封装使用效果更佳。
 A lightweight, good expandability Android library used for displaying different pages like loading, error, empty, timeout or even your custom page when you load a page.(优雅地处理加载中，重试，无数据等)
 [LoadSir Github传送门](https://github.com/KingJA/LoadSir)
 
+***
 异步：线程池、多线程、链式调度、设计模式
 
-### ----------2020.4.21（庚子年三月廿八）Tuesday---------
+### ----------2020.4.21（庚子年三月廿九）Tuesday---------
 > 后端：分库分表（水平分表策略：区间、取模）
 ***
 > 为什么使用泛型？  
@@ -152,7 +237,7 @@ parentMeasureSpec和childMeasureSpec为什么会存在这样的转换关系？�
 [Android的OOM_ADJ](https://www.jianshu.com/p/8897b7e47466)
 
 
-### ----------2020.4.20（庚子年三月廿七）Monday---------
+### ----------2020.4.20（庚子年三月廿八）Monday---------
 
 Links:
 > **JOL** (Java Object Layout) is the tiny toolbox to analyze object layout schemes in JVMs.  
@@ -169,7 +254,7 @@ Links:
 
 
 
-### ----------2020.4.19（庚子年三月廿六）Sunday---------
+### ----------2020.4.19（庚子年三月廿七）Sunday---------
 > **内存泄漏**  
 包含Context的单例(Context使用Application)
 
@@ -219,7 +304,7 @@ Attention: This tool is now deprecated. Please switch to view binding.
 
 > 软技能：拒绝的艺术
 
-### ----------2020.4.18（庚子年三月廿五）Saturday---------
+### ----------2020.4.18（庚子年三月廿六）Saturday---------
 **一个线程对象只能调用一次start方法.**  
 从new到等待运行是单行道,所以如果你对一个已经启动的线程对象再调用一次start方法的话,会产生**IllegalThreadStateException**异常
 
@@ -273,12 +358,12 @@ KeyWord：**ColorMatrix**
 
 
 
-### ----------2020.4.17（庚子年三月廿四）Friday---------
+### ----------2020.4.17（庚子年三月廿五）Friday---------
 
 
 
 
-### ----------2020.4.16（庚子年三月廿三）Thursday---------
+### ----------2020.4.16（庚子年三月廿四）Thursday---------
 
 ## **[马士兵教育直播列表](https://s1.mashibing.com/selectuser)**
 
@@ -329,7 +414,7 @@ SurfaceView拥有独立的绘图表面，因此SurfaceView的UI就可以在一�
 https://class.imooc.com/sale/newandroid?mc_marking=f322d9d94ed01283bfdc19694f44e877&mc_channel=bdazrmjt
 
 
-### ----------2020.4.15（庚子年三月廿二）Wednesday---------
+### ----------2020.4.15（庚子年三月廿三）Wednesday---------
 AAR（Android Archive）
 JAR（Java Archive）
 
