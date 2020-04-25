@@ -1,3 +1,7 @@
+##----------2020.4.14（庚子年三月廿二）Tuesday---------
+
+
+
 ##----------2020.4.13（庚子年三月廿一）Monday---------
 TraceView：Android平台配备的性能分析工具
 使用：通过Android studio自带的traceview查看（Android profiler）
