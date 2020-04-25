@@ -1,8 +1,631 @@
-##----------2020.4.14（庚子年三月廿二）Tuesday---------
+### ----------2020.4.25（庚子年四月初三）Saturday---------
 
 
 
-##----------2020.4.13（庚子年三月廿一）Monday---------
+### ----------2020.4.24（庚子年四月初二）Friday---------
+并行(同一时间)
+并发（指定时间段范围）
+Callable、FutureTask
+
+### ----------2020.4.23（庚子年四月初一）Thursday---------
+IntelliJ IDEA 插件 ASM Bytecode Viewer插件
+ASMPlugin:Bytecode ASMified Groovified
+
+泛型
+不能创建泛型数组
+
+数组协变
+
+泛型+协变=坑
+
+CAP#1
+
+通配符就是解决泛型不能 协变和逆变的
+
+
+Box<?> 不能存也不能取,进行安全检查
+
+Box<? extends T> 可看作只取（读取)  
+Box<? super T> 主要用于存（写入)  
+***
+
+
+##java进阶
+	JVM、多线程、设计模式、Redis、ZK、MySQL调优
+	算法与数据结构
+	Netty（网络）
+
+
+
+《java多线程编程实战指南》--黄文海
+
+先栈后大再小堆，大是老人好GC
+
+
+
+对象内存存储布局
+jol(java object layout)
+
+[JOL：查看Java 对象布局、大小工具](https://www.iteye.com/blog/shihlei-2407693)  
+
+[Object obj = new Object()在内存中占用多少字节？](https://blog.csdn.net/linysuccess/article/details/105655614)  
+64位虚拟机，开启压缩，不开启压缩都是**16byte**，坑：obj在32G内存以上会膨胀为8byte  
+一个Object对象占用16个字节，那这个16个字节中分别存放的是什么内容呢？  
+
+前面8个字节是对象头，也叫markword，记录对象被上锁的各种状态（锁升级）和垃圾回收相关信息等。  
+接下来4个字节（4G堆内存以下；或者32G以内，并且开启了ClassPointer指针压缩，否则是8个字节）是一个指向对象所属Class对象的指针。  
+接下来4个字节是为了8字节对齐而填充的padding。  
+
+
+
+```
+markword 		8byte  
+class pointer		4byte  
+instance data		0byte  
+padding			4byte  
+```
+
+
+
+对象头markword klasspointer包含什么内容？（hashcode gc 锁）
+
+cms年龄是6
+
+biased lock偏向锁
+```
+####对象怎么定位？
+* 句柄方式(间接定位，句柄方式GC回收比较稳定)
+实例数据指针 m = 0
+类型数据指针 方法区 T.class
+
+* 直接指针
+
+
+
+```
+分配内存 调用构造 返回指针
+TLAB(Thread Local Allocation Buffer)
+
+***
+
+java -X
+java -XX
+java -XX:+PrintCommandLineFlags -version
+
+javac
+javap -c
+
+//编译成 class 文件
+javac Test.java 
+
+//反汇编 class 文件
+javap -V Test.class
+
+> IDEA 插件  
+	1. jclasslib Bytecode viewer  
+	2. ASM Bytecode Viewer  
+
+	
+	
+***
+HashMap优化：避免扩容  
+加载因子  
+阈值0.75  
+扩容：达到阈值=加载因子x默认大小  
+rehash  
+
+
+> 设计模式-代理模式
+> * 普通代理
+> * 强制代理
+> * 动态代理
+> [Android设计模式之代理模式 Proxy](https://blog.csdn.net/l2show/article/details/46992495)
+
+***
+> 工具  
+[英语词源](https://www.etymonline.com/)  
+[词根词源字典](http://etymon.cn/index.html)  
+[汉典](https://www.zdic.net/)  
+[IntelliJ IDEA官方文档 W3Cschol](https://www.w3cschool.cn/intellij_idea_doc/)  
+[JAVA SE6 API](https://docs.oracle.com/javase/6/docs/api/)  
+[JAVA SE7 API](https://docs.oracle.com/javase/7/docs/api/)  
+[JAVA SE8 API](https://docs.oracle.com/javase/8/docs/api/)  
+[JAVA SE10 API](https://docs.oracle.com/javase/10/docs/api/)  
+[JAVA SE14 API](https://docs.oracle.com/en/java/javase/14/docs/api/index.html)  
+[java8 language specification](https://docs.oracle.com/javase/specs/jls/se8/html/index.html)  
+
+
+[java6 api在线中文](https://tool.oschina.net/apidocs/apidoc?api=jdk-zh)
+[java8 api在线中文](http://www.matools.com/api/java8)  
+[open jdk](http://openjdk.java.net/)  
+[jdk14 download](http://jdk.java.net/14/)
+
+
+[jdk1.8 API中文翻译](https://gitee.com/aLiez/java8-zh)
+
+
+***
+* GitHub:Android选择器（时间、省市区三级联动  
+[时间选择器、省市区三级联动](https://github.com/Bigkoo/Android-PickerView)
+
+https://github.com/saiwu-bigkoo?tab=repositories
+***
+Activity>PhoneWindow>DecorView>(TitleView|ContentView)
+
+[Android窗口机制（一）认识Android的窗口结构](https://blog.csdn.net/HoHohong/article/details/54412449)  
+[Android窗口机制（二）Window，PhoneWindow，DecorView，setContentView源码理解](https://blog.csdn.net/HoHohong/article/details/54412464)
+***
+
+
+java.lang.Object
+	java.text.Format
+* All Implemented Interfaces:
+	Serializable, Cloneable
+* Direct Known Subclasses:
+	DateFormat, MessageFormat, **NumberFormat**
+	
+
+NumberFormat (Java Platform SE 7 )
+java.lang.Object  
+	java.text.Format  
+		java.text.NumberFormat 
+		
+* All Implemented Interfaces:  
+	Serializable, Cloneable
+* Direct Known Subclasses:
+	ChoiceFormat, DecimalFormat
+	
+```
+                 |-- java.text.MessageFormat
+java.text.Format—|
+		 |			   |--java.text.ChoiceFormat
+		 |--java.text.NumberFormat—|
+		 |			   |--java.text.DecimalFormat
+		 |
+		 |--java.text.DateFormat—java.text.SimpleDateFormat
+```
+
+java.text.NumberFormat类有三个方法可以产生下列数据的标准格式化器：  
+创建格式化器(默认地区Local格式)：  
+NumberFormat.getNumberInstance();//数字格式化器  
+NumberFormat.getCurrencyInstance();//货币格式化器  
+NumberFormat.getPercentInstance();//百分数格式化器  
+
+**整数或小数部分所显示的最少和最多位数**  
+设定整数或小数部分所显示的最少和最多位数，可以使用NumberFormat类的方法：  
+setMinimumIntegerDigits(int)//设定整数最小位数  
+setMinimumFractionDigits(int)//设定小数最少位数  
+setMaximumIntegerDigits(int)//设定整数最多位数  
+setMaximumFractionDigits(int)//设定小数最多位数  
+
+
+* 设定小数部分的最多位很有用处。
+	如果小数部分丢失的第一位数字大于等于5，那么显示的最后一位会增1（四舍五入）。  
+	如果要显示尾随的零，可以把小数部分的最少位等于最多位。  
+	如果不想显示，可以把小数部分的最少位设定为0或不设定。  
+
+* 指定最多位整数相当危险，显示值将会被截断，产生一个错误的值。
+
+> 原文链接：  
+[java.text.NumberFormat使用](https://blog.csdn.net/junshuaizhang/article/details/8559708)
+
+***
+### ----------2020.4.22（庚子年三月三十）Tuesday---------
+六大原则
+单一职责原则（SRP：Single Pesponsibility Principle）
+开放封闭原则（OCP：Open Closed Principle）--Open（Open for extendtion）开放支持扩展，Close（Closed for modification）
+里氏替换原则（LSP：Liskov Substitution Principl）
+依赖倒置原则（DIP：Dependence Inversion Principle）
+接口隔离原则（ISP：Interface Segregation Principle）
+最少知识原则（LKP：Least Knowledge Principle）又叫迪米特原则（Law of Demeter）,简单说成：talk only to your immediate friends
+
+
+[okhttp官网](https://square.github.io/okhttp/)
+
+
+***
+kHttp3的最底层是Socket，而不是URLConnection，它通过Platform的Class.forName()反射获得当前Runtime使用的socket库，调用栈如下
+
+okhttp//实现HTTP协议  
+==>framwork//JRE，实现JDK中Socket封装  
+    ==>jvm//JDK的实现，本质对libc标准库的native封装  
+        ==>bionic//android下的libc标准库  
+            ==>systemcall//用户态切换入内核  
+                ==>kernel//实现下协议栈(L4,L3)与网络驱动(一般是L2,L1)  
+
+注：需求决定，Android版本4.4.4 okhttp 3.2.0
+
+原文链接：https://blog.csdn.net/hello2mao/article/details/53159151
+
+***
+@SuppressWarnings
+压制警告
+
+* android.widget.FrameLayout  
+public class FrameLayout extends ViewGroup
+
+***
+设计模式:Composite--组合模式-树形结构
+
+***
+> 工具：
+* [知识圈助手](https://intools.cn/PCoverview)
+* PC QQ 滑动鼠标截长图：Ctrl+Alt+A
+
+
+
+[ViewPager不能高度自适应？height=wrap_content 无效解决办法](https://www.cnblogs.com/zhujiabin/p/4818551.html) -->重写onMeasure
+
+[Android为什么在RecyclerView中使用executePendingBindings](http://www.6tie.net/p/1272494.html)
+
+[Android Why use ExecutePendingBindings](https://stackoverflow.com/questions/52996894/android-why-use-executependingbindings)
+
+
+MD(Material Design)
+
+
+* [BRVAH](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)
+> 强大而灵活的RecyclerView Adapter http://www.recyclerview.org/
+
+***
+凡使用Adapter选项高度设定：包一层布局
+
+ public FrameLayout(@NonNull Context context, @Nullable AttributeSet attrs,
+            @AttrRes int defStyleAttr, @StyleRes int defStyleRes) 
+			
+***
+public View inflate(XmlPullParser parser, @Nullable ViewGroup root, boolean attachToRoot)
+常用方法：View inflate(int resource, ViewGroup root)
+
+setContentView vs LayoutInflater.inflate  
+* 联系：
+	目的都是把xml表述的layout转化为View对象   
+	 Activity.setContentView底层PhoneWindow.setContentView最终调用的也是mLayoutInflater.inflate
+	 //将要加载的资源添加到mContentParent上
+     mLayoutInflater.inflate(layoutResID, mContentParent);
+	 
+	 new com.android.internal.policy.PhoneWindow(this, window, activityConfigCallback);
+* 区别：
+	1. setContentView()一旦调用, layout就会立刻显示UI；  
+	inflate只会把Layout形成一个以view类实现成的对象，可通过调用setContentView(view)显示出来  
+	2. 在activity中通过setContentView()将界面显示出来，在非activity中对控件布局设置操作需要用LayoutInflater动态加载
+***
+* LiveData=LifecycleObserver+DataObserver
+
+***
+**LoadSir**是一个高效易用，低碳环保，扩展性良好的加载反馈页管理框架，在加载网络或其他数据时候，根据需求切换状态页面，可添加自定义状态页面，如加载中，加载失败，无数据，网络超时，占位图，登录失效等常用页面。可配合网络加载框架，结合返回状态码，错误码，数据进行状态页自动切换，封装使用效果更佳。
+A lightweight, good expandability Android library used for displaying different pages like loading, error, empty, timeout or even your custom page when you load a page.(优雅地处理加载中，重试，无数据等)
+[LoadSir Github传送门](https://github.com/KingJA/LoadSir)
+
+***
+异步：线程池、多线程、链式调度、设计模式
+
+### ----------2020.4.21（庚子年三月廿九）Tuesday---------
+> 后端：分库分表（水平分表策略：区间、取模）
+***
+> 为什么使用泛型？  
+	1. 编译时类型检查  
+	2. 消除类型强制转化
+	3. 实现通用算法-->代码复用
+
+***
+## 自定义View
+
+#### 描述MeasureSpec的原理
+
+MeasureSpec用一个32位的int来表示一个View测量规格  
+	前2位表示测量规格模式(mode)  
+	后30位表示测量规格尺寸大小(size)
+	
+```
+子View的大小及测量模式由父View的测量模式和子View的LayoutParams决定
+LayoutParams取值有三种：dp（精确值）,match_parent,wrap_content 
+根据父view的三种测量模式和子View的三种LayoutParams会得出九种结果
+```
+	
+
+	private static final int MODE_SHIFT = 30;
+	private static final int MODE_MASK  = 0x3 << MODE_SHIFT;
+	
+1. 未指定模式（android.view.View.MeasureSpec#UNSPECIFIED）  
+当前父View未对子View加任何限制，可以随便用空间，不受限制。
+	
+		/**
+		 * Measure specification mode: The parent has not imposed any constraint
+		 * on the child. It can be whatever size it wants.
+		 * 最高两位是00的时候表示"未指定模式"。即MeasureSpec.UNSPECIFIED  
+		 */
+		public static final int UNSPECIFIED = 0 << MODE_SHIFT;//00
+	
+2. 精确模式（android.view.View.MeasureSpec#EXACTLY）  
+父View对子View尺寸有精确限定。无论子View想要多大尺寸，但都已被已父View限定了范围。
+	
+		/**
+		 * Measure specification mode: The parent has determined an exact size
+		 * for the child. The child is going to be given those bounds regardless
+		 * of how big it wants to be.
+		 *最高两位是01的时候表示"'精确模式"。即MeasureSpec.EXACTLY
+		 */
+		public static final int EXACTLY     = 1 << MODE_SHIFT;//01
+	
+	
+	
+3. 最大模式（android.view.View.MeasureSpec#AT_MOST）  
+子View想要多大就多大,当然子View也可以用很小的尺寸  
+	
+		 /**
+		 * Measure specification mode: The child can be as large as it wants up
+		 * to the specified size.
+		 *最高两位是10的时候表示"最大模式"。即MeasureSpec.AT_MOST
+		 */
+		public static final int AT_MOST     = 2 << MODE_SHIFT;//10
+
+参考：  
+[MeasureSpec中三种模式：UNSPECIFIED，AT_MOST，EXACTLY](https://blog.csdn.net/mp624183768/article/details/79622527)
+
+
+***
+parentMeasureSpec和childMeasureSpec为什么会存在这样的转换关系？我是这样理解的：
+
+1. 当子view指定精确的大小时，无论父容器的测量模式是什么，父容器都会依据子view所要求的dimension来确定子view的大小，即子view的模式是EXACTLY。
+2. 当父容器为精确模式时,父容器的大小就确定了。如果子view的属性是match_parent，子view填满父容器，子view的大小就等于父容器的大小，那么子view的模式就是EXACTLY；如果子view的属性为wrap_content，那么子view的大小是不确定的，但是必须小于父容器的size，所以子view的MeasureSpec为AT_MOST+size。
+3. 当父器为AT_MOST最大模式时，这是时父容器的大小不确定，但是不能大于size。此时不论子view的属性是match_parent还是wrap_content，模式都是最大模式，并且小于size。
+4. 当父器为UNSPECIFIED未知模式时，此时无论子view的dimension为多大都是可以的，因为这个模式下父容器不限制子view的大小，要多大有多大。
+
+原文：[View的三种测量模式的理解](https://blog.csdn.net/yangtssj/article/details/71634229)
+
+
+
+
+### 自定义View，为什么要进行measure？ 
+通过measure可以测量出实际宽高尺寸，
+
+
+***
+**OOM_ADJ (Out of Memory Adjustment)** 
+是android系统在内存不足情况下进行内存调整的重要参数，OOM_ADJ 取值：
+[Android的OOM_ADJ](https://www.jianshu.com/p/8897b7e47466)
+
+
+### ----------2020.4.20（庚子年三月廿八）Monday---------
+
+Links:
+> **JOL** (Java Object Layout) is the tiny toolbox to analyze object layout schemes in JVMs.  
+> [JOL](http://openjdk.java.net/projects/code-tools/jol/)
+
+
+
+> 自定义view事件分发  
+> window->decorView->ViewGroup->View.  
+> 3层，简化就是：Activity的分发， ViewGroup的事件分发，View的事件分发  
+
+
+
+
+
+
+### ----------2020.4.19（庚子年三月廿七）Sunday---------
+> **内存泄漏**  
+包含Context的单例(Context使用Application)
+
+***
+
+> say byebye to findViewById-----ViewBinding 
+[Butterknife的github主页](https://github.com/JakeWharton/butterknife)  
+http://jakewharton.github.io/butterknife/
+
+Attention: This tool is now deprecated. Please switch to view binding.
+
+
+***
+
+> Lifecycle  
+
+	public class ComponentActivity extends androidx.core.app.ComponentActivity implements
+        LifecycleOwner,
+        ViewModelStoreOwner,
+        SavedStateRegistryOwner,
+        OnBackPressedDispatcherOwner {
+***
+
+
+	public class ComponentActivity extends Activity implements
+			LifecycleOwner,
+			KeyEventDispatcher.Component 
+
+***
+	package androidx.lifecycle;
+	/**
+	 * Marks a class as a LifecycleObserver. It does not have any methods, instead, relies on
+	 * {@link OnLifecycleEvent} annotated methods.
+	 * <p>
+	 * @see Lifecycle Lifecycle - for samples and usage patterns.
+	 */
+	@SuppressWarnings("WeakerAccess")
+	public interface LifecycleObserver {
+
+	}
+
+***
+泛型PECS（Producer Extends<只读> Comsumer Super)  
+[Java 泛型 <? super T> 中 super 怎么 理解？与 extends 有何不同？](https://www.zhihu.com/question/20400700)  
+
+[《effective java》里，Joshua Bloch提出的PECS原则](http://stackoverflow.com/questions/2723397/what-is-pecs-producer-extends-consumer-super)
+
+> 软技能：拒绝的艺术
+
+### ----------2020.4.18（庚子年三月廿六）Saturday---------
+**一个线程对象只能调用一次start方法.**  
+从new到等待运行是单行道,所以如果你对一个已经启动的线程对象再调用一次start方法的话,会产生**IllegalThreadStateException**异常
+
+***
+[Java并发编程：Callable、Future和FutureTask](https://www.cnblogs.com/dolphin0520/p/3949310.html)  
+
+##### Future提供了三种功能：  
+　　1）判断任务是否完成；  
+　　2）能够中断任务；  
+　　3）能够获取任务执行结果。  
+
+* FutureTask是Future接口的常用实现类
+
+		public abstract class ForkJoinTask<V> implements Future<V>, Serializable 
+
+```
+JDK1.8 API Future接口
+所有已知实现类： 
+CompletableFuture ， CountedCompleter ， ForkJoinTask ， 
+FutureTask ，RecursiveAction ， RecursiveTask ， SwingWorker
+```
+
+**Future接口的实现类**
+
+|CompletableFuture  | CountedCompleter | ForkJoinTask |
+| --- | --- | --- |
+| FutureTask | RecursiveAction | RecursiveTask | SwingWorker |
+
+* FutureTask类实现了RunnableFuture接口  
+
+		public class FutureTask<V> implements RunnableFuture<V>
+ 
+* RunnableFuture接口的实现  
+
+		public interface RunnableFuture<V> extends Runnable, Future<V> {
+			void run();
+		}
+	
+***
+
+KeyWord：**ColorMatrix**  
+[Android改变图像的饱和度、亮度和对比度](https://blog.csdn.net/sxwyf248/article/details/7019731)
+
+
+[颜色矩阵-滤镜ColorMatrix](https://www.cnblogs.com/baiqiantao/p/5491800.html)
+
+## 色彩的三要素
+1. 色相。色相通俗的说就是“颜色”，色相的改变就是颜色的改变，色相的调节伴随着红橙黄绿蓝紫的变化。
+2. 亮度。明度通俗的说就是“光照度”，明度的改变就是光照在物体上带来的改变，明度的调节伴随着越高，光越强，越泛白（就像过曝一样，往白色上偏离）；越低，光越弱，越往黑里偏
+3. 饱和度。饱和度通俗的说就是“色彩的纯度”，饱和度的改变会影响颜色的鲜艳程度，以红色为例子，越高，越接近红色，越低则越接近灰色（黑白）
+
+
+
+### ----------2020.4.17（庚子年三月廿五）Friday---------
+
+
+
+
+### ----------2020.4.16（庚子年三月廿四）Thursday---------
+
+## **[马士兵教育直播列表](https://s1.mashibing.com/selectuser)**
+
+
+[《深度探索Gradle自动化构建技术（二、Groovy 筑基篇）》](https://juejin.im/post/5e97ac34f265da47aa3f6dca)
+
+***
+[SurfaceView用法](https://www.jianshu.com/p/a40c84580952)  
+View是通过刷新来重绘视图，系统通过发出VSSYNC信号来进行屏幕的重绘，刷新的时间间隔是16ms,
+如果我们可以在**16ms**以内将绘制工作完成，则没有任何问题。
+如果我们绘制过程逻辑很复杂，并且我们的界面更新还非常频繁，这时候就会造成界面的卡顿，影响用户体验，
+为此Android提供了SurfaceView来解决这一问题。  
+SurfaceView拥有独立的绘图表面，因此SurfaceView的UI就可以在一个独立的线程中进行绘制。  
+由于不会占用主线程资源，SurfaceView 一方面可以实现复杂而高效的UI，另一方面又不会导致用户输入得不到及时响应。
+***
+
+## 组件化方案
+* CC:ComponentCaller、
+* ARouter、
+* DDComponent/JIMU
+* AppJoint（面向接口编程）
+
+***
+
+> [模拟API返回数据](https://www.easy-mock.com/)
+
+***
+>[单链表反转](https://blog.csdn.net/zxm317122667/article/details/84282723)
+
+
+
+## ANR
+
+在Android里, App的响应能力是由Activity Manager和Window Manager系统服务来监控的. 通常在如下三种情况下会弹出ANR对话框:
+
+1.  Activity 位于前台时:**5s**内无法响应用户输入事件(例如键盘输入, 触摸屏幕等)
+2. BroadcastReceiver在**10s**内无法结束
+3. ServiceTimeout(**20s**) --小概率类型，Service在特定的时间内无法处理完成
+
+造成以上两种情况的首要原因就是在主线程(UI线程)里面做了太多的阻塞耗时操作, 例如文件读写, 数据库读写, 网络查询等.
+
+链接：https://www.jianshu.com/p/4eabede8c8af
+
+> Links: [ANR谷歌官方定义](https://developer.android.google.cn/topic/performance/vitals/anr?hl=zh_cn)
+***
+
+
+https://class.imooc.com/sale/newandroid?mc_marking=f322d9d94ed01283bfdc19694f44e877&mc_channel=bdazrmjt
+
+
+### ----------2020.4.15（庚子年三月廿三）Wednesday---------
+AAR（Android Archive）
+JAR（Java Archive）
+
+```
+[view，canvas，surface之间的关系](https://blog.csdn.net/daojin505/article/details/76814844)  
+Views are not attached to the Canvas nor the Surface.   
+The window is tied to a Surface and the ViewRoot asks the Surface for a Canvas that is then used by the Views to draw onto.
+
+ViewRootImpl.performTraversals()  
+* 1、private void performMeasure(int childWidthMeasureSpec, int childHeightMeasureSpec)  
+* 2、private void performLayout(WindowManager.LayoutParams lp, int desiredWindowWidth, int desiredWindowHeight)  
+* 3、private void performDraw()  
+```
+
+> Android开发方向：  
+> 1. Android APP
+> 2. Android后台(Java后台)
+> 3. 系统级开发
+> 4. Android驱动开发(嵌入式串口编程)
+
+
+
+串口通信 用serialport:
+
+串口和tcp差不多，一个输入流一个输出流，来一个线程读 一个线程队列写，然后就是定协议的事情了
+
+ZLL:
+图像 音频的基础和编码，ffmpeg使用
+
+
+参考源码
+exoplayer
+ijkplayer
+
+
+
+
+### ----------2020.4.14（庚子年三月廿二）Tuesday---------
+**vi操作**  
+ESC+O	换行  
+u		撤销上一步的操作  
+Ctrl+r	恢复上一步被撤销的操作  
+
+
+**度量单位含义**  
+`dip (dp)`  
+device independent pixels（设备独立像素）。  
+不同设备有不同的显示效果，这个和设备硬件有关，一般我们为了支持WVGA，HVGA和QVGA推荐使用这个，不依赖像素。  
+`px`  
+pixels（像素）不同设备显示效果相同。  
+`sp`  
+scaled pixels（放大像素）主要用于字体显示（best for textsize）。  
+`in`  
+英寸，长度单位。  
+`pt`  
+point，是一个标准长度单位，1pt = 1/72英寸，用于印刷业。  
+
+[原文链接]：https://blog.csdn.net/zinss26914/java/article/details/43732467
+
+
+### ----------2020.4.13（庚子年三月廿一）Monday---------
 TraceView：Android平台配备的性能分析工具
 使用：通过Android studio自带的traceview查看（Android profiler）
 
@@ -120,8 +743,8 @@ androidx.work.Constraints.Builder
 * 前端：
 AsyncListUtil 是一个用于异步内容加载的类
 
->60秒后过期倒计时器
-  android.os.CountDownTimer countDownTimer = new CountDownTimer(60000, 1000) 
+> 60秒后过期倒计时器  
+	android.os.CountDownTimer countDownTimer = new CountDownTimer(60000, 1000) 
 
 ViewPager2+Fragment
 
@@ -339,12 +962,12 @@ https://blog.csdn.net/u012982629/article/details/82770282
 
 
 
-at android.app.ActivityThread.main(ActivityThread.java:5151)
-at java.lang.reflect.Method.invokeNative(Method.java)
-at java.lang.reflect.Method.invoke(Method.java:515)
-at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:868)
-at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:684)
-at dalvik.system.NativeStart.main(NativeStart.java)
+	at android.app.ActivityThread.main(ActivityThread.java:5151)
+	at java.lang.reflect.Method.invokeNative(Method.java)
+	at java.lang.reflect.Method.invoke(Method.java:515)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:868)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:684)
+	at dalvik.system.NativeStart.main(NativeStart.java)
 
 
 java.lang.String
@@ -391,7 +1014,7 @@ https://www.jianshu.com/p/317b2d6bde1b
 
 
 
------------2020.4.2（庚子年三月初十）Thursday-----------------
+-----------2020.4.2（庚子年三月初十）Thursday-----------------  
 Android图片轮播控件---com.youth.banner.Banner
 
 优先级队列：根据时间先后顺序排队的单链表
@@ -399,43 +1022,44 @@ handler.sendXXX
 handler.sendXXX
 
 Handler
-dispatchMessage(Message msg)
-enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis)
+	dispatchMessage(Message msg)
+	enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis)
 
-private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis) {
-	msg.target = this;//Handler
-	if (mAsynchronous) {
-		msg.setAsynchronous(true);
+	private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis) {
+		msg.target = this;//Handler
+		if (mAsynchronous) {
+			msg.setAsynchronous(true);
+		}
+		return queue.enqueueMessage(msg, uptimeMillis);
 	}
-	return queue.enqueueMessage(msg, uptimeMillis);
-}
 
 
 一个线程是如何保证只有一个Looper？
-    /**
-     * Get the map associated with a ThreadLocal. Overridden in
-     * InheritableThreadLocal.
-     *
-     * @param  t the current thread
-     * @return the map
-     */
-    ThreadLocalMap getMap(Thread t) {
-        return t.threadLocals;
-    }
 
-
-
-// sThreadLocal.get() will return null unless you've called prepare().
-static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>()
-
-
-
-private static void prepare(boolean quitAllowed) {
-	if (sThreadLocal.get() != null) {
-		throw new RuntimeException("Only one Looper may be created per thread");
+	/**
+	 * Get the map associated with a ThreadLocal. Overridden in
+	 * InheritableThreadLocal.
+	 *
+	 * @param  t the current thread
+	 * @return the map
+	 */
+	ThreadLocalMap getMap(Thread t) {
+		return t.threadLocals;
 	}
-	sThreadLocal.set(new Looper(quitAllowed));
-}
+
+
+
+	// sThreadLocal.get() will return null unless you've called prepare().
+	static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>()
+
+
+
+	private static void prepare(boolean quitAllowed) {
+		if (sThreadLocal.get() != null) {
+			throw new RuntimeException("Only one Looper may be created per thread");
+		}
+		sThreadLocal.set(new Looper(quitAllowed));
+	}
 
 ThreadLocalMap维护ThreadLocal和Looper
 
@@ -452,21 +1076,21 @@ Handler持有上下文，message.target握住Handler
 Handler--MessageQueue--Looper--
 
 
-/**
- * Quits the looper safely.
- * <p>
- * Causes the {@link #loop} method to terminate as soon as all remaining messages
- * in the message queue that are already due to be delivered have been handled.
- * However pending delayed messages with due times in the future will not be
- * delivered before the loop terminates.
- * </p><p>
- * Any attempt to post messages to the queue after the looper is asked to quit will fail.
- * For example, the {@link Handler#sendMessage(Message)} method will return false.
- * </p>
- */
-public void quitSafely() {
-	mQueue.quit(true);
-}
+	/**
+	 * Quits the looper safely.
+	 * <p>
+	 * Causes the {@link #loop} method to terminate as soon as all remaining messages
+	 * in the message queue that are already due to be delivered have been handled.
+	 * However pending delayed messages with due times in the future will not be
+	 * delivered before the loop terminates.
+	 * </p><p>
+	 * Any attempt to post messages to the queue after the looper is asked to quit will fail.
+	 * For example, the {@link Handler#sendMessage(Message)} method will return false.
+	 * </p>
+	 */
+	public void quitSafely() {
+		mQueue.quit(true);
+	}
 
 子线程中
 prepare
@@ -503,10 +1127,10 @@ JetPack
 ViewModel
 
 
-
-PECS（Producer Extends Consumer Super）原则
-频繁往外读取内容的，适合用上界Extends。
-经常往里插入的，适合用下界Super
+[泛型:上界<? extends T>  vs 下界<? super T>](https://www.cnblogs.com/drizzlewithwind/p/6100164.html)  
+PECS（Producer Extends Consumer Super）原则  
+* 生产者：频繁往外读取内容的，适合用上界Extends（只读)
+* 消费者：经常往里插入的，适合用下界Super
 
 上界<? extends T>不能往里存，只能往外取
 Plate<? extends Fruit> p=new Plate<Apple>(new Apple());
@@ -520,21 +1144,22 @@ Fruit newFruit1=p.get();
 Object newFruit2=p.get();
 Apple newFruit3=p.get();    //Error
 
-*******分割*******
-下界<? super T>不影响往里存，但往外取只能放在Object对象里
-Plate<? super Fruit> p=new Plate<Fruit>(new Fruit());
-//存入元素正常
-p.set(new Fruit());
-p.set(new Apple());
-//读取出来的东西只能存放在Object类里。
-Apple newFruit3=p.get();    //Error
-Fruit newFruit1=p.get();    //Error
-Object newFruit2=p.get();
+***
+下界<? super T>不影响往里存，但往外取只能放在Object对象里  
+
+	Plate<? super Fruit> p=new Plate<Fruit>(new Fruit());  
+	//存入元素正常
+	p.set(new Fruit());
+	p.set(new Apple());
+	//读取出来的东西只能存放在Object类里。
+	Apple newFruit3=p.get();    //Error
+	Fruit newFruit1=p.get();    //Error
+	Object newFruit2=p.get();
 
 
 
 
-----2020.3.30（庚子年三月初七）Monday----
+----2020.3.30（庚子年三月初七）Monday----  
 javapoet源代码生成
 
 
