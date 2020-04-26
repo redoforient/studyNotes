@@ -1,3 +1,32 @@
+### ----------2020.4.26（庚子年四月初四）Sunday---------
+
+
+
+> java中**协变**跟**逆变**是对泛型类的继承关系的表述.
+> Number为Integer的父类
+> List<Number> 和List<Integer> 之间是没有继承关系的
+> **协变**  协变主要是用在函数的返回值上
+>  List<Integer> 是 List<? extends Number> 的子类型
+>  Crate<Orange> 是 Crate<? extends Fruit> 的子类型
+> ***
+> **逆变** 逆变用在函数参数上
+> List<Number> 是 List<? super Integer> 的子类型
+> Crate<Fruit> 是 Crate<? super Orange> 的子类型
+> ***
+> [Java和Kotlin中泛型的协变、逆变和不变](https://www.jianshu.com/p/0c2948f7e656)  
+> ``` 
+> type variance（型变）  
+> Type variance refers to the techniques by which we can allow, or not allow, subtyping in our parameterized types.
+> ```
+> invariance（不型变）：也就是说，Crate<Orange> 和 Crate<Fruit> 之间没有关系。
+> covariance（协变）：也就是说，Crate<Orange> 是 Crate<? extends Fruit> 的子类型。
+> contravariance（逆变）：也就是说，Crate<Fruit> 是 Crate<? super Orange> 的子类型。
+> 子类（subclass） 和 子类型（subtype）不是一个概念  
+> 子类一定是子类型，子类型不一定是子类，例如，Crate<Orange> 是 Crate<? extends Fruit> 的子类型，但是Crate<Orange> 并不是 Crate<? extends Fruit> 的子类。
+
+
+
+
 ### ----------2020.4.25（庚子年四月初三）Saturday---------
 
 
@@ -14,7 +43,9 @@ ASMPlugin:Bytecode ASMified Groovified
 泛型
 不能创建泛型数组
 
-数组协变
+> [数组是协变的，具体化的](https://blog.csdn.net/zjq2008wd/article/details/8788310)  
+> 示例：Fruit[] apples=new Apple[size];
+
 
 泛型+协变=坑
 
