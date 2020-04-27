@@ -1,7 +1,7 @@
+### ----------2020.4.27（庚子年四月初五）Monday---------
+
+
 ### ----------2020.4.26（庚子年四月初四）Sunday---------
-
-
-
 > java中**协变**跟**逆变**是对泛型类的继承关系的表述.
 > Number为Integer的父类
 > List<Number> 和List<Integer> 之间是没有继承关系的
@@ -18,11 +18,11 @@
 > type variance（型变）  
 > Type variance refers to the techniques by which we can allow, or not allow, subtyping in our parameterized types.
 > ```
-> invariance（不型变）：也就是说，Crate<Orange> 和 Crate<Fruit> 之间没有关系。
-> covariance（协变）：也就是说，Crate<Orange> 是 Crate<? extends Fruit> 的子类型。
-> contravariance（逆变）：也就是说，Crate<Fruit> 是 Crate<? super Orange> 的子类型。
-> 子类（subclass） 和 子类型（subtype）不是一个概念  
-> 子类一定是子类型，子类型不一定是子类，例如，Crate<Orange> 是 Crate<? extends Fruit> 的子类型，但是Crate<Orange> 并不是 Crate<? extends Fruit> 的子类。
+> invariance（不型变）：也就是说，Crate<Orange> 和 Crate<Fruit> 之间没有关系。  
+> covariance（协变）：也就是说，Crate<Orange> 是 Crate<? extends Fruit> 的子类型。  
+> contravariance（逆变）：也就是说，Crate<Fruit> 是 Crate<? super Orange> 的子类型。  
+> 子类（subclass） 和 子类型（subtype）不是一个概念    
+> 子类一定是子类型，子类型不一定是子类，例如，Crate<Orange> 是 Crate<? extends Fruit> 的子类型，但是Crate<Orange> 并不是 Crate<? extends Fruit> 的子类。  
 
 
 
