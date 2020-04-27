@@ -1,4 +1,28 @@
 ### ----------2020.4.27（庚子年四月初五）Monday---------
+注解
+
+```
+正向代理
+[正向代理与反向代理的区别](https://www.jianshu.com/p/208c02c9dd1d)  
+[正向代理和反向代理的区别]（https://www.tuicool.com/articles/M7bAnqy)  
+正向代理（代理封装客户端）应用场景：Squid科学上网  
+反向代理（代理封装服务端）应用场景：Nginx
+* 负载均衡
+* 保护和隐藏原始资源服务器
+* 加密和SSL加速
+* 缓存静态内容
+* 压缩
+* 减速上传
+* 安全
+* 外网发布
+```
+
+***
+要价12580大洋的课程
+[网易工程师带你突破Android技术瓶颈](https://mooc.study.163.com/smartSpec/detail/1202810601.htm)
+-  UI/NDK开发 · 性能优化 · 架构设计 · Flutter开发
+***
+
 
 
 ### ----------2020.4.26（庚子年四月初四）Sunday---------
@@ -159,9 +183,10 @@ rehash
 
 
 > 设计模式-代理模式
-> * 普通代理
-> * 强制代理
-> * 动态代理
+> * 普通代理(静态代理)
+> * [虚拟代理(可类比为：代理模式+懒汉模式，需要多处判空)](https://www.cnblogs.com/noKing/p/9062329.html)  
+> * 强制代理  
+> * 动态代理  
 > [Android设计模式之代理模式 Proxy](https://blog.csdn.net/l2show/article/details/46992495)
 
 ***
