@@ -1,5 +1,149 @@
+### ----------2020.4.28（庚子年四月初六）Tuesday---------
+Annotation Processing Tool (APT)
+
+
+
 ### ----------2020.4.27（庚子年四月初五）Monday---------
-注解
+**反射**  
+
+java.lang.reflect   
+接口 Type  
+所有已知子接口：   
+GenericArrayType, ParameterizedType, TypeVariable<D>, WildcardType   
+所有已知实现类： 
+Class 
+
+public interface TypeType 是 Java 编程语言中所有类型的公共高级接口。它们包括原始类型、参数化类型、数组类型、类型变量和基本类型。 
+
+从以下版本开始： 
+1.5 
+
+***
+[注解作用目标限定和保留策略](https://blog.csdn.net/u011541946/article/details/100057926)  
+**注解作用目标**
+java.lang.annotation 
+注解类型 Target
+***
+@Documented  
+@Retention(value=RUNTIME)  
+@Target(value=ANNOTATION_TYPE)  
+public @interface Target  
+
+从以下版本开始： 
+1.5 
+
+	java.lang.annotation 
+	枚举 ElementType
+	java.lang.Object
+	  继承者 java.lang.Enum<ElementType>
+		  继承者 java.lang.annotation.ElementType
+	所有已实现的接口： Serializable, Comparable<ElementType> 
+
+	ANNOTATION_TYPE	注解类型声明 
+	CONSTRUCTOR 构造方法声明 
+	FIELD 字段声明（包括枚举常量） 
+	LOCAL_VARIABLE 局部变量声明 
+	METHOD 方法声明 
+	PACKAGE 包声明 
+	PARAMETER 参数声明 
+	TYPE 类、接口（包括注解类型）或枚举声明 
+
+
+
+**注解保留策略**
+-
+java.lang.annotation 
+注解类型 Retention
+
+@Documented  
+@Retention(value=RUNTIME)  
+@Target(value=ANNOTATION_TYPE)  
+public @interface Retention指示注解类型的注解要保留多久。如果注解类型声明中不存在 Retention 注解，则保留策略默认为 RetentionPolicy.CLASS。 
+
+只有元注解类型直接用于注解时，Target 元注解才有效。如果元注解类型用作另一种注解类型的成员，则无效。 
+
+从以下版本开始： 
+1.5 
+
+
+  
+* 源代码文件注解（SOURCE）：  
+	注解只保留在源代码文件，当编译时，会被忽略，在字节码中是不会存在的。所以，反编译别人的源码，是不会存在注解的。
+* 字节码文件注解（CLASS）：  
+	这种注解，在源代码中存在，然后编译时会把注解信息放在class文件中，但JVM在加载类的时候会忽略注解。
+* JVM中注解（RUNTIME）：  
+	在源码文件中存在，在JVM加载的时候会把注解加载到JVM内存，这个是唯一可反射注解。
+
+	java.lang.annotation  
+	枚举 RetentionPolicy  
+	java.lang.Object  
+	  继承者 java.lang.Enum<RetentionPolicy>  
+		  继承者 java.lang.annotation.RetentionPolicy  
+	所有已实现的接口： 
+	Serializable, Comparable<RetentionPolicy>   
+	public enum RetentionPolicy extends Enum<RetentionPolicy>注解保留策略。此枚举类型的常量描述保留注解的不同策略。它们与 Retention 元注解类型一起使用，以指定保留多长的注解。 
+
+	从以下版本开始： 
+	1.5 
+
+	枚举常量摘要   
+	SOURCE 编译器要丢弃的注解。   
+	CLASS 编译器将把注解记录在类文件中，但在运行时 VM 不需要保留注解。   
+	RUNTIME 编译器将把注解记录在类文件中，在运行时 VM 将保留注解，因此可以反射性地读取。  
+
+***
+
+
+
+**java四种引用**
+```
+java.lang.ref 
+类 ReferenceQueue<T>
+java.lang.Object
+  继承者 java.lang.ref.ReferenceQueue<T>
+
+--------------------------------------------------------------------------------
+public class ReferenceQueue<T> extends Object  
+引用队列，在检测到适当的可到达性更改后，垃圾回收器将已注册的引用对象添加到该队列中。 
+
+
+
+强、
+软：SoftReference
+	java.lang.Object
+  继承者 java.lang.ref.Reference<T>
+      继承者 java.lang.ref.SoftReference<T>
+	构造方法摘要 
+	SoftReference(T referent) 
+          创建引用给定对象的新的软引用。 
+	SoftReference(T referent, ReferenceQueue<? super T> q) 
+          创建一个引用给定对象的新的软引用，并向给定队列注册该引用。 
+
+	//软可到达对象的所有软引用都要保证在虚拟机抛出 OutOfMemoryError 之前已经被清除。然而，虚拟机实现不鼓励清除最近访问或使用过的软引用。 
+	//此类的直接实例可用于实现简单缓存
+
+
+弱：WeakReference
+java.lang.Object
+  继承者 java.lang.ref.Reference<T>
+      继承者 java.lang.ref.WeakReference<T>
+	构造方法摘要 
+	WeakReference(T referent) 
+          创建引用给定对象的新的弱引用。 
+	WeakReference(T referent, ReferenceQueue<? super T> q) 
+          创建引用给定对象的新的弱引用，并向给定队列注册该引用。 
+	//弱引用最常用于实现规范化的映射。 -->ThreadLocal
+
+
+虚：PhantomReference
+java.lang.Object
+  继承者 java.lang.ref.Reference<T>
+      继承者 java.lang.ref.PhantomReference<T>
+	
+	构造方法摘要
+	PhantomReference(T referent, ReferenceQueue<? super T> q) 
+	创建一个引用给定对象的新的虚引用，并向给定队列注册它。
+```
 
 ```
 正向代理
