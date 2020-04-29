@@ -1,3 +1,18 @@
+### ----------2020.4.29（庚子年四月初七）Wednesday---------
+[Android 后台运行白名单，优雅实现保活](https://www.cnblogs.com/Android-Alvin/p/12465949.html?tdsourcetag=s_pctim_aiomsg)  
+* 保活"黑科技":1像素Activity，播放无声音频，双进程互相守护
+
+[2017-2020历年字节跳动Android面试真题解析（累计下载1082万次，持续更新中）](https://www.cnblogs.com/Android-Alvin/p/12448764.html)  
+
+https://github.com/LingCoder/OnJava8
+第五版别人的中文业余翻译
+
+[《On Java 8》中文版]https://lingcoder.github.io/OnJava8/#/sidebar
+
+[《Java编程思想》中文第5版](https://lingcoder.github.io/OnJava8/)
+
+
+
 ### ----------2020.4.28（庚子年四月初六）Tuesday---------
 Annotation Processing Tool (APT)
 
