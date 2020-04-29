@@ -1,6 +1,10 @@
 ### ----------2020.4.28（庚子年四月初六）Tuesday---------
 Annotation Processing Tool (APT)
 
+ConstraintLayout
+
+Retrofit
+动态代理+注解+反射
 
 
 ### ----------2020.4.27（庚子年四月初五）Monday---------
