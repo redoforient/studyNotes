@@ -1,4 +1,80 @@
 ### ----------2020.4.29（庚子年四月初七）Wednesday---------
+
+[三大Java虚拟机(HotSpot,JRockit,IBM JVM)垃圾回收机制的比较](https://blog.csdn.net/ZYC88888/article/details/70918799?utm_source=blogxgwz4)  
+
+**jfinal**
+JAVA WEB + ORM Framework http://www.jfinal.com （作者：詹波）
+https://github.com/jfinal/jfinal
+
+
+[Jboot](http://jboot.io/)
+一个开源的分布式、商业级微服务框架
+
+
+**曾经的老框架**
+AndroidAnnotation
+https://github.com/androidannotations/androidannotations
+
+**Afinal**  
+Afinal是一个android的ioc，orm框架，内置了四大模块功能：FinalAcitivity,FinalBitmap,FinalDb,FinalHttp。---作者：杨福海(微信：wx198819880)
+
+
+***
+屏幕自动适配：修改dimension、百分比布局、autolayout
+[Android-RatioLayout](https://github.com/mapleqin/Android-RatioLayout)  
+***
+[ConstraintLayout,看完一篇真的就够了么？](https://juejin.im/post/5d12c4146fb9a07ea33c24b7)
+
+***
+[Android实现全部状态栏透明或者隐藏](https://www.jianshu.com/p/5d43548c05ce)  
+
+    //获取手机状态栏高度
+    public static int getStatusBarHeight(Context context) {
+        Class<?> c = null;
+        Object obj = null;
+        Field field = null;
+        int x = 0, statusBarHeight = 0;
+        try {
+            c = Class.forName("com.android.internal.R$dimen");
+            obj = c.newInstance();
+            field = c.getField("status_bar_height");
+            x = Integer.parseInt(field.get(obj).toString());
+            statusBarHeight = context.getResources().getDimensionPixelSize(x);
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+        return statusBarHeight;
+    }
+
+***
+**luyten**
+luyten反编译工具是一款github的开源工具，目前支持.exe、.jar和源代码下载，还是充分的考虑到windows用户了，jd显示INTERNAL ERROR的class文件笔者用这个可以打开，并且设置比jd丰富。
+
+[Java电子书库](https://github.com/singgel/JAVA)  
+
+***
+
+**Java四大名著**
+Think in java, Effective Java , Core Java(Volume I--Fundamentals & Volume II--Advanced Features) , java编程语言----JamesGosling
+
+* Java编程语言（第三版)---Java四大名著----James Gosling(Java之父)  
+* Java编程思想（第4版)----Java四大名著----------------Bruce Eckel  
+* JAVA 2核心技术 卷I：基础知识（原书第8版）---Java四大名著-----Cay Horstmann   
+	JAVA 2核心技术 卷II：高级特性（原书第8版)----Java四大名著-----Cay Horstmann  
+* Effective Java中文版------Java四大名著--------Joshua Bloch
+
+[Java世界里的四大名著(Java程序员必看书籍)](https://blog.csdn.net/qq_38584262/article/details/83793854)  
+
+***
+* 所有界面都显示悬浮球
+	一个要悬浮窗，一个不用悬浮窗（只能在应用内）
+	https://www.jianshu.com/p/7d1a7c82094a  
+	https://github.com/feiyuu/FloatingView 
+
+
+
+
+### ----------2020.4.29（庚子年四月初七）Wednesday---------
 [Android 后台运行白名单，优雅实现保活](https://www.cnblogs.com/Android-Alvin/p/12465949.html?tdsourcetag=s_pctim_aiomsg)  
 * 保活"黑科技":1像素Activity，播放无声音频，双进程互相守护
 
