@@ -21,7 +21,14 @@ Afinal是一个android的ioc，orm框架，内置了四大模块功能：FinalAc
 
 ***
 屏幕自动适配：修改dimension、百分比布局、autolayout
+
+
+百分比布局
 [Android-RatioLayout](https://github.com/mapleqin/Android-RatioLayout)  
+
+[AndroidAutoSize](https://github.com/JessYanCoding/AndroidAutoSize)  
+ A low-cost Android screen adaptation solution (今日头条屏幕适配方案终极版，一个极低成本的 Android 屏幕适配方案).
+ 
 ***
 [ConstraintLayout,看完一篇真的就够了么？](https://juejin.im/post/5d12c4146fb9a07ea33c24b7)
 
