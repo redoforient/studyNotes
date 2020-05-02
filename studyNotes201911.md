@@ -1,4 +1,86 @@
-### ----------2020.4.29（庚子年四月初七）Wednesday---------
+### ----------2020.5.2（庚子年四月初十）Saturday---------
+[ConstraintLayout](https://juejin.im/post/5d12c4146fb9a07ea33c24b7)
+
+12:constraintTop_toTopof
+7:android:layout_marginTop
+6:layout_goneMarginTop
+
+* baseline
+	app:layout_constraintBaseline_toBaselineOf="@id/tvHello"
+
+* Guideline
+
+* 圆形定位(Added in 1.1)circle radius angle
+	layout_constraintCircle : 另外一个view的id,上图的A view
+	layout_constraintCircleRadius : 半径，上图的radius
+	layout_constraintCircleAngle : 角度，上图angle，范围为0-360
+	根据上面上个属性就可以确定B View的位置。从图也可以知道，角度以时间12点为0，顺时针方式。
+
+
+**Centering positioning and bias**
+ConstraintLayout居中则采用左右上下边来约束居中。
+
+* 水平居中 layout_constraintLeft_toLeftOf & layout_constraintRight_toRightOf
+* 垂直居中 layout_constraintTop_toTopOf & layout_constraintBottom_toBottomOf
+* 中间居中 水平居中 & 垂直居中  
+	```
+	<TextView
+		...
+		android:text="Hello"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"/>
+
+	```
+
+* layout_constraintWidth="true)
+
+
+* 比例约束
+控件的宽高比，要求是宽或高至少一个设为0dp，然后设置属性layout_constraintDimensionRatio即可。
+
+
+* Chain
+	layout_constraintHorizontal_chainStyle 水平方向链式
+	layout_constraintVertical_chainStyle 垂直方向链式
+
+### ----------2020.5.1（庚子年四月初九）Friday---------
+极坐标定位（半径、角度）
+笛卡尔坐标定位（第几行第几列)
+
+
+自定义View几种方式
+事件拦截/分发流程dispatchTouch
+事件处理机制
+滑动冲突解决方式
+
+享学课堂
+1. 获得Android VIP基础班免费学习名额
+2. 600元课程优惠券
+3. 价值2180元的面试专题全套课程赠送
+
+[蒲公英API](https://www.pgyer.com/doc/view/api#paramInfo)
+
+[钉钉开发文档](
+https://ding-doc.dingtalk.com/doc#/serverapi2/qgx3dh)
+
+
+
+https://maven.aliyun.com/mvn/view
+
+maven{ url "https://raw.github.com/bmob/bmob-android-sdk/master"}
+maven{ url "https://maven.aliyun.com/repository/google"}
+maven{ url "https://maven.aliyun.com/repository/public"}
+maven{ url "https://maven.aliyun.com/nexus/content/groups/public/" }
+maven{ url "https://maven.aliyun.com/repository/jcenter"}
+maven{ url "https://maven.aliyun.com/repository/central"}
+maven{ url "https://maven.aliyun.com/repository/gradle-plugin"}
+
+public-->central仓和jcenter仓的聚合仓	
+https://maven.aliyun.com/repository/public 或 https://maven.aliyun.com/nexus/content/groups/public
+
+
+
+### ----------2020.4.30（庚子年四月初八）Thursday---------
 
 [三大Java虚拟机(HotSpot,JRockit,IBM JVM)垃圾回收机制的比较](https://blog.csdn.net/ZYC88888/article/details/70918799?utm_source=blogxgwz4)  
 
