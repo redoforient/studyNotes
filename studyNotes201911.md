@@ -1,4 +1,59 @@
 ### ----------2020.5.6（庚子年四月十四）Wednesday---------
+* 子线程中启动的Activity与主线程中启动Activity有什么区别？
+
+
+jetpack +mvvm结合使用
+
+享学课堂-薇薇:
+mvvm第一节：链接: https://pan.baidu.com/s/1ELGSv3vaF5Hfm81n1ZiQmw 提取码: ftur
+享学课堂-薇薇:
+mvvm第二节链接：https://pan.baidu.com/s/1wreePMHn07iDy0U7fXNgHg 
+提取码：cox9
+mvvm第三节：链接：https://pan.baidu.com/s/1VHjzGZVqYFyPoBuq03Ojtw 
+提取码：wko9
+链接: https://pan.baidu.com/s/199u0sOP-6YlSjA78nZX_aA 提取码: eqx9
+
+
+https://space.bilibili.com/441387550/
+
+
+https://space.bilibili.com/544029825/
+
+
+
+
+
+java.lang.instrument.Instrumentation
+
+***
+android.app.Instrumentation
+Android instrumentation是Android系统里面的一套控制方法或者”钩子“
+
+https://blog.csdn.net/a19891024/article/details/54342799
+
+这些钩子可以在正常的生命周期（正常是由操作系统控制的)之外控制Android控件的运行，其实指的就是Instrumentation类提供的各种流程控制方法，下表展示了部分方法的对应关系
+
+Method | Control by User(Instrumentation) | Control by OS  |
+--------   | -----:   | :----:|
+onCreate|callActivityOnCreate|onCreate |  
+onDestroy|callActivityOnDestroy|onDestroy |   
+onStart|callActivityOnStart|onStart|   
+
+
+markdown快速生成
+
+Markdown创建表格
+https://www.jianshu.com/p/b0f56b7d7ee8
+
+| 水果        | 价格    |  数量  |
+| --------   | -----:   | :----: |
+| 香蕉        | $1      |   5    |
+| 苹果        | $1      |   6    |
+| 草莓        | $1      |   7    |
+
+
+
+
 
 
 ### ----------2020.5.5（庚子年四月十三-立夏）Tuesday---------
@@ -940,7 +995,11 @@ KeyWord：**ColorMatrix**
 
 ### ----------2020.4.16（庚子年三月廿四）Thursday---------
 
-## **[马士兵教育直播列表](https://s1.mashibing.com/selectuser)**
+## [马士兵教育直播列表](https://s1.mashibing.com/selectuser)
+## [马士兵教育菜鸟预习](http://mashibing.com/html/bird.html)
+## [马士兵教育vip资料](http://www.mashibing.com/vip.html)
+## [马士兵教育github仓库](https://www.github.com/bjmashibing)
+
 
 
 [《深度探索Gradle自动化构建技术（二、Groovy 筑基篇）》](https://juejin.im/post/5e97ac34f265da47aa3f6dca)
@@ -2253,10 +2312,49 @@ Consistency 一致性
 Availability 可用性
 Partition tolerance 分区容错性
 
+***
+[java的动态代理机制详解](https://www.cnblogs.com/xiaoluo501395377/p/3383130.html)
+
+InvocationHandler接口
+	
+	Object invoke(Object proxy, Method method, Object[] args) throws Throwable
+
+proxy:　　指代我们所代理的那个真实对象
+method:　　指代的是我们所要调用真实对象的某个方法的Method对象
+args:　　指代的是调用真实对象某个方法时接受的参数
+
+---------------------------------------------
+proxy指的不是所代理的那个真实对象。如果是这样的话就没必要在handler中保存真实对象的引用了，，
+
+在invoke中
+System.out.println("proxy.getClass():" + proxy.getClass());
+输出： proxy.getClass():class **com.sun.proxy.$Proxy0**
 
 
+------------------------
+* Proxy
+	
+	public static Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces, InvocationHandler h) throws IllegalArgumentException
+	
+Proxy类加载器:
 
+System.out.println("proxy.getClass().getClassLoader(): "+proxy.getClass().getClassLoader());
+System.out.println("realSub.getClass().getClassLoader(): "+realSub.getClass().getClassLoader());
 
+结果：
+proxy.getClass().getClassLoader():		**sun.misc.Launcher$AppClassLoader@1471cb25**
+realSub.getClass().getClassLoader():	**sun.misc.Launcher$AppClassLoader@1471cb25**
+
+这两个的类加载器都是系统类加载器吧，应该一样的，所以用哪个都可以吧
+
+另外，一共就只有**四种类加载器**，大家可以了解一下他们的加载机制
+* 启动类加载器
+* 扩展类加载器
+* 系统类加载器
+* 用户自定义类加载器
+基本上我们能接触到的就只是**系统类加载器**
+
+***
 
 
 Proxy模式：
@@ -2266,6 +2364,9 @@ org.objectweb.asm 小而快速的字节码操作框架     缺点：直接修改
 asm官网
 https://gitlab.ow2.org/asm/asm
 https://asm.ow2.io/
+
+
+
 
 
 javaassist简要介绍
