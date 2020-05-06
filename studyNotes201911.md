@@ -1,3 +1,22 @@
+### ----------2020.5.6（庚子年四月十四）Wednesday---------
+
+
+### ----------2020.5.5（庚子年四月十三-立夏）Tuesday---------
+lateX：android展示数学公式
+
+* 作业：利用反射、注解、动态代理实现OnClick事件的自动注入
+
+	@Click({R.id.bottom,R.id.end})
+	public void abc(View view){
+			
+	}
+
+### ----------2020.5.4（庚子年四月十二）Monday---------
+
+
+### ----------2020.5.3（庚子年四月十一）Sunday---------
+RxJava
+
 ### ----------2020.5.2（庚子年四月初十）Saturday---------
 [ConstraintLayout](https://juejin.im/post/5d12c4146fb9a07ea33c24b7)
 
@@ -42,6 +61,16 @@ ConstraintLayout居中则采用左右上下边来约束居中。
 * Chain
 	layout_constraintHorizontal_chainStyle 水平方向链式
 	layout_constraintVertical_chainStyle 垂直方向链式
+	
+[MotionLayout：一个可以直接写动画的ConstraintLayout](https://www.jianshu.com/p/106c056772ec)  
+[MotionLayout动画](https://blog.csdn.net/u014290233/article/details/94398813)
+https://github.com/LGD2009/MotionLayoutExample
+
+
+* Group（组）
+	用来控制一组view的可见性，如果view被多个Group控制，则以最后的Group定义的可见性为主。
+
+* 
 
 ### ----------2020.5.1（庚子年四月初九）Friday---------
 极坐标定位（半径、角度）
