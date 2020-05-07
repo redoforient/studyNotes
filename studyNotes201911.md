@@ -1,5 +1,40 @@
+### ----------2020.5.7（庚子年四月十五）Thursday---------
+[Luban(鲁班)—Image compression with efficiency very close to WeChat Moments/可能是最接近微信朋友圈的图片压缩算法](https://github.com/Curzibn/Luban)
+	
+	//将文件路径字符串列表转化为文件列表
+	Flowable.just(photos)
+    .observeOn(Schedulers.io())
+    .map(new Function<List<String>, List<File>>() {
+      @Override public List<File> apply(@NonNull List<String> list) throws Exception {
+        // 同步方法直接返回压缩后的文件
+        return Luban.with(MainActivity.this).load(list).get();
+      }
+    })
+    .observeOn(AndroidSchedulers.mainThread())
+    .subscribe();
+
+***
+
+GIF(Graphics Interchange Format)的原义是“图像互换格式”
+GIF文件的数据，是一种基于LZW算法的连续色调的无损压缩格式.
+
+***
+**睡眠1000毫秒不同写法**  
+	
+	android.os.SystemClock.sleep(1000);// similar to Thread.sleep(millis), but it **ignores InterruptedException**.
+
+	throws InterruptedException
+		java.lang.Thread.sleep(5000);
+		java.util.concurrent.TimeUnit.MILLISECONDS.sleep(1000);
+
+
 ### ----------2020.5.6（庚子年四月十四）Wednesday---------
-* 子线程中启动的Activity与主线程中启动Activity有什么区别？
+
+
+## 子线程中启动的Activity与主线程中启动Activity有什么区别？
+
+
+
 
 
 jetpack +mvvm结合使用
