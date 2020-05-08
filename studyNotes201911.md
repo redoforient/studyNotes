@@ -1,3 +1,22 @@
+### ----------2020.5.8（庚子年四月十六）Friday---------
+[android小知识]removeCallbacks与postDelayed的恩怨史（removeCallbacks所谓的无效, View和Handler 的postDelayed）
+https://blog.csdn.net/bluewindtalker/article/details/51984300
+
+***
+[详解 Java 常用的四种锁机制优缺点](https://blog.csdn.net/valada/article/details/84540368)
+（Synchronized、ReentrantLock、Semaphore、AtomicInteger）
+
+
+***
+AndroidManifest文件配置
+android:supportsRtl
+从Android 4.2开始，Android SDK支持一种从右到左（RTL，Right-to-Left）UI布局的方式，尽管这种布局方式经常被使用在诸如阿拉伯语、希伯来语等环境中，中国用户很少使用
+
+android:allowBackup
+Android 2.2中引入的系统备份功能,android:allowBackup(默认为 true )来设置应用数据是否能能够被备份或恢复
+[Android之allowBackup属性](https://blog.csdn.net/mysimplelove/article/details/84073013)  
+
+
 ### ----------2020.5.7（庚子年四月十五）Thursday---------
 [Luban(鲁班)—Image compression with efficiency very close to WeChat Moments/可能是最接近微信朋友圈的图片压缩算法](https://github.com/Curzibn/Luban)
 	
