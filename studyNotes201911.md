@@ -1,3 +1,9 @@
+### ----------2020.5.9（庚子年四月十七）Saturday---------
+[全面深入地掌握NDK技术，成为下一波5G时代的浪潮儿~](https://github.com/JsonChao/Awesome-Android-NDK)  
+
+[GitHub 热榜：文字识别神器，超轻量级中文 OCR！](https://mp.weixin.qq.com/s/RTBiM9r9MwZxwlxbhLhNEg)  
+[超轻量级中文ocr，支持竖排文字识别, 支持ncnn推理 , psenet(8.5M) + crnn(6.3M) + anglenet(1.5M) 总模型仅17M](https://github.com/ouyanghuiyu/chineseocr_lite)  
+
 ### ----------2020.5.8（庚子年四月十六）Friday---------
 [android小知识]removeCallbacks与postDelayed的恩怨史（removeCallbacks所谓的无效, View和Handler 的postDelayed）
 https://blog.csdn.net/bluewindtalker/article/details/51984300
