@@ -1,3 +1,21 @@
+### ----------2020.5.11（庚子年四月十九）Monday---------
+ThreadLocal使用场景：
+解决数据库连接、Session管理等
+	
+1.Hiberante的Session 工具类HibernateUtil
+2.通过不同的线程对象设置Bean属性，保证各个线程Bean对象的独立性。
+
+spring中使用ThreadLocal来设计TransactionSynchronizationManager类，实现了事务管理与数据访问服务的解耦，同时也保证了多线程环境下connection的线程安全问题。
+
+
+***
+[Android利用GradientDrawable定义动态的shape形状探索](https://blog.csdn.net/SimonHunt/article/details/72477590)  
+[Android Drawable之GradientDrawable](https://www.jianshu.com/p/dbccf8dfe3ef)  
+
+### ----------2020.5.10（庚子年四月十八）Sunday---------
+* ()->lambda expression
+* ::----method reference
+
 ### ----------2020.5.9（庚子年四月十七）Saturday---------
 [全面深入地掌握NDK技术，成为下一波5G时代的浪潮儿~](https://github.com/JsonChao/Awesome-Android-NDK)  
 
