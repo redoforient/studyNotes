@@ -1,4 +1,16 @@
 ### ----------2020.5.14（庚子年四月廿二）Thursday---------
+[java中isAssignableFrom()方法与instanceof关键字用法及通过反射配合注解为字段设置默认值](https://blog.csdn.net/qq_36666651/article/details/81215221)
+isAssignableFrom()方法与instanceof关键字的区别总结为以下两个点：
+
+isAssignableFrom()方法是从类继承的角度去判断，instanceof关键字是从实例继承的角度去判断。
+isAssignableFrom()方法是判断是否为某个类的父类，instanceof关键字是判断是否某个类的子类。
+使用方法：
+
+父类.class.isAssignableFrom(子类.class)
+子类实例 instanceof 父类类型
+
+***
+
 
 
 ### ----------2020.5.13（庚子年四月廿一）Wednesday---------
