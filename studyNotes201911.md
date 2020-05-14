@@ -5,6 +5,90 @@
 理清synchronized wait notify关系
 
 
+https://www.typora.io/
+markdown
+
+
+hsdis
+hotspot disassembler
+
+
+JIT编译器
+
+java解释执行
+
+StampedLock
+
+
+0x80中断
+90H中断
+
+cpu指令
+ring0
+
+锁重入
+lock record会进入栈
+为了支持继承重写
+
+
+
+
+PS+P0(经历15次gc，分代年龄)
+G1（5）
+ZGC（不判断年龄）
+
+(FGC)full GC
+
+HOTSPOT
+
+synchronized(o)
+无锁  001
+偏向锁101(匿名偏向：jvm虚拟机启动4s后添加状态)
+自旋锁 00  轻量级锁（轻度竞争）
+重量锁 10  重量级锁（重度竞争，耗时过长，wait直接启动）
+GC     11
+
+
+1． Little endian：将低序字节存储在起始地址（即小的字节先存放）
+2． Big endian：将高序字节存储在起始地址（即大的字节先存放）
+
+
+
+偏向锁（大多数情况）
+
+
+StringBuffer
+Vector
+
+
+(JOL)Java Object Layout
+
+Object o= new Object();
+markword-------8byte(64bit)
+klass pointer--4byte(32bit)
+instance-------0byte
+padding--------4byte
+
+
+markword
+锁
+GC
+hashcode(identity)
+
+CompareAndSet
+
+lock Atomic::cmpxhg
+
+
+
+maven
+openjdk.classlayout
+
+ClassLayout.parseInstance(o).toPrintable();
+
+
+
+
 ### ----------2020.5.12（庚子年四月二十）Tuesday---------
 descendant	英[dɪˈsendənt]
 美[dɪˈsendənt]
