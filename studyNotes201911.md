@@ -1,3 +1,23 @@
+### ----------2020.5.14（庚子年四月廿二）Thursday---------
+
+
+### ----------2020.5.13（庚子年四月廿一）Wednesday---------
+理清synchronized wait notify关系
+
+
+### ----------2020.5.12（庚子年四月二十）Tuesday---------
+descendant	英[dɪˈsendənt]
+美[dɪˈsendənt]
+n.	后裔; 后代; 子孙; (由过去类似物发展来的) 派生物;
+
+cmoveTaskToBack(true)====等价于点击HOME键
+
+* 查看当前任务栈Task  
+ adb shell dumpsys activity activities | sed -En -e '/Stack #/p' -e '/Running activities/,/Run #0/p'
+
+
+android:configChanges="orientation|keyboardHidden|screenSize"
+
 ### ----------2020.5.11（庚子年四月十九）Monday---------
 ThreadLocal使用场景：
 解决数据库连接、Session管理等
@@ -1306,7 +1326,19 @@ androidx.work.Constraints.Builder
 AsyncListUtil 是一个用于异步内容加载的类
 
 > 60秒后过期倒计时器  
-	android.os.CountDownTimer countDownTimer = new CountDownTimer(60000, 1000) 
+	android.os.CountDownTimer countDownTimer = new android.os.CountDownTimer(60000, 1000) 
+	
+android.os.CountDownTimer countDownTimer = new android.os.CountDownTimer(duration, delayTime) {
+	@Override
+	public void onTick(long millisUntilFinished) {
+		
+	}
+
+	@Override
+	public void onFinish() {
+
+	}
+};
 
 ViewPager2+Fragment
 
