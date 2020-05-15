@@ -1,3 +1,16 @@
+### ----------2020.5.15（庚子年四月廿三）Friday---------
+[java高并发基础篇之线程执行顺序的控制](https://blog.csdn.net/qq_41071876/article/details/106010590)  
+一、CountDownLatch  
+二、CyclicBarrier  
+三、Semaphore  
+四、Exchanger  
+五、Phaser
+
+
+***
+[java高并发基础篇之多线程Future设计模式](https://blog.csdn.net/qq_41071876/article/details/106087734)
+
+
 ### ----------2020.5.14（庚子年四月廿二）Thursday---------
 [java中isAssignableFrom()方法与instanceof关键字用法及通过反射配合注解为字段设置默认值](https://blog.csdn.net/qq_36666651/article/details/81215221)
 isAssignableFrom()方法与instanceof关键字的区别总结为以下两个点：
