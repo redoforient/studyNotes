@@ -1,4 +1,49 @@
 ### ----------2020.5.15（庚子年四月廿三）Friday---------
+常用阻塞队列
+ArrayBlockingQueue：数组结构组成的有界阻塞队列
+LinkedBlockingQueue：链表结构组成的有界阻塞队列
+PriorityBlockingQueue：支持优先级排序的无界阻塞队列
+DelayQueue：使用优先级队列实现的误解阻塞队列
+SynchronousQueue：一个不存储元素的阻塞队列
+LinkedTransferQueue:由链表结构组成的无界阻塞队列
+LinkedBlockingQeque：由链表结构组成的双向阻塞队列
+
+队列操作方法：
+add  不阻塞抛异常
+remove
+
+offer false
+poll null 超时机制
+
+take 空：阻塞拿元素
+put	满：阻塞放元素
+
+
+CAS（Compare And Swap）问题
+- ABA
+- 自旋消耗CPU资源
+- 只能保证一个共享变量的原子操作
+
+***
+* AtomicReference
+
+　　通过volatile和Unsafe提供的CAS函数实现原子操作。 自旋+CAS的无锁操作保证共享变量的线程安全
+
+value是volatile类型，这保证了：当某线程修改value的值时，其他线程看到的value的值都是最新的值，即修改之后的volatile的值
+通过CAS设置value。这保证了：某线程池通过CAS函数（如compareAndSet函数）设置value时，它的操作时原子性的，即线程在操作vu略时不会被中断。
+但是CAS操作可能存在ABA问题。AtomicStampedReference的出现就是为了解决这问题
+
+* AtomicStampedReference（标注被修改过几次）
+构造方法中initialStamp（时间戳）用来唯一标识引用变量，在构造器内部，实例化了一个Pair对象，Pair对象记录了对象引用和时间戳信息，采用int作为时间戳，实际使用的时候，要保证时间戳唯一（一般做成自增的），如果时间戳如果重复，还会出现ABA的问题。
+
+* AtomicStampedReference中的每一个引用变量都带上了pair.stamp这个时间戳，这样就可以解决CAS中的ABA的问题。
+
+
+AtomicMarkableReference（关注有没有被修改过）
+AtomicMarkableReference的唯一区别就是不再用int标识引用，而是使用boolean变量——表示引用变量是否被更改过。
+
+[AtomicReference，AtomicStampedReference与AtomicMarkableReference的区别](https://www.cnblogs.com/xyhz0310/p/9627582.html)
+
 [java高并发基础篇之线程执行顺序的控制](https://blog.csdn.net/qq_41071876/article/details/106010590)  
 一、CountDownLatch  
 二、CyclicBarrier  
