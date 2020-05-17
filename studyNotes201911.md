@@ -1,3 +1,40 @@
+### ----------2020.5.17（庚子年四月廿五）Sunday---------
+Glide LRUhuancun 算法实现->
+	LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder)
+https://blog.csdn.net/a724888/article/details/80290276
+***
+
+netty粘包
+https://blog.csdn.net/crazymakercircle/article/details/83957259
+
+***
+* 类加载为什么要使用双亲委派？主要是由于安全(java.lang.String)，另外基于效率原因，上级已经加载就不用再次加载了
+Custom ClassLoader-->AppClassLoader(classpath)-->Extension ClassLoader(ext)-->Bootstrap
+
+System.getProperty("sun.boot.class.path");
+%JAVA_HOMR%/bin/
+%JAVA_HOMR%/jre
+
+System.getProperty("java.ext.dirs");
+ext
+System.getProperty("java.class.path");
+
+sun.misc.launcher$AppClassLoader@18b4aac3
+sun.misc.launcher$ExtClassLoader@4554617c
+
+
+双亲委派：自底向上，然后自顶向下返回
+
+
+### ----------2020.5.16（庚子年四月廿四）Saturday---------
+Retrofit(okhttp)
+enqueue异步执行
+execute()同步执行
+
+单链表反转：pre、next
+
+
+
 ### ----------2020.5.15（庚子年四月廿三）Friday---------
 常用阻塞队列
 ArrayBlockingQueue：数组结构组成的有界阻塞队列
