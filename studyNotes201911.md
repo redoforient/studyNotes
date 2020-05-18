@@ -1,5 +1,16 @@
 ### ----------2020.5.17（庚子年四月廿五）Sunday---------
-Glide LRUhuancun 算法实现->
+
+***
+AQS(AbstractQueuedSynchronizer)
+提供FIFO队列，是一个用来实现同步锁以及其他涉及到同步功能的核心组件，常见的有:ReentrantLock、CountDownLatch等。
+AQS是一个抽象类，主要是通过继承的方式来使用，它本身没有实现任何的同步接口，仅仅是**定义了同步状态的获取以及释放的方法**来提供自定义的同步组件
+CLH CLH(Craig, Landin, and Hagersten locks): 是一个自旋锁，能确保无饥饿性，提供先来先服务的公平性。
+CLH锁也是一种基于链表的可扩展、高性能、公平的自旋锁，申请线程只在本地变量上自旋，它不断轮询前驱的状态，如果发现前驱释放了锁就结束自旋。
+链接：https://www.jianshu.com/p/4682a6b0802d
+***
+
+
+Glide LRU缓存 算法实现->
 	LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder)
 https://blog.csdn.net/a724888/article/details/80290276
 ***
@@ -16,7 +27,7 @@ System.getProperty("sun.boot.class.path");
 %JAVA_HOMR%/jre
 
 System.getProperty("java.ext.dirs");
-ext
+%ext
 System.getProperty("java.class.path");
 
 sun.misc.launcher$AppClassLoader@18b4aac3
@@ -27,11 +38,11 @@ sun.misc.launcher$ExtClassLoader@4554617c
 
 
 ### ----------2020.5.16（庚子年四月廿四）Saturday---------
-Retrofit(okhttp)
-enqueue异步执行
-execute()同步执行
+Retrofit(okhttp)  
+enqueue异步执行  
+execute()同步执行  
 
-单链表反转：pre、next
+单链表反转：pre、next  
 
 
 
