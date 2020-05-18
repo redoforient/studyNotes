@@ -1,3 +1,137 @@
+### ----------2020.5.18（庚子年四月廿六）Monday---------
+* GC ROOTS内存回收(对象回收）
+1. 线程栈变量【虚拟机栈（栈帧中的局部变量区，也叫局部变量表）)】
+2. 静态变量【方法区中的类静态属性引用的对象】
+3. 方法区中常量引用
+4. 本地方法栈JNI（Native）方法引用
+
+
+**3种GC Algorithms**
+* Mark-Sweep（标记清除）
+* Copying（拷贝）
+* Mark-Compact(标记压缩）
+
+**垃圾回收器
+Serial Old
+stop-the-world
+
+CMS:concurrent mark sweep
+
+-XX:Maxtenured
+
+永久代的初始值-XX:PermSize及最大值-XX:MaxPermSize应该比永久代活跃数据大1.2~1.5倍
+-XX:PermSize=13m，-XX:MaxPermSize=13m
+java -Xms200m -Xmx200M -XX:+PrintGC com.mashibing.java.gc.T15FullGCProblem
+ -Xms200m -Xmx200M 防止内存抖动
+
+新生代大量死去，少量存活，采用复制算法
+老年代存活率高，回收较少，采用MC或MS
+
+top命令查看线程信息和jstack使用介绍
+
+jstack定义： jstack是java虚拟机自带的一种堆栈跟踪工具。
+top -Hp pid
+top pstack ps -eaf
+
+
+jmap -histo
+dump+jmap分析
+
+
+
+***
+Jconsole （Java Monitoring and Management Console），一种基于JMX的可视化监视、管理工具。
+jvisualvm远程连接监控
+MAT内存分析工具(Memory Analyzer Tool)
+
+**JProfiler是由ej-technologies GmbH公司开发的一款性能瓶颈分析工具(该公司还开发部署工具)。
+其特点:
+
+使用方便
+界面操作友好
+对被分析的应用影响小
+CPU,Thread,Memory分析功能尤其强大
+支持对jdbc,noSql, jsp, servlet, socket等进行分析
+支持多种模式(离线，在线)的分析
+
+**Arthas - Java 线上问题定位处理的终极利器
+排查 Java 线上问题时，如 CPU 飙升、负载突高、内存溢出等问题，你需要查命令，查网络，然后 jps、jstack、jmap、jhat、jstat、hprof 等一通操作
+
+dashboard指令
+thread -b//查看线程死锁
+
+jmap -histo pid | head -20
+
+top+jstack
+
+
+Full GC
+***
+
+CyclicBarrier(int parties,Runable barrierAction);//runable:达到屏障点要做的事情
+await()：进行阻塞直到线程数达到屏障点
+await(timeout)
+geNumberWaiting();//获取正在CyclicBarrier上等待的线程数
+
+CyclicBarrier.Generation ge
+
+
+juc.locks.ReentrantLock
+juc.locks.StampedLock
+juc.locks.LockSupport
+juc.Semaphore
+juc.Phaser
+
+
+java.util.concurrent.locks.AbstractQueuedSynchronizer extends java.util.concurrent.lock.AbstractOwnableSynchronizer
+
+java.util.concurrent.locks.Condition
+
+	    public class ConditionObject implements Condition, java.io.Serializable {
+        private static final long serialVersionUID = 1173984872572414699L;
+        /** First node of condition queue. */
+        private transient Node firstWaiter;
+        /** Last node of condition queue. */
+        private transient Node lastWaiter;
+
+
+Sync
+
+***
+LockSupport(AQS)
+
+
+
+
+
+***
+IPC（Inter-Process Communication）
+AIDL(Android interface Definition Language)
+
+android.os.IBinder
+
+最好异步加上oneway
+
+AMS---ActivityManagerService
+android.app.ActivityManagerNative.getDefault().bindService()-->IActivityManager
+ServiceManager本身是一个进程
+
+IServiceConnection
+
+Client-AMS-Service
+
+
+
+广播进程间通信--底层原理-->使用Binder实现
+四大组件--底层通信--Binder
+进程之间通信--Binder
+native驱动 ---  Messenger
+***
+zygote进程和system server进程通信 为啥用socket 而不用binder 进行线程通信?
+***
+[AIDL与Binder与Messenger的使用区别！](https://blog.csdn.net/luojiusan520/article/details/50840008)
+适用范围 messenger<binder<aidl  
+
 ### ----------2020.5.17（庚子年四月廿五）Sunday---------
 Glide LRUhuancun 算法实现->
 	LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder)
