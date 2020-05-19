@@ -1,4 +1,13 @@
 ### ----------2020.5.19（庚子年四月廿七）Tuesday---------
+[应届生/社招面试最爱问的几道Java基础问题](https://juejin.im/post/5e18879e6fb9a02fc63602e2)  
+
+
+
+
+android打包  
+terminal输入 ./gradlew assembleRelease  编译release包
+
+***
 Java8伪共享和缓存行填充--@Contended注释
 
 cache line（缓存行） 64byte
