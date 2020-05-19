@@ -37,7 +37,29 @@ stop-the-world
 
 CMS:concurrent mark sweep
 
--XX:Maxtenured
+
+ OldTenured:年老代年轻代的对象如果能够挺过数次收集,就会进入老人区。 
+ -XX:MaxTenuringThreshold=设置熬过年轻代多少
+ -XX:MaxTenuringThreshold设置的是年龄阈值，默认15（对象被复制的次数）
+
+
+**Java 的内存模型分**
+* Young（年轻代）
+* Tenured（终身代）
+* Perm（永久代）
+
+有些旧版本也叫作
+* New
+* Old
+* Perm
+
+* Eden区
+* Tenured区
+* Perm区
+
+
+
+
 
 永久代的初始值-XX:PermSize及最大值-XX:MaxPermSize应该比永久代活跃数据大1.2~1.5倍
 -XX:PermSize=13m，-XX:MaxPermSize=13m
