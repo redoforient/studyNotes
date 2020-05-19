@@ -1,3 +1,23 @@
+### ----------2020.5.19（庚子年四月廿七）Tuesday---------
+Java8伪共享和缓存行填充--@Contended注释
+
+cache line（缓存行） 64byte
+伪共享
+
+jvm：设置-XX:RestrictContended
+@sun.misc.Contended
+
+
+[线程基础：多任务处理（18）——MESI协议以及带来的问题：伪共享](https://www.cnblogs.com/liulaolaiu/p/11744225.html)  
+**MESI 协议**
+* M（修改，Modified）：本地处理器已经修改缓存行，即是脏行，它的内容与内存中的内容不一样，并且此 cache 只有本地一个拷贝(专有)；
+* E（专有，Exclusive）：缓存行内容和内存中的一样，而且其它处理器都没有这行数据；
+* S（共享，Shared）：缓存行内容和内存中的一样, 有可能其它处理器也存在此缓存行的拷贝；
+* I（无效，Invalid）：缓存行失效, 不能使用。
+
+**RFO请求（Request For Owner）**
+
+
 ### ----------2020.5.18（庚子年四月廿六）Monday---------
 * GC ROOTS内存回收(对象回收）
 1. 线程栈变量【虚拟机栈（栈帧中的局部变量区，也叫局部变量表）)】
