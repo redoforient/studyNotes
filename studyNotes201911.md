@@ -12,6 +12,7 @@ https://github.com/XieZhiFa/IdCardOCR
 
 [为了在简历上写掌握Java多线程和并发编程，做了两万字总结！！！](https://blog.csdn.net/HeZhiYing_/article/details/105943962?utm_source=app)  
 [Android面试点](https://github.com/zytc2009/Android_learning/tree/master/%E9%9D%A2%E8%AF%95%E9%A2%98/android%E9%9D%A2%E8%AF%95%E7%82%B9)  
+
 [Android内核设计思想](http://mp.weixin.qq.com/mp/homepage?__biz=MzA5OTAxNDEyNg==&hid=1&sn=ebe1c61ff758e51e9e92fd907a99f342&scene=18#wechat_redirect)  
 [约束布局ConstraintLayout看这一篇就够了](https://www.jianshu.com/p/17ec9bd6ca8a)  
 
@@ -23,11 +24,171 @@ android 4.4以上沉浸式状态栏和沉浸式导航栏管理，适配横竖屏
 [沉浸式状态栏&导航栏](https://github.com/gyf-dev/ImmersionBar)
 
 
+***
+LinkedBlockingQueue  代码实现阻塞细节-->ReentrantLock
+
+    /** Main lock guarding all access */
+    final ReentrantLock lock = new ReentrantLock();
+
+    /** Condition for waiting takes */
+    private final Condition notEmpty = lock.newCondition();
+
+    /** Condition for waiting puts */
+    private final Condition notFull = lock.newCondition();
+
+***
+[线程池，这一篇或许就够了](https://mp.weixin.qq.com/s/r_7EsctIudMb0O5-FNIWmQ)  
+
+***
+[线程池 8 大拒绝策略，别说你不会！](https://mp.weixin.qq.com/s/nPe253SsKkBFhZPmFKoD1w)  
+    
+    public interface RejectedExecutionHandler {
+        void rejectedExecution(Runnable r, ThreadPoolExecutor executor);
+    }
+
+【8大拒绝策略】=JDK预设的4种线程池拒绝策略+四款第三方拒绝策略实现
+**JDK内置实现**  
+    CallerRunsPolicy（调用者运行策略）  
+    AbortPolicy（中止策略）  
+    DiscardPolicy（丢弃策略）  
+    DiscardOldestPolicy（弃老策略）  
+**第三方实现**  
+    dubbo中的线程拒绝策略  
+    Netty中的线程池拒绝策略  
+    activeMq中的线程池拒绝策略  
+    pinpoint中的线程池拒绝策略  
+
+***
+[java阻塞队列与非阻塞队列](https://blog.csdn.net/danengbinggan33/article/details/73105838)
+
+方法\处理方式	抛出异常	返回特殊值	一直阻塞	超时退出
+插入方法	add(e)	offer(e)	put(e)	offer(e,time,unit)
+移除方法	remove()	poll()	take()	poll(time,unit)
+检查方法	element()	peek()	不可用	不可用
+
+**阻塞队列**
+JDK7提供了7个阻塞队列。分别是：
+ArrayBlockingQueue ：一个由数组结构组成的有界阻塞队列。
+LinkedBlockingQueue ：一个由链表结构组成的有界阻塞队列。
+PriorityBlockingQueue ：一个支持优先级排序的无界阻塞队列。
+DelayQueue：一个使用优先级队列实现的无界阻塞队列。
+SynchronousQueue：一个不存储元素的阻塞队列。
+LinkedTransferQueue：一个由链表结构组成的无界阻塞队列。
+LinkedBlockingDeque：一个由链表结构组成的双向阻塞队列。
+ 
+**非阻塞队列**
+ConcurrentLinkedQueue
+
+
+***
+**Queue和List区别&联系**
+联系
+public interface Queue<E> extends Collection<E> {
+public interface List<E> extends Collection<E> {
+
+双方共同继承自Collection接口
+public interface Collection<E> extends Iterable<E> {
+
+java.util.Collection#add(E)  
+java.util.Collection#addAll(Collection<? extends E>)  
+java.util.Collection#clear  
+java.util.Collection#contains  
+java.util.Collection#containsAll  
+java.util.Collection#isEmpty  
+java.util.Collection#parallelStream  
+java.util.Collection#remove  
+java.util.Collection#removeAll  
+java.util.Collection#removeIf  
+java.util.Collection#retainAll  
+java.util.Collection#size  
+java.util.Collection#stream  
+java.util.Collection#toArray()  
+java.util.Collection#toArray(T[])  
+
+
+|   Queue           |   List    |
+|-------------------|-----------|
+|   element:E       |   add     |
+|   offer(E):boolean|   remove  |
+|   peek:E          |   get     |
+|   poll:E          |   set     |
+|   remove:E        |   add     |
+
+
+***
+***添加元素***
+
+    /**
+     * Inserts the specified element into this queue if it is possible to do
+     * so immediately without violating capacity restrictions.
+     * When using a capacity-restricted queue, this method is generally
+     * preferable to {@link #add}, which can fail to insert an element only
+     * by throwing an exception.
+     *
+     * @param e the element to add
+     * @return {@code true} if the element was added to this queue, else
+     *         {@code false}
+     * @throws ClassCastException if the class of the specified element
+     *         prevents it from being added to this queue
+     * @throws NullPointerException if the specified element is null and
+     *         this queue does not permit null elements
+     * @throws IllegalArgumentException if some property of this element
+     *         prevents it from being added to this queue
+     */
+    boolean offer(E e);
+    
+****下面为获取元素****
+    
+    /**
+     * Retrieves, but does not remove, the head of this queue.  This method
+     * differs from {@link #peek peek} only in that it throws an exception
+     * if this queue is empty.
+     *
+     * @return the head of this queue
+     * @throws NoSuchElementException if this queue is empty
+     */
+    E element();
+    
+    /**
+     * Retrieves, but does not remove, the head of this queue,
+     * or returns {@code null} if this queue is empty.
+     *
+     * @return the head of this queue, or {@code null} if this queue is empty
+     */
+    E peek();
+
+    /**
+     * Retrieves and removes the head of this queue,
+     * or returns {@code null} if this queue is empty.
+     *
+     * @return the head of this queue, or {@code null} if this queue is empty
+     */
+    E poll();
+    
+    /**
+     * Retrieves and removes the head of this queue.  This method differs
+     * from {@link #poll poll} only in that it throws an exception if this
+     * queue is empty.
+     *
+     * @return the head of this queue
+     * @throws NoSuchElementException if this queue is empty
+     */
+    E remove();
+
+
+**Queue  VS BlockingQueue**
+public interface Queue<E> extends Collection<E> {
+
+public interface BlockingQueue<E> extends Queue<E> {  
+put(E):void  
+take():E  
+offer(E,long,TimeUnit):boolean  
+poll(long,TimeUnit):E  
+
+
+
 
 ### ----------2020.5.19（庚子年四月廿七）Tuesday---------
-
-
-
 
 [应届生/社招面试最爱问的几道Java基础问题](https://juejin.im/post/5e18879e6fb9a02fc63602e2)  
 
@@ -35,7 +196,10 @@ android 4.4以上沉浸式状态栏和沉浸式导航栏管理，适配横竖屏
 
 
 android打包  
-terminal输入 ./gradlew assembleRelease  编译release包
+terminal输入指令编译
+编译release包
+./gradlew assembleRelease  
+./gradlew assembleUat
 
 ***
 Java8伪共享和缓存行填充--@Contended注释
