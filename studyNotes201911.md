@@ -192,7 +192,7 @@ poll(long,TimeUnit):E
 
 [应届生/社招面试最爱问的几道Java基础问题](https://juejin.im/post/5e18879e6fb9a02fc63602e2)  
 
-
+[java字节码速查表](https://www.wanandroid.com/blog/show/2277)  
 
 
 android打包  
