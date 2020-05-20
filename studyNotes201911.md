@@ -60,6 +60,7 @@ LinkedBlockingQueue  代码实现阻塞细节-->ReentrantLock
 
 ***
 [java阻塞队列与非阻塞队列](https://blog.csdn.net/danengbinggan33/article/details/73105838)
+[Java中常用七个阻塞队列的总结](https://www.cnblogs.com/kaigejava/p/12825493.html)  
 
 方法\处理方式	抛出异常	返回特殊值	一直阻塞	超时退出
 插入方法	add(e)	offer(e)	put(e)	offer(e,time,unit)
@@ -77,6 +78,8 @@ LinkedTransferQueue：一个由链表结构组成的无界阻塞队列。
 LinkedBlockingDeque：一个由链表结构组成的双向阻塞队列。
  
 **非阻塞队列**
+LinkedList（java中的LinkedList 是采用双向循环列表实现的。利用LinkedList 可以实现栈（stack）、队列（queue））
+PriorityQueue
 ConcurrentLinkedQueue
 
 
