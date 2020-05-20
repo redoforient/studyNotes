@@ -1,3 +1,29 @@
+### ----------2020.5.20（庚子年四月廿八）Wednesday---------
+身份证正反面识别，身份证扫描识别，二代身份证OCR识别，OCR极速识别身份证所有信息正反面均可。离线无需联网,极速秒扫。
+https://github.com/XieZhiFa/IdCardOCR
+
+
+[0 UI颜色渐变效果](https://uigradients.com/#Flickr)  
+[1 Android开发网址导航](http://www.jcodecraeer.com/hao.html#)  
+[2 程序员导航](https://playmei.com/developer.html)  
+[3 GIFFOX技术资源站点](http://code.giffox.com/)  
+[4 极客文档](https://geekdocs.cn/)  
+[5 开源中国](https://www.oschina.net/)  
+
+[为了在简历上写掌握Java多线程和并发编程，做了两万字总结！！！](https://blog.csdn.net/HeZhiYing_/article/details/105943962?utm_source=app)  
+[Android面试点](https://github.com/zytc2009/Android_learning/tree/master/%E9%9D%A2%E8%AF%95%E9%A2%98/android%E9%9D%A2%E8%AF%95%E7%82%B9)  
+[Android内核设计思想](http://mp.weixin.qq.com/mp/homepage?__biz=MzA5OTAxNDEyNg==&hid=1&sn=ebe1c61ff758e51e9e92fd907a99f342&scene=18#wechat_redirect)  
+[约束布局ConstraintLayout看这一篇就够了](https://www.jianshu.com/p/17ec9bd6ca8a)  
+
+
+[kotlin中文学习](http://www.kotlincn.net/docs/reference/basic-syntax.html)
+
+***
+android 4.4以上沉浸式状态栏和沉浸式导航栏管理，适配横竖屏切换、刘海屏、软键盘弹出等问题，可以修改状态栏字体颜色和导航栏图标颜色，以及不可修改字体颜色手机的适配，适用于Activity、Fragment、DialogFragment、Dialog，PopupWindow，一句代码轻松实现，以及对bar的其他设置
+[沉浸式状态栏&导航栏](https://github.com/gyf-dev/ImmersionBar)
+
+
+
 ### ----------2020.5.19（庚子年四月廿七）Tuesday---------
 
 
