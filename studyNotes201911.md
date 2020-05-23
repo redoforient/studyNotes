@@ -2,7 +2,28 @@
 
 
 ### ----------2020.5.23（庚子年闰四月初一）Saterday---------
-加班升级--还是遗留了bug（网点支付宝不能维护）git多分支惹得祸
+//用于判断当前线程是否运行在主线程
+Looper.mylooper()==Looper.mainLooper();
+
+[Android判断当前是否在主线程](https://www.cnblogs.com/genggeng/p/7524948.html)
+
+	public boolean isMainThread() {
+		return Looper.getMainLooper() == Looper.myLooper();
+	}
+	
+	
+	public boolean isMainThread() {
+		return Looper.getMainLooper().getThread() == Thread.currentThread();
+	}
+
+
+	public boolean isMainThread() {
+		return Looper.getMainLooper().getThread().getId() == Thread.currentThread().getId();
+	}
+
+
+***
+***加班升级--还是遗留了bug（网点支付宝不能维护）git多分支管理不善惹得祸
 
 
 ### ----------2020.5.22（庚子年四月三十）Friday---------
