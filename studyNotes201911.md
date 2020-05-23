@@ -1,3 +1,48 @@
+### ----------2020.5.24（庚子年闰四月初二）Sunday---------
+
+
+### ----------2020.5.23（庚子年闰四月初一）Saterday---------
+加班升级--还是遗留了bug（网点支付宝不能维护）git多分支惹得祸
+
+
+### ----------2020.5.22（庚子年四月三十）Friday---------
+
+[Android Bitmap 详解：关于 Bitamp 你所要知道的一切](https://www.jianshu.com/p/eef3daeeecbc)
+[Android 最佳并发实践之基础篇](https://mp.weixin.qq.com/s/jo142pIuknpECf6O7yb6DA)
+
+***
+[并发编程系列：面试官最想要的synchronized，你值得拥有](https://mp.weixin.qq.com/s/zi0A4kZgnjnF2-XtAi4pxQ)
+[java单例模式之readResolve()，在序列化&反序列化时保持单例](https://blog.csdn.net/u011499747/article/details/50982956)  
+
+	import java.io.Serializable;
+	import java.util.Objects;
+	public class SerSingleton implements Serializable {
+		String name;
+		private SerSingleton(){
+			System.out.println("Singleton is creating");
+		}
+
+		private static SerSingleton instance = new SerSingleton();
+
+		public static SerSingleton getInstance(){
+			return instance;
+		}
+
+		public static void createString(){
+			System.out.println("create string in singleton");
+		}
+
+		private Object readResolve(){
+			System.out.println("read resolve");
+			return instance;
+		}
+	}
+***
+
+### ----------2020.5.21（庚子年四月廿九）Thursday---------
+感谢神，赐下灵感解决麻烦问题，保准生产应用稳定准时上线--
+
+
 ### ----------2020.5.20（庚子年四月廿八）Wednesday---------
 身份证正反面识别，身份证扫描识别，二代身份证OCR识别，OCR极速识别身份证所有信息正反面均可。离线无需联网,极速秒扫。
 https://github.com/XieZhiFa/IdCardOCR
