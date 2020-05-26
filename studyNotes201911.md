@@ -1,4 +1,41 @@
+### ----------2020.5.26（庚子年闰四月初四）Tuesday---------
+[Android刘海屏、水滴屏全面屏适配方案](https://www.jianshu.com/p/2b8db60ba8df)  
+[Android刘海屏、水滴屏等全面屏适配工具](https://github.com/smarxpan/NotchScreenTool)  
+
+
+[关于多线程，你必须知道的那些玩意儿](https://mp.weixin.qq.com/s/QNeM3kuUZkicJVWjraDzQA)  
+
+[单例的线程安全及序列化问题](https://mp.weixin.qq.com/s/p-4gC9TDSOxQPTJLou-s-w)  
+[Android 最佳并发实践之基础篇](https://mp.weixin.qq.com/s/jo142pIuknpECf6O7yb6DA)  
+[并发编程系列：面试官最想要的synchronized，你值得拥有](https://mp.weixin.qq.com/s/zi0A4kZgnjnF2-XtAi4pxQ)  
+[看完，这辈子都忘不了责任链模式](https://mp.weixin.qq.com/s/0tyFKaHllRsawt3c56UGXg)  
+[Wake up , 您有一条新的消息等待查收！](https://mp.weixin.qq.com/s/kA0-42fiL_oHQXruA8pfPw)  
+### ----------2020.5.25（庚子年闰四月初三）Monday---------
+
+[Android获取屏幕高度的坑](https://www.jianshu.com/p/74a7a40437cb)  
+
+***
+[FrameLayout 配合ImageView 设置背景](https://blog.csdn.net/a15140288018/article/details/84294933)  
+	
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@drawable/login_title_bg" />
+		//不可将"background"换成"src"属性，这样会引发ImageView无法完全填充FrameLayout。
+		
+		
 ### ----------2020.5.24（庚子年闰四月初二）Sunday---------
+Gson
+TypeAdapter(适配器模式）
+TypeToken
+JsonDeserializer
+Gson.fromJson(String json,Class clazz)(门面模式、代理模式）
+[Gson实现自定义解析json格式](https://www.cnblogs.com/xiaowangabc/p/d0c34013b6c24a4f62a3bdedb3b0a5cc.html)  
+JsonParser  解析json文本的解析器，它将json文本解析成JsonElement树。  
+JsonElement 用来表示一个json元素的类，它可能是JsonObject,JsonArray,JsonPrimitive,JsonNull.  
 
 
 ### ----------2020.5.23（庚子年闰四月初一）Saterday---------
