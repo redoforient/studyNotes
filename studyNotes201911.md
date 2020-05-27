@@ -1,15 +1,33 @@
+### ----------2020.5.27（庚子年闰四月初五）Wednesday---------
+[《我们一起进大厂》系列-HashMap](https://juejin.im/post/5dee6f54f265da33ba5a79c8)
+[DVM，应用程序的进程，Linux的进程](https://blog.csdn.net/lin111000713/article/details/52459710)  
+**DVM的进程和Linux的进程, 应用程序的进程为同一个概念**
+* DVM的进程
+* Linux的进程
+* 应用程序的进程
+
+DVM指dalivk的虚拟机。
+每一个【Android应用程序】都在它自己的进程中运行，都拥有一个【独立的Dalvik虚拟机实例】。
+而每一个【DVM】都是【在Linux中的一个进程】，所以说可以认为是同一个概念
+
+
+
 ### ----------2020.5.26（庚子年闰四月初四）Tuesday---------
 [Android刘海屏、水滴屏全面屏适配方案](https://www.jianshu.com/p/2b8db60ba8df)  
 [Android刘海屏、水滴屏等全面屏适配工具](https://github.com/smarxpan/NotchScreenTool)  
 
-
-[关于多线程，你必须知道的那些玩意儿](https://mp.weixin.qq.com/s/QNeM3kuUZkicJVWjraDzQA)  
-
-[单例的线程安全及序列化问题](https://mp.weixin.qq.com/s/p-4gC9TDSOxQPTJLou-s-w)  
 [Android 最佳并发实践之基础篇](https://mp.weixin.qq.com/s/jo142pIuknpECf6O7yb6DA)  
-[并发编程系列：面试官最想要的synchronized，你值得拥有](https://mp.weixin.qq.com/s/zi0A4kZgnjnF2-XtAi4pxQ)  
 [看完，这辈子都忘不了责任链模式](https://mp.weixin.qq.com/s/0tyFKaHllRsawt3c56UGXg)  
 [Wake up , 您有一条新的消息等待查收！](https://mp.weixin.qq.com/s/kA0-42fiL_oHQXruA8pfPw)  
+
+
+
+[并发编程系列：面试官最想要的synchronized，你值得拥有](https://mp.weixin.qq.com/s/zi0A4kZgnjnF2-XtAi4pxQ)  
+[关于多线程，你必须知道的那些玩意儿](https://mp.weixin.qq.com/s/QNeM3kuUZkicJVWjraDzQA)  
+[单例的线程安全及序列化问题](https://mp.weixin.qq.com/s/p-4gC9TDSOxQPTJLou-s-w)  
+
+
+
 ### ----------2020.5.25（庚子年闰四月初三）Monday---------
 
 [Android获取屏幕高度的坑](https://www.jianshu.com/p/74a7a40437cb)  
