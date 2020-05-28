@@ -1,3 +1,7 @@
+### ----------2020.5.28（庚子年闰四月初六）Thursday---------
+
+
+
 ### ----------2020.5.27（庚子年闰四月初五）Wednesday---------
 [《我们一起进大厂》系列-HashMap](https://juejin.im/post/5dee6f54f265da33ba5a79c8)
 [DVM，应用程序的进程，Linux的进程](https://blog.csdn.net/lin111000713/article/details/52459710)  
@@ -9,6 +13,23 @@
 DVM指dalivk的虚拟机。
 每一个【Android应用程序】都在它自己的进程中运行，都拥有一个【独立的Dalvik虚拟机实例】。
 而每一个【DVM】都是【在Linux中的一个进程】，所以说可以认为是同一个概念
+
+
+
+
+模板方法模式 VS 工厂方法模式
+
+钩子线程
+
+**JDK1.6与1.7有什么区别？**
+
+***
+Gson课程干货：
+javabean类中的注解，key名，是否参与序列化，版本号；
+原理，词法分析，构词规则，解析流程，自定义TypeAdapter，
+自定义实现JsonDeserializer接口，Typetoken，nullSafe，nextNull，
+设计模式等的
+
 
 
 
