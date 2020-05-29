@@ -1,4 +1,50 @@
+### ----------2020.5.29（庚子年闰四月初七）Friday---------
+[高并发编程之AtomicReference讲解](https://blog.csdn.net/weixin_42146366/article/details/87822781)  
+一、AtomicReference介绍  
+①.AtomicReference和AtomicInteger非常类似，不同之处就在于AtomicInteger是对整数的封装，而AtomicReference则对应普通的对象引用。也就是它可以保证你在修改对象引用时的线程安全性。  
+②.AtomicReference是作用是对”对象”进行原子操作。 提供了一种读和写都是原子性的对象引用变量。原子意味着多个线程试图改变同一个AtomicReference(例如比较和交换操作)将不会使得AtomicReference处于不一致的状态。  
+
+
+***
+[大端和小端存储模式详解](https://www.cnblogs.com/still-smile/p/11595775.html)  
+**什么是大端和小端**
+Big-Endian和Little-Endian的定义如下：
+1) Little-Endian就是低位字节排放在内存的低地址端，高位字节排放在内存的高地址端。
+2) Big-Endian就是高位字节排放在内存的低地址端，低位字节排放在内存的高地址端。
+举一个例子，比如数字0x12 34 56 78在内存中的表示形式为：
+1)大端模式：
+低地址 -----------------> 高地址
+0x12  |  0x34  |  0x56  |  0x78
+2)小端模式：
+低地址 ------------------> 高地址
+0x78  |  0x56  |  0x34  |  0x12
+可见，大端模式和字符串的存储模式类似。
+
+具体例子：
+16bit宽的数0x1234在Little-endian模式（以及Big-endian模式）CPU内存中的存放方式（假设从地址0x4000开始存放）为：
+
+|内存地址 | 小端模式存放内容 | 大端模式存放内容 |
+|------  |-------------  |-------------- |
+|0x4000  |    0x34       |      0x12     |
+|0x4001  |    0x12       |      0x34     |
+
+***
+
+
 ### ----------2020.5.28（庚子年闰四月初六）Thursday---------
+
+javassist
+
+
+rxjava
+
+**RxJavaPlugins**
+
+RxJavaPlugins.onAssembly
+
+[RxjavaPlugins](https://blog.csdn.net/weixin_43724742/article/details/103394113)  
+
+
 
 
 
@@ -64,8 +110,9 @@ javabean类中的注解，key名，是否参与序列化，版本号；
 			android:layout_height="match_parent"
 			android:background="@drawable/login_title_bg" />
 		//不可将"background"换成"src"属性，这样会引发ImageView无法完全填充FrameLayout。
-		
-		
+
+
+​		
 ### ----------2020.5.24（庚子年闰四月初二）Sunday---------
 Gson
 TypeAdapter(适配器模式）
@@ -86,8 +133,9 @@ Looper.mylooper()==Looper.mainLooper();
 	public boolean isMainThread() {
 		return Looper.getMainLooper() == Looper.myLooper();
 	}
-	
-	
+
+
+​	
 	public boolean isMainThread() {
 		return Looper.getMainLooper().getThread() == Thread.currentThread();
 	}
@@ -96,7 +144,6 @@ Looper.mylooper()==Looper.mainLooper();
 	public boolean isMainThread() {
 		return Looper.getMainLooper().getThread().getId() == Thread.currentThread().getId();
 	}
-
 
 ***
 ***加班升级--还是遗留了bug（网点支付宝不能维护）git多分支管理不善惹得祸
@@ -118,17 +165,17 @@ Looper.mylooper()==Looper.mainLooper();
 		private SerSingleton(){
 			System.out.println("Singleton is creating");
 		}
-
+	
 		private static SerSingleton instance = new SerSingleton();
-
+	
 		public static SerSingleton getInstance(){
 			return instance;
 		}
-
+	
 		public static void createString(){
 			System.out.println("create string in singleton");
 		}
-
+	
 		private Object readResolve(){
 			System.out.println("read resolve");
 			return instance;
@@ -140,10 +187,6 @@ Looper.mylooper()==Looper.mainLooper();
 感谢神，赐下灵感解决麻烦问题，保准生产应用稳定准时上线--
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 40eb12f8a350d18c7a975f6ce01d1bb4ba024e2f
 ### ----------2020.5.20（庚子年四月廿八）Wednesday---------
 身份证正反面识别，身份证扫描识别，二代身份证OCR识别，OCR极速识别身份证所有信息正反面均可。离线无需联网,极速秒扫。
 https://github.com/XieZhiFa/IdCardOCR
@@ -169,16 +212,15 @@ https://github.com/XieZhiFa/IdCardOCR
 android 4.4以上沉浸式状态栏和沉浸式导航栏管理，适配横竖屏切换、刘海屏、软键盘弹出等问题，可以修改状态栏字体颜色和导航栏图标颜色，以及不可修改字体颜色手机的适配，适用于Activity、Fragment、DialogFragment、Dialog，PopupWindow，一句代码轻松实现，以及对bar的其他设置
 [沉浸式状态栏&导航栏](https://github.com/gyf-dev/ImmersionBar)
 
-
 ***
 LinkedBlockingQueue  代码实现阻塞细节-->ReentrantLock
 
     /** Main lock guarding all access */
     final ReentrantLock lock = new ReentrantLock();
-
+    
     /** Condition for waiting takes */
     private final Condition notEmpty = lock.newCondition();
-
+    
     /** Condition for waiting puts */
     private final Condition notFull = lock.newCondition();
 
@@ -222,12 +264,11 @@ DelayQueue：一个使用优先级队列实现的无界阻塞队列。
 SynchronousQueue：一个不存储元素的阻塞队列。
 LinkedTransferQueue：一个由链表结构组成的无界阻塞队列。
 LinkedBlockingDeque：一个由链表结构组成的双向阻塞队列。
- 
+
 **非阻塞队列**
 LinkedList（java中的LinkedList 是采用双向循环列表实现的。利用LinkedList 可以实现栈（stack）、队列（queue））
 PriorityQueue
 ConcurrentLinkedQueue
-
 
 ***
 **Queue和List区别&联系**
@@ -263,7 +304,6 @@ java.util.Collection#toArray(T[])
 |   poll:E          |   set     |
 |   remove:E        |   add     |
 
-
 ***
 ***添加元素***
 
@@ -285,7 +325,7 @@ java.util.Collection#toArray(T[])
      *         prevents it from being added to this queue
      */
     boolean offer(E e);
-    
+
 ****下面为获取元素****
     
     /**
@@ -305,7 +345,7 @@ java.util.Collection#toArray(T[])
      * @return the head of this queue, or {@code null} if this queue is empty
      */
     E peek();
-
+    
     /**
      * Retrieves and removes the head of this queue,
      * or returns {@code null} if this queue is empty.
@@ -482,11 +522,11 @@ java.util.concurrent.locks.AbstractQueuedSynchronizer extends java.util.concurre
 java.util.concurrent.locks.Condition
 
 	    public class ConditionObject implements Condition, java.io.Serializable {
-        private static final long serialVersionUID = 1173984872572414699L;
-        /** First node of condition queue. */
-        private transient Node firstWaiter;
-        /** Last node of condition queue. */
-        private transient Node lastWaiter;
+	    private static final long serialVersionUID = 1173984872572414699L;
+	    /** First node of condition queue. */
+	    private transient Node firstWaiter;
+	    /** Last node of condition queue. */
+	    private transient Node lastWaiter;
 
 
 Sync
@@ -627,7 +667,6 @@ AtomicMarkableReference的唯一区别就是不再用int标识引用，而是使
 四、Exchanger  
 五、Phaser
 
-
 ***
 [java高并发基础篇之多线程Future设计模式](https://blog.csdn.net/qq_41071876/article/details/106087734)
 
@@ -757,7 +796,6 @@ ThreadLocal使用场景：
 
 spring中使用ThreadLocal来设计TransactionSynchronizationManager类，实现了事务管理与数据访问服务的解耦，同时也保证了多线程环境下connection的线程安全问题。
 
-
 ***
 [Android利用GradientDrawable定义动态的shape形状探索](https://blog.csdn.net/SimonHunt/article/details/72477590)  
 [Android Drawable之GradientDrawable](https://www.jianshu.com/p/dbccf8dfe3ef)  
@@ -780,7 +818,6 @@ https://blog.csdn.net/bluewindtalker/article/details/51984300
 [详解 Java 常用的四种锁机制优缺点](https://blog.csdn.net/valada/article/details/84540368)
 （Synchronized、ReentrantLock、Semaphore、AtomicInteger）
 
-
 ***
 AndroidManifest文件配置
 android:supportsRtl
@@ -796,15 +833,15 @@ Android 2.2中引入的系统备份功能,android:allowBackup(默认为 true )�
 	
 	//将文件路径字符串列表转化为文件列表
 	Flowable.just(photos)
-    .observeOn(Schedulers.io())
-    .map(new Function<List<String>, List<File>>() {
-      @Override public List<File> apply(@NonNull List<String> list) throws Exception {
-        // 同步方法直接返回压缩后的文件
-        return Luban.with(MainActivity.this).load(list).get();
-      }
-    })
-    .observeOn(AndroidSchedulers.mainThread())
-    .subscribe();
+	.observeOn(Schedulers.io())
+	.map(new Function<List<String>, List<File>>() {
+	  @Override public List<File> apply(@NonNull List<String> list) throws Exception {
+	    // 同步方法直接返回压缩后的文件
+	    return Luban.with(MainActivity.this).load(list).get();
+	  }
+	})
+	.observeOn(AndroidSchedulers.mainThread())
+	.subscribe();
 
 ***
 
@@ -815,7 +852,7 @@ GIF文件的数据，是一种基于LZW算法的连续色调的无损压缩格�
 **睡眠1000毫秒不同写法**  
 	
 	android.os.SystemClock.sleep(1000);// similar to Thread.sleep(millis), but it **ignores InterruptedException**.
-
+	
 	throws InterruptedException
 		java.lang.Thread.sleep(5000);
 		java.util.concurrent.TimeUnit.MILLISECONDS.sleep(1000);
@@ -945,6 +982,7 @@ ConstraintLayout居中则采用左右上下边来约束居中。
 	layout_constraintHorizontal_chainStyle 水平方向链式
 	layout_constraintVertical_chainStyle 垂直方向链式
 	
+
 [MotionLayout：一个可以直接写动画的ConstraintLayout](https://www.jianshu.com/p/106c056772ec)  
 [MotionLayout动画](https://blog.csdn.net/u014290233/article/details/94398813)
 https://github.com/LGD2009/MotionLayoutExample
@@ -1012,7 +1050,6 @@ https://github.com/androidannotations/androidannotations
 **Afinal**  
 Afinal是一个android的ioc，orm框架，内置了四大模块功能：FinalAcitivity,FinalBitmap,FinalDb,FinalHttp。---作者：杨福海(微信：wx198819880)
 
-
 ***
 屏幕自动适配：修改dimension、百分比布局、autolayout
 
@@ -1022,7 +1059,7 @@ Afinal是一个android的ioc，orm框架，内置了四大模块功能：FinalAc
 
 [AndroidAutoSize](https://github.com/JessYanCoding/AndroidAutoSize)  
  A low-cost Android screen adaptation solution (今日头条屏幕适配方案终极版，一个极低成本的 Android 屏幕适配方案).
- 
+
 ***
 [ConstraintLayout,看完一篇真的就够了么？](https://juejin.im/post/5d12c4146fb9a07ea33c24b7)
 
@@ -1134,7 +1171,7 @@ public @interface Target
 	  继承者 java.lang.Enum<ElementType>
 		  继承者 java.lang.annotation.ElementType
 	所有已实现的接口： Serializable, Comparable<ElementType> 
-
+	
 	ANNOTATION_TYPE	注解类型声明 
 	CONSTRUCTOR 构造方法声明 
 	FIELD 字段声明（包括枚举常量） 
@@ -1162,7 +1199,7 @@ public @interface Retention指示注解类型的注解要保留多久。如果�
 1.5 
 
 
-  
+
 * 源代码文件注解（SOURCE）：  
 	注解只保留在源代码文件，当编译时，会被忽略，在字节码中是不会存在的。所以，反编译别人的源码，是不会存在注解的。
 * 字节码文件注解（CLASS）：  
@@ -1412,8 +1449,8 @@ javap -V Test.class
 	1. jclasslib Bytecode viewer  
 	2. ASM Bytecode Viewer  
 
-	
-	
+
+​	
 ***
 HashMap优化：避免扩容  
 加载因子  
@@ -1450,7 +1487,6 @@ rehash
 
 
 [jdk1.8 API中文翻译](https://gitee.com/aLiez/java8-zh)
-
 
 ***
 * GitHub:Android选择器（时间、省市区三级联动  
@@ -1530,7 +1566,6 @@ setMaximumFractionDigits(int)//设定小数最多位数
 
 [okhttp官网](https://square.github.io/okhttp/)
 
-
 ***
 kHttp3的最底层是Socket，而不是URLConnection，它通过Platform的Class.forName()反射获得当前Runtime使用的socket库，调用栈如下
 
@@ -1591,7 +1626,7 @@ setContentView vs LayoutInflater.inflate
 	 Activity.setContentView底层PhoneWindow.setContentView最终调用的也是mLayoutInflater.inflate
 	 //将要加载的资源添加到mContentParent上
      mLayoutInflater.inflate(layoutResID, mContentParent);
-	 
+	
 	 new com.android.internal.policy.PhoneWindow(this, window, activityConfigCallback);
 * 区别：
 	1. setContentView()一旦调用, layout就会立刻显示UI；  
@@ -1630,11 +1665,11 @@ MeasureSpec用一个32位的int来表示一个View测量规格
 LayoutParams取值有三种：dp（精确值）,match_parent,wrap_content 
 根据父view的三种测量模式和子View的三种LayoutParams会得出九种结果
 ```
-	
+
 
 	private static final int MODE_SHIFT = 30;
 	private static final int MODE_MASK  = 0x3 << MODE_SHIFT;
-	
+
 1. 未指定模式（android.view.View.MeasureSpec#UNSPECIFIED）  
 当前父View未对子View加任何限制，可以随便用空间，不受限制。
 	
@@ -1671,7 +1706,6 @@ LayoutParams取值有三种：dp（精确值）,match_parent,wrap_content
 参考：  
 [MeasureSpec中三种模式：UNSPECIFIED，AT_MOST，EXACTLY](https://blog.csdn.net/mp624183768/article/details/79622527)
 
-
 ***
 parentMeasureSpec和childMeasureSpec为什么会存在这样的转换关系？我是这样理解的：
 
@@ -1687,7 +1721,6 @@ parentMeasureSpec和childMeasureSpec为什么会存在这样的转换关系？�
 
 ### 自定义View，为什么要进行measure？ 
 通过measure可以测量出实际宽高尺寸，
-
 
 ***
 **OOM_ADJ (Out of Memory Adjustment)** 
@@ -1724,16 +1757,15 @@ http://jakewharton.github.io/butterknife/
 
 Attention: This tool is now deprecated. Please switch to view binding.
 
-
 ***
 
 > Lifecycle  
 
 	public class ComponentActivity extends androidx.core.app.ComponentActivity implements
-        LifecycleOwner,
-        ViewModelStoreOwner,
-        SavedStateRegistryOwner,
-        OnBackPressedDispatcherOwner {
+	    LifecycleOwner,
+	    ViewModelStoreOwner,
+	    SavedStateRegistryOwner,
+	    OnBackPressedDispatcherOwner {
 ***
 
 
@@ -1751,7 +1783,7 @@ Attention: This tool is now deprecated. Please switch to view binding.
 	 */
 	@SuppressWarnings("WeakerAccess")
 	public interface LifecycleObserver {
-
+	
 	}
 
 ***
@@ -1794,7 +1826,7 @@ FutureTask ，RecursiveAction ， RecursiveTask ， SwingWorker
 * FutureTask类实现了RunnableFuture接口  
 
 		public class FutureTask<V> implements RunnableFuture<V>
- 
+
 * RunnableFuture接口的实现  
 
 		public interface RunnableFuture<V> extends Runnable, Future<V> {
@@ -1971,8 +2003,8 @@ TraceView：Android平台配备的性能分析工具
         }
         return statusHeight;
     }
-
-	//通过反射获取状态栏高度
+    
+    //通过反射获取状态栏高度
     private void getStatusBarHeight(Context context){
         int statusBarHeight=0;
         try {
@@ -2057,16 +2089,16 @@ AsyncListUtil 是一个用于异步内容加载的类
 
 > 60秒后过期倒计时器  
 	android.os.CountDownTimer countDownTimer = new android.os.CountDownTimer(60000, 1000) 
-	
+
 android.os.CountDownTimer countDownTimer = new android.os.CountDownTimer(duration, delayTime) {
 	@Override
 	public void onTick(long millisUntilFinished) {
 		
 	}
-
+	
 	@Override
 	public void onFinish() {
-
+	
 	}
 };
 
@@ -2087,34 +2119,34 @@ Java 8 中我们可以通过 `::` 关键字来访问类的构造方法，对象�
 
 
     import java.util.concurrent.atomic.AtomicLong;
-	public class Main {
-	    static AtomicLong i = new AtomicLong();
-		//##静态块加载即执行，且只执行一次##
-		static {
-			//##加载类的时候，虚拟机会加锁保证只有一个线程去做加载动作
-	        //会一直等待
-	        //Thread t = new Thread(()->i.getAndIncrement());
-	        Thread t = new Thread(new Runnable() {
-	            @Override
-	            public void run() {
-	                i.getAndIncrement();
-	            }
-	        });
-	        //可以顺利执行并打印1
-	        //Thread t = new Thread(i::getAndIncrement);
-	        t.start();
-	        try {
-				//此处挂起主线程执行子线程任务
-	            t.join();
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	        }
-	    }		
-		//main一执行是开启一个进程，要加载各种资源，fork出很多线程，包括垃圾回收等线程
-	    public static void main(String[] a) {
-	        System.out.print(i.get());
-	    }
-	}
+    public class Main {
+        static AtomicLong i = new AtomicLong();
+    	//##静态块加载即执行，且只执行一次##
+    	static {
+    		//##加载类的时候，虚拟机会加锁保证只有一个线程去做加载动作
+            //会一直等待
+            //Thread t = new Thread(()->i.getAndIncrement());
+            Thread t = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    i.getAndIncrement();
+                }
+            });
+            //可以顺利执行并打印1
+            //Thread t = new Thread(i::getAndIncrement);
+            t.start();
+            try {
+    			//此处挂起主线程执行子线程任务
+                t.join();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }		
+    	//main一执行是开启一个进程，要加载各种资源，fork出很多线程，包括垃圾回收等线程
+        public static void main(String[] a) {
+            System.out.print(i.get());
+        }
+    }
 
 
 
@@ -3170,12 +3202,12 @@ proxy指的不是所代理的那个真实对象。如果是这样的话就没必
 System.out.println("proxy.getClass():" + proxy.getClass());
 输出： proxy.getClass():class **com.sun.proxy.$Proxy0**
 
-
 ------------------------
 * Proxy
 	
 	public static Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces, InvocationHandler h) throws IllegalArgumentException
 	
+
 Proxy类加载器:
 
 System.out.println("proxy.getClass().getClassLoader(): "+proxy.getClass().getClassLoader());
