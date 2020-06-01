@@ -76,3 +76,31 @@ https://www.wikiwand.com/zh/%E5%85%89%E5%AD%A6%E5%AD%97%E7%AC%A6%E8%AF%86%E5%88%
  neutral (mubāḥ), 
  reprehensible (makrūh), 
  forbidden (ḥarām)
+ 
+***
+APN(Access Point Name)“接入点名称
+SSO(Single Sign On)单点登录
+PDA(Personal Digital Assistant)掌上电脑、个人数字助理
+
+RS-232串行接口
+RJ-45接口
+
+CODE-128条码
+QR Code二维码
+
+
+SP(Start Price)起薪
+
+PM是团体机能概念(评级)
+P（performance），指工作绩效，是团体的目标达成机能
+M（maintenance），指团体维系，是维持强化团体或组织的机能
+
+PM八个情境因素:
+①对工作的欲望；
+②对待遇的满意程度；
+③对公司的满意程度；
+④心理保健；
+⑤集体工作精神；
+⑥会议成效；
+⑦信息沟通；
+⑧绩效规范。
