@@ -1,6 +1,7 @@
 ### ----------2020.6.1（庚子年闰四月初十）Monday---------
 * 概念---逆波兰 表达式
-    
+
+[RxJava2线程调度](https://xieyang94.github.io/RxJava-/RxJava2/RxJava2-%E7%BA%BF%E7%A8%8B%E8%B0%83%E5%BA%A6.html)  
 
 
 
@@ -27,7 +28,6 @@ Binder
 一、AtomicReference介绍  
 ①.AtomicReference和AtomicInteger非常类似，不同之处就在于AtomicInteger是对整数的封装，而AtomicReference则对应普通的对象引用。也就是它可以保证你在修改对象引用时的线程安全性。  
 ②.AtomicReference是作用是对”对象”进行原子操作。 提供了一种读和写都是原子性的对象引用变量。原子意味着多个线程试图改变同一个AtomicReference(例如比较和交换操作)将不会使得AtomicReference处于不一致的状态。  
-
 
 ***
 [大端和小端存储模式详解](https://www.cnblogs.com/still-smile/p/11595775.html)  
@@ -160,9 +160,9 @@ Looper.mylooper()==Looper.mainLooper();
 
 
 ​	
-	public boolean isMainThread() {
-		return Looper.getMainLooper().getThread() == Thread.currentThread();
-	}
+​	public boolean isMainThread() {
+​		return Looper.getMainLooper().getThread() == Thread.currentThread();
+​	}
 
 
 	public boolean isMainThread() {
@@ -884,8 +884,7 @@ GIF文件的数据，是一种基于LZW算法的连续色调的无损压缩格�
 
 ### ----------2020.5.6（庚子年四月十四）Wednesday---------
 
-
-## 子线程中启动的Activity与主线程中启动Activity有什么区别？
+** 子线程中启动的Activity与主线程中启动Activity有什么区别？**
 
 
 
@@ -1676,9 +1675,9 @@ A lightweight, good expandability Android library used for displaying different 
 	3. 实现通用算法-->代码复用
 
 ***
-## 自定义View
+** 自定义View**
 
-#### 描述MeasureSpec的原理
+** 描述MeasureSpec的原理**
 
 MeasureSpec用一个32位的int来表示一个View测量规格  
 	前2位表示测量规格模式(mode)  
@@ -1743,7 +1742,7 @@ parentMeasureSpec和childMeasureSpec为什么会存在这样的转换关系？�
 
 
 
-### 自定义View，为什么要进行measure？ 
+**自定义View，为什么要进行measure？ **
 通过measure可以测量出实际宽高尺寸，
 
 ***
@@ -1825,7 +1824,7 @@ Attention: This tool is now deprecated. Please switch to view binding.
 ***
 [Java并发编程：Callable、Future和FutureTask](https://www.cnblogs.com/dolphin0520/p/3949310.html)  
 
-##### Future提供了三种功能：  
+** Future提供了三种功能：  **
 　　1）判断任务是否完成；  
 　　2）能够中断任务；  
 　　3）能够获取任务执行结果。  
@@ -1862,10 +1861,9 @@ FutureTask ，RecursiveAction ， RecursiveTask ， SwingWorker
 KeyWord：**ColorMatrix**  
 [Android改变图像的饱和度、亮度和对比度](https://blog.csdn.net/sxwyf248/article/details/7019731)
 
-
 [颜色矩阵-滤镜ColorMatrix](https://www.cnblogs.com/baiqiantao/p/5491800.html)
 
-## 色彩的三要素
+** 色彩的三要素**
 1. 色相。色相通俗的说就是“颜色”，色相的改变就是颜色的改变，色相的调节伴随着红橙黄绿蓝紫的变化。
 2. 亮度。明度通俗的说就是“光照度”，明度的改变就是光照在物体上带来的改变，明度的调节伴随着越高，光越强，越泛白（就像过曝一样，往白色上偏离）；越低，光越弱，越往黑里偏
 3. 饱和度。饱和度通俗的说就是“色彩的纯度”，饱和度的改变会影响颜色的鲜艳程度，以红色为例子，越高，越接近红色，越低则越接近灰色（黑白）
@@ -1879,10 +1877,10 @@ KeyWord：**ColorMatrix**
 
 ### ----------2020.4.16（庚子年三月廿四）Thursday---------
 
-## [马士兵教育直播列表](https://s1.mashibing.com/selectuser)
-## [马士兵教育菜鸟预习](http://mashibing.com/html/bird.html)
-## [马士兵教育vip资料](http://www.mashibing.com/vip.html)
-## [马士兵教育github仓库](https://www.github.com/bjmashibing)
+ [马士兵教育直播列表](https://s1.mashibing.com/selectuser)
+ [马士兵教育菜鸟预习](http://mashibing.com/html/bird.html)
+ [马士兵教育vip资料](http://www.mashibing.com/vip.html)
+ [马士兵教育github仓库](https://www.github.com/bjmashibing)
 
 
 
@@ -1898,7 +1896,8 @@ SurfaceView拥有独立的绘图表面，因此SurfaceView的UI就可以在一�
 由于不会占用主线程资源，SurfaceView 一方面可以实现复杂而高效的UI，另一方面又不会导致用户输入得不到及时响应。
 ***
 
-## 组件化方案
+** 组件化方案**
+
 * CC:ComponentCaller、
 * ARouter、
 * DDComponent/JIMU
@@ -1913,7 +1912,7 @@ SurfaceView拥有独立的绘图表面，因此SurfaceView的UI就可以在一�
 
 
 
-## ANR
+** ANR**
 
 在Android里, App的响应能力是由Activity Manager和Window Manager系统服务来监控的. 通常在如下三种情况下会弹出ANR对话框:
 
@@ -2215,13 +2214,13 @@ https://mp.weixin.qq.com/s?src=3&timestamp=1586240207&ver=1&signature=DsLIvaPTLL
 
 
 
-#### Facade与Mediator模式的区别？
+** Facade与Mediator模式的区别？**
 https://www.cnblogs.com/sweetdream/archive/2005/12/19/299983.html
 Facade模式是解耦系统外到系统内（单向）的对象关联关系，
 Mediator模式是解耦系统内各个对象之间在（双向）的关联关系
 
 
-### 设计模式(17)--Mediator(中介者模式)行为型
+** 设计模式(17)--Mediator(中介者模式)行为型**
 https://www.cnblogs.com/yysbolg/p/7518777.html
 应用实例：
 [1]Mediator模式在事件驱动类应用中比较多，例如聊天、消息传递等等，需要有一个MessageMediator，专门负责request/reponse之间任务的调节。
@@ -2616,9 +2615,9 @@ protobuf + mmkv
 ***********
 
 零拷贝技术分类
-Linux 中的零拷贝技术主要有下面这几种：
-直接 I/O、mmap、sendfile、splice
--------
+Linux 中的零拷贝技术主要有下面这几种：  
+** 直接 I/O、mmap、sendfile、splice**
+
 mars的日志模块 xlog
 
 
