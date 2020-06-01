@@ -2306,6 +2306,11 @@ https://developer.android.google.cn/topic/libraries/architecture/lifecycle#java
 
 
 ##----------------2020.4.3（庚子年三月十一）Friday---------------------------------------------
+报名享学课堂——> ￥5380
+￥ 5380
+￥10980
+￥16360
+
 AtomicReference
 
 JVM垃圾回收：有向图机制 GC Roots
@@ -3321,6 +3326,7 @@ WeakHashMap
 
 
 -------2019.10.10（己亥年九月十二）Thu---------
+报名马士兵教育-->￥10980元
 VarHandle
 java四种引用：强、软、弱、虚
     软引用和弱引用的价值：
