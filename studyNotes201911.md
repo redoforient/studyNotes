@@ -1,3 +1,27 @@
+### ----------2020.6.1（庚子年闰四月初十）Monday---------
+* 概念---逆波兰 表达式
+    
+
+
+
+### ----------2020.5.31（庚子年闰四月初九）Sunday---------
+**TypeToken**
+[关于Gson的TypeToken](https://www.jianshu.com/p/c820e55d9f27)  
+​ Gson在Json解析中使用广泛, 常用的数据类型都可以解析, 特殊的可以自定义Adapter解析. 在解析大量具有某些相同结构的数据上,我们总想复用已有的类型, 为了复用通常可以使用继承和泛型
+
+***
+[Gson中使用TypeAdapter设置默认值, 数据免判空、解析后校验、预处理](https://ubock.com/article/45)  
+Gson中使用TypeAdapter设置默认值，如数字类型Long默认是null,但是我们需要0
+
+
+
+### ----------2020.5.30（庚子年闰四月初八）Saturday---------
+RxJava装饰器模式（洋葱模型） 
+
+Binder
+
+
+
 ### ----------2020.5.29（庚子年闰四月初七）Friday---------
 [高并发编程之AtomicReference讲解](https://blog.csdn.net/weixin_42146366/article/details/87822781)  
 一、AtomicReference介绍  
@@ -73,7 +97,7 @@ DVM指dalivk的虚拟机。
 Gson课程干货：
 javabean类中的注解，key名，是否参与序列化，版本号；
 原理，词法分析，构词规则，解析流程，自定义TypeAdapter，
-自定义实现JsonDeserializer接口，Typetoken，nullSafe，nextNull，
+自定义实现JsonDeserializer接口，TypeToken，nullSafe，nextNull，
 设计模式等的
 
 
