@@ -1,6 +1,86 @@
+### ----------2020.6.4（庚子年闰四月十三）Thursday---------
+com.google.gson.reflect.TypeToken获取运行时泛型类型(参数化类型)
+
+***
+hightopo是一款收费软件,它可以很方便的帮助我们制作web版的网络拓扑图。它的底层是 HTML5 的 Canvas 实现。
+[大型风力发电机-在线三维动图](https://hightopo.com/demo/fan3d-magic/)  
+
+
+***
+[泛型与通配符详解](https://www.cnblogs.com/fengmingyue/p/6087031.html)  
+
+    public void fun3() {
+        List<Integer> intList = new ArrayList<Integer>();
+        print1(intList);
+        List<Long> longList = new ArrayList<Long>();
+        print1(longList);
+    }
+    /*
+     * 给通配符添加了限定：
+     *   只能传递Number或其子类型
+     *   子类通配符对通用性产生了影响，但使用形参更加灵活
+     */
+    public void print1(List<? extends Number> list) {
+        //list.add(new Integer(100));//错误！！！编译器报错，说明参数为泛型的方法还是不能使用（因为?也可能为Long型）
+        Number number = list.get(0);//正确！！！返回值为泛型的方法可用了！
+    }
+    
+    
+    public void fun4() {
+        List<Integer> intList = new ArrayList<Integer>();
+        print2(intList);
+        List<Number> numberList = new ArrayList<Number>();
+        print2(numberList);
+        List<Object> objList = new ArrayList<Object>();
+        print2(objList);
+    }
+    /*
+     * 给通配符添加了限定
+     *   只能传递Integer类型，或其父类型
+     */
+    public void print2(List<? super Integer> list) {
+        list.add(new Integer(100));//正确！！！参数为泛型的方法可以使用了
+        Object obj =  list.get(0);//正确！！！但是只是得益于object类是所有类的父类，换成其他任何类编译器都会报错！说明返回值为泛型的方法，还是不能使用
+    }
+ 
+
 ### ----------2020.6.3（庚子年闰四月十二）Wednesday---------
 
 
+***
+
+参数化类型(parameterized types)具体含义:
+在List<Sting>中，String 就是参数化类型；
+
+类型变量（type variables）具体含义：
+List<T> list中，T就是类型变量
+
+
+	package java.lang.reflect;
+
+	/**
+	 * Type is the common superinterface for all types in the Java
+	 * programming language. These include raw types, parameterized types,
+	 * array types, type variables and primitive types.
+	 *Type是 Java 编程语言中所有类型的公共高级接口。它们包括原始类型、参数化类型、数组类型、类型变量和基本类型。
+	 * @since 1.5
+	 */
+
+	public interface Type {
+
+
+
+	
+***
+[Java 获取泛型对象的参数类型](https://blog.csdn.net/Gdeer/article/details/104591155/)  
+由于类型擦除，java 中的泛型对象在运行时是不知道自己类型参数的类型的。
+但有几种特殊情况，能够获取泛型对象的参数类型：
+
+	一、类中有 class 信息（类中有一个 Class 字段）
+	二、父类中有 class 信息（父类是泛型类，并指定了参数类型）
+		2.1 子类
+		2.2 匿名子类
+	三、持有者中有 class 信息（是一个类的 Field、Method）
 
 
 ### ----------2020.6.2（庚子年闰四月十一）Tuesday---------
