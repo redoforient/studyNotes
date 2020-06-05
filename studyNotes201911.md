@@ -1,3 +1,17 @@
+### ----------2020.6.5（庚子年闰四月十四）Friday---------
+
+[正则表达式校验网址](http://leaverou.github.io/regexplained/)  
+
+[json在线格式化](https://www.sojson.com/)  
+
+
+[在线颜色选择器 | RGB颜色查询对照表](http://tools.jb51.net/static/colorpicker/?)  
+
+
+**mybase**  
+[个人（wiki）知识管理工具-一代神器之mybase](http://www.eryajf.net/1040.html)  
+
+
 ### ----------2020.6.4（庚子年闰四月十三）Thursday---------
 com.google.gson.reflect.TypeToken获取运行时泛型类型(参数化类型)
 
