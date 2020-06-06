@@ -1,3 +1,48 @@
+### ----------2020.6.6（庚子年闰四月十五）Saturday---------
+
+Effective Java<Third Edition> Joshua Bloch 俞黎敏译
+
+**第30条：优先考虑泛型方法**  
+递归类型限制(recursive type bound)  
+	
+	//Using a recursive type bound to express mutual comparability(集合元素可以互相比较）
+	public static <E extends Comparable<E>> E max(Collection<E> c)
+ 
+**第42条：Lambda优先于匿名类**
+ 
+**第43条：方法引用优先于Lambda**
+
+**第44条：坚持使用标准的函数接口**
+unary (adj.)一元的
+1923, from Latin unus "one" (from PIE root *oi-no- "one, unique") on model of binary, etc.
+
+|		接口		|	函数签名		|		范例		|  
+|-------------------|-------------------|-------------------|   
+| UnaryOperator<T>	|T apply(T t)		|String::toLowerCase|  
+| BinaryOperator<T>	|T apply(T t1,T t2)	|BigInteger::add	|  
+| Predicate<T>		|booean test(T t)	|Collection::isEmpty|  
+| Function<T,R>		|R apply(T t)		|Arrays::asList		|  
+| Supplier<T>		|T get()			|Instant::now		|  
+| Consumer<T>		|void accept(T t)	|System.out::println|  
+
+***
+1.8的新特性—>函数式编程即:将函数作为参数
+
+	java.util
+		Class Objects
+		java.lang.Object
+		java.util.Objects
+
+	static <T> T	requireNonNull(T obj)
+	Checks that the specified object reference is not null.
+	static <T> T	requireNonNull(T obj, String message)
+	Checks that the specified object reference is not null and throws a customized NullPointerException if it is.
+
+***
+[马士兵教育：SpringBoot学习](https://gitee.com/freedomszq/shiro.git)  
+
+
+
 ### ----------2020.6.5（庚子年闰四月十四）Friday---------
 
 [正则表达式校验网址](http://leaverou.github.io/regexplained/)  
