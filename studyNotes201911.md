@@ -1,4 +1,55 @@
 ### ----------2020.6.7（庚子年闰四月十六）Sunday---------
+https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html
+
+Class文件中除了有类的版本、字段、方法、接口等描述信息外，还有一项信息就是常量池，用于存放 编译时期生成的各种字面量和符号引用，这部分内容将在类加载后进入方法区的运行时常量池中存放。
+按照系統改變
+https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html#BABCBGHF
+
+
+方法区：
+JDK1.7之前称为永久代
+JDK1.8之后称为元空间
+
+
+方法区是虚拟机规范, 是概念的东西, 1.7用永久代实现方法去, 1.8用元空间实现永久代
+方法区在JDK 8中就是Metaspace，在JDK6或7中就是Perm Space
+
+
+-Xmx200M（堆区内存可被分配的最大上限	10G
+-Xms 堆区内存初始内存分配的大小			2G
+
+Oracle：1、hotspot	2、JRocket（没有永久代）
+
+直接内存
+directByteBuffer
+
+
+
+方法区
+栈区、堆、本地内存
+
+
+eden s0 s1 tenured permanent
+
+ps -ef|grep java
+
+**HSDB**
+
+
+**共享区域为什么分为堆和方法区？**
+堆里面会有变化，会有GC，  
+方法区几乎不变，Class加载一次基本就不变了  
+
+**第33条：优先考虑类型安全的异构容器**
+类型令牌（type token）
+String.class属于Class<String>类型
+Integer.class属于Class<Integer>类型
+
+	public class Class<T> {
+		T cast(Object obj);
+	}
+
+
 **第60条：如果需要精确的答案，请避免使用float和double**
 请使用BigDecimal、int或者long进行  货币运算(float和double类型尤其不适合用于货币计算，主要用于科学计算和工程计算）
 
