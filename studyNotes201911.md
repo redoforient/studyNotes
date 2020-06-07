@@ -1,3 +1,49 @@
+### ----------2020.6.7（庚子年闰四月十六）Sunday---------
+**第60条：如果需要精确的答案，请避免使用float和double**
+请使用BigDecimal、int或者long进行  货币运算(float和double类型尤其不适合用于货币计算，主要用于科学计算和工程计算）
+
+java是伪泛型(编译时泛型,运行时类型擦除(type erasure))，真泛型语言如C#、 C++（模板）
+协变(covariant):数组是协变的（covariant）。这就是说如果sub是super的子类型，那么数组类型sub[]就是super[]的子类型。  
+逆变(contravariant)
+不变(invariant)：泛型是不可变的（invariant），对于任意两个不同的类型type1和type2，List<type1>既不是List<type1>的子类型，也不是List<type2>的超类型。
+
+***
+C++模板是"reified generic"
+
+reify
+verb [ T ]
+  formal
+UK/ˈreɪ.ɪ.faɪ/ US/ˈriː.ə.faɪ/
+to make something more real or consider it as real
+使物体化；使具体化
+***
+
+* 任何情况下都不要在多个线程间共享一个Random实例，而该把它放入ThreadLocal之中
+* java7 **在所有情形下** 都更推荐使用ThreadLocalRandom，它向下兼容已有的代码且运营成本更低
+	
+	ThreadLocalRandom的主要实现细节：
+	* 使用一个普通的long而不是使用Random中的AtomicLong作为seed
+	* 不能自己创建ThreadLocalRandom实例，因为它的构造函数是私有的，可以使用它的静态工厂ThreadLocalRandom.current()
+	* 它是CPU缓存感知式的，使用8个long虚拟域来填充64位L1高速缓存行
+
+***
+predicate
+美: ['predɪkeɪt] 
+英: ['predɪkət] 
+v.	断言；使基于；使以…为依据；表明
+adj.	述语的；谓项的
+n.	谓语（句子成分，对主语加以陈述，如 John went home 中的 went home）
+网络	谓词；述词；断定
+
+
+negate
+美: [nə'ɡeɪt] 
+英: [nɪ'ɡeɪt] 
+v.	否定；否认；取消；使无效
+网络	非；打消；抵消
+
+
+
 ### ----------2020.6.6（庚子年闰四月十五）Saturday---------
 
 Effective Java<Third Edition> Joshua Bloch 俞黎敏译
@@ -24,6 +70,7 @@ unary (adj.)一元的
 | Function<T,R>		|R apply(T t)		|Arrays::asList		|  
 | Supplier<T>		|T get()			|Instant::now		|  
 | Consumer<T>		|void accept(T t)	|System.out::println|  
+
 
 ***
 1.8的新特性—>函数式编程即:将函数作为参数
@@ -755,6 +802,30 @@ CLH锁也是一种基于链表的可扩展、高性能、公平的自旋锁，�
 Glide LRU缓存 算法实现->
 	LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder)
 https://blog.csdn.net/a724888/article/details/80290276
+
+
+[实现LRU算法的两种方法](https://blog.csdn.net/Apple_hzc/article/details/84640879)  
+* 一、LinkedHashMap
+	LinkedHashMap 内部维护了一个双向链表，用来维护插入顺序或者 LRU（最近最久未使用）顺序。
+	* 设定最大缓存空间 threshold 为4；
+	* 使用 LinkedHashMap 的构造函数将 accessOrder 设置为 true，开 LRU 顺序；
+	* 覆盖 removeEldestEntry()方法实现，在结点多于 threshold 时就会将最近最久未使用的数据移除。
+
+         private static final int MAX_ENTRIES = 100;
+    
+         protected boolean removeEldestEntry(Map.Entry eldest) {
+            return size() > MAX_ENTRIES;
+         }	
+
+* 二、双向链表 + HashMap
+
+
+threshold
+美: ['θreʃ.hoʊld] 
+英: ['θreʃ.həʊld] 
+n.	阈；门槛；起点；开端
+网络	阈值；阀值；临界值
+
 ***
 
 netty粘包
