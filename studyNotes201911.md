@@ -1,4 +1,52 @@
 ### ----------2020.6.8（庚子年闰四月十七）Monday---------
+[设计模式之工厂模式（factory pattern）](https://www.cnblogs.com/yssjun/p/11102162.html)  
+[Java学习笔记之UnaryOperator](https://blog.csdn.net/yangshuaionline/article/details/85329657)  
+
+    package java.util.function;
+    
+    /**
+     * Represents an operation on a single operand that produces a result of the
+     * same type as its operand.  This is a specialization of {@code Function} for
+     * the case where the operand and result are of the same type.
+     *
+     * <p>This is a <a href="package-summary.html">functional interface</a>
+     * whose functional method is {@link #apply(Object)}.
+     *
+     * @param <T> the type of the operand and result of the operator
+     *
+     * @see Function
+     * @since 1.8
+     */
+    @FunctionalInterface
+    public interface UnaryOperator<T> extends Function<T, T> {
+    
+        /**
+         * Returns a unary operator that always returns its input argument.
+         *
+         * @param <T> the type of the input and output of the operator
+         * @return a unary operator that always returns its input argument
+         */
+        static <T> UnaryOperator<T> identity() {
+            return t -> t;
+        }
+        
+    }
+    
+    //identity方法的等价写法
+    static <T> UnaryOperator<T> identity() {
+        //代码return t -> t;的等价写法如下
+        return new UnaryOperator<T>() {
+            @Override
+            public T apply(T t) {
+               return t;
+            }
+        };
+    }
+
+```英语补习
+operand  ['ɑpə'rænd /'ɒpərænd]
+n.  运算域, 数学操作运算的量; 用于操作的数据单位 (数学, 计算机用语)
+
 [进程间通信IPC、LPC、RPC](https://www.cnblogs.com/gsk99/archive/2010/12/13/1904541.html)  
 IPC:(Inter-Process Communication)跨进程通信:进程间通信技术包括"消息传递、同步、共享内存和远程过程调用"。  
 LPC:(Local Procedure Call)本地过程调用
