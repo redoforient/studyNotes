@@ -1,3 +1,13 @@
+### ----------2020.6.8（庚子年闰四月十七）Monday---------
+[进程间通信IPC、LPC、RPC](https://www.cnblogs.com/gsk99/archive/2010/12/13/1904541.html)  
+IPC:(Inter-Process Communication)跨进程通信:进程间通信技术包括"消息传递、同步、共享内存和远程过程调用"。  
+LPC:(Local Procedure Call)本地过程调用
+RPC:(Remote Procedure Call)远程过程调用  
+
+
+[JDK1.9对Optional类的改进，ifPresentOrElse() 方法](https://blog.csdn.net/qq_35951897/article/details/97780993)  
+
+
 ### ----------2020.6.7（庚子年闰四月十六）Sunday---------
 https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html
 
