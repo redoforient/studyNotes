@@ -1,4 +1,9 @@
+----------2020.6.9（庚子年闰四月十八）Tuesday---------
+中级职称资料
+
+
 ### ----------2020.6.8（庚子年闰四月十七）Monday---------
+
 [设计模式之工厂模式（factory pattern）](https://www.cnblogs.com/yssjun/p/11102162.html)  
 [Java学习笔记之UnaryOperator](https://blog.csdn.net/yangshuaionline/article/details/85329657)  
 
@@ -1315,13 +1320,13 @@ ConstraintLayout居中则采用左右上下边来约束居中。
 * 水平居中 layout_constraintLeft_toLeftOf & layout_constraintRight_toRightOf
 * 垂直居中 layout_constraintTop_toTopOf & layout_constraintBottom_toBottomOf
 * 中间居中 水平居中 & 垂直居中  
-	```
+```
 	<TextView
 		...
 		android:text="Hello"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"/>
-
+	
 	```
 
 * layout_constraintWidth="true)
