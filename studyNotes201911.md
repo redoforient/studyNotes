@@ -1,5 +1,27 @@
-----------2020.6.9（庚子年闰四月十八）Tuesday---------
+### ----------2020.6.11（庚子年闰四月十九）Thursday---------
+
+
+
+### ----------2020.6.10（庚子年闰四月十八）Wednesday---------
+
+***
+[Java之JVM逃逸分析](https://blog.csdn.net/blueheart20/article/details/76167489)  
+
+逃逸分析开启设置
+默认的在JDK 6u23以上是默认开启，这里将设置重新明确一下：
+强制开启：
+
+	-server -XX:+DoEscapeAnalysis -XX:+PrintGCDetail -Xmx10m -Xms10m
+	
+	关闭逃逸分析：
+	
+	-server -XX:-DoEscapeAnalysis -XX:+PrintGCDetail -Xmx10m -Xms10m
+
+
+
+### ----------2020.6.9（庚子年闰四月十八）Tuesday---------
 中级职称资料
+
 
 
 ### ----------2020.6.8（庚子年闰四月十七）Monday---------
@@ -48,7 +70,7 @@
         };
     }
 
-```英语补习
+英语补习
 operand  ['ɑpə'rænd /'ɒpərænd]
 n.  运算域, 数学操作运算的量; 用于操作的数据单位 (数学, 计算机用语)
 
@@ -167,24 +189,23 @@ Effective Java<Third Edition> Joshua Bloch 俞黎敏译
 	
 	//Using a recursive type bound to express mutual comparability(集合元素可以互相比较）
 	public static <E extends Comparable<E>> E max(Collection<E> c)
- 
+
 **第42条：Lambda优先于匿名类**
- 
+
 **第43条：方法引用优先于Lambda**
 
 **第44条：坚持使用标准的函数接口**
 unary (adj.)一元的
 1923, from Latin unus "one" (from PIE root *oi-no- "one, unique") on model of binary, etc.
 
-|		接口		|	函数签名		|		范例		|  
-|-------------------|-------------------|-------------------|   
-| UnaryOperator<T>	|T apply(T t)		|String::toLowerCase|  
-| BinaryOperator<T>	|T apply(T t1,T t2)	|BigInteger::add	|  
-| Predicate<T>		|booean test(T t)	|Collection::isEmpty|  
-| Function<T,R>		|R apply(T t)		|Arrays::asList		|  
-| Supplier<T>		|T get()			|Instant::now		|  
-| Consumer<T>		|void accept(T t)	|System.out::println|  
-
+|		接口		|	函数签名		|		范例		|
+|-------------------|-------------------|-------------------|
+| UnaryOperator<T>	|T apply(T t)		|String::toLowerCase|
+| BinaryOperator<T>	|T apply(T t1,T t2)	|BigInteger::add	|
+| Predicate<T>		|booean test(T t)	|Collection::isEmpty|
+| Function<T,R>		|R apply(T t)		|Arrays::asList		|
+| Supplier<T>		|T get()			|Instant::now		|
+| Consumer<T>		|void accept(T t)	|System.out::println|
 
 ***
 1.8的新特性—>函数式编程即:将函数作为参数
@@ -193,7 +214,7 @@ unary (adj.)一元的
 		Class Objects
 		java.lang.Object
 		java.util.Objects
-
+	
 	static <T> T	requireNonNull(T obj)
 	Checks that the specified object reference is not null.
 	static <T> T	requireNonNull(T obj, String message)
@@ -225,7 +246,6 @@ com.google.gson.reflect.TypeToken获取运行时泛型类型(参数化类型)
 hightopo是一款收费软件,它可以很方便的帮助我们制作web版的网络拓扑图。它的底层是 HTML5 的 Canvas 实现。
 [大型风力发电机-在线三维动图](https://hightopo.com/demo/fan3d-magic/)  
 
-
 ***
 [泛型与通配符详解](https://www.cnblogs.com/fengmingyue/p/6087031.html)  
 
@@ -244,8 +264,9 @@ hightopo是一款收费软件,它可以很方便的帮助我们制作web版的�
         //list.add(new Integer(100));//错误！！！编译器报错，说明参数为泛型的方法还是不能使用（因为?也可能为Long型）
         Number number = list.get(0);//正确！！！返回值为泛型的方法可用了！
     }
-    
-    
+
+
+​    
     public void fun4() {
         List<Integer> intList = new ArrayList<Integer>();
         print2(intList);
@@ -262,10 +283,9 @@ hightopo是一款收费软件,它可以很方便的帮助我们制作web版的�
         list.add(new Integer(100));//正确！！！参数为泛型的方法可以使用了
         Object obj =  list.get(0);//正确！！！但是只是得益于object类是所有类的父类，换成其他任何类编译器都会报错！说明返回值为泛型的方法，还是不能使用
     }
- 
+
 
 ### ----------2020.6.3（庚子年闰四月十二）Wednesday---------
-
 
 ***
 
@@ -277,7 +297,7 @@ List<T> list中，T就是类型变量
 
 
 	package java.lang.reflect;
-
+	
 	/**
 	 * Type is the common superinterface for all types in the Java
 	 * programming language. These include raw types, parameterized types,
@@ -285,12 +305,11 @@ List<T> list中，T就是类型变量
 	 *Type是 Java 编程语言中所有类型的公共高级接口。它们包括原始类型、参数化类型、数组类型、类型变量和基本类型。
 	 * @since 1.5
 	 */
-
+	
 	public interface Type {
 
 
 
-	
 ***
 [Java 获取泛型对象的参数类型](https://blog.csdn.net/Gdeer/article/details/104591155/)  
 由于类型擦除，java 中的泛型对象在运行时是不知道自己类型参数的类型的。
@@ -926,7 +945,7 @@ https://blog.csdn.net/a724888/article/details/80290276
 	* 覆盖 removeEldestEntry()方法实现，在结点多于 threshold 时就会将最近最久未使用的数据移除。
 
          private static final int MAX_ENTRIES = 100;
-    
+          
          protected boolean removeEldestEntry(Map.Entry eldest) {
             return size() > MAX_ENTRIES;
          }	
@@ -1327,7 +1346,7 @@ ConstraintLayout居中则采用左右上下边来约束居中。
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"/>
 	
-	```
+```
 
 * layout_constraintWidth="true)
 
@@ -1349,7 +1368,7 @@ https://github.com/LGD2009/MotionLayoutExample
 * Group（组）
 	用来控制一组view的可见性，如果view被多个Group控制，则以最后的Group定义的可见性为主。
 
-* 
+
 
 ### ----------2020.5.1（庚子年四月初九）Friday---------
 极坐标定位（半径、角度）
@@ -1912,7 +1931,7 @@ setMaximumFractionDigits(int)//设定小数最多位数
 [java.text.NumberFormat使用](https://blog.csdn.net/junshuaizhang/article/details/8559708)
 
 ***
-### ----------2020.4.22（庚子年三月三十）Tuesday---------
+### ----------2020.4.22（庚子年三月三十）Wednesday---------
 六大原则
 单一职责原则（SRP：Single Pesponsibility Principle）
 开放封闭原则（OCP：Open Closed Principle）--Open（Open for extendtion）开放支持扩展，Close（Closed for modification）
@@ -2381,6 +2400,7 @@ TraceView：Android平台配备的性能分析工具
             // TODO: handle exception
         }
     }
+
 
 
 
