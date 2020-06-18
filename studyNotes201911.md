@@ -1,5 +1,105 @@
-### -----2020.6.16（庚子年闰四月廿五）Tuesday -----
+### -----2020.6.18（庚子年闰四月廿七）Thursday -----
+java线程处理异常Thread.UncaughtExceptionHandler
+    /**
+     * 这个是最关键的函数，当程序中有未被捕获的异常，系统将会自动调用uncaughtException方法
+     * thread为出现未捕获异常的线程，ex为未捕获的异常，有了这个ex，我们就可以得到异常信息
+     */
+    @Override
+    public void uncaughtException(Thread thread, Throwable ex) {
 
+
+第三方异常日志框架
+谷歌BreakPad(Native日志)
+腾讯bugly
+XCrash（灵活自定义异常处理）
+Sentry（日志过滤）
+
+***
+
+Spring容器：可看作里面一个Map，根据key可以取出对应的实例
+
+
+***
+[Android Studio（JAVA） 编译警告:使用了未经检查或不安全的操作](https://www.mobibrw.com/2015/2502)  
+使用了未经检查或不安全的操作
+要了解详细信息，请使用 "-Xlint:unchecked" 重新编译。
+有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+
+
+> Task :app:compileDebugJavaWithJavac  
+注: D:\XXXX.java使用或覆盖了已过时的 API。  
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。  
+注: D:\XXXX.java使用了未经检查或不安全的操作。  
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。  
+
+
+```
+     tasks.withType(JavaCompile) {
+       options.compilerArgs << "-Xlint:unchecked"
+     }
+    
+    
+    //展示未检查与过时API详情信息
+    gradle.projectsEvaluated {
+         tasks.withType(JavaCompile) {
+              options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+         }
+    }
+
+
+    final LinkedHashMap<WeakReference<Object>,WeakReference<Object>> aWeakArray = new LinkedHashMap<>();
+    for (Iterator iter = aWeakArray.entrySet().iterator(); iter.hasNext(); ) {
+        LinkedHashMap.Entry element = (LinkedHashMap.Entry)iter.next();
+        WeakReference<Object> aWeakObj = (WeakReference<Object>)element.getKey();
+        WeakReference<Object> aWeakTag = (WeakReference<Object>)element.getValue();
+    }
+
+
+    消除警告后的代码Java
+
+    final LinkedHashMap<WeakReference<Object>,WeakReference<Object>> aWeakArray = new LinkedHashMap<>();
+    for (Iterator<LinkedHashMap.Entry<WeakReference<Object>,WeakReference<Object>> > iter = aWeakArray.entrySet().iterator(); iter.hasNext(); ) {
+        LinkedHashMap.Entry<WeakReference<Object>,WeakReference<Object>> element = iter.next();
+        WeakReference<Object> aWeakObj = element.getKey();
+        WeakReference<Object> aWeakTag = element.getValue();
+    }
+
+    final LinkedHashMap<WeakReference<Object>,WeakReference<Object>> aWeakArray = new LinkedHashMap<>();
+    for (Iterator<LinkedHashMap.Entry<WeakReference<Object>,WeakReference<Object>> > iter = aWeakArray.entrySet().iterator(); iter.hasNext(); ) {
+        LinkedHashMap.Entry<WeakReference<Object>,WeakReference<Object>> element = iter.next();
+        WeakReference<Object> aWeakObj = element.getKey();
+        WeakReference<Object> aWeakTag = element.getValue();
+    }
+
+```
+
+### -----2020.6.17（庚子年闰四月廿六）Wednesday -----
+vlayout阿里巴巴开源淘宝多布局LayoutManager库, a powerfull LayoutManager extension for RecyclerView
+
+在一个RecyclerView中实现Grid、List等多样布局
+
+
+[vlayout github](https://github.com/alibaba/vlayout)  
+Project vlayout is a powerfull LayoutManager extension for RecyclerView, it provides a group of layouts for RecyclerView. 
+Make it able to handle a complicate situation when grid, list and other layouts in the same recyclerview. http://tangram.pingguohe.net/
+
+    LinearLayoutHelper: provide linear layout as LinearLayoutManager.
+    GridLayoutHelper: provide grid layout as GridLayoutManager, but with more feature.
+    FixLayoutHelper: fix the view at certain position of screen, the view does not scroll with whole page.
+    ScrollFixLayoutHelper: fix the view at certain position of screen, but the view does not show until it scrolls to it position.
+    FloatLayoutHelper: float the view on top of page, user can drag and drop it.
+    ColumnLayoutHelper: perform like GridLayoutHelper but layouts all child views in one line.
+    SingleLayoutHelper: contain only one child view.
+    OnePlusNLayoutHelper: a custom layout with one child view layouted at left and the others at right, you may not need this.
+    StickyLayoutHelper: scroll the view when its position is inside the screen, but fix the view at start or end when its position is outside the screen.
+    StaggeredGridLayoutHelper: provide waterfall like layout as StaggeredGridLayoutManager.
+
+
+### -----2020.6.16（庚子年闰四月廿五）Tuesday -----
+去奉贤税务局
 
 
 ### -----2020.6.15（庚子年闰四月廿四）Monday -----
