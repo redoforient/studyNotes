@@ -1,3 +1,16 @@
+### -----2020.6.21（庚子年五月初一夏至）Sunday -----
+http://www.jsonschema2pojo.org/
+json字符串转pojo类
+
+### -----2020.6.20（庚子年闰四月廿九）Saturday -----
+frog-artifactory搭建本地私服
+
+
+### -----2020.6.19（庚子年闰四月廿八）Friday -----
+代码分支合并失误
+
+
+
 ### -----2020.6.18（庚子年闰四月廿七）Thursday -----
 java线程处理异常Thread.UncaughtExceptionHandler
     /**
