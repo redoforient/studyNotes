@@ -2,12 +2,24 @@
 http://www.jsonschema2pojo.org/
 json字符串转pojo类
 
+
+Kotlin 泛型中的 in 和 out  协变
+
+kotlin扩展函数
+kotlin解构
+
+
 ### -----2020.6.20（庚子年闰四月廿九）Saturday -----
 frog-artifactory搭建本地私服
 
 
 ### -----2020.6.19（庚子年闰四月廿八）Friday -----
 代码分支合并失误
+
+kotlin遍历打印1到100的数值
+	for(index in 1..100){
+         print(index)
+    }
 
 
 
