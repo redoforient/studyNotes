@@ -1,6 +1,34 @@
+### -----2020.6.22（庚子年五月初二）Monday -----
+[强制Gradle 刷新依赖](https://www.jianshu.com/p/5e8e70f3c1d5)  
+./gradlew :app:assembleDebug --refresh-dependencies
+./gradlew assembleDebug --info
+
+[gradlew常用命令](https://www.jianshu.com/p/be0d6445709d)  
+
+***
+公司maven私服  
+http://10.1.193.100:8081/nexus/#welcome  
+
+个人本地maven私服  
+http://172.16.50.39:8081/artifactory/webapp/#/home  
+                
+	//url "http://10.1.193.100:8081/nexus/content/groups/Android/"
+	url "http://172.16.50.39:8081/artifactory/android_group/"
+
+***
+
+[设计模式](https://www.runoob.com/design-pattern/design-pattern-tutorial.html)  
+
+
+[微服务持续交付-系列课程](https://www.jfrogchina.com/series_webinars/)  
+
+
 ### -----2020.6.21（庚子年五月初一夏至）Sunday -----
-http://www.jsonschema2pojo.org/
-json字符串转pojo类
+凌晨2:30睡觉，眼睛干涩流泪不止  
+学习使用frog-artifactory搭建本地私服  
+
+[json字符串转pojo类](http://www.jsonschema2pojo.org/)  
+
 
 ### -----2020.6.20（庚子年闰四月廿九）Saturday -----
 frog-artifactory搭建本地私服
