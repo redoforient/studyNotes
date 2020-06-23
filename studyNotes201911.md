@@ -1,6 +1,29 @@
+### -----2020.6.23（庚子年五月初三）Tuesday -----
+
+kotlin：线程框架
+launch+withContext
+suspend标记
+
+***
+高效易用的加载反馈页管理框架 LoadSir 
+[LoadSir](https://gitee.com/mirrors/LoadSir)  
+LoadSir 是一个高效易用，低碳环保，扩展性良好的加载反馈页管理框架，在加载网络或其他数据时候，根据需求切换状态页面， 可添加自定义状态页面，如加载中，加载失败，无数据，网络超
+https://www.oschina.net/p/loadsir
+
+
+***
+lottie
+https://github.com/airbnb/lottie-android
+
+
+***
+BottomNavigationView底部导航栏
+
+
+
 ### -----2020.6.22（庚子年五月初二）Monday -----
 
-【码上开学】--协程
+【码上开学】--协程  
 [学不会协程？很可能因为你看过的教程都是错的](https://www.bilibili.com/video/BV164411C7FK)  
 [Kotlin 协程的挂起好神奇好难懂？今天我把它的皮给扒了](https://www.bilibili.com/video/BV1KJ41137E9)  
 [到底什么是「非阻塞式」挂起？协程真的比线程更轻量级吗？](https://www.bilibili.com/video/BV1JE411R7hp)  
@@ -38,7 +61,18 @@ http://172.16.50.39:8081/artifactory/webapp/#/home
 
 [json字符串转pojo类](http://www.jsonschema2pojo.org/)  
 
+***
+[kotlin泛型](https://www.runoob.com/kotlin/kotlin-generics.html)  
 
+where
+对于多个上界约束条件，可以用 where 子句：
+```
+	fun <T> copyWhenGreater(list: List<T>, threshold: T): List<String>
+		where T : CharSequence,
+			  T : Comparable<T> {
+		return list.filter { it > threshold }.map { it.toString() }
+	}
+```
 
 Kotlin 泛型中的 in 和 out  协变
 
