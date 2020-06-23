@@ -1,3 +1,8 @@
+### -----2020.6.23（庚子年五月初三）Tuesday -----
+
+Kotlin协程：一个线程框架
+
+
 ### -----2020.6.22（庚子年五月初二）Monday -----
 [强制Gradle 刷新依赖](https://www.jianshu.com/p/5e8e70f3c1d5)  
 ./gradlew :app:assembleDebug --refresh-dependencies
@@ -1779,6 +1784,10 @@ Think in java, Effective Java , Core Java(Volume I--Fundamentals & Volume II--Ad
 ### -----2020.4.29（庚子年四月初七）Wednesday -----
 [Android 后台运行白名单，优雅实现保活](https://www.cnblogs.com/Android-Alvin/p/12465949.html?tdsourcetag=s_pctim_aiomsg)  
 * 保活"黑科技":1像素Activity，播放无声音频，双进程互相守护
+
+[优雅保活方案，原来Android还可以这样保活！](https://www.jianshu.com/p/8736f4fadb66)  
+提高app的保活可能性，项目中使用1px像素Activity ，前台服务，播放无声音乐，Job Service等方法。
+手机设置：进程加锁，自启动，允许后台运行，部分机型有解冻app设置。
 
 [2017-2020历年字节跳动Android面试真题解析（累计下载1082万次，持续更新中）](https://www.cnblogs.com/Android-Alvin/p/12448764.html)  
 
