@@ -1,3 +1,36 @@
+### -----2020.6.24（庚子年五月初四）Wednesday -----
+注解处理器
+@SupportAnnotaionType
+public CustomeAnnotationProcessor extends AbstractProcessor
+	getSupportAnnotaionType()
+
+resources/MEMA-INFO.services
+
+annotationProcessor 引入注解
+Filer filer = processingEnv.getFiler();
+JavaFileObject javaFileObject = filer.createSourceFile("包名.类名");
+
+	javaPreCompileDebug
+	注：注解日志打印
+	compileDebugJavaWithJavac
+	
+***
+class1.isAssignableFrom(class2) 
+class2是不是class1的子类或者子接口
+
+***
+SPI机制
+PI全称Service Provider Interface
+
+
+***
+输入场景的页面变换(聊天输入框跳闪）PanelSwitchHelper 
+https://juejin.im/post/5eddf8456fb9a04804041738
+
+[PanelSwitchHelper✔️一个可帮助键盘平稳过渡到功能面板的框架](https://javascript.ctolib.com/yummylau-panelswitchhelper.html)  
+
+
+
 ### -----2020.6.23（庚子年五月初三）Tuesday -----
 
 
