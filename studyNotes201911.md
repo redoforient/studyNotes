@@ -1,3 +1,16 @@
+### -----2020.6.26（庚子年五月初六）Friday -----
+
+
+### -----2020.6.25（庚子年五月初五）Thursday -----
+IModel
+IView
+IPresenter
+
+BasePresenter
+BaseActivity attach() detach()
+
+
+
 ### -----2020.6.24（庚子年五月初四）Wednesday -----
 注解处理器
 @SupportAnnotaionType
@@ -30,9 +43,7 @@ https://juejin.im/post/5eddf8456fb9a04804041738
 [PanelSwitchHelper✔️一个可帮助键盘平稳过渡到功能面板的框架](https://javascript.ctolib.com/yummylau-panelswitchhelper.html)  
 
 
-
 ### -----2020.6.23（庚子年五月初三）Tuesday -----
-
 
 Kotlin协程：一个线程框架
 
