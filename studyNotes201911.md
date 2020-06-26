@@ -2,14 +2,85 @@
 
 
 ### -----2020.6.25（庚子年五月初五）Thursday -----
+Android源码设计模式解析与实战<第2版> 何红辉 关爱民 著
+https://github.com/hehonghui
+
+
 IModel
 IView
 IPresenter
 
-BasePresenter
+BasePresenter<T>
+	public class BasePresenter<T extends IView> implements IPresenter<T> {
+	protected Reference<T> mView;
+    protected BasePresenter<T> mPresenter;
+    
+    /**
+     * 如果当前页面不需要操作数据,只需要 View 层,则使用此构造函数
+     *
+     * @param rootView
+     */
+    public BasePresenter(T rootView) {
+        Preconditions.checkNotNull(rootView, "%s cannot be null", IView.class.getName());
+        this.mView = new WeakReference<T>(rootView);
+    }
+
+    public BasePresenter() {
+
+    }
+
+    protected BasePresenter<T> getPresenter() {
+        return this;
+    }
+
+    @Override
+    public void attachView(T view) {
+        if (mView == null) {
+            mView = new WeakReference<T>(view);
+        }
+    }
+
+    @Override
+    public void detachView() {
+        dispose();
+        mView.clear();
+        mView = null;
+    }
+
+    public T getView() {
+        if (mView != null) {
+            return mView.get();
+        }
+        return null;
+    }
+
+
+
 BaseActivity attach() detach()
 
-
+public abstract class BaseFragment<T extends IPresenter> extends Fragment implements IView {
+	public abstract class BaseActivity<T extends IPresenter> extends AppCompatActivity implements IView {
+    protected T mPresenter;
+	
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mContext = this;
+        ...
+        if (mPresenter != null) {
+            mPresenter.attachView(this);
+        }
+	}
+	
+	    protected void onDestroy() {
+        super.onDestroy();
+        if (mPresenter != null) {
+            mPresenter.detachView();
+            mPresenter = null;
+        }
+        mUnBinder.unbind();
+    }
+	
+	
 
 ### -----2020.6.24（庚子年五月初四）Wednesday -----
 注解处理器
