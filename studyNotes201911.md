@@ -1,3 +1,15 @@
+### -----2020.6.27（庚子年五月初九）Monday -----
+
+
+
+### -----2020.6.26（庚子年五月初八）Sunday -----
+;--hava i been pwned?
+https://haveibeenpwned.com/
+
+
+### -----2020.6.27（庚子年五月初七）Saturday -----
+
+
 ### -----2020.6.26（庚子年五月初六）Friday -----
 
 
@@ -56,9 +68,8 @@ BasePresenter<T>
 
 
 
-BaseActivity attach() detach()
+BaseActivity
 
-public abstract class BaseFragment<T extends IPresenter> extends Fragment implements IView {
 	public abstract class BaseActivity<T extends IPresenter> extends AppCompatActivity implements IView {
     protected T mPresenter;
 	
@@ -71,13 +82,12 @@ public abstract class BaseFragment<T extends IPresenter> extends Fragment implem
         }
 	}
 	
-	    protected void onDestroy() {
+	protected void onDestroy() {
         super.onDestroy();
         if (mPresenter != null) {
             mPresenter.detachView();
             mPresenter = null;
         }
-        mUnBinder.unbind();
     }
 	
 	
