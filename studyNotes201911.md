@@ -1,8 +1,7 @@
-### -----2020.7.1（庚子年五月十一）Wednesday -----
+### ----2020.7.1（庚子年五月十一）Wednesday -----
 Android6.0(M)动态权限获取框架(github星)
 Normal Permissions权限一般不涉及用户隐私，不需要用户进行授权，比如手机震动、访问网络等；
 Dangerous Permission权限涉及到用户隐私的，需要用户进行授权，比如读取sdcard、访问通讯录等；
-
 
 PermissionsDispatcher(10k)使用注解，使用简单
 RxPermissions(9.7k) 需要RxJava2支持
@@ -10,7 +9,7 @@ easypermissions(8.5k)
 AndPermissons(6.3k)严正杰出品
 
 
-### -----2020.6.30（庚子年五月初十）Tuesday -----
+### ----2020.6.30（庚子年五月初十）Tuesday -----
 Kotlin
 var textViews: List<*>
 
@@ -41,7 +40,7 @@ kotlin的线程该不是轻量级的线程，只是线程框架
 		
 		}
 	}
-
+	
 	job.cancel()
 ```
 suspend fun test6(){
@@ -64,23 +63,25 @@ suspend fun test6(){
 flutter连切换协程环境都不需要，只需要加两个关键字async和await
 
 
-### -----2020.6.29（庚子年五月初九）Monday -----
+### ----2020.6.29（庚子年五月初九）Monday -----
 云信下(公有)云升级问题排查到23点
+儿子高烧至39.2℃
 
-
-### -----2020.6.28（庚子年五月初八）Sunday -----
+### ----2020.6.28（庚子年五月初八）Sunday -----
 ;--hava i been pwned?
 https://haveibeenpwned.com/
 
 
-### -----2020.6.27（庚子年五月初七）Saturday -----
+### ----2020.6.27（庚子年五月初七）Saturday -----
+职称论文还是未动笔
+带儿子去玩儿童火车
 
 
-### -----2020.6.26（庚子年五月初六）Friday -----
+### ----2020.6.26（庚子年五月初六）Friday -----
 
 
-### -----2020.6.25（庚子年五月初五）Thursday -----
-接待静静到访
+### ----2020.6.25（庚子年五月初五端午）Thursday -----
+接待静静、计杨丽到访
 
 Android源码设计模式解析与实战<第2版> 何红辉 关爱民 著
 https://github.com/hehonghui
@@ -104,29 +105,29 @@ BasePresenter<T>
         Preconditions.checkNotNull(rootView, "%s cannot be null", IView.class.getName());
         this.mView = new WeakReference<T>(rootView);
     }
-
+    
     public BasePresenter() {
-
+    
     }
-
+    
     protected BasePresenter<T> getPresenter() {
         return this;
     }
-
+    
     @Override
     public void attachView(T view) {
         if (mView == null) {
             mView = new WeakReference<T>(view);
         }
     }
-
+    
     @Override
     public void detachView() {
         dispose();
         mView.clear();
         mView = null;
     }
-
+    
     public T getView() {
         if (mView != null) {
             return mView.get();
@@ -139,28 +140,29 @@ BasePresenter<T>
 BaseActivity
 
 	public abstract class BaseActivity<T extends IPresenter> extends AppCompatActivity implements IView {
-    protected T mPresenter;
+	protected T mPresenter;
 	
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mContext = this;
-        ...
-        if (mPresenter != null) {
-            mPresenter.attachView(this);
-        }
+	protected void onCreate(@Nullable Bundle savedInstanceState) {
+	    super.onCreate(savedInstanceState);
+	    mContext = this;
+	    ...
+	    if (mPresenter != null) {
+	        mPresenter.attachView(this);
+	    }
 	}
 	
 	protected void onDestroy() {
-        super.onDestroy();
-        if (mPresenter != null) {
-            mPresenter.detachView();
-            mPresenter = null;
-        }
-    }
-	
-	
+	    super.onDestroy();
+	    if (mPresenter != null) {
+	        mPresenter.detachView();
+	        mPresenter = null;
+	    }
+	}
 
-### -----2020.6.24（庚子年五月初四）Wednesday -----
+
+​	
+
+### ----2020.6.24（庚子年五月初四）Wednesday -----
 注解处理器
 @SupportAnnotaionType
 public CustomeAnnotationProcessor extends AbstractProcessor
@@ -175,7 +177,7 @@ JavaFileObject javaFileObject = filer.createSourceFile("包名.类名");
 	javaPreCompileDebug
 	注：注解日志打印
 	compileDebugJavaWithJavac
-	
+
 ***
 class1.isAssignableFrom(class2) 
 class2是不是class1的子类或者子接口
@@ -184,7 +186,6 @@ class2是不是class1的子类或者子接口
 SPI机制
 PI全称Service Provider Interface
 
-
 ***
 输入场景的页面变换(聊天输入框跳闪）PanelSwitchHelper 
 https://juejin.im/post/5eddf8456fb9a04804041738
@@ -192,7 +193,7 @@ https://juejin.im/post/5eddf8456fb9a04804041738
 [PanelSwitchHelper✔️一个可帮助键盘平稳过渡到功能面板的框架](https://javascript.ctolib.com/yummylau-panelswitchhelper.html)  
 
 
-### -----2020.6.23（庚子年五月初三）Tuesday -----
+### ----2020.6.23（庚子年五月初三）Tuesday -----
 
 Kotlin协程：一个线程框架
 
@@ -216,7 +217,7 @@ BottomNavigationView底部导航栏
 
 
 
-### -----2020.6.22（庚子年五月初二）Monday -----
+### ----2020.6.22（庚子年五月初二）Monday -----
 
 【码上开学】--协程  
 [学不会协程？很可能因为你看过的教程都是错的](https://www.bilibili.com/video/BV164411C7FK)  
@@ -250,7 +251,7 @@ http://172.16.50.39:8081/artifactory/webapp/#/home
 [微服务持续交付-系列课程](https://www.jfrogchina.com/series_webinars/)  
 
 
-### -----2020.6.21（庚子年五月初一夏至）Sunday -----
+### ----2020.6.21（庚子年五月初一夏至）Sunday -----
 凌晨2:30睡觉，眼睛干涩流泪不止  
 学习使用frog-artifactory搭建本地私服  
 
@@ -275,11 +276,11 @@ kotlin扩展函数
 kotlin解构
 
 
-### -----2020.6.20（庚子年闰四月廿九）Saturday -----
+### ----2020.6.20（庚子年闰四月廿九）Saturday -----
 frog-artifactory搭建本地私服
 
 
-### -----2020.6.19（庚子年闰四月廿八）Friday -----
+### ----2020.6.19（庚子年闰四月廿八）Friday -----
 代码分支合并失误
 
 kotlin遍历打印1到100的数值
@@ -289,7 +290,7 @@ kotlin遍历打印1到100的数值
 
 
 
-### -----2020.6.18（庚子年闰四月廿七）Thursday -----
+### ----2020.6.18（庚子年闰四月廿七）Thursday -----
 java线程处理异常Thread.UncaughtExceptionHandler
     /**
      * 这个是最关键的函数，当程序中有未被捕获的异常，系统将会自动调用uncaughtException方法
@@ -366,7 +367,7 @@ Spring容器：可看作里面一个Map，根据key可以取出对应的实例
 
 ```
 
-### -----2020.6.17（庚子年闰四月廿六）Wednesday -----
+### ----2020.6.17（庚子年闰四月廿六）Wednesday -----
 vlayout阿里巴巴开源淘宝多布局LayoutManager库, a powerfull LayoutManager extension for RecyclerView
 
 在一个RecyclerView中实现Grid、List等多样布局
@@ -388,11 +389,11 @@ Make it able to handle a complicate situation when grid, list and other layouts 
     StaggeredGridLayoutHelper: provide waterfall like layout as StaggeredGridLayoutManager.
 
 
-### -----2020.6.16（庚子年闰四月廿五）Tuesday -----
+### ----2020.6.16（庚子年闰四月廿五）Tuesday -----
 去奉贤税务局
 
 
-### -----2020.6.15（庚子年闰四月廿四）Monday -----
+### ----2020.6.15（庚子年闰四月廿四）Monday -----
 
 ***
 
@@ -474,7 +475,7 @@ Android应用程序开发工程师
 [Windows API 参考手册](http://www.office-cn.net/t/api/api_content.htm)  
 
 
-### -----2020.6.14（庚子年闰四月廿三）Sunday -----
+### ----2020.6.14（庚子年闰四月廿三）Sunday -----
 
 ART从Android7.0使用混合编译
 
@@ -494,7 +495,7 @@ Zygote
 
 
 
-### -----2020.6.13（庚子年闰四月廿二）Saturday -----
+### ----2020.6.13（庚子年闰四月廿二）Saturday -----
 
 JVM垃圾回收算法：复制、标记清除、标记整理
 
@@ -504,7 +505,7 @@ Android使用CMS(Concurrent Mark Sweep)垃圾回收
 
 
 
-### -----2020.6.12（庚子年闰四月廿一）Friday -----
+### ----2020.6.12（庚子年闰四月廿一）Friday -----
 
 马老师邮寄的
 
@@ -555,12 +556,12 @@ BootClassLoader
 
 
 
-### -----2020.6.9（庚子年闰四月十八）Tuesday -----
+### ----2020.6.9（庚子年闰四月十八）Tuesday -----
 中级职称资料
 
 
 
-### -----2020.6.8（庚子年闰四月十七）Monday -----
+### ----2020.6.8（庚子年闰四月十七）Monday -----
 
 [设计模式之工厂模式（factory pattern）](https://www.cnblogs.com/yssjun/p/11102162.html)  
 [Java学习笔记之UnaryOperator](https://blog.csdn.net/yangshuaionline/article/details/85329657)  
@@ -619,7 +620,7 @@ RPC:(Remote Procedure Call)远程过程调用
 [JDK1.9对Optional类的改进，ifPresentOrElse() 方法](https://blog.csdn.net/qq_35951897/article/details/97780993)  
 
 
-### -----2020.6.7（庚子年闰四月十六）Sunday -----
+### ----2020.6.7（庚子年闰四月十六）Sunday -----
 https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html
 
 Class文件中除了有类的版本、字段、方法、接口等描述信息外，还有一项信息就是常量池，用于存放 编译时期生成的各种字面量和符号引用，这部分内容将在类加载后进入方法区的运行时常量池中存放。
@@ -716,7 +717,7 @@ v.	否定；否认；取消；使无效
 
 
 
-### -----2020.6.6（庚子年闰四月十五）Saturday -----
+### ----2020.6.6（庚子年闰四月十五）Saturday -----
 
 Effective Java<Third Edition> Joshua Bloch 俞黎敏译
 
@@ -761,7 +762,7 @@ unary (adj.)一元的
 
 
 
-### -----2020.6.5（庚子年闰四月十四）Friday -----
+### ----2020.6.5（庚子年闰四月十四）Friday -----
 
 [正则表达式校验网址](http://leaverou.github.io/regexplained/)  
 
@@ -775,7 +776,7 @@ unary (adj.)一元的
 [个人（wiki）知识管理工具-一代神器之mybase](http://www.eryajf.net/1040.html)  
 
 
-### -----2020.6.4（庚子年闰四月十三）Thursday -----
+### ----2020.6.4（庚子年闰四月十三）Thursday -----
 com.google.gson.reflect.TypeToken获取运行时泛型类型(参数化类型)
 
 ***
@@ -821,7 +822,7 @@ hightopo是一款收费软件,它可以很方便的帮助我们制作web版的�
 ​    }
 
 
-### -----2020.6.3（庚子年闰四月十二）Wednesday -----
+### ----2020.6.3（庚子年闰四月十二）Wednesday -----
 
 ***
 
@@ -858,12 +859,12 @@ List<T> list中，T就是类型变量
 	三、持有者中有 class 信息（是一个类的 Field、Method）
 
 
-### -----2020.6.2（庚子年闰四月十一）Tuesday -----
+### ----2020.6.2（庚子年闰四月十一）Tuesday -----
 装饰器模式
 File)FileInputStream)FilterInputStream)BufferInputStream)DataInputStream
 
 
-### -----2020.6.1（庚子年闰四月初十）Monday -----
+### ----2020.6.1（庚子年闰四月初十）Monday -----
 * 概念---逆波兰 表达式
 
 装饰器模式（洋葱模型）
@@ -871,7 +872,7 @@ File)FileInputStream)FilterInputStream)BufferInputStream)DataInputStream
 
 
 
-### -----2020.5.31（庚子年闰四月初九）Sunday -----
+### ----2020.5.31（庚子年闰四月初九）Sunday -----
 **TypeToken**
 [关于Gson的TypeToken](https://www.jianshu.com/p/c820e55d9f27)  
 ​ Gson在Json解析中使用广泛, 常用的数据类型都可以解析, 特殊的可以自定义Adapter解析. 在解析大量具有某些相同结构的数据上,我们总想复用已有的类型, 为了复用通常可以使用继承和泛型
@@ -882,14 +883,14 @@ Gson中使用TypeAdapter设置默认值，如数字类型Long默认是null,但�
 
 
 
-### -----2020.5.30（庚子年闰四月初八）Saturday -----
+### ----2020.5.30（庚子年闰四月初八）Saturday -----
 RxJava装饰器模式（洋葱模型） 
 
 Binder
 
 
 
-### -----2020.5.29（庚子年闰四月初七）Friday -----
+### ----2020.5.29（庚子年闰四月初七）Friday -----
 [高并发编程之AtomicReference讲解](https://blog.csdn.net/weixin_42146366/article/details/87822781)  
 一、AtomicReference介绍  
 ①.AtomicReference和AtomicInteger非常类似，不同之处就在于AtomicInteger是对整数的封装，而AtomicReference则对应普通的对象引用。也就是它可以保证你在修改对象引用时的线程安全性。  
@@ -921,7 +922,7 @@ Big-Endian和Little-Endian的定义如下：
 ***
 
 
-### -----2020.5.28（庚子年闰四月初六）Thursday -----
+### ----2020.5.28（庚子年闰四月初六）Thursday -----
 
 javassist
 
@@ -938,7 +939,7 @@ RxJavaPlugins.onAssembly
 
 
 
-### -----2020.5.27（庚子年闰四月初五）Wednesday -----
+### ----2020.5.27（庚子年闰四月初五）Wednesday -----
 [《我们一起进大厂》系列-HashMap](https://juejin.im/post/5dee6f54f265da33ba5a79c8)
 [DVM，应用程序的进程，Linux的进程](https://blog.csdn.net/lin111000713/article/details/52459710)  
 **DVM的进程和Linux的进程, 应用程序的进程为同一个概念**
@@ -969,7 +970,7 @@ javabean类中的注解，key名，是否参与序列化，版本号；
 
 
 
-### -----2020.5.26（庚子年闰四月初四）Tuesday -----
+### ----2020.5.26（庚子年闰四月初四）Tuesday -----
 [Android刘海屏、水滴屏全面屏适配方案](https://www.jianshu.com/p/2b8db60ba8df)  
 [Android刘海屏、水滴屏等全面屏适配工具](https://github.com/smarxpan/NotchScreenTool)  
 
@@ -985,7 +986,7 @@ javabean类中的注解，key名，是否参与序列化，版本号；
 
 
 
-### -----2020.5.25（庚子年闰四月初三）Monday -----
+### ----2020.5.25（庚子年闰四月初三）Monday -----
 
 [Android获取屏幕高度的坑](https://www.jianshu.com/p/74a7a40437cb)  
 
@@ -1003,7 +1004,7 @@ javabean类中的注解，key名，是否参与序列化，版本号；
 
 
 ​		
-### -----2020.5.24（庚子年闰四月初二）Sunday -----
+### ----2020.5.24（庚子年闰四月初二）Sunday -----
 Gson
 TypeAdapter(适配器模式）
 TypeToken
@@ -1014,7 +1015,7 @@ JsonParser  解析json文本的解析器，它将json文本解析成JsonElement�
 JsonElement 用来表示一个json元素的类，它可能是JsonObject,JsonArray,JsonPrimitive,JsonNull.  
 
 
-### -----2020.5.23（庚子年闰四月初一）Saterday -----
+### ----2020.5.23（庚子年闰四月初一）Saterday -----
 //用于判断当前线程是否运行在主线程
 Looper.mylooper()==Looper.mainLooper();
 
@@ -1039,7 +1040,7 @@ Looper.mylooper()==Looper.mainLooper();
 ***加班升级--还是遗留了bug（网点支付宝不能维护）git多分支管理不善惹得祸
 
 
-### -----2020.5.22（庚子年四月三十）Friday -----
+### ----2020.5.22（庚子年四月三十）Friday -----
 
 [Android Bitmap 详解：关于 Bitamp 你所要知道的一切](https://www.jianshu.com/p/eef3daeeecbc)
 [Android 最佳并发实践之基础篇](https://mp.weixin.qq.com/s/jo142pIuknpECf6O7yb6DA)
@@ -1073,11 +1074,11 @@ Looper.mylooper()==Looper.mainLooper();
 	}
 ***
 
-### -----2020.5.21（庚子年四月廿九）Thursday -----
+### ----2020.5.21（庚子年四月廿九）Thursday -----
 感谢神，赐下灵感解决麻烦问题，保准生产应用稳定准时上线--
 
 
-### -----2020.5.20（庚子年四月廿八）Wednesday -----
+### ----2020.5.20（庚子年四月廿八）Wednesday -----
 身份证正反面识别，身份证扫描识别，二代身份证OCR识别，OCR极速识别身份证所有信息正反面均可。离线无需联网,极速秒扫。
 https://github.com/XieZhiFa/IdCardOCR
 
@@ -1267,7 +1268,7 @@ poll(long,TimeUnit):E
 
 
 
-### -----2020.5.19（庚子年四月廿七）Tuesday -----
+### ----2020.5.19（庚子年四月廿七）Tuesday -----
 
 [应届生/社招面试最爱问的几道Java基础问题](https://juejin.im/post/5e18879e6fb9a02fc63602e2)  
 
@@ -1300,7 +1301,7 @@ jvm：设置-XX:RestrictContended
 **RFO请求（Request For Owner）**
 
 
-### -----2020.5.18（庚子年四月廿六）Monday -----
+### ----2020.5.18（庚子年四月廿六）Monday -----
 * GC ROOTS内存回收(对象回收）
 1. 线程栈变量【虚拟机栈（栈帧中的局部变量区，也叫局部变量表）)】
 2. 静态变量【方法区中的类静态属性引用的对象】
@@ -1456,7 +1457,7 @@ zygote进程和system server进程通信 为啥用socket 而不用binder 进行�
 [AIDL与Binder与Messenger的使用区别！](https://blog.csdn.net/luojiusan520/article/details/50840008)
 适用范围 messenger<binder<aidl  
 
-### -----2020.5.17（庚子年四月廿五）Sunday -----
+### ----2020.5.17（庚子年四月廿五）Sunday -----
 
 ***
 AQS(AbstractQueuedSynchronizer)
@@ -1519,7 +1520,7 @@ sun.misc.launcher$ExtClassLoader@4554617c
 双亲委派：自底向上，然后自顶向下返回
 
 
-### -----2020.5.16（庚子年四月廿四）Saturday -----
+### ----2020.5.16（庚子年四月廿四）Saturday -----
 Retrofit(okhttp)  
 enqueue异步执行  
 execute()同步执行  
@@ -1528,7 +1529,7 @@ execute()同步执行
 
 
 
-### -----2020.5.15（庚子年四月廿三）Friday -----
+### ----2020.5.15（庚子年四月廿三）Friday -----
 常用阻塞队列
 ArrayBlockingQueue：数组结构组成的有界阻塞队列
 LinkedBlockingQueue：链表结构组成的有界阻塞队列
@@ -1585,7 +1586,7 @@ AtomicMarkableReference的唯一区别就是不再用int标识引用，而是使
 [java高并发基础篇之多线程Future设计模式](https://blog.csdn.net/qq_41071876/article/details/106087734)
 
 
-### -----2020.5.14（庚子年四月廿二）Thursday -----
+### ----2020.5.14（庚子年四月廿二）Thursday -----
 [java中isAssignableFrom()方法与instanceof关键字用法及通过反射配合注解为字段设置默认值](https://blog.csdn.net/qq_36666651/article/details/81215221)
 isAssignableFrom()方法与instanceof关键字的区别总结为以下两个点：
 
@@ -1600,7 +1601,7 @@ isAssignableFrom()方法是判断是否为某个类的父类，instanceof关键�
 
 
 
-### -----2020.5.13（庚子年四月廿一）Wednesday -----
+### ----2020.5.13（庚子年四月廿一）Wednesday -----
 理清synchronized wait notify关系
 
 
@@ -1688,7 +1689,7 @@ ClassLayout.parseInstance(o).toPrintable();
 
 
 
-### -----2020.5.12（庚子年四月二十）Tuesday -----
+### ----2020.5.12（庚子年四月二十）Tuesday -----
 descendant	英[dɪˈsendənt]
 美[dɪˈsendənt]
 n.	后裔; 后代; 子孙; (由过去类似物发展来的) 派生物;
@@ -1701,7 +1702,7 @@ cmoveTaskToBack(true)====等价于点击HOME键
 
 android:configChanges="orientation|keyboardHidden|screenSize"
 
-### -----2020.5.11（庚子年四月十九）Monday -----
+### ----2020.5.11（庚子年四月十九）Monday -----
 ThreadLocal使用场景：
 解决数据库连接、Session管理等
 	
@@ -1714,17 +1715,17 @@ spring中使用ThreadLocal来设计TransactionSynchronizationManager类，实现
 [Android利用GradientDrawable定义动态的shape形状探索](https://blog.csdn.net/SimonHunt/article/details/72477590)  
 [Android Drawable之GradientDrawable](https://www.jianshu.com/p/dbccf8dfe3ef)  
 
-### -----2020.5.10（庚子年四月十八）Sunday -----
+### ----2020.5.10（庚子年四月十八）Sunday -----
 * ()->lambda expression
 * ::----method reference
 
-### -----2020.5.9（庚子年四月十七）Saturday -----
+### ----2020.5.9（庚子年四月十七）Saturday -----
 [全面深入地掌握NDK技术，成为下一波5G时代的浪潮儿~](https://github.com/JsonChao/Awesome-Android-NDK)  
 
 [GitHub 热榜：文字识别神器，超轻量级中文 OCR！](https://mp.weixin.qq.com/s/RTBiM9r9MwZxwlxbhLhNEg)  
 [超轻量级中文ocr，支持竖排文字识别, 支持ncnn推理 , psenet(8.5M) + crnn(6.3M) + anglenet(1.5M) 总模型仅17M](https://github.com/ouyanghuiyu/chineseocr_lite)  
 
-### -----2020.5.8（庚子年四月十六）Friday -----
+### ----2020.5.8（庚子年四月十六）Friday -----
 [android小知识]removeCallbacks与postDelayed的恩怨史（removeCallbacks所谓的无效, View和Handler 的postDelayed）
 https://blog.csdn.net/bluewindtalker/article/details/51984300
 
@@ -1742,7 +1743,7 @@ Android 2.2中引入的系统备份功能,android:allowBackup(默认为 true )�
 [Android之allowBackup属性](https://blog.csdn.net/mysimplelove/article/details/84073013)  
 
 
-### -----2020.5.7（庚子年四月十五）Thursday -----
+### ----2020.5.7（庚子年四月十五）Thursday -----
 [Luban(鲁班)—Image compression with efficiency very close to WeChat Moments/可能是最接近微信朋友圈的图片压缩算法](https://github.com/Curzibn/Luban)
 	
 	//将文件路径字符串列表转化为文件列表
@@ -1772,7 +1773,7 @@ GIF文件的数据，是一种基于LZW算法的连续色调的无损压缩格�
 		java.util.concurrent.TimeUnit.MILLISECONDS.sleep(1000);
 
 
-### -----2020.5.6（庚子年四月十四）Wednesday -----
+### ----2020.5.6（庚子年四月十四）Wednesday -----
 
 ** 子线程中启动的Activity与主线程中启动Activity有什么区别？**
 
@@ -1834,7 +1835,7 @@ https://www.jianshu.com/p/b0f56b7d7ee8
 
 
 
-### -----2020.5.5（庚子年四月十三-立夏）Tuesday -----
+### ----2020.5.5（庚子年四月十三-立夏）Tuesday -----
 lateX：android展示数学公式
 
 * 作业：利用反射、注解、动态代理实现OnClick事件的自动注入
@@ -1844,13 +1845,13 @@ lateX：android展示数学公式
 			
 	}
 
-### -----2020.5.4（庚子年四月十二）Monday -----
+### ----2020.5.4（庚子年四月十二）Monday -----
 
 
-### -----2020.5.3（庚子年四月十一）Sunday -----
+### ----2020.5.3（庚子年四月十一）Sunday -----
 RxJava
 
-### -----2020.5.2（庚子年四月初十）Saturday -----
+### ----2020.5.2（庚子年四月初十）Saturday -----
 [ConstraintLayout](https://juejin.im/post/5d12c4146fb9a07ea33c24b7)
 
 12:constraintTop_toTopof
@@ -1906,7 +1907,7 @@ https://github.com/LGD2009/MotionLayoutExample
 
 
 
-### -----2020.5.1（庚子年四月初九）Friday -----
+### ----2020.5.1（庚子年四月初九）Friday -----
 极坐标定位（半径、角度）
 笛卡尔坐标定位（第几行第几列)
 
@@ -1943,7 +1944,7 @@ https://maven.aliyun.com/repository/public 或 https://maven.aliyun.com/nexus/co
 
 
 
-### -----2020.4.30（庚子年四月初八）Thursday -----
+### ----2020.4.30（庚子年四月初八）Thursday -----
 
 [三大Java虚拟机(HotSpot,JRockit,IBM JVM)垃圾回收机制的比较](https://blog.csdn.net/ZYC88888/article/details/70918799?utm_source=blogxgwz4)  
 
@@ -2025,7 +2026,7 @@ Think in java, Effective Java , Core Java(Volume I--Fundamentals & Volume II--Ad
 
 
 
-### -----2020.4.29（庚子年四月初七）Wednesday -----
+### ----2020.4.29（庚子年四月初七）Wednesday -----
 [Android 后台运行白名单，优雅实现保活](https://www.cnblogs.com/Android-Alvin/p/12465949.html?tdsourcetag=s_pctim_aiomsg)  
 * 保活"黑科技":1像素Activity，播放无声音频，双进程互相守护
 
@@ -2044,7 +2045,7 @@ https://github.com/LingCoder/OnJava8
 
 
 
-### -----2020.4.28（庚子年四月初六）Tuesday -----
+### ----2020.4.28（庚子年四月初六）Tuesday -----
 Annotation Processing Tool (APT)
 
 ConstraintLayout
@@ -2053,7 +2054,7 @@ Retrofit
 动态代理+注解+反射
 
 
-### -----2020.4.27（庚子年四月初五）Monday -----
+### ----2020.4.27（庚子年四月初五）Monday -----
 **反射**  
 
 java.lang.reflect   
@@ -2219,7 +2220,7 @@ java.lang.Object
 
 
 
-### -----2020.4.26（庚子年四月初四）Sunday -----
+### ----2020.4.26（庚子年四月初四）Sunday -----
 > java中**协变**跟**逆变**是对泛型类的继承关系的表述.
 > Number为Integer的父类
 > List<Number> 和List<Integer> 之间是没有继承关系的
@@ -2245,7 +2246,7 @@ java.lang.Object
 
 
 
-### -----2020.4.25（庚子年四月初三）Saturday -----
+### ----2020.4.25（庚子年四月初三）Saturday -----
 Thread中断
 * static	boolean interrupted()	测试当前线程是否已经中断。  
 public static boolean interrupted()测试当前线程是否已经中断。线程的中断状态 由该方法清除。换句话说，如果连续两次调用该方法，则第二次调用将返回 false（在第一次调用已清除了其中断状态之后，且第二次调用检验完中断状态前，当前线程再次中断的情况除外）。 
@@ -2261,12 +2262,12 @@ public static boolean interrupted()测试当前线程是否已经中断。线程
 
 
 
-### -----2020.4.24（庚子年四月初二）Friday -----
+### ----2020.4.24（庚子年四月初二）Friday -----
 并行(同一时间)
 并发（指定时间段范围）
 Callable、FutureTask
 
-### -----2020.4.23（庚子年四月初一）Thursday -----
+### ----2020.4.23（庚子年四月初一）Thursday -----
 IntelliJ IDEA 插件 ASM Bytecode Viewer插件
 ASMPlugin:Bytecode ASMified Groovified
 
@@ -2478,7 +2479,7 @@ setMaximumFractionDigits(int)//设定小数最多位数
 [java.text.NumberFormat使用](https://blog.csdn.net/junshuaizhang/article/details/8559708)
 
 ***
-### -----2020.4.22（庚子年三月三十）Wednesday -----
+### ----2020.4.22（庚子年三月三十）Wednesday -----
 六大原则
 单一职责原则（SRP：Single Pesponsibility Principle）
 开放封闭原则（OCP：Open Closed Principle）--Open（Open for extendtion）开放支持扩展，Close（Closed for modification）
@@ -2567,7 +2568,7 @@ A lightweight, good expandability Android library used for displaying different 
 ***
 异步：线程池、多线程、链式调度、设计模式
 
-### -----2020.4.21（庚子年三月廿九）Tuesday -----
+### ----2020.4.21（庚子年三月廿九）Tuesday -----
 > 后端：分库分表（水平分表策略：区间、取模）
 ***
 > 为什么使用泛型？  
@@ -2652,7 +2653,7 @@ parentMeasureSpec和childMeasureSpec为什么会存在这样的转换关系？�
 [Android的OOM_ADJ](https://www.jianshu.com/p/8897b7e47466)
 
 
-### -----2020.4.20（庚子年三月廿八）Monday -----
+### ----2020.4.20（庚子年三月廿八）Monday -----
 
 Links:
 > **JOL** (Java Object Layout) is the tiny toolbox to analyze object layout schemes in JVMs.  
@@ -2669,7 +2670,7 @@ Links:
 
 
 
-### -----2020.4.19（庚子年三月廿七）Sunday -----
+### ----2020.4.19（庚子年三月廿七）Sunday -----
 > **内存泄漏**  
 包含Context的单例(Context使用Application)
 
@@ -2737,7 +2738,7 @@ PECS表示producer-extends，consumer-super
 
 > 软技能：拒绝的艺术
 
-### -----2020.4.18（庚子年三月廿六）Saturday -----
+### ----2020.4.18（庚子年三月廿六）Saturday -----
 **一个线程对象只能调用一次start方法.**  
 从new到等待运行是单行道,所以如果你对一个已经启动的线程对象再调用一次start方法的话,会产生**IllegalThreadStateException**异常
 
@@ -2790,12 +2791,12 @@ KeyWord：**ColorMatrix**
 
 
 
-### -----2020.4.17（庚子年三月廿五）Friday -----
+### ----2020.4.17（庚子年三月廿五）Friday -----
 
 
 
 
-### -----2020.4.16（庚子年三月廿四）Thursday -----
+### ----2020.4.16（庚子年三月廿四）Thursday -----
 
  [马士兵教育直播列表](https://s1.mashibing.com/selectuser)
  [马士兵教育菜鸟预习](http://mashibing.com/html/bird.html)
@@ -2851,7 +2852,7 @@ SurfaceView拥有独立的绘图表面，因此SurfaceView的UI就可以在一�
 https://class.imooc.com/sale/newandroid?mc_marking=f322d9d94ed01283bfdc19694f44e877&mc_channel=bdazrmjt
 
 
-### -----2020.4.15（庚子年三月廿三）Wednesday -----
+### ----2020.4.15（庚子年三月廿三）Wednesday -----
 AAR（Android Archive）
 JAR（Java Archive）
 
@@ -2889,7 +2890,7 @@ ijkplayer
 
 
 
-### -----2020.4.14（庚子年三月廿二）Tuesday -----
+### ----2020.4.14（庚子年三月廿二）Tuesday -----
 **vi操作**  
 ESC+O	换行  
 u		撤销上一步的操作  
@@ -2912,7 +2913,7 @@ point，是一个标准长度单位，1pt = 1/72英寸，用于印刷业。
 [原文链接]：https://blog.csdn.net/zinss26914/java/article/details/43732467
 
 
-### -----2020.4.13（庚子年三月廿一）Monday -----
+### ----2020.4.13（庚子年三月廿一）Monday -----
 TraceView：Android平台配备的性能分析工具
 使用：通过Android studio自带的traceview查看（Android profiler）
 
@@ -3225,7 +3226,7 @@ https://developer.android.google.cn/topic/libraries/architecture/lifecycle#java
 
 
 
-### -----2020.4.3（庚子年三月十一）Friday ------
+### ----2020.4.3（庚子年三月十一）Friday ------
 报名享学课堂——> ￥5380
 ￥ 5380
 ￥10980
@@ -3315,7 +3316,7 @@ https://www.jianshu.com/p/317b2d6bde1b
 
 
 
-### ------2020.4.2（庚子年三月初十）Thursday ------ 
+### ----2020.4.2（庚子年三月初十）Thursday ------ 
 Android图片轮播控件---com.youth.banner.Banner
 
 优先级队列：根据时间先后顺序排队的单链表
@@ -3861,7 +3862,7 @@ https://github.com/toutiaoio/awesome-architecture?hmsr=toutiao.io&utm_medium=tou
 
 
 
-### -----2019.10.22（己亥年九月廿四）Tue-----
+### ----2019.10.22（己亥年九月廿四）Tue-----
 Disruptor并发框架
 https://www.bilibili.com/video/av57885285?from=search&seid=1251517418409342493
 
