@@ -1,5 +1,9 @@
 ### -----2020.7.1（庚子年五月十一）Wednesday -----
 Android6.0(M)动态权限获取框架(github星)
+Normal Permissions权限一般不涉及用户隐私，不需要用户进行授权，比如手机震动、访问网络等；
+Dangerous Permission权限涉及到用户隐私的，需要用户进行授权，比如读取sdcard、访问通讯录等；
+
+
 PermissionsDispatcher(10k)使用注解，使用简单
 RxPermissions(9.7k) 需要RxJava2支持
 easypermissions(8.5k)
