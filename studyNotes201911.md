@@ -1,8 +1,62 @@
-### -----2020.6.27（庚子年五月初九）Monday -----
+### -----2020.6.30（庚子年五月初十）Tuesday -----
+Kotlin
+var textViews: List<*>
+
+Java
+List<?> textViews;
 
 
+[Kotlin中文社区](https://www.jianshu.com/u/a324daa6fa19)  
 
-### -----2020.6.26（庚子年五月初八）Sunday -----
+Kotlin协程依赖库导入
+```
+implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
+implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7" // Android
+```
+
+MainScope.launch{}
+GlobalScope.launch{}
+ViewModelScope.launch{}
+LifeCycleScpoe.launch{}
+
+协程就是线程框架
+kotlin的线程该不是轻量级的线程，只是线程框架
+协程实质就是线程, 协程是线程的框架.
+
+	fun click（view: View):Job = runBlocking{//外协程
+		launch(Dispatchers.IO){//内协程
+		Log.e("tag","launch $
+		
+		}
+	}
+
+	job.cancel()
+```
+suspend fun test6(){
+
+    withContext ( Dispatchers.Main){
+        println("Dispatchers.Main------"+ Thread.currentThread().name)
+    }
+
+    withContext(Dispatchers.IO) {
+        println("Dispatchers.IO------"+ Thread.currentThread().name)
+    }
+}
+````
+
+
+【Kotlin协程简化理解】：
+	线程池+线程切换
+	用同步的方式写异步，消除回调
+
+flutter连切换协程环境都不需要，只需要加两个关键字async和await
+
+
+### -----2020.6.29（庚子年五月初九）Monday -----
+云信下(公有)云升级问题排查到23点
+
+
+### -----2020.6.28（庚子年五月初八）Sunday -----
 ;--hava i been pwned?
 https://haveibeenpwned.com/
 
