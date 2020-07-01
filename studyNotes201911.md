@@ -1,4 +1,8 @@
 ### ----2020.7.1（庚子年五月十一）Wednesday -----
+开发技术栈(Android)
+DB canvas OpenGL MVVM 音视频解码 socket http netty 串口通讯 rabbitmq
+
+
 Android6.0(M)动态权限获取框架(github星)
 Normal Permissions权限一般不涉及用户隐私，不需要用户进行授权，比如手机震动、访问网络等；
 Dangerous Permission权限涉及到用户隐私的，需要用户进行授权，比如读取sdcard、访问通讯录等；
