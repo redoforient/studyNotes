@@ -1,4 +1,38 @@
 ### ----2020.7.1（庚子年五月十一）Wednesday -----
+深入理解Kotlin协程----霍丙乾
+
+Kotlin
+
+**star projection(星投影）**
+
+泛型约束 
+
+```kotlin
+fun <T : Comparable<T>> sort(list: List<T>) {
+    // ……
+}
+```
+
+
+
+ 
+
+ Java 语言中，数组是协变的，泛型不是协变的
+
+[Java泛型中的PECS原则](https://blog.csdn.net/xx326664162/article/details/52175283)
+
+[What is PECS (Producer Extends Consumer Super)?](http://stackoverflow.com/questions/2723397/what-is-pecs-producer-extends-consumer-super/2723538#2723538)
+
+PECS原则（控制读写）
+
+java泛型：extends->读 |	super->写
+
+Kotlin泛型：out->读  |	in->写
+
+
+
+***
+
 binder是Android通讯的血管
 
 ***
