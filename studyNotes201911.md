@@ -1,6 +1,17 @@
 ### ----2020.7.1（庚子年五月十一）Wednesday -----
 
 ***
+依赖库地址
+maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+maven { url 'https://jitpack.io' }
+maven { url 'https://dl.bintray.com/umsdk/release' }
+maven { url "http://mvn.mob.com/android" }
+
+jcenter()
+google()
+
+
+***
 https://www.cnblogs.com/chaojimali/p/12750936.html
 
 enter passphrase for key '~/.ssh/id_rsa'
