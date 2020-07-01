@@ -1,4 +1,25 @@
 ### ----2020.7.1（庚子年五月十一）Wednesday -----
+
+***
+https://www.cnblogs.com/chaojimali/p/12750936.html
+
+enter passphrase for key '~/.ssh/id_rsa'
+避免每次pull或者push都要输入密码
+
+enter passphrase for key '~/.ssh/id_rsa'
+ 
+
+1、输入下边命令；
+
+ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]
+ 
+
+2、实例：旧密码为123465
+
+ssh-keygen -p -P "123456" -N '' -f ~/.ssh/id_rsa
+
+***
+
 开发技术栈(Android)
 DB canvas OpenGL MVVM 音视频解码 socket http netty 串口通讯 rabbitmq
 
