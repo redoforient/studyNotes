@@ -1,3 +1,11 @@
+### -----2020.7.1（庚子年五月十一）Wednesday -----
+Android6.0(M)动态权限获取框架(github星)
+PermissionsDispatcher(10k)使用注解，使用简单
+RxPermissions(9.7k) 需要RxJava2支持
+easypermissions(8.5k)
+AndPermissons(6.3k)严正杰出品
+
+
 ### -----2020.6.30（庚子年五月初十）Tuesday -----
 Kotlin
 var textViews: List<*>
@@ -68,6 +76,8 @@ https://haveibeenpwned.com/
 
 
 ### -----2020.6.25（庚子年五月初五）Thursday -----
+接待静静到访
+
 Android源码设计模式解析与实战<第2版> 何红辉 关爱民 著
 https://github.com/hehonghui
 
