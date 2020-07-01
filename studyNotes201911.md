@@ -13,15 +13,15 @@ fun <T : Comparable<T>> sort(list: List<T>) {
 }
 ```
 
+***
 
-
- 
-
- Java 语言中，数组是协变的，泛型不是协变的
+Java 语言中，数组是协变的，泛型不是协变的
 
 [Java泛型中的PECS原则](https://blog.csdn.net/xx326664162/article/details/52175283)
 
-[What is PECS (Producer Extends Consumer Super)?](http://stackoverflow.com/questions/2723397/what-is-pecs-producer-extends-consumer-super/2723538#2723538)
+[What is PECS (Producer Extends Consumer Super)?](http://stackoverflow.com/questions/2723397/what-is-pecs-producer-extends-consumer-super/2723538#2723538)  
+
+[深入理解 Java 泛型：类型擦除、通配符、运行时参数类型获取](https://blog.csdn.net/hustspy1990/article/details/78048493)  
 
 PECS原则（控制读写）
 
@@ -43,6 +43,17 @@ elvishew -xLog
 https://github.com/elvishew/xLog
 Android logger, simple and pretty, powerful and flexible, all you need is here (updating)
 
+
+
+***
+
+Mars 是微信官方的跨平台跨业务的终端基础组件。
+
+- comm：可以独立使用的公共库，包括 socket、线程、消息队列、协程等；
+- xlog：高可靠性高性能的运行期日志组件；
+- SDT： 网络诊断组件；
+- STN： 信令分发网络模块，也是 Mars 最主要的部分。
+
 ***
 [Java NIO Tutorial](http://tutorials.jenkov.com/java-nio/index.html)  
 RandomAccessFile aFile     = new RandomAccessFile("data/nio-data.txt", "rw");
@@ -63,7 +74,7 @@ android {
     buildToolsVersion '25.0.0'
     defaultConfig {
         manifestPlaceholders = [STAT_KEY    : "1111111111111",
-                                STAT_CHANNEL: "rrrrF"]
+                               		STAT_CHANNEL: "rrrrF"]
 https://blog.csdn.net/f552126367/java/article/details/86502481
 
 [Android项目中gradle文件里面的productFlavors一些常用配置](https://www.jianshu.com/p/0ff4b5f5e892)  
