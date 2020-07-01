@@ -1,4 +1,47 @@
 ### ----2020.7.1（庚子年五月十一）Wednesday -----
+binder是Android通讯的血管
+
+***
+美团点评移动端基础日志组件 Logan
+
+Xlog
+elvishew -xLog
+https://github.com/elvishew/xLog
+Android logger, simple and pretty, powerful and flexible, all you need is here (updating)
+
+***
+[Java NIO Tutorial](http://tutorials.jenkov.com/java-nio/index.html)  
+RandomAccessFile aFile     = new RandomAccessFile("data/nio-data.txt", "rw");
+FileChannel      inChannel = aFile.getChannel();
+
+***
+buildTypes {//在android节点下
+        release {
+……
+		debug{
+
+***  Android多渠道打包 **
+flavorDimensions
+productFlavors
+defaultConfig或buildType中配置Mainfestplacehoders：
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        manifestPlaceholders = [STAT_KEY    : "1111111111111",
+                                STAT_CHANNEL: "rrrrF"]
+https://blog.csdn.net/f552126367/java/article/details/86502481
+
+[Android项目中gradle文件里面的productFlavors一些常用配置](https://www.jianshu.com/p/0ff4b5f5e892)  
+
+***
+zip文件格式EOCD(End of Central Directory record)
+***
+
+【JMeter】是Apache组织开发的基于Java的压力测试工具。
+***
+
+[文件类型魔数](https://www.jianshu.com/p/114340fec1b2)  
 
 ***
 依赖库地址
@@ -10,7 +53,6 @@ maven { url "http://mvn.mob.com/android" }
 jcenter()
 google()
 
-
 ***
 https://www.cnblogs.com/chaojimali/p/12750936.html
 
@@ -18,12 +60,12 @@ enter passphrase for key '~/.ssh/id_rsa'
 避免每次pull或者push都要输入密码
 
 enter passphrase for key '~/.ssh/id_rsa'
- 
+
 
 1、输入下边命令；
 
 ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]
- 
+
 
 2、实例：旧密码为123465
 
