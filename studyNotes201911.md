@@ -1,4 +1,12 @@
+### ----2020.7.2（庚子年五月十二）Thursday -----
+MinGW(Minimalist GNU for Windows)   
+
+
+
+
+
 ### ----2020.7.1（庚子年五月十一）Wednesday -----
+
 深入理解Kotlin协程----霍丙乾
 
 Kotlin
@@ -75,9 +83,23 @@ android {
     defaultConfig {
         manifestPlaceholders = [STAT_KEY    : "1111111111111",
                                		STAT_CHANNEL: "rrrrF"]
-https://blog.csdn.net/f552126367/java/article/details/86502481
+https://blog.csdn.net/f552126367/java/article/details/86502481  
 
 [Android项目中gradle文件里面的productFlavors一些常用配置](https://www.jianshu.com/p/0ff4b5f5e892)  
+
+
+
+---
+
+[Gradle多渠道打包(动态设定App名称，应用图标，替换常量，更改包名，变更渠道)](https://www.jianshu.com/p/533240d222d3)  
+不同环境，不同包名；
+不同环境，修改不同的 string.xml 资源文件；
+不同环境，修改指定的常量；
+不同环境，修改 AndroidManifest.xml 里渠道变量；
+不同环境，引用不同的 module。
+
+
+
 
 ***
 zip文件格式EOCD(End of Central Directory record)
