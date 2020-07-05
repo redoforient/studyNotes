@@ -1,35 +1,25 @@
+### ----2020.7.5（庚子年五月十五）Sunday -----
+
+
+
+
+
+### ----2020.7.4（庚子年五月十四）Saturday -----
+RxJava异步调用目前优于Kotlin协程
+
+***
+Jetpack Architecture Components
+Lifecycle ViewModel LiveData Room
+***
+[synchronized的CPU原语级别是如何实现的？](https://www.cnblogs.com/ytxiao/p/12182679.html)  
+**synchronized CPUY原语实现**
+synchronized代码块主要是靠monitorenter和monitorexit这两个原语来实现同步的。
+
+monitor的本质是依赖于底层操作系统的Mutex Lock实现，
+操作系统实现线程间的切换需要从用户态到内核态的切换，切换成本非常高。
+
+
 ### ----2020.7.3（庚子年五月十三）Friday -----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -65,6 +55,7 @@
 
 玉门关（甘肃省敦煌市城西北八十公里戈壁滩,一名小方盘城,是长城西端重要关口）
 阳  关（甘肃省敦煌市西南七十公里古董滩）
+
 
 
 ### ----2020.7.2（庚子年五月十二）Thursday -----
@@ -235,11 +226,51 @@ Kotlin协程依赖库导入
 implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7" // Android
 ```
+Kotlin切换线程
+Dispatcher.dispatch切UI线程里面还是用的handler.post(runnable)
+DefaultDispatcher-Worker-序数
 
+
+Kotlin挂起线程
+根据kotlin bytecode用到switch
+
+kotlinx.coroutines提供的协程调度器包括：
+
+Dispatchers.Default： 使用共享的后台线程池
+Dispatchers.IO：用于IO操作的协程
+Dispatchers.Unconfined：用于不消耗CPU时间的任务以及不更新UI的协程
+用newSingleThreadContext创建的调度器：为协和的运行启动了一个线程，（一个专用的纯种是一种非常昂贵的资源）
+[【Kotlin】协程(之二）](https://blog.csdn.net/menghaocheng/java/article/details/105320870)  
+
+
+
+协程用法
+launch+withContext
+
+suspend fun ioFun1(){
+	//withContext(Dispatchers.IO){
+	withContext(Dispatchers.Default){
+	 println("Coroutines Camp ioFun1 ${Thread.currentThread().name}")
+	}
+}
+
+结构化并发
+Coroutine Cancellation and Structured Concurrency
+
+KTX扩展
+
+CoroutineScope.launch{}
 MainScope.launch{}
 GlobalScope.launch{}
+GlobalScope.launch(Dispatchers.Main){}
 ViewModelScope.launch{}
-LifeCycleScpoe.launch{}
+LiveDataScope.launch{}
+LifeCycleScope.launch{}
+LifeCycleScope.launchWhenResumed{}
+
+
+Kotlin协程delay比Thread.sleep性能更好
+
 
 协程就是线程框架
 kotlin的线程该不是轻量级的线程，只是线程框架
