@@ -1,6 +1,32 @@
+### ----2020.7.6（庚子年五月十六）Monday -----
+Flywith24
+
+
+[域名解析](https://www.ipaddress.com/)  
+
+[如何利用 theme 与 style 更优雅地管理资源文件](https://github.com/Flywith24/Flywith24-Theme-demo)  
+
+
+***
+FlowLayout
+
+[FlexboxLayout——实现灵活多变的瀑布流](https://www.jianshu.com/p/0723ff4123e1)  
+
+[FlexboxLayout是什么?](https://www.jianshu.com/p/a8edc312fa3d)  
+FlexboxLayout 可以理解为高级的 LinearLayout，因为这两个布局都将其子视图按序排列。
+二者之间的重要差异在于 FlexboxLayout 具有 “换行” 的特性。
+同时 FlexboxLayout 还为 RecycleView 提供了管理器 FlexboxLayoutManager。
+
+***
+[FlexboxLayout的使用说明书](https://zhuanlan.zhihu.com/p/29169416)  
+google
+https://github.com/google/flexbox-layout
+
+
+
 ### ----2020.7.5（庚子年五月十五）Sunday -----
 
-
+论文整理
 
 
 
