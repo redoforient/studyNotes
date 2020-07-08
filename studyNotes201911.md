@@ -1,6 +1,12 @@
 ### ----2020.7.8（庚子年五月十八）Wednesday -----
 
 https://www.jianshu.com/u/942d45d61f59
+Android 消息处理机制（Looper、Handler、MessageQueue,Message）
+
+周周大佬
+
+https://www.jianshu.com/u/0d51dc41eff1
+
 
 
 ### ----2020.7.7（庚子年五月十七）Tuesday -----
@@ -17,7 +23,6 @@ Flywith24
 [域名解析](https://www.ipaddress.com/)  
 
 [如何利用 theme 与 style 更优雅地管理资源文件](https://github.com/Flywith24/Flywith24-Theme-demo)  
-
 
 ***
 FlowLayout
@@ -192,7 +197,6 @@ https://blog.csdn.net/f552126367/java/article/details/86502481
 不同环境，修改指定的常量；
 不同环境，修改 AndroidManifest.xml 里渠道变量；
 不同环境，引用不同的 module。
-
 
 
 
