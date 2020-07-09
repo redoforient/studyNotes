@@ -4,6 +4,21 @@ foreach报java.util.ConcurrentModificationException异常问题解决：迭代�
 2、采用ConcurrentHashMap替换HashMap
 3、采用同步锁等的方案
 
+
+***
+跨平台开发：Android和iOS平台上运行的应用
+
+Cordova，PhoneGap 最优，毕竟十几年在哪，坑少，解决方案多。
+React-Native, NativeScript 其次，要求些许英文的阅读能力(特别是 NativeScript)，这两种解决方案都可以尝试，但不建议作为首选项。
+Flutter 和 Xarmarin，Xarmarin 我没用过，所以没有发言权。Flutter 不建议用于 production。
+
+国内的Dcloud的Uniapp
+app端就用echart，小程序端就用uchart
+
+链接：https://www.zhihu.com/question/333817230/answer/903381349
+
+***
+
 ### ----2020.7.8（庚子年五月十八）Wednesday -----
 
 https://www.jianshu.com/u/942d45d61f59
