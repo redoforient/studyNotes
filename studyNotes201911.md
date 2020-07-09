@@ -1,3 +1,9 @@
+### ----2020.7.9（庚子年五月十九）Thursday -----
+foreach报java.util.ConcurrentModificationException异常问题解决：迭代器
+1、将ArrayList改为CopyOnWriteArrayList在多线程环境中同样可以避免出现这个异常。
+2、采用ConcurrentHashMap替换HashMap
+3、采用同步锁等的方案
+
 ### ----2020.7.8（庚子年五月十八）Wednesday -----
 
 https://www.jianshu.com/u/942d45d61f59
