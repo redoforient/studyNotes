@@ -17,7 +17,12 @@ app端就用echart，小程序端就用uchart
 
 链接：https://www.zhihu.com/question/333817230/answer/903381349
 
-***
+***Android自定义动画
+[Android自定义控件三部曲文章索引](https://blog.csdn.net/harvic880925/article/details/50995268)  
+
+[自定义控件三部曲之动画篇(七)——ObjectAnimator基本使用](https://blog.csdn.net/harvic880925/article/details/50598322)  
+
+
 
 ### ----2020.7.8（庚子年五月十八）Wednesday -----
 
