@@ -1,4 +1,71 @@
+### ----2020.7.10（庚子年五月二十）Friday -----
+非技术问题
+
+
+ZLL:
+这种问题也不是三言两语说的清的
+
+无:
+就是工期能报长就报长，千万别觉得自己认为几天能搞完就一定能搞完。。多报几天总归没错。预留出自己如果遇到不会的问题，去解决问题的时间。
+
+老梁:
+工作量估算开发周期时间直接double  基本也就问题不大了
+
+陈阳:
+开发前先设计清楚工程框架
+
+涂晓龙:
+产品需求评审之后，加个技术评审的步骤，拆解需求，定技术方案，排期加冗余
+
+
+JETT老师 ：
+这个主要是思考两点
+1.需要中有没有技术上做不到的
+2.这个需求会不会在开发中变动
+JETT老师：
+还一个就是需求中是否会有没写明确，但技术上必需去做的，或是要主动去挖
+
+
+正规项目组里是需要调研时间的，那些没做过的技术点需要先调研
+调研完再排期，太复杂要让产品削减需求，或者排个长一点的工期
+
+
+AV老师  16:54:51
+这个其实也没有太多的想法，基本上就是排开了干
+哈哈
+AV老师  16:54:59
+不过，要及时的去调整
+多想到复用
+类超过 400行代码一定要重构
+另外，首先要选择一个app的架构：建议就是MVVM
+然后，基于jetpack做开发
+如果能用kotlin就用kotlin
+
+
+https://github.com/liangjingkanji/Net   Android不是最强的网络请求
+
+https://github.com/liangjingkanji/BRV   Android不是最强的列表库
+
+***
+androidx.cardview.widget.CardView
+CardView实现阴影效果
+
+***
+VoIP
+基于IP的语音传输（英语：Voice over Internet Protocol，缩写为VoIP）是一种语音通话技术，经由网际协议（IP）来达成语音通话与多媒体会议，也就是经由互联网来进行通信。
+其他非正式的名称有IP电话（IP telephony）、互联网电话（Internet telephony）、宽带电话（broadband telephony）以及宽带电话服务（broadband phone service）。
+VoIP可用于包括VoIP电话、智能手机、个人计算机在内的诸多互联网接入设备，通过蜂窝网络、Wi-Fi进行通话及发送短信。
+
+
 ### ----2020.7.9（庚子年五月十九）Thursday -----
+CoordinatorLayout+Behavior实现嵌套滑动效果
+Behavior只有是CoordinatorLayout的直接子View才有意义。可以为任何View添加一个Behavior。
+Material Design里面的CoordinatorLayout是一个非常强大的控件，它接管了child组件之间的交互。
+让你滑动交互使用更加方便简单，效果也更加强大，不需要像以前那样自己处理一坨什么乱七八槽的滑动,事件传递之类的处理了。
+https://blog.csdn.net/jinfulin/article/details/77927719
+
+***
+
 foreach报java.util.ConcurrentModificationException异常问题解决：迭代器
 1、将ArrayList改为CopyOnWriteArrayList在多线程环境中同样可以避免出现这个异常。
 2、采用ConcurrentHashMap替换HashMap
