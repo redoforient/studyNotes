@@ -1,4 +1,12 @@
 ### ----2020.7.13（庚子年五月廿三）Monday -----
+***
+Mr.Simple的专栏
+https://blog.csdn.net/bboyfeiyu
+
+kymjs张涛
+https://blog.kymjs.com/
+
+***
 垂直方向的支持
 ViewPager2可以在垂直方向上翻页，仅需要在布局文件添加一行代码
 
@@ -24,6 +32,7 @@ DirectUI 界面库 DuiLib
 
 
 ### ----2020.7.12（庚子年五月廿二）Sunday -----
+onTouch和onClick事件冲突（leo老师主讲-未看完）
 
 
 ### ----2020.7.11（庚子年五月廿一）Saturday -----
