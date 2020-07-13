@@ -3,7 +3,15 @@
 ** 预防github打不开的B方案
 可以设置推送同时推送到github和gitee
 https://www.yuque.com/greyzeng/uzfhep/ycoqn4
-这样就不怕github经常打不开了，
+这样就不怕github经常打不开了
+
+
+【最新】解决Github网页上图片显示失败的问题
+https://blog.csdn.net/qq_38232598/article/details/91346392
+
+
+腾讯云轻量 24块钱，买个反代 gayhub 和 谷歌就好了
+买个 国外服务器，安装nginx 设置反向代理 x 网站
 
 ***
 Mr.Simple的专栏
@@ -150,6 +158,10 @@ app端就用echart，小程序端就用uchart
 
 [自定义控件三部曲之动画篇(七)——ObjectAnimator基本使用](https://blog.csdn.net/harvic880925/article/details/50598322)  
 
+
+motion动画详解
+[ConstraintLayout 2.0新特性 MotionLayout制作炫酷动画](https://mp.weixin.qq.com/s/JkMJQLOUr3hoFf-eJ-OBDQ)  
+[MontionLayout：打开动画新世界大门](https://mp.weixin.qq.com/s/Cs3_9vIC3IKrZ4KzBtKoYw)    
 
 
 ### ----2020.7.8（庚子年五月十八）Wednesday -----
