@@ -2652,6 +2652,7 @@ java.lang.Object
 [正向代理和反向代理的区别]（https://www.tuicool.com/articles/M7bAnqy)  
 正向代理（代理封装客户端）应用场景：Squid科学上网  
 反向代理（代理封装服务端）应用场景：Nginx
+
 * 负载均衡
 * 保护和隐藏原始资源服务器
 * 加密和SSL加速
@@ -2660,6 +2661,22 @@ java.lang.Object
 * 减速上传
 * 安全
 * 外网发布
+
+正向代理代理的对象是客户端：
+反向代理代理的对象是服务端：Nginx就是性能非常好的反向代理服务器，用来做负载均衡。
+
+nginx或者squid正向代理实现受限网站的访问
+https://blog.csdn.net/reblue520/article/details/80553313
+
+apache,nginx,squid比较
+https://blog.csdn.net/iteye_1109/article/details/82639180  
+
+
+web cache server方案比较：varnish、squid、nginx
+https://www.cnblogs.com/kevingrace/p/6188123.html
+*************** 当你发现自己的才华撑不起野心时，就请安静下来学习吧！***************
+
+
 ```
 
 ***
