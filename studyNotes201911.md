@@ -1,4 +1,10 @@
 ### ----2020.7.13（庚子年五月廿三）Monday -----
+
+** 预防github打不开的B方案
+可以设置推送同时推送到github和gitee
+https://www.yuque.com/greyzeng/uzfhep/ycoqn4
+这样就不怕github经常打不开了，
+
 ***
 Mr.Simple的专栏
 https://blog.csdn.net/bboyfeiyu
