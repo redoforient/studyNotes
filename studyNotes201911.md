@@ -37,6 +37,8 @@ MVC （Model-View-Controller)
 MVP （Model-View-Presenter）
 MVVM（Model-View-ViewModel）
 
+MVC、MVP、MVVM模式的概念与区别
+https://www.jianshu.com/p/ff6de219f988
 
 
 ### ----2020.7.10（庚子年五月二十）Friday -----
