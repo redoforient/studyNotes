@@ -1,6 +1,51 @@
-### ----2020.7.10（庚子年五月二十）Friday -----
-非技术问题
+### ----2020.7.13（庚子年五月廿三）Monday -----
+垂直方向的支持
+ViewPager2可以在垂直方向上翻页，仅需要在布局文件添加一行代码
 
+***
+可怕！从简洁高效的角度来说，Kotlin比Java强太多了吧！难道Java真的要被替代了？
+https://blog.csdn.net/colinandroid/article/details/80490040
+Tip1- 更简洁的字符串
+Tip2- 更好调用的函数：显式参数名/默认参数值
+Tip3- 利用局部函数抽取重复代码
+Tip4- 使用数据类来快速实现model类
+Tip5- 用类委托来快速实现代理模式
+Tip6- apply函数来简化代码
+Tip7- 用函数型变量来简化回调
+Tip9- let语句简化可空对象访问
+
+
+***
+Qt、WPF
+UWP即Windows 10中的Universal Windows Platform
+
+CEF （Chromium嵌入式框架）
+DirectUI 界面库 DuiLib
+
+
+### ----2020.7.12（庚子年五月廿二）Sunday -----
+
+
+### ----2020.7.11（庚子年五月廿一）Saturday -----
+架构演进
+一体架构
+MVC：model独立出来，View是可以直接访问Model的
+MVP：与MVC相比，与Model交互的部分由Presenter处理
+MVVM：与MVP相比减少各种接口回调
+
+MVC （Model-View-Controller)
+MVP （Model-View-Presenter）
+MVVM（Model-View-ViewModel）
+
+
+
+### ----2020.7.10（庚子年五月二十）Friday -----
+
+** 非技术问题
+
+老师好，老师在多年开发经验里，如果拿到一个产品需求任务，如何能在开发初期及时发现里面风险点和坑点啊？
+我是接到一个任务，不管三七二十一就排期开干，等到开发到半路才发现里面的坑，吃了好几次亏，现在想咨询老师有没有经验传授下哈
+这个问题也不急，老师有时间整理整理，或者推荐相关资料也行
 
 ZLL:
 这种问题也不是三言两语说的清的
@@ -70,7 +115,6 @@ foreach报java.util.ConcurrentModificationException异常问题解决：迭代�
 1、将ArrayList改为CopyOnWriteArrayList在多线程环境中同样可以避免出现这个异常。
 2、采用ConcurrentHashMap替换HashMap
 3、采用同步锁等的方案
-
 
 ***
 跨平台开发：Android和iOS平台上运行的应用
