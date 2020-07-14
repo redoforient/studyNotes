@@ -1,5 +1,12 @@
 ### ----2020.7.14（庚子年五月廿四）Tuesday -----
 
+
+io.reactivex.exceptions.OnErrorNotImplementedException: 
+Cleartext HTTP traffic to pic1.win4000.com not permitted
+
+[java.io.IOException: Cleartext HTTP traffic to xxx.xxx.xxx.xxx not permitted 的解决方案](https://blog.csdn.net/Doyle_/article/details/88964548)  
+
+***
 [UML类图几种关系的总结](https://blog.csdn.net/tianhai110/article/details/6339565)  
 泛化（Generalization）,  实现（Realization）,关联（Association）,聚合（Aggregation）,组合(Composition)，依赖(Dependency)
 关系的强弱顺序：
