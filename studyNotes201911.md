@@ -1,4 +1,11 @@
 ### ----2020.7.14（庚子年五月廿四）Tuesday -----
+
+[UML类图几种关系的总结](https://blog.csdn.net/tianhai110/article/details/6339565)  
+泛化（Generalization）,  实现（Realization）,关联（Association）,聚合（Aggregation）,组合(Composition)，依赖(Dependency)
+关系的强弱顺序：
+泛化 = 实现> 组合> 聚合> 关联> 依赖
+***
+
 [树的广度优先遍历和深度优先遍历（递归非递归、Java实现）](https://www.cnblogs.com/xiaolovewei/p/7763867.html)  
 1.广度优先遍历:　
     广度优先遍历树，需要用到队列（Queue-LinkedList）来存储节点对象,队列的特点就是先进先出。
