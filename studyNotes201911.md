@@ -1,5 +1,45 @@
 ### ----2020.7.15（庚子年五月廿五）Wednesday -----
+动态代理实现aop
+aspectj实现aop
+《Android切面设计-实战提升你的架构抽象能力》Derry老师
 
+***
+埋点
+java 程序埋点具体是指什么?
+就是在特定的地方打印日志，看看输出是否符合要求。。
+
+数据埋点是什么？设置埋点的意义是什么？
+https://www.zhihu.com/question/36411025
+
+[埋点SDK原理与实现](https://blog.csdn.net/baozhuona/article/details/103087682)  
+
+所谓“埋点”，是数据采集领域（尤其是用户行为数据采集领域）的术语，指的是针对特定用户行为或事件进行捕获、处理和发送给服务器的相关技术及其实施过程。
+
+pv -> page view页面的访问量
+uv -> user view用户的访问量, uv可以通过pv筛user处理得出
+
+现在埋点的主流有两种方式：
+第一种：自己公司研发在产品中注入代码统计，并搭建起相应的后台查询。
+第二种：第三方统计工具，如友盟、神策、Talkingdata、GrowingIO等。
+
+***
+** 什么是插桩？
+插桩就是将一段代码通过某种策略插入到另一段代码，或替换另一段代码。
+代码可以分为源码和字节码，而我们所说的插桩一般指字节码插桩。
+[字节码插桩--你也可以轻松掌握](https://www.jianshu.com/p/13d18c631549)  
+
+APT技术：编译时
+AspectJ：运行时
+
+@AspectJ
+@Pointcut("execution(@com.xx.* *(..))"):
+***
+
+[持ActivityLifecycleCallbacks，监听前后台状态如此舒](https://www.jianshu.com/p/e7f64e6bc2cc)  
+
+Application.ActivityLifecycleCallbacks来实现 监听程序处于前台还是后台
+
+***
 
 Android轮子哥
 git@github.com:getActivity/AndroidProject.git
