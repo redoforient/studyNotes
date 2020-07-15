@@ -39,6 +39,12 @@ AspectJ：运行时
 
 Application.ActivityLifecycleCallbacks来实现 监听程序处于前台还是后台
 
+
+[MVP系列文章（三） - 动态代理优化每次判断 View != null](https://www.jianshu.com/p/a46d22fe9928)  
+
+
+[实现View的点击事件监听（注解+反射+动态代理）](https://www.jianshu.com/p/0697a9d9fbbf)  
+
 ***
 
 Android轮子哥
