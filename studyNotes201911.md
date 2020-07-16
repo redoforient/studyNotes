@@ -1311,7 +1311,17 @@ unary (adj.)一元的
 
 [在线颜色选择器 | RGB颜色查询对照表](http://tools.jb51.net/static/colorpicker/?)  
 
+***
 
+myBase Desktop (Linux/MacOSX/Windows)
+
+Wjj Software
+Providing High-quality Software Tools for Data, Information and Knowledge Management
+
+http://www.wjjsoft.com/mybase_cn.html#register
+
+
+nyf格式数据库文件
 **mybase**  
 [个人（wiki）知识管理工具-一代神器之mybase](http://www.eryajf.net/1040.html)  
 
