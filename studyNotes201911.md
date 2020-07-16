@@ -1,3 +1,20 @@
+### ----2020.7.16（庚子年五月廿六）Thursday -----
+
+Drawable是可绘制对象，需要有View来接收显示，View可直接显示
+
+Math.sin()、Math.cos()参数为弧度制
+Java Math.toRadians()角度转换为弧度
+Java Math.toDegrees()弧度转换成角度
+
+
+***
+[Android 自定义View----离屏缓冲和图像混合模式(圆形头像)](https://blog.csdn.net/Zheng_Jiao/article/details/103729441)  
+硬件加速：CPU把绘制内容转换为GPU操作，然后交给GPU进行,由GPU负责真正的绘制，这就叫硬件绘制，使用GPU绘制就叫做硬件加速；
+离屏缓冲：单独的一个绘制View的区域
+
+
+
+
 ### ----2020.7.15（庚子年五月廿五）Wednesday -----
 动态代理实现aop
 aspectj实现aop
