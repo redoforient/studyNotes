@@ -8,6 +8,13 @@ lucene索引数据库可视化查看工具-->luke-swing-8.0.0
 (1)  onViewCreated在onCreateView执行完后立即执行。
 (2)  onCreateView返回的就是fragment要显示的view。
 
+
+择业选择
+开发工程师
+快递员
+导游（解说员）
+文案编写
+
 ### ----2020.7.16（庚子年五月廿六）Thursday -----
 
 Drawable是可绘制对象，需要有View来接收显示，View可直接显示
