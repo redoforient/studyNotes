@@ -1,4 +1,67 @@
 ### ----2020.7.20（庚子年五月三十）Monday -----
+JDK内置类型(观察者|被观察者)
+~~~
+//观察者
+package java.util;
+
+/**
+ * A class can implement the <code>Observer</code> interface when it
+ * wants to be informed of changes in observable objects.
+ *
+ * @author  Chris Warth
+ * @see     java.util.Observable
+ * @since   JDK1.0
+ */
+public interface Observer {
+    /**
+     * This method is called whenever the observed object is changed. An
+     * application calls an <tt>Observable</tt> object's
+     * <code>notifyObservers</code> method to have all the object's
+     * observers notified of the change.
+     *
+     * @param   o     the observable object.
+     * @param   arg   an argument passed to the <code>notifyObservers</code>
+     *                 method.
+     */
+    void update(Observable o, Object arg);
+}
+
+//被观察者
+java.util.Observable
+java.util.Observable#Observable
+java.util.Observable#addObserver
+java.util.Observable#deleteObserver
+java.util.Observable#notifyObservers()
+java.util.Observable#notifyObservers(java.lang.Object)
+java.util.Observable#deleteObservers
+java.util.Observable#setChanged
+java.util.Observable#clearChanged
+java.util.Observable#hasChanged
+java.util.Observable#countObservers
+java.util.Observable#changed
+java.util.Observable#obs
+~~~
+
+UML关系图
+[uml图六种箭头的含义](https://blog.csdn.net/wglla/article/details/52225571)  
+#表示protected，+表示Public，-表示private
+泛化：类继承
+实现：接口实现
+依赖：是一种使用的关系，即一个类的实现需要另一个类的协助。
+     java中，方法参数需要传入另一个类的对象，就表示依赖这个类。
+     表示方法：虚线箭头，类A指向类B。
+关联：表示类与类之间的联接,它使一个类知道另一个类的属性和方法，这种关系比依赖更强、不存在依赖关系的偶然性、关系也不是临时性的，一般是长期性的。
+     java中一个类的全局变量引用了另一个类，就表示关联了这个类
+     表示方法：实线箭头，类A指向类B
+聚合：聚合是关联关系的一种特例，是强的关联关系。
+     聚合是整体和个体之间的关系，即has-a的关系，整体与个体可以具有各自的生命周期，部分可以属于多个整体对象，也可以为多个整体对象共享。
+     程序中聚合和关联关系是一致的，只能从语义级别来区分；
+     表示方法：尾部为空心菱形的实线箭头（也可以没箭头），类A指向类B
+组合：组合也是关联关系的一种特例。
+     组合是一种整体与部分的关系，即contains-a的关系，比聚合更强。
+     部分与整体的生命周期一致，整体的生命周期结束也就意味着部分的生命周期结束，组合关系不能共享。
+     程序中组合和关联关系是一致的，只能从语义级别来区分。
+     表示方法：尾部为实心菱形的实现箭头（也可以没箭头），类A指向类B
 
 
 ** 设计模式重要原则：对修改关闭对扩展开发  
