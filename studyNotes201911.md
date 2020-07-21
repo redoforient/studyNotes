@@ -1,4 +1,52 @@
 ### ----2020.7.21（庚子年六月初一）Tuesday -----
+***
+[并发&耗时业务场景线程池选择](https://www.cnblogs.com/dangjunhui/p/5481435.html)  
+下列三种业务，应该如何使用线程池：
+· 高并发、任务执行时间短
+· 并发不高、任务执行时间长
+· 并发高、业务执行时间长
+
+高并发，执行耗时短的任务，还有低并发，执行耗时长的任务，各自选取什么样的线程池比较合理？
+为什么？如果业务场景是高并发，且任务耗时长时，有什么解决思路？
+线程池的关键点是：
+1、尽量减少线程切换和管理的开支； 2、最大化利用cpu。
+对于1，要求线程数尽量少，这样可以减少线程切换和管理的开支；
+对于2，要求尽量多的线程，以保证CPU资源最大化的利用。
+ 
+所以对于任务耗时短的情况，要求线程尽量少，如果线程太多，有可能出现线程切换和管理的时间，大于任务执行的时间，那效率就低了；
+对于耗时长的任务，要分是cpu任务，还是io等类型的任务。如果是cpu类型的任务，线程数不宜太多；但是如果是io类型的任务，线程多一些更好，可以更充分利用cpu。
+所以：
+高并发，低耗时的情况：建议少线程，只要满足并发即可；例如并发100，线程池可能设置为10就可以
+低并发，高耗时的情况：建议多线程，保证有空闲线程，接受新的任务；例如并发10，线程池可能就要设置为20；
+高并发高耗时：1要分析任务类型，2增加排队，3、加大线程数
+
+对于高并发耗时长的情况，我认为，思路就是把一个难以解决的问题转化成我们已知的已经有解决方案的问题，以此来解决。
+所以 ，高并发又耗时长，可以转化为
+      1、高并发，耗时短的问题   –>   异步处理+回调，和情况1吻合
+      2、低并发，耗时长的问题   –>   前端加load balance，把高并发分摊成若干低并发，和情况2吻合
+其实说到核心，如果真遇到高并发耗时长的场景，只能是加机器，加计算单元（无论是异步加回调还是load balance）
+
+***
+二、Executor 、ExecutorService 、ThreadPoolExecutor 等类的说明
+1、线程池： 提供一个线程队列，队列中保存着所有等待状态的线程。避免了创建与销毁的额外开销，提高了响应的速度。
+
+2、线程池的体系结构：
+java.util.concurrent.Executor 负责线程的使用和调度的根接口
+		|--ExecutorService 子接口： 线程池的主要接口
+				|--ThreadPoolExecutor 线程池的实现类
+				|--ScheduledExecutorService 子接口： 负责线程的调度
+					|--ScheduledThreadPoolExecutor : 继承ThreadPoolExecutor，实现了ScheduledExecutorService
+			
+
+3、工具类 ： Executors
+ExecutorService newFixedThreadPool() : 创建固定大小的线程池
+ExecutorService newCachedThreadPool() : 缓存线程池，线程池的数量不固定，可以根据需求自动的更改数量。
+ExecutorService newSingleThreadExecutor() : 创建单个线程池。 线程池中只有一个线程
+
+ScheduledExecutorService newScheduledThreadPool() : 创建固定大小的线程，可以延迟或定时的执行任务
+
+原文链接：[线程池 ExecutorService 的使用例子](https://blog.csdn.net/xiaojin21cen/article/details/81810534)  
+***
 
 
 ### ----2020.7.20（庚子年五月三十）Monday -----
