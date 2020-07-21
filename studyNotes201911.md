@@ -1,12 +1,24 @@
 ### ----2020.7.21（庚子年六月初一）Tuesday -----
-- [鸿洋][8]
-- [郭霖][9]
-- [张旭童][10]
-- [任玉刚][11]  
-[9]: https://blog.csdn.net/lmj623565791 "郭霖"  
-[10]: https://me.csdn.net/qq_23547831 "张旭童"  
-[11]: https://me.csdn.net/singwhatiwanna "任玉刚"  
-[12]: https://blog.csdn.net/carson_ho "Carson_Ho"  
+- [鸿洋](https://blog.csdn.net/lmj623565791)  
+- [郭霖](https://me.csdn.net/qq_23547831)
+- [张旭童](https://me.csdn.net/singwhatiwanna)    
+- [任玉刚](https://blog.csdn.net/carson_ho)     
+
+[Android最全开发资源](https://www.jianshu.com/p/0c36302e0ed0)  
+[WanAndroid](https://wanandroid.com/)  
+[极客导航](https://www.jikedaohang.com/index/)  
+  
+# Android开发需要掌握的工具
+- Ruler
+- Mark Man
+- TinyPNG
+- MAVEN
+- Git Bash
+- 印象笔记（MarkDown）
+- GitHub
+- 反编译工具（dex2jar;jd-gui）
+
+
 
 
 ***
