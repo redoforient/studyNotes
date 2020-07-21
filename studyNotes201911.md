@@ -136,20 +136,7 @@ UML关系图
 国内硬件编程
 total solution，turn key solution
 ***
-在当今社会上，影响力是一门很重要的学科。
-如何从各个细致入微的角度去影响其它人是一门很重要的技能，在本文中，我们将一起了解影响力决策的28条法则，
-希望大家能一起将它们应用到我们的生活当中，肯定会获益匪浅。
-感兴趣的同学可以看看：[如何深刻影响他人](https://juejin.im/post/5f0cef8b5188252e864b2beb)  
 
-
-1978-2018四十年黄金时间（1978-1998二十年思想解放期；1998-2018：二十年蓬勃发展期）
-2018-2058四十年新常态，现在的情况很可能只是个开始，。。。，筒子们，时局艰难，且行且珍惜。
-
-我上过一个公共课，讲国家粮食安全的，上面的老教授说过，我们的小麦（面粉）大体可以自给，水稻（大米）可以自给，
-至于想改善下生活，比如碗里多点油水，不好意那得依赖进口
-长期不买老美的大豆，级联效应可能就是早晨喝的豆浆要涨价，豆腐要涨价，辣条要涨价，
-更重要的是，食用大豆油要涨价，养猪的豆粕（只有富含蛋白质的饲料猪才长膘）也要大大的涨价，猪肉价格那就不用说了，
-所以，和气生财，没事别动不动就喊打喊杀的
 ### ----2020.7.19（庚子年五月廿九）Sunday -----
 主日礼拜
 
@@ -3239,13 +3226,27 @@ setMaximumFractionDigits(int)//设定小数最多位数
 
 ***
 ### ----2020.4.22（庚子年三月三十）Wednesday -----
+Android Source Design Patterns Analysis & Practice
+何红辉、关爱民《Android 源码分析之设计模式》
+郭霖《第一行代码：Android》
+任玉刚《Android开发艺术探索》
+徐宜生《Android群英传》
+
+设计模式
+
+《设计模式之禅》
+《设计模式：可复用面向对象软件的基础》
+
+
 面向对象编程(OOP)五项基本原则(SOLID)
 单一职责、开闭原则、里氏替换、接口隔离、依赖倒置(依赖反转)
 关键词：抽象、单一职责、最小化
 
+** 开闭原则与里氏替换原则是相互伴生，通过里氏替换来达到对扩展开放，对修改关闭的效果 **
+
 六大原则
 单一职责原则（SRP：Single Responsibility Principle)
-开放封闭原则（OCP：Open Closed Principle)--Open（Open for extendtion)开放支持扩展，Close（Closed for modification)
+开放封闭原则（OCP：Open Closed Principle)--Open（Open for Extension)开放支持扩展，Close（Closed for Modification)
 里氏替换原则（LSP：Liskov Substitution Principle)
 接口隔离原则（ISP：Interface Segregation Principle)
 依赖倒置原则（DIP：Dependence Inversion Principle)
