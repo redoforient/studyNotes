@@ -3239,13 +3239,17 @@ setMaximumFractionDigits(int)//设定小数最多位数
 
 ***
 ### ----2020.4.22（庚子年三月三十）Wednesday -----
+面向对象编程(OOP)五项基本原则(SOLID)
+单一职责、开闭原则、里氏替换、接口隔离、依赖倒置(依赖反转)
+关键词：抽象、单一职责、最小化
+
 六大原则
-单一职责原则（SRP：Single Pesponsibility Principle）
-开放封闭原则（OCP：Open Closed Principle）--Open（Open for extendtion）开放支持扩展，Close（Closed for modification）
-里氏替换原则（LSP：Liskov Substitution Principl）
-依赖倒置原则（DIP：Dependence Inversion Principle）
-接口隔离原则（ISP：Interface Segregation Principle）
-最少知识原则（LKP：Least Knowledge Principle）又叫迪米特原则（Law of Demeter）,简单说成：talk only to your immediate friends
+单一职责原则（SRP：Single Responsibility Principle)
+开放封闭原则（OCP：Open Closed Principle)--Open（Open for extendtion)开放支持扩展，Close（Closed for modification)
+里氏替换原则（LSP：Liskov Substitution Principle)
+接口隔离原则（ISP：Interface Segregation Principle)
+依赖倒置原则（DIP：Dependence Inversion Principle)
+最少知识原则（LKP：Least Knowledge Principle)又叫迪米特原则（Law of Demeter),简单说成：talk only to your immediate friends
 
 
 [okhttp官网](https://square.github.io/okhttp/)
