@@ -1,4 +1,14 @@
 ### ----2020.7.21（庚子年六月初一）Tuesday -----
+- [鸿洋][8]
+- [郭霖][9]
+- [张旭童][10]
+- [任玉刚][11]  
+[9]: https://blog.csdn.net/lmj623565791 "郭霖"  
+[10]: https://me.csdn.net/qq_23547831 "张旭童"  
+[11]: https://me.csdn.net/singwhatiwanna "任玉刚"  
+[12]: https://blog.csdn.net/carson_ho "Carson_Ho"  
+
+
 ***
 [并发&耗时业务场景线程池选择](https://www.cnblogs.com/dangjunhui/p/5481435.html)  
 下列三种业务，应该如何使用线程池：
