@@ -1,6 +1,9 @@
 ### ----2020.7.22（庚子年六月初二）Wednesday 大暑-----
-**责任链模式**
+圆形菜单列表CircleMenuLayout（建行app圆形滑动菜单）
+参考资料：鸿洋自定义view进阶篇
 
+
+**责任链模式**
 Android源码：事件分发处理-->dispatchTouchEvent
 ViewGroup事件的递归调用，View的onToucheEvent返回值的设置：true当前view消费该事件并不再转，false向外传递
 
