@@ -1,5 +1,9 @@
 ### ----2020.7.22（庚子年六月初二）Wednesday 大暑-----
-圆形菜单列表CircleMenuLayout（建行app圆形滑动菜单）
+**装饰器模式**
+ContextWrapper扮演的就是装饰着
+***
+
+圆形菜单列表CircleMenuLayout（建行app圆形滑动菜单）  
 参考资料：鸿洋自定义view进阶篇
 
 
@@ -297,6 +301,17 @@ AspectJ：运行时
 [持ActivityLifecycleCallbacks，监听前后台状态如此舒](https://www.jianshu.com/p/e7f64e6bc2cc)  
 
 Application.ActivityLifecycleCallbacks来实现 监听程序处于前台还是后台
+```
+public interface ActivityLifecycleCallbacks {
+    void onActivityCreated(Activity activity, Bundle savedInstanceState);
+    void onActivityStarted(Activity activity);
+    void onActivityResumed(Activity activity);
+    void onActivityPaused(Activity activity);
+    void onActivityStopped(Activity activity);
+    void onActivitySaveInstanceState(Activity activity, Bundle outState);
+    void onActivityDestroyed(Activity activity);
+}
+```
 
 
 [MVP系列文章（三） - 动态代理优化每次判断 View != null](https://www.jianshu.com/p/a46d22fe9928)  
@@ -1669,7 +1684,7 @@ List<T> list中，T就是类型变量
 
 
 ### ----2020.6.2（庚子年闰四月十一）Tuesday -----
-装饰器模式
+装饰器模式(Decorator Pattern),又称包装模式(Wrapper Pattern)
 File)FileInputStream)FilterInputStream)BufferInputStream)DataInputStream
 
 
