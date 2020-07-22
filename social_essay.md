@@ -1,6 +1,23 @@
 ### ----2020.7.22（庚子年六月初二）Wednesday -----
 活下去，像牲口一样地活下去！《芙蓉镇》
 
+
+[扔物线](https://kaixue.io/)  
+
+[基你太美-字节跳动内推](https://blankj.com/)  
+[蔡梦杰简历](https://blankj.com/resume/resume-cn.html)  
+[闷瓜蛋子](https://fookwood.com/)  
+
+[作者还未想好干什么的网站：可能是想做程序开发导航](https://www.xcube.cn/)  
+
+[字节跳动靠谱内推](https://www.yuque.com/docs/share/215512ae-a0d5-4256-8867-3a9b12a4f785)  
+北京、杭州、武汉、广州、深圳、上海，等众多城市等你来投～
+感兴趣的朋友可以私我咨询&内推，也可以通过链接直接投递！
+飞书海量 HC：https://www.feishu.cn/hr/feishu_social_recruitment?token=MzsxNTkxMjczNzQ1Mzg4OzY2ODc3OTI0Mjc2Mzk5NjUxOTY7MA  
+社招所有职位: https://job.toutiao.com/s/EjLtyC  
+校招所有职位: https://job.toutiao.com/campus ，校招内推码: M8KN3K4
+
+
 ### ----2020.7.21（庚子年六月初一）Tuesday -----
 龙哥的启示：**谁杀了我的牛**
 机会成本

@@ -1,4 +1,8 @@
 ### ----2020.7.22（庚子年六月初二）Wednesday 大暑-----
+**组合模式**
+View(TextView、ViewGroup)
+ViewGroup实现ViewParent、ViewManager接口
+***
 **装饰器模式**
 ContextWrapper扮演的就是装饰着
 ***
@@ -21,7 +25,7 @@ BroadcastReceiver有序广播
 
 OkHttp的源码时，会发现在返回response时就是用到责任链模式
 RealInterceptorChain
-```
+```java
 Response getResponseWithInterceptorChain() throws IOException {
    // Build a full stack of interceptors.
    List<Interceptor> interceptors = new ArrayList<>();
