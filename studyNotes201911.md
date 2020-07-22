@@ -1,4 +1,49 @@
 ### ----2020.7.22（庚子年六月初二）Wednesday 大暑-----
+**责任链模式**
+
+Android源码：事件分发处理-->dispatchTouchEvent
+ViewGroup事件的递归调用，View的onToucheEvent返回值的设置：true当前view消费该事件并不再转，false向外传递
+
+BroadcastReceiver有序广播
+
+
+核心目的：将请求发起者与处理者解耦
+生活举例：日常生活中的审批(请假、报销)，一层层审批升级，最终得到结果
+组长-主管-经理-老板（GroupLeader、Director、Manager、Boss）
+
+
+OkHttp的源码时，会发现在返回response时就是用到责任链模式
+RealInterceptorChain
+```
+Response getResponseWithInterceptorChain() throws IOException {
+   // Build a full stack of interceptors.
+   List<Interceptor> interceptors = new ArrayList<>();
+   interceptors.addAll(client.interceptors());
+   interceptors.add(retryAndFollowUpInterceptor);
+   interceptors.add(new BridgeInterceptor(client.cookieJar()));
+   interceptors.add(new CacheInterceptor(client.internalCache()));
+   interceptors.add(new ConnectInterceptor(client));
+   if (!forWebSocket) {
+     interceptors.addAll(client.networkInterceptors());
+   }
+   interceptors.add(new CallServerInterceptor(forWebSocket));
+
+   Interceptor.Chain chain = new RealInterceptorChain(interceptors, null, null, null, 0,
+       originalRequest, this, eventListener, client.connectTimeoutMillis(),
+       client.readTimeoutMillis(), client.writeTimeoutMillis());
+
+   return chain.proceed(originalRequest);
+ }
+```
+
+***
+[Android中动画的种类和实现](https://www.jianshu.com/p/36dc190a8ab8)  
+Android 中的动画有三种类型：
+View Animation（补间动画）：只能设置给View，可以进行位置，大小，旋转，透明四种变化。（xml = anim）
+Drawable Animation（帧动画）：用来一个个的显示图片资源，类似于幻灯片一帧一帧地播放。（xml = drawable）
+Property Animation（属性动画）：Android3.0以上系统中使用，这种动画可以设置给任何object并且是可以扩展的，可以自定义任何类型和属性的动画。（xml = animator）
+
+***
 **单例模式实现方式：**
 - 饿汉模式
 - 懒汉模式
