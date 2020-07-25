@@ -1,3 +1,18 @@
+### ----2020.7.25（庚子年六月初五）Saturday -----
+
+
+### ----2020.7.24（庚子年六月初四）Friday -----
+
+
+### ----2020.7.23（庚子年六月初三）Thursday -----
+即时通讯经验
+Android 开发工程师中级 12-24K·15薪
+https://www.zhipin.com/job_detail/cf7b0c8c86d168c633J50964EVQ~.html?ka=search_list_jname_4_blank&lid=nlp-1UYQBA1f3or.search.4
+
+B站（上海市 杨浦区 国正中心3号楼）
+https://www.zhipin.com/gongsi/ae1ff0467cbd29ea1nZ-3ts~.html?ka=job-comintroduce
+
+
 ### ----2020.7.22（庚子年六月初二）Wednesday 大暑-----
 **组合模式**
 View(TextView、ViewGroup)
