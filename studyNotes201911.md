@@ -34,10 +34,11 @@ DaggerMyComponent.builder()
 
 
 T DoubleCheck.provider(Provider<T> provider);//双重检测单例
+
+
 ```
-
-
-http://bbs.xiangxueketang.cn/forum.php?mod=forumdisplay&fid=81&page=1
+[Dagger 2 基本使用，局部单例，全局单例](https://www.jianshu.com/p/79270af654a2)  
+[享学课堂BBS](http://bbs.xiangxueketang.cn/forum.php?mod=forumdisplay&fid=81&page=1)  
 
 
 ***
@@ -305,13 +306,6 @@ lucene索引数据库可视化查看工具-->luke-swing-8.0.0
 [fragment中的onCreateView和onViewCreated的区别和联系](https://www.jianshu.com/p/20b1f11b72b8)  
 (1)  onViewCreated在onCreateView执行完后立即执行。
 (2)  onCreateView返回的就是fragment要显示的view。
-
-
-择业选择
-开发工程师
-快递员
-导游（解说员）
-文案编写
 
 ### ----2020.7.16（庚子年五月廿六）Thursday -----
 
