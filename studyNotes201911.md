@@ -1,5 +1,7 @@
 ### ----2020.7.27（庚子年六月初七）Monday -----
-
+保存KV键值对，
+TreeMap implements SortedMap(基于红黑树结构，有序，默认升序排列)
+HashMap extends AbstractMap（散列不均匀，不支持排序，基于桶（数组）链表或红黑树）适合Map中插入、删除和定位元素
 
 ### ----2020.7.26（庚子年六月初六）Sunday -----
 
