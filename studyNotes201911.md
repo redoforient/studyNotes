@@ -1,4 +1,46 @@
 ### ----2020.7.27（庚子年六月初七）Monday -----
+
+IOC注入神器Dagger2
+```groovy
+implementation 'com.google.dagger:dagger:2.4'
+annotationProcessor 'com.google.dagger:dagger-compiler:2.4'
+```
+```java
+
+@Inject
+HttpModule httpModule;
+
+@Inject
+DatabaseModule databaseModule;
+DaggerMyComponent.create().injectMainActivity(this);
+等价于
+DaggerMyComponent.builder()
+                .httpModule(new HttpModule())
+                .databaseModule(new DatabaseModule())
+                .build()
+                .injectMainActivity(this);
+
+//Component单例
+@Singleton
+@Component(Module={HttpModule.class,DatabaseModule.class})
+局部单例
+全局单例解决方案：
+MyComponent构造放到Application中
+
+DaggerMyComponent.builder()
+                .httpModule(new HttpModule())
+                .databaseModule(new DatabaseModule())
+                .build();
+
+
+T DoubleCheck.provider(Provider<T> provider);//双重检测单例
+```
+
+
+http://bbs.xiangxueketang.cn/forum.php?mod=forumdisplay&fid=81&page=1
+
+
+***
 保存KV键值对
 TreeMap implements SortedMap(基于红黑树结构，有序，默认升序排列)
 HashMap extends AbstractMap（散列不均匀，不支持排序，基于桶（数组）链表或红黑树）适合Map中插入、删除和定位元素
