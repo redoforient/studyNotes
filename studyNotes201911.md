@@ -3437,12 +3437,12 @@ Android Source Design Patterns Analysis & Practice
 ** 开闭原则与里氏替换原则是相互伴生，通过里氏替换来达到对扩展开放，对修改关闭的效果 **
 
 六大设计原则
-单一职责原则（SRP：Single Responsibility Principle)
-开放封闭原则（OCP：Open Closed Principle)--Open（Open for Extension)开放支持扩展，Close（Closed for Modification)
-里氏替换原则（LSP：Liskov Substitution Principle)
-接口隔离原则（ISP：Interface Segregation Principle)
-依赖倒置原则（DIP：Dependence Inversion Principle)
-最少知识原则（LKP：Least Knowledge Principle)又叫迪米特原则（Law of Demeter),简单说成：talk only to your immediate friends
+开放封闭原则（OCP：Open Closed Principle)--Open（Open for Extension)开放支持扩展，Close（Closed for Modification)：总纲、对扩展开发，对修改关闭
+单一职责原则（SRP：Single Responsibility Principle)：类的职责要单一（高内聚低耦合）
+里氏替换原则（LSP：Liskov Substitution Principle)：子类可以透明替换父类
+接口隔离原则（ISP：Interface Segregation Principle)：接口职责要单一（每个接口承担独立的角色，不干不该自己干的事）
+依赖倒置原则（DIP：Dependence Inversion Principle)：面向接口编程（依赖抽象，而不是依赖具体实现）
+最少知识原则（LKP：Least Knowledge Principle)又叫迪米特原则（Law of Demeter),简单说成：talk only to your immediate friends，降低耦合
 
 
 23种设计模式
