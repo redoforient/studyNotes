@@ -1,3 +1,10 @@
+### ----2020.8.25（庚子年七月初七）Tuesday -----
+
+
+
+
+###空置8天
+
 ### ----2020.8.17（庚子年六月廿八）Monday -----
 WebView
 命令模式（Command Design Pattern）
@@ -3429,7 +3436,7 @@ Android Source Design Patterns Analysis & Practice
 
 ** 开闭原则与里氏替换原则是相互伴生，通过里氏替换来达到对扩展开放，对修改关闭的效果 **
 
-六大原则
+六大设计原则
 单一职责原则（SRP：Single Responsibility Principle)
 开放封闭原则（OCP：Open Closed Principle)--Open（Open for Extension)开放支持扩展，Close（Closed for Modification)
 里氏替换原则（LSP：Liskov Substitution Principle)
@@ -3437,6 +3444,42 @@ Android Source Design Patterns Analysis & Practice
 依赖倒置原则（DIP：Dependence Inversion Principle)
 最少知识原则（LKP：Least Knowledge Principle)又叫迪米特原则（Law of Demeter),简单说成：talk only to your immediate friends
 
+
+23种设计模式
+创建型模式（5种）
+01、Singleton单例模式
+02、Prototype原型
+03、FactoryMethod工厂方法
+04、AbstractFactory抽象工厂
+05、Builder构建者
+
+结构型模式（7种）
+06、Adapter适配器
+07、Decorator装饰器
+08、Facade外观|门面
+09、Composite组合模式
+10、Proxy代理（静态代理+动态代理）
+11、Bridge桥接
+12、Flyweight享元模式
+
+行为型模式（11种）
+13、Visitor访问者
+14、Mediator中介者|调停者模式
+15、Chain Of Responsibility责任链
+16、Iterator迭代器
+17、Interpreter解释器
+18、Observer观察者模式
+19、Memento备忘录
+20、Template Method模板方法
+21、State状态
+22、Strategy策略模式
+23、Command命令
+
+指导思想
+可维护性Maintainability
+可复用性Reusability
+可扩展性Extensibility/Scalability
+灵活性Flexiblity/mobility/adaptability
 
 [okhttp官网](https://square.github.io/okhttp/)
 
