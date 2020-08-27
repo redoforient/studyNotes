@@ -1,5 +1,7 @@
 ### ----2020.8.25（庚子年七月初七）Tuesday -----
-
+基本类型在哈希表中都是按值传递
+HashMap（UnsortMap）
+TreeMap
 
 
 
@@ -1150,6 +1152,14 @@ http://172.16.50.39:8081/artifactory/webapp/#/home
 ***
 
 [设计模式](https://www.runoob.com/design-pattern/design-pattern-tutorial.html)  
+
+[《深入设计模式》亚历山大 什韦茨（Alexander Shvets)著 彭力 译](https://refactoringguru.cn/)  
+
+
+[23 种设计模式详解（全23种）](https://blog.csdn.net/A1342772/article/details/91349142)
+[23种设计模式总结](https://blog.csdn.net/mw_nice/article/details/82840034)  
+[UML中的几种关系(依赖，关联，泛化，实现)](https://blog.csdn.net/mw_nice/article/details/108157198)  
+
 
 
 [微服务持续交付-系列课程](https://www.jfrogchina.com/series_webinars/)  
@@ -3484,7 +3494,7 @@ Android Source Design Patterns Analysis & Practice
 [okhttp官网](https://square.github.io/okhttp/)
 
 ***
-kHttp3的最底层是Socket，而不是URLConnection，它通过Platform的Class.forName()反射获得当前Runtime使用的socket库，调用栈如下
+okHttp3的最底层是Socket，而不是URLConnection，它通过Platform的Class.forName()反射获得当前Runtime使用的socket库，调用栈如下
 
 okhttp//实现HTTP协议  
 ==>framwork//JRE，实现JDK中Socket封装  
