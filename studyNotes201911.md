@@ -1,3 +1,149 @@
+### ----2020.11.5（庚子年九月二十）Thursday -----
+GreenDao
+LitePal
+Afinal
+ORMLite
+
+Room GreenDao ObjectBox
+
+内存：LRU+对象池
+···
+（BitmapFactory.Options对资源图片进行缩放）
+通过Matrix类的postScale方法进行缩放
+（BitmapFactory.Options对资源图片进行缩放）
+
+options.inPreferredConfig = Bitmap.Config.ARGB_4444;    // 默认是Bitmap.Config.ARGB_8888
+
+···
+java对象布局
+// https://mvnrepository.com/artifact/org.openjdk.jol/jol-core
+implementation group: 'org.openjdk.jol', name: 'jol-core', version: '0.9'
+
+/* 下面两个字段需要组合使用 */
+
+options.inPurgeable = true;
+
+options.inInputShareable = true;
+
+
+用BitmapFactory解码一张图片时，有时会遇到该错误。这往往是由于图片过大造成的。要想正常使用，则需要分配更少的内存空间来存储。
+
+BitmapFactory.Options.inSampleSize
+设置恰当的inSampleSize可以使BitmapFactory分配更少的空间以消除该错误。inSampleSize的具体含义请参考SDK文档。例如：
+
+BitmapFactory.Options opts = new BitmapFactory.Options();
+opts.inSampleSize = 4;
+Bitmap bitmap = BitmapFactory.decodeFile(imageFile, opts);
+设置恰当的inSampleSize是解决该问题的关键之一。
+
+
+
+	
+···	
+giflib动图处理
+
+···	
+MAT(Memory Analyzer Tool)
+
+···
+Chromium 的Breakpad是目前 Native 崩溃捕获中最成熟的方案
+
+Breakpad开源库采集native 的crash日志，自己参照老师的讲解和Demo做了个封装库Android_Breakpad，方便以后使用。该库主要是在发生native crash的时候生成文件保存到sd卡，然后分析文件，定位问题。
+在我们开发过程中Android JNI层Crash问题是个比较头疼的问题。
+
+Breakpad is a set of client and server components which implement a crash-reporting system.
+
+张绍文：崩溃优化（上）：关于“崩溃”那些事儿
+···
+	Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+            @Override
+            public void uncaughtException(Thread thread, Throwable ex) {
+                Toast.makeText(App.this, "程序遇到错误:" + ex.getMessage(), Toast.LENGTH_LONG).show();
+                ex.printStackTrace();
+            }
+        });
+		
+		
+		
+		严正杰：AndPermission
+		
+		
+		
+	externalNativeBuild {
+		ndkBuild {
+			...	
+		}
+	
+		cmake {
+			...
+		}
+	}
+### ----2020.11.3（庚子年九月十八）Tuesday -----
+profiler  mat
+Android Size Analyzer
+
+getLifecycle().addObserver(presenter);
+
+
+
+责任链模式(Chain of Responsibility Pattern)：
+Android中的事件分发机制就是类似于责任链模式
+OKhttp中对请求的拦截处理也是用到了责任链模式
+JDK应用中：类加载的双亲委派模型，ClassLoader的委托模型
+
+装饰器模式(Decorator Pattern):
+FilterInputStream--BufferInputStream、DataInputStream
+ContextWrapper--Application、Service
+
+构建者模式（Builder Pattern）：
+建造者模式（将一个复杂对象的构建与它的表示分离，用于属性参数很多时。）
+
+	// The singleton HTTP client.
+	public final OkHttpClient client = new OkHttpClient.Builder()
+	   .addInterceptor(new HttpLoggingInterceptor())
+	   .cache(new Cache(cacheDir, cacheSize))
+	   .build();
+ 
+	Retrofit retrofit = new Retrofit.Builder()
+		.baseUrl("https://api.github.com/")
+		.build();
+
+
+### ----2020.11.2（庚子年九月十七）Monday -----
+内存抖动
+1、避免在循环体内创建对象
+2、View的onDraw()会被频繁调用，此处不宜创建对象
+3、需要大量使用Bitmap的时候，可以缓存在数组或容器中实现复用
+4、对能够复用的对象，可以使用对象池缓存起来
+
+
+
+### ----2020.10.30（庚子年九月十四）Friday -----
+体验优先VS安全第一
+
+
+SplashActivity作用：
+1、分发
+2、解决白屏
+3、直线打开app路径、统一入口
+
+### ----2020.10.30（庚子年九月十四）Friday -----
+
+Android进程优先级的五个分类
+前台进程
+可视进程
+服务进程
+后台进程
+空进程
+
+### ----2020.10.27（庚子年九月十一）Tuesday -----
+
+
+
+
+### ----2020.10.2（庚子年八月十六）Friday -----
+
+
 ### ----2020.8.25（庚子年七月初七）Tuesday -----
 基本类型在哈希表中都是按值传递
 HashMap（UnsortMap）
