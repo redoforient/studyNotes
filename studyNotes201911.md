@@ -1,3 +1,112 @@
+### ----2020.12.31（庚子年冬月十七）Tuesday -----  
+
+
+
+
+### ----2020.12.15（庚子年冬月初一）Tuesday -----  
+
+
+
+### ----2020.12.3（庚子年十月十九）Thursday -----
+
+
+
+### ----2020.12.2（庚子年十月十八）Wednesday -----
+
+
+
+
+### ----2020.12.1（庚子年十月十七）Tuesday -----
+# hot-fix(热修复) 
+# Tinker 
+Tinker is a hot-fix solution library for Android, it supports dex, library and resources update without reinstall apk.
+
+# Robust 
+Robust is an Android HotFix solution with high compatibility and high stability. Robust can fix bugs immediately without a reboot.
+
+# AndFix 
+AndFix is a library that offer hot-fix for Android App.
+
+### ----2020.11.30（庚子年十月十六）Monday -----
+
+[享学内推](http://bbs.xiangxueketang.cn/news/14)  
+
+
+
+  
+
+### ----2020.11.28（庚子年十月十四）Saturday -----
+CoordinatorLayout 能不能实现多级悬停？
+可以，自己写个behavior
+
+### ----2020.11.27（庚子年十月十三）Friday -----
+ConstraintLayout
+
+bias反约束属性
+baseline
+
+ [一个HelloWorld 的程序行这个应用，Java 至少会创建几个线程呢？](https://cloud.tencent.com/developer/article/1414973)  
+[6] Monitor Ctrl-Break  
+[5] Attach Listener  
+[4] Signal Dispatcher  
+[3] Finalizer  
+[2] Reference Handler  
+[1] main  
+
+
+在jdk8时，可见创建了5个线程。  
+ main:主线程  
+ Reference Handler：处理引用对象本身的垃圾回收  
+ Finalizer：处理用户的Finalizer方法  
+ Signal Dispatcher：外部jvm命令的转发器  
+ Attach Listener: jvm提供一种jvm进程间通信的能力，能让一个进程传命令给另外一个进程  
+
+[Java 启动一个main程序时，有多少个线程](https://blog.csdn.net/chenxi004/article/details/104972979/)  
+
+windows下这个Monitor Ctrl-Break是不算在活动线程的，所以这样大于1是可以执行的，但是linux下应该是 大于2  
+
+---
+
+
+
+### ----2020.11.26（庚子年十月十二）Thursday -----
+架构师必会4图：类图 活动图 时序图 流程图
+
+
+反射、注解、泛型、classloader、jvm、dex、差分包、hook
+
+
+一个网络请求必须要处理的步骤
+1、设置URL
+2、设置请求参数
+3、发送请求
+4、处理响应
+5、回调调用者
+
+
+### ----2020.11.19（庚子年十月初五）Thursday -----
+老外把PPT叫deck
+slide deck
+presentation deck
+一摞演示文稿a deck of slides
+一副扑克牌 a deck of cards
+销售文档/给客户展示产品用的PPT） sales deck
+you need a killer sales deck
+自我推销文档 (给投资人展示自己的PPT) pitch deck
+
+poke suits[hearts,spades,clubs,diamonds]
+扑克花色[红桃/红心、黑桃/铲子、梅花/三叶草、方板/钻石]
+card number扑克点数[1-13]
+
+
+---相似的思想
+好莱坞原则、依赖倒置、控制反转、依赖注入、
+好莱坞原则(don't call us, we'll call you)
+好莱坞原则（Hollywood Principle）：别打电话给我们，有事我会打电话给你。
+
+接口回调、Promise两个回调函数（执行成功、异常状态)
+
+
 ### ----2020.11.5（庚子年九月二十）Thursday -----
 GreenDao
 LitePal
@@ -38,7 +147,7 @@ Bitmap bitmap = BitmapFactory.decodeFile(imageFile, opts);
 
 
 
-	
+
 ···	
 giflib动图处理
 
@@ -66,9 +175,10 @@ Breakpad is a set of client and server components which implement a crash-report
 		
 		
 		严正杰：AndPermission
-		
-		
-		
+
+
+​		
+​		
 	externalNativeBuild {
 		ndkBuild {
 			...	
@@ -103,7 +213,7 @@ ContextWrapper--Application、Service
 	   .addInterceptor(new HttpLoggingInterceptor())
 	   .cache(new Cache(cacheDir, cacheSize))
 	   .build();
- 
+	 
 	Retrofit retrofit = new Retrofit.Builder()
 		.baseUrl("https://api.github.com/")
 		.build();
@@ -314,7 +424,7 @@ Property Animation（属性动画）：Android3.0以上系统中使用，这种�
 [Android最全开发资源](https://www.jianshu.com/p/0c36302e0ed0)  
 [WanAndroid](https://wanandroid.com/)  
 [极客导航](https://www.jikedaohang.com/index/)  
-  
+
 # Android开发需要掌握的工具
 - Ruler
 - Mark Man
@@ -341,7 +451,7 @@ Property Animation（属性动画）：Android3.0以上系统中使用，这种�
 1、尽量减少线程切换和管理的开支； 2、最大化利用cpu。
 对于1，要求线程数尽量少，这样可以减少线程切换和管理的开支；
 对于2，要求尽量多的线程，以保证CPU资源最大化的利用。
- 
+
 所以对于任务耗时短的情况，要求线程尽量少，如果线程太多，有可能出现线程切换和管理的时间，大于任务执行的时间，那效率就低了；
 对于耗时长的任务，要分是cpu任务，还是io等类型的任务。如果是cpu类型的任务，线程数不宜太多；但是如果是io类型的任务，线程多一些更好，可以更充分利用cpu。
 所以：
