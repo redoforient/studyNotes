@@ -1,3 +1,106 @@
+
+
+
+----2021.2.1（庚子年腊月二十）Monday ----- 
+无论我们是否需要在activity中使用该fragment，我们都必须给该fragment声明id属性或者声明一个tag属性，否则会报异常
+
+----2021.1.30（庚子年腊月十八）Saturday ----- 
+Individual Contributor vs Manager
+
+ 
+ViewFlipper(翻转视图)的基本使用，做图片轮播和引导页
+ViewFlipper，它是Android自带的一个多页面管理控件，且可以自动播放！ 和ViewPager不同，ViewPager是一页页的，而ViewFlipper则是一层层的，和ViewPager一样，很多时候， 用来实现进入应用后的引导页，或者用于图片轮播
+
+http://www.codingke.com/
+扣丁课堂--马老师
+
+
+----2021.1.27（庚子年腊月十五）Wednesday -----  
+
+saic_token:429dbe12e46547948c364765d9dcf4462efa9342
+
+Lifecycle可以有效的避免内存泄漏和解决android生命周期的常见难题
+Livecycle   是一个表示android生命周期及状态的对象
+LivecycleOwner  用于连接有生命周期的对象，如activity,fragment
+LivecycleObserver  用于观察查LifecycleOwner
+
+LifecycleOwner:
+
+LifecycleObserver
+
+***  
+
+LiveData是一种具有生命周期感知能力的可观察数据持有类
+LiveData可以保证屏幕上的显示内容和数据一直保持同步
+特点：
+1.LiveData了解UI界面的状态，如果activity不在屏幕上显示，livedata不会触发没必要的界面更新，如果activity已经被销毁，会自动清空与observer的连接，意外的调用就不会发生
+2.LiveData是一个LifecycleOwner,他可以直接感知activity或fragment的生命周期
+
+
+
+
+
+----2021.1.14（庚子年腊月初二）Thursday -----  
+
+我们可通过LiveData.observe()方法对LiveData包装的数据进行观察
+
+LiveData.postValue在非UI线程中使用
+
+LiveData.setValue在UI线程中使用
+
+Cannot invoke setValue on a background thread
+
+
+
+### ----2021.1.6（庚子年冬月廿三）Wednesday -----  
+
+
+### ----2021.1.5（庚子年冬月廿二）Tuesday -----  
+EasyHttp 更新了：
+1. 新增网络请求代码定位功能
+2. 新增 Https 证书生成相关的类
+3. 优化框架代码嵌套及代码注释
+
+https://github.com/getActivity/EasyHttp
+
+***
+* 安装concurrently
+npm install concurrently --save
+
+* 安装TypeScript
+npm install -g typescript
+
+* 安装lite-server
+npm install -g live-server
+
+* 使用tsc --init命令就可以快速创建一个tsconfig.json文件
+
+* 使用npm init来创建package.json文件
+
+* 在.html的文件，然后在编辑器里代码区输入！+tab，快速创建html布局代码
+* 在index.html键入：html:5，按Tab键，就会生成好HTML模版文件！  
+
+* 然后在body中键入：script:src，按Tab键，然后加载我们马上要编译好的js脚本
+
+~~~
+创建项目#
+
+mkdir typescript-demo
+npm init -y //创建一个 package.json
+tsc --init //创建一个 tsconfig.json
+touch index.html
+touch hello.ts
+~~~
+
+
+### ----2021.1.4（庚子年冬月廿一）Monday -----  
+
+
+***
+
+***
+
+
 ### ----2020.12.31（庚子年冬月十七）Tuesday -----  
 
 
@@ -179,15 +282,15 @@ Breakpad is a set of client and server components which implement a crash-report
 
 ​		
 ​		
-	externalNativeBuild {
-		ndkBuild {
-			...	
-		}
-	
-		cmake {
-			...
-		}
-	}
+​	externalNativeBuild {
+​		ndkBuild {
+​			...	
+​		}
+​	
+​		cmake {
+​			...
+​		}
+​	}
 ### ----2020.11.3（庚子年九月十八）Tuesday -----
 profiler  mat
 Android Size Analyzer
